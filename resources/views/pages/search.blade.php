@@ -1,0 +1,100 @@
+@extends('layouts.landing-base')
+
+@section('content')
+    <form class="flex flex-col gap-4 px-8 pt-12 lg:pt-20 md:flex-row lg:px-40" action="{{ route('search') }}" method="GET" id="searchForm">
+        <!-- Select (Data) Field -->
+        <div class="w-full flex-0 md:w-auto">
+            <select name="tag" class="w-full text-sm border-gray-300 rounded-md">
+                @foreach ($data['tags'] as $tag)
+                    <option value="{{ $tag->tag }}" {{ $request->tag == $tag->tag ? "selected" : "" }}>{{ $tag->tag }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <!-- Search Field -->
+        <div class="flex-1 w-full">
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-3">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" name="search" class="block w-full py-2 text-sm text-gray-900 border border-gray-300 rounded-lg pe-4 ps-10 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" value="{{ $request->search }}" />
+            </div>
+        </div>
+
+        <!-- Dropdown Button -->
+        <button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg bg-red hover:scale-105 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 md:w-auto" type="button">Categories
+            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700">
+            <ul class="p-3 overflow-y-auto text-sm text-gray-700 h-max-48 dark:text-gray-200" aria-labelledby="dropdownSearchButton">
+                @foreach ($data['categories'] as $item)
+                    <li>
+                        <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                            @if ($request->filled('categories'))
+                                @if (in_array($item->category_name, explode(',', $request->categories)))
+                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="categories" value="{{ $item->category_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-red focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" checked>
+                                    <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->category_name }}</label>
+                                @else
+                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="categories" value="{{ $item->category_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-red focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->category_name }}</label>
+                                @endif
+                            @else
+                                <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="categories" value="{{ $item->category_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-red focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->category_name }}</label>
+                            @endif
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+
+        <input type="hidden" id="categoriesInput" name="categories">
+
+        <!-- Submit Button -->
+        <button type="submit" class="px-4 py-2 text-sm font-medium text-white transition-transform transform rounded-lg bg-red hover:scale-105 md:w-auto">Search</button>
+    </form>
+
+    <div class="px-8 py-12 mx-auto lg:px-40 lg:py-20 max-w-screen-3xl">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            @if ($data['result']->isEmpty())
+                <p class="text-xl text-center">Hasil tidak ditemukan</p>
+            @else
+                @switch($request->input('tag'))
+                    @case('event')
+                        @foreach ($data['result'] as $item)
+                            @include('components.cardEvent')
+                        @endforeach
+                        @break
+                    @default
+                        @foreach ($data['result'] as $item)
+                            @include('components.cardPost')
+                        @endforeach
+                @endswitch
+            @endif
+        </div>
+        {{ $data['result']->links() }}
+    </div>
+@endsection
+
+@section('js')
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let categoriesInputs = document.querySelectorAll('input[name="categories"]:checked');
+            let categoriesMap = Array.from(categoriesInputs).map(checkbox => checkbox.value);
+            categoriesInputs.forEach(checkbox => {checkbox.removeAttribute('name');});
+
+            document.getElementById('categoriesInput').value = categoriesMap.join(',');
+
+            this.submit();
+        });
+    </script>
+@endsection

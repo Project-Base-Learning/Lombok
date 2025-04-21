@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @if (isset($data['article']))
+        <title>{{ $data['site_name'].' - '.$data['article']->title }}</title>
+        <meta name="title" content="{{ $data['article']->metadata['meta_title'] ?? $data['article']->title }}">
+        <meta name="description" content="{{ $data['article']->metadata['meta_desc'] ?? $data['article']->title }}">
+        <meta property="og:title" content="{{ $data['article']->metadata['meta_title'] ?? $data['article']->title }}">
+        <meta property="og:description" content="{{ $data['article']->metadata['meta_desc'] ?? $data['article']->title }}">
+        <meta property="og:image" content="{{ Storage::url($data['article']->cover->first()->image_path) }}">
+        <meta property="og:url" content="{{ Request::url() }}">
+        <meta property="og:type" content="website">
+    @else
+        <title>{{ $data['site_name'].' - '.$data['page']->title }}</title>
+        <meta name="title" content="{{ $data['site_name'] }}">
+        <meta name="description" content="{{ $data['site_description'] }}">
+    @endif
+
+    {{-- CDN --}}
+    <link rel="shortcut icon" href="{{ Storage::url($data['site_favicon']) }}">
+    <script src="https://kit.fontawesome.com/f87eaab4e6.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    {{-- Styles --}}
+    @yield('css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+<body class="break-words">
+    @if (!empty($data['more_configs']['navigation']))
+        @include('patterns/'.$data['more_configs']['navigation']->layout_path)
+    @endif
+
+    @yield('content')
+
+    @if (!empty($data['more_configs']['footer']))
+        @include('patterns/'.$data['more_configs']['footer']->layout_path)
+    @endif
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                once: true
+            });
+        });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    @if (!env("APP_DEBUG") && $data['features']['analytics'] && $data['google_analytics_tag'] && getenv("ANALYTICS_PROPERTY_ID") !== false)
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ $data['google_analytics_tag'] }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', {{ $data['google_analytics_tag'] }});
+        </script>
+    @endif
+
+    @yield('js')
+</body>
+
+</html>
