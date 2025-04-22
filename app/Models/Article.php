@@ -47,14 +47,14 @@ class Article extends Model
         return $this->belongsToMany(Cover::class, 'articles_cover');
     }
 
-    public function categories() : BelongsToMany
+    public function tags() : BelongsToMany
     {
-        return $this->belongsToMany(Category::class, 'articles_categories');
+        return $this->belongsToMany(Tag::class, 'articles_tags');
     }
 
-    public function tag() : BelongsTo
+    public function category() : BelongsTo
     {
-        return $this->belongsTo(Tag::class, 'tag_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     public function sponsors(): BelongsToMany

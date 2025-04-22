@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use App\Models\Category;
 use App\Models\Tag;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
@@ -13,20 +13,20 @@ class SearchController extends Controller
     {
         $data = $this->page('home');
         $data['page'] = (object) array('title' => 'Search');
-        $data['tags'] = Tag::get();
-        $data['categories'] = Category::withoutTrashed()->get();
+        $data['categories'] = Category::get();
+        $data['tags'] = Tag::withoutTrashed()->get();
 
         $tmp = Article::query();
         $tmp = $tmp->whereNotNull('published_at')->where('private', 0);
 
-        $tmp = $tmp->whereHas('tag', function ($query) use ($request) {
-            $query->where('tag', $request->input('tag') ? $request->input('tag') : 'article');
+        $tmp = $tmp->whereHas('category', function ($query) use ($request) {
+            $query->where('category_name', $request->input('category') ? $request->input('category') : 'article');
         });
 
-        if ($request->filled('categories')) {
-            $selected = explode(',', $request->categories);
-            $tmp->whereHas('categories', function ($q) use ($selected) {
-                $q->whereIn('category_name', $selected);
+        if ($request->filled('tags')) {
+            $selected = explode(',', $request->tags);
+            $tmp->whereHas('tags', function ($q) use ($selected) {
+                $q->whereIn('tag_name', $selected);
             }, '=', count($selected));
         }
 

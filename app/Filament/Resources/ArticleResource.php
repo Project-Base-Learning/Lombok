@@ -8,7 +8,7 @@ use App\Models\Article;
 use App\Models\Cover;
 use App\Models\GeneralSetting;
 use App\Models\Sponsor;
-use App\Models\Tag;
+use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
@@ -110,11 +110,11 @@ class ArticleResource extends Resource
                                     ->columnSpan(['lg' => 2]),
                                 Forms\Components\Section::make()
                                     ->schema([
-                                        Forms\Components\Select::make('tag_id')
+                                        Forms\Components\Select::make('category_id')
                                             ->required()
                                             ->disabledOn('edit')
                                             ->live()
-                                            ->relationship('tag', 'tag'),
+                                            ->relationship('category', 'category_name'),
                                         Forms\Components\Select::make('categories')
                                             ->multiple()
                                             ->relationship('categories', 'category_name')
@@ -184,10 +184,10 @@ class ArticleResource extends Resource
                         Forms\Components\Tabs\Tab::make('Other')
                             ->icon('heroicon-o-plus')
                             ->visible(
-                                fn ($record, $get) => Tag::query()
+                                fn ($record, $get) => Category::query()
                                     ->where([
-                                        'id' => $get('tag_id'),
-                                        'tag' => 'event'
+                                        'id' => $get('category_id'),
+                                        'category_name' => 'event'
                                     ])->exists()
                             )
                             ->schema([
@@ -244,11 +244,11 @@ class ArticleResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->defaultGroup('tag.tag')
+            ->defaultGroup('category.category_name')
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('tag.tag')
+                Tables\Columns\TextColumn::make('category.category_name')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('published_at')
@@ -281,7 +281,7 @@ class ArticleResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                Tables\Filters\SelectFilter::make('tag')->relationship('tag', 'tag'),
+                Tables\Filters\SelectFilter::make('category')->relationship('category', 'category_name'),
                 Tables\Filters\TrashedFilter::make(),
             ])
             ->actions([

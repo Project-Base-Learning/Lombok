@@ -19,9 +19,6 @@ use Illuminate\Support\Facades\Storage;
 class User extends Authenticatable
 {
     // implements FilamentUser, HasAvatar
-    // public function canAccessPanel(Panel $panel): bool {
-    //     return $this->status && $this->role->status;
-    // }
 
     use Notifiable, SoftDeletes, HasRoles;
 
@@ -51,9 +48,9 @@ class User extends Authenticatable
         return $this->hasMany(Article::class);
     }
 
-    public function categories() : HasMany
+    public function tags() : HasMany
     {
-        return $this->hasMany(Category::class);
+        return $this->hasMany(Tag::class);
     }
 
     public function getFilamentAvatarUrl(): ?string

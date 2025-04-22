@@ -12,7 +12,7 @@ foreach ($data['navigation'] as $item) {
     Route::get('/'.$item->slug, [HomeController::class, 'index'])->name($item->slug);
 }
 
-Route::get('/{tag}/{slug}', [HomeController::class, 'detail'])->name('detail');
+Route::get('/{category}/{slug}', [HomeController::class, 'detail'])->name('detail');
 
 Route::controller(SearchController::class)->group(function () {
     Route::get('/search', 'index')->name('search');

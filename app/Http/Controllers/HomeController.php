@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Sponsor;
-use App\Models\Tag;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 class HomeController extends Controller
@@ -18,7 +18,7 @@ class HomeController extends Controller
                 $tmp = $tmp->dataset;
                 $tmp2 = Article::query();
                 $tmp2 = $tmp2->where([
-                    // ['tag_id', $tmp->tag->id],
+                    // ['category_id', $tmp->category->id],
                     ['private', 0]
                 ])->whereNotNull('published_at');
                 $tmp2 = $tmp2->orderBy($tmp->order_col, $tmp->order_sort);
@@ -38,9 +38,9 @@ class HomeController extends Controller
         return view('pages.index', compact('data'));
     }
 
-    public function detail(string $tag, string $slug) {
+    public function detail(string $category, string $slug) {
         $data = $this->page('home');
-        $data['tag'] = Tag::where('tag', $tag)->firstOrFail();
+        $data['category'] = Category::where('category_name', $category)->firstOrFail();
         $data['article'] = Article::where('slug', $slug)->whereNotNull('published_at')->firstOrFail();
         $categories = [];
 
@@ -50,7 +50,7 @@ class HomeController extends Controller
 
         $data['related'] = Article::query()
             ->where('id', "!=", $data['article']->id)
-            ->where('tag_id', "=", $data['article']->tag_id)
+            ->where('category_id', "=", $data['article']->category_id)
             ->whereNotNull('published_at')
             ->whereHas('categories', function ($q) use ($categories) {
                 $q->whereIn('category_name', $categories);
@@ -59,6 +59,6 @@ class HomeController extends Controller
             ->get();
 
         $data['sponsors'] = $data['article']->sponsors()->get();
-        return view($data['tag']->layout_detail_path, compact('data'));
+        return view($data['category']->layout_detail_path, compact('data'));
     }
 }

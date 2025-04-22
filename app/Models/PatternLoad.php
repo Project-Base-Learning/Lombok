@@ -19,8 +19,8 @@ class PatternLoad extends Model
         'limit',
     ];
 
-    public function tag() : BelongsTo
+    public function category() : BelongsTo
     {
-        return $this->belongsTo(Tag::class, 'dataset_id');
+        return $this->belongsTo(Category::class, 'dataset_id');
     }
 }
