@@ -15,7 +15,9 @@ use Filament\Navigation\NavigationItem;
 use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
+use Filament\Support\Assets\Css;
 use Filament\Support\Colors\Color;
+use Filament\Support\Facades\FilamentAsset;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -30,6 +32,13 @@ class SuperadminPanelProvider extends PanelProvider
     protected $data;
     protected array $plugins;
 
+    public function boot(): void
+    {
+        FilamentAsset::register([
+            Css::make('curator', __DIR__.'/../resources/dist/curator.css'),
+        ], 'awcodes/curator');
+    }
+
     public function panel(Panel $panel): Panel
     {
         $this->data = GeneralSetting::first()?->toArray() ?: [];
@@ -41,6 +50,15 @@ class SuperadminPanelProvider extends PanelProvider
                 ->navigationLabel('Environment')
                 ->navigationIcon('heroicon-o-command-line')
                 ->navigationSort(2),
+            \Awcodes\Curator\CuratorPlugin::make()
+                ->label('Media')
+                ->navigationIcon('heroicon-o-photo')
+                ->navigationGroup('Article')
+                ->navigationSort(5)
+                ->navigationCountBadge(false)
+                ->registerNavigation(true)
+                ->defaultListView('grid')
+                ->resource(\Awcodes\Curator\Resources\MediaResource::class)
         ];
 
         if ($this->data['features']['analytics'] && $this->data['google_analytics_tag']) {
