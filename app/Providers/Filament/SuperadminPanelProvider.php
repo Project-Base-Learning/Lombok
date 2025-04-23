@@ -34,9 +34,9 @@ class SuperadminPanelProvider extends PanelProvider
 
     public function boot(): void
     {
-        FilamentAsset::register([
-            Css::make('curator', __DIR__.'/../resources/dist/curator.css'),
-        ], 'awcodes/curator');
+        // FilamentAsset::register([
+        //     Css::make('curator', __DIR__.'/../../resources/css/curator.css'),
+        // ], 'awcodes/curator');
     }
 
     public function panel(Panel $panel): Panel

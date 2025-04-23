@@ -20,7 +20,11 @@ class SearchController extends Controller
         $tmp = $tmp->whereNotNull('published_at')->where('private', 0);
 
         $tmp = $tmp->whereHas('category', function ($query) use ($request) {
-            $query->where('category_name', $request->input('category') ? $request->input('category') : 'article');
+            if ($request->input('category')) {
+                $query->where('category_name', $request->input('category'));
+            } else {
+                $query->where('default', 1);
+            }
         });
 
         if ($request->filled('tags')) {

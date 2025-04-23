@@ -6,7 +6,7 @@
         <div class="w-full flex-0 md:w-auto">
             <select name="category" class="w-full text-sm border-gray-300 rounded-md">
                 @foreach ($data['categories'] as $category)
-                    <option value="{{ $category->category_name }}" {{ $request->category == $category->category_name ? "selected" : "" }}>{{ $category->category_name }}</option>
+                    <option value="{{ $category->category_name }}" @selected($request->category ? $request->category == $category->category_name : $category->default)>{{ $category->category_name }}</option>
                 @endforeach
             </select>
         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Forms\CustomForms;
 use Illuminate\Support\Str;
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Models\Article;
@@ -181,61 +182,68 @@ class ArticleResource extends Resource
                             ])
                             ->columns(2)
                             ->statePath('metadata'),
-                        Forms\Components\Tabs\Tab::make('Other')
+                        Forms\Components\Tabs\Tab::make('Fields')
                             ->icon('heroicon-o-plus')
                             ->visible(
                                 fn ($record, $get) => Category::query()
-                                    ->where([
-                                        'id' => $get('category_id'),
-                                        'category_name' => 'event'
-                                    ])->exists()
+                                    ->where('id', $get('category_id'))
+                                    ->whereNotNull('fields')
+                                    ->exists()
                             )
-                            ->schema([
-                                Forms\Components\Section::make()
-                                    ->schema([
-                                        Forms\Components\DateTimePicker::make('start_date')
-                                            ->seconds(false)
-                                            ->reactive(),
-                                        Forms\Components\DateTimePicker::make('finish_date')
-                                            ->seconds(false)
-                                            ->reactive()
-                                            ->after('start_date'),
-                                        Forms\Components\TextInput::make('location')
-                                            ->label('Location link')
-                                            ->url()
-                                            ->default('https://maps.app.goo.gl/RG4syWQQ9GnQWpiS8'),
-                                        Forms\Components\Toggle::make('has_ticket')
-                                            ->label('Enable Ticketing')
-                                            ->default(false)
-                                            ->live(),
-                                    ])
-                                    ->columns(1)
-                                    ->columnSpan(['lg' => 2]),
-                                Forms\Components\Fieldset::make('Ticketing')
-                                    ->visible(
-                                        fn ($record, $get): bool => $get('has_ticket') == true
-                                    )
-                                    ->schema([
-                                        Forms\Components\TextInput::make('price')
-                                            ->minValue(1)
-                                            ->numeric()
-                                            ->prefix('Rp.'),
-                                        Forms\Components\TextInput::make('quota')
-                                            ->minValue(1)
-                                            ->numeric()
-                                            ->prefix('People'),
-                                        Forms\Components\TextInput::make('link')
-                                            ->label('Register link')
-                                            ->url()
-                                            ->required()
-                                            ->maxLength(255),
-                                    ])
-                                    ->columns(1)
-                                    ->columnSpan(['lg' => 1])
-                                    ->statePath('ticketing'),
-                            ])
-                            ->columns(3)
-                            ->statePath('others'),
+                            ->schema(function ($record, $get) {
+                                $fields = Category::query()
+                                    ->where('id', $get('category_id'))
+                                    ->whereNotNull('fields')
+                                    ->value('fields');
+                                return $fields ? CustomForms::get($fields) : [];
+                            }
+                                // [
+                                // Forms\Components\Section::make()
+                                //     ->schema([
+                                //         Forms\Components\DateTimePicker::make('start_date')
+                                //             ->seconds(false)
+                                //             ->reactive(),
+                                //         Forms\Components\DateTimePicker::make('finish_date')
+                                //             ->seconds(false)
+                                //             ->reactive()
+                                //             ->after('start_date'),
+                                //         Forms\Components\TextInput::make('location')
+                                //             ->label('Location link')
+                                //             ->url()
+                                //             ->default('https://maps.app.goo.gl/RG4syWQQ9GnQWpiS8'),
+                                //         Forms\Components\Toggle::make('has_ticket')
+                                //             ->label('Enable Ticketing')
+                                //             ->default(false)
+                                //             ->live(),
+                                //     ])
+                                //     ->columns(1)
+                                //     ->columnSpan(['lg' => 2]),
+                                // Forms\Components\Fieldset::make('Ticketing')
+                                //     ->visible(
+                                //         fn ($record, $get): bool => $get('has_ticket') == true
+                                //     )
+                                //     ->schema([
+                                //         Forms\Components\TextInput::make('price')
+                                //             ->minValue(1)
+                                //             ->numeric()
+                                //             ->prefix('Rp.'),
+                                //         Forms\Components\TextInput::make('quota')
+                                //             ->minValue(1)
+                                //             ->numeric()
+                                //             ->prefix('People'),
+                                //         Forms\Components\TextInput::make('link')
+                                //             ->label('Register link')
+                                //             ->url()
+                                //             ->required()
+                                //             ->maxLength(255),
+                                //     ])
+                                //     ->columns(1)
+                                //     ->columnSpan(['lg' => 1])
+                                //     ->statePath('ticketing'),
+                                // ]
+                            )
+                            ->columns(2)
+                            ->statePath('fields'),
                     ])
                     ->columnSpan(2),
             ]);

@@ -20,14 +20,14 @@ class Article extends Model
         'slug',
         'content',
         'private',
-        'others',
+        'fields',
         'metadata',
         'published_at',
     ];
 
     protected $casts = [
         'privated' => 'boolean',
-        'others' => 'array',
+        'fields' => 'array',
         'metadata' => 'array',
         'published_at' => 'datetime'
     ];
