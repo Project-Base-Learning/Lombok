@@ -27,7 +27,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
-class SuperadminPanelProvider extends PanelProvider
+class AdminPanelProvider extends PanelProvider
 {
     protected $data;
     protected array $plugins;

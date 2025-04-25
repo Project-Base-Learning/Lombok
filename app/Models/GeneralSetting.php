@@ -14,9 +14,8 @@ class GeneralSetting extends Model
         'site_description',
         'site_logo',
         'site_favicon',
-        // 'support_email',
-        // 'support_phone',
-        // 'theme_color',
+        'location',
+        'contacts',
         'features',
         'user_features',
         'google_analytics_tag',
@@ -28,6 +27,8 @@ class GeneralSetting extends Model
     ];
 
     protected $casts = [
+        'location' => 'array',
+        'contacts' => 'array',
         'features' => 'array',
         'user_features' => 'array',
         'email_settings' => 'array',

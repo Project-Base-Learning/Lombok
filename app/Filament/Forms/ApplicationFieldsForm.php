@@ -2,6 +2,7 @@
 
 namespace App\Filament\Forms;
 
+use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
@@ -9,6 +10,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Set;
 
 class ApplicationFieldsForm
 {
@@ -17,47 +19,57 @@ class ApplicationFieldsForm
         return [
             Grid::make()
                 ->schema([
-                    Section::make()
+                    Section::make('Site Config')
                         ->schema([
                             TextInput::make('site_name')
-                                ->autofocus()
-                                ->columnSpanFull(),
-                            Textarea::make('site_description')
-                                ->columnSpanFull(),
-                            Grid::make()
-                                ->schema([
-                                    FileUpload::make('site_logo')
-                                        ->image()
-                                        ->directory('assets')
-                                        ->visibility('public')
-                                        ->moveFiles()
-                                        ->imageEditor()
-                                        ->getUploadedFileNameForStorageUsing(fn () => 'site_logo.png')
-                                        ->columnSpan(['default' => 1, 'lg' => 2]),
-                                    FileUpload::make('site_favicon')
-                                        ->image()
-                                        ->directory('assets')
-                                        ->visibility('public')
-                                        ->moveFiles()
-                                        ->getUploadedFileNameForStorageUsing(fn () => 'site_favicon.ico')
-                                        ->acceptedFileTypes(['image/x-icon', 'image/vnd.microsoft.icon'])
-                                        ->columnSpan(['default' => 1, 'lg' => 2]),
-                                ])
-                                ->columns(2),
+                                ->autofocus(),
+                            Textarea::make('site_description'),
+                            FileUpload::make('site_logo')
+                                ->image()
+                                ->directory('assets')
+                                ->visibility('public')
+                                ->moveFiles()
+                                ->imageEditor()
+                                ->getUploadedFileNameForStorageUsing(fn () => 'site_logo.png'),
+                            FileUpload::make('site_favicon')
+                                ->image()
+                                ->directory('assets')
+                                ->visibility('public')
+                                ->moveFiles()
+                                ->getUploadedFileNameForStorageUsing(fn () => 'site_favicon.ico')
+                                ->acceptedFileTypes(['image/x-icon', 'image/vnd.microsoft.icon']),
                         ])
+                        ->columns(1),
+                    Section::make('Location')
+                        ->schema([
+                            TextInput::make('address')
+                                ->maxLength(255),
+                            Map::make('coordinate')
+                                ->zoom(15)
+                                ->minZoom(0)
+                                ->maxZoom(28)
+                                ->tilesUrl("https://tile.openstreetmap.de/{z}/{x}/{y}.png")
+                                ->detectRetina(true)
+                                ->showFullscreenControl(true)
+                                ->showZoomControl(true)
+                                ->extraStyles(['min-height: 50dvh']),
+                        ])
+                        ->columns(1)
+                        ->statePath('location'),
                 ])
                 ->columnSpan(['lg' => 2]),
             Grid::make()
                 ->schema([
-                    Section::make()
+                    Section::make('Contact Supports')
                         ->schema([
-                            TextInput::make('support_email')
+                            TextInput::make('email')
                                 ->prefixIcon('heroicon-o-envelope'),
-                            TextInput::make('support_phone')
+                            TextInput::make('phone')
                                 ->prefixIcon('heroicon-o-phone'),
-                            ColorPicker::make('theme_color')
-                                ->prefixIcon('heroicon-o-swatch'),
-                        ]),
+                            TextInput::make('whatsapp')
+                                ->prefixIcon('heroicon-o-device-phone-mobile'),
+                        ])
+                        ->statePath('contacts'),
                     Section::make('Features')
                         ->description('Features you want to have.')
                         ->schema([
