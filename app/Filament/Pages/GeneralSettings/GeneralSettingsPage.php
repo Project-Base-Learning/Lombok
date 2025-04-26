@@ -19,9 +19,12 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 use App\Services\MailSettingsService;
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 
 class GeneralSettingsPage extends Page
 {
+    use HasPageShield;
+
     protected static string $view = 'filament.pages.general-settings-page';
 
     protected static ?string $slug = 'general-settings';
@@ -40,11 +43,11 @@ class GeneralSettingsPage extends Page
     {
         $this->data = GeneralSetting::first()?->toArray() ?: [];
 
-        $this->data['seo_description'] = $this->data['seo_description'] ?? '';
-        $this->data['seo_preview'] = $this->data['seo_preview'] ?? '';
-        $this->data['theme_color'] = $this->data['theme_color'] ?? '';
-        $this->data['seo_metadata'] = $this->data['seo_metadata'] ?? [];
-        $this->data = EmailDataHelper::getEmailConfigFromDatabase($this->data);
+        // $this->data['seo_description'] = $this->data['seo_description'] ?? '';
+        // $this->data['seo_preview'] = $this->data['seo_preview'] ?? '';
+        // $this->data['theme_color'] = $this->data['theme_color'] ?? '';
+        // $this->data['seo_metadata'] = $this->data['seo_metadata'] ?? [];
+        // $this->data = EmailDataHelper::getEmailConfigFromDatabase($this->data);
 
         if (isset($this->data['site_logo']) && is_string($this->data['site_logo'])) {
             $this->data['site_logo'] = [
@@ -57,6 +60,14 @@ class GeneralSettingsPage extends Page
                 'name' => $this->data['site_favicon'],
             ];
         }
+
+        if (isset($this->data['google_analytics']['service-account-credentials']) && is_string($this->data['google_analytics']['service-account-credentials'])) {
+            $this->data['google_analytics']['service-account-credentials'] = [
+                'name' => $this->data['google_analytics']['service-account-credentials'],
+            ];
+        }
+
+        $this->form->fill($this->data);
     }
 
     public function form(Form $form): Form
@@ -82,7 +93,9 @@ class GeneralSettingsPage extends Page
         if (!empty($this->data['features']['analytics'])) {
             $arrTabs[] = Tabs\Tab::make('Analytics')
                 ->icon('heroicon-o-globe-alt')
-                ->schema(AnalyticsFieldsForm::get());
+                ->schema(AnalyticsFieldsForm::get())
+                ->columns(['lg' => 3])
+                ->statePath('google_analytics');
         }
 
         $arrTabs[] = Tabs\Tab::make('Template')

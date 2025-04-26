@@ -190,57 +190,14 @@ class ArticleResource extends Resource
                                     ->whereNotNull('fields')
                                     ->exists()
                             )
-                            ->schema(function ($record, $get) {
-                                $fields = Category::query()
-                                    ->where('id', $get('category_id'))
-                                    ->whereNotNull('fields')
-                                    ->value('fields');
-                                return $fields ? CustomForms::get($fields) : [];
-                            }
-                                // [
-                                // Forms\Components\Section::make()
-                                //     ->schema([
-                                //         Forms\Components\DateTimePicker::make('start_date')
-                                //             ->seconds(false)
-                                //             ->reactive(),
-                                //         Forms\Components\DateTimePicker::make('finish_date')
-                                //             ->seconds(false)
-                                //             ->reactive()
-                                //             ->after('start_date'),
-                                //         Forms\Components\TextInput::make('location')
-                                //             ->label('Location link')
-                                //             ->url()
-                                //             ->default('https://maps.app.goo.gl/RG4syWQQ9GnQWpiS8'),
-                                //         Forms\Components\Toggle::make('has_ticket')
-                                //             ->label('Enable Ticketing')
-                                //             ->default(false)
-                                //             ->live(),
-                                //     ])
-                                //     ->columns(1)
-                                //     ->columnSpan(['lg' => 2]),
-                                // Forms\Components\Fieldset::make('Ticketing')
-                                //     ->visible(
-                                //         fn ($record, $get): bool => $get('has_ticket') == true
-                                //     )
-                                //     ->schema([
-                                //         Forms\Components\TextInput::make('price')
-                                //             ->minValue(1)
-                                //             ->numeric()
-                                //             ->prefix('Rp.'),
-                                //         Forms\Components\TextInput::make('quota')
-                                //             ->minValue(1)
-                                //             ->numeric()
-                                //             ->prefix('People'),
-                                //         Forms\Components\TextInput::make('link')
-                                //             ->label('Register link')
-                                //             ->url()
-                                //             ->required()
-                                //             ->maxLength(255),
-                                //     ])
-                                //     ->columns(1)
-                                //     ->columnSpan(['lg' => 1])
-                                //     ->statePath('ticketing'),
-                                // ]
+                            ->schema(
+                                function ($record, $get) {
+                                    $fields = Category::query()
+                                        ->where('id', $get('category_id'))
+                                        ->whereNotNull('fields')
+                                        ->value('fields');
+                                    return $fields ? CustomForms::get($fields) : [];
+                                }
                             )
                             ->columns(2)
                             ->statePath('fields'),
@@ -252,16 +209,22 @@ class ArticleResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->defaultGroup('category.category_name')
+            ->groups([
+                'category.category_name',
+                'creator.name',
+                'editor.name'
+            ])
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('category.category_name')
-                    ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\IconColumn::make('private')
                     ->boolean()
                     ->trueIcon('heroicon-o-check-circle')
@@ -269,23 +232,26 @@ class ArticleResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('creator.name')
                     ->label('Created by')
-                    ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('editor.name')
                     ->label('Last edited by')
-                    ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([

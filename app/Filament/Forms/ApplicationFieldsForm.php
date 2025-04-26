@@ -26,16 +26,14 @@ class ApplicationFieldsForm
                             Textarea::make('site_description'),
                             FileUpload::make('site_logo')
                                 ->image()
+                                ->disk('public')
                                 ->directory('assets')
-                                ->visibility('public')
-                                ->moveFiles()
                                 ->imageEditor()
                                 ->getUploadedFileNameForStorageUsing(fn () => 'site_logo.png'),
                             FileUpload::make('site_favicon')
                                 ->image()
+                                ->disk('public')
                                 ->directory('assets')
-                                ->visibility('public')
-                                ->moveFiles()
                                 ->getUploadedFileNameForStorageUsing(fn () => 'site_favicon.ico')
                                 ->acceptedFileTypes(['image/x-icon', 'image/vnd.microsoft.icon']),
                         ])
@@ -63,6 +61,7 @@ class ApplicationFieldsForm
                     Section::make('Contact Supports')
                         ->schema([
                             TextInput::make('email')
+                                ->email()
                                 ->prefixIcon('heroicon-o-envelope'),
                             TextInput::make('phone')
                                 ->prefixIcon('heroicon-o-phone'),

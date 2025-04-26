@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
+use BezhanSalleh\FilamentShield\Traits\HasPanelShield;
 use Filament\Panel;
 use Spatie\Permission\Traits\HasRoles;
 use Filament\Models\Contracts\FilamentUser;
@@ -16,13 +17,16 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
-    // implements FilamentUser, HasAvatar
-
-    use Notifiable, SoftDeletes, HasRoles;
+    use Notifiable, SoftDeletes, HasRoles, HasPanelShield;
 
     protected $table = 'users';
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+       return $this->hasAnyRole(['Developer', 'Admin']);
+    }
 
     protected $fillable = [
         'name',

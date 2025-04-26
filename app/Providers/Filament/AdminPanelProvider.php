@@ -4,8 +4,10 @@ namespace App\Providers\Filament;
 
 use App\Filament\Pages\Auth\Login;
 use App\Filament\Pages\Auth\EditProfile;
+use App\Filament\Pages\DashboardPage;
+use App\Filament\Pages\EnvEditor\EnvEditorPage;
 use App\Filament\Pages\GeneralSettings\GeneralSettingsPage;
-use App\Filament\Widgets\OptimizeButton;
+use App\Filament\Widgets\OptimizeClearWidget;
 use App\Models\GeneralSetting;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -34,9 +36,9 @@ class AdminPanelProvider extends PanelProvider
 
     public function boot(): void
     {
-        // FilamentAsset::register([
-        //     Css::make('curator', __DIR__.'/../../resources/css/curator.css'),
-        // ], 'awcodes/curator');
+        FilamentAsset::register([
+            Css::make('curator', __DIR__.'/../../../public/css/awcodes/curator/curator.css'),
+        ], 'awcodes/curator');
     }
 
     public function panel(Panel $panel): Panel
@@ -44,12 +46,28 @@ class AdminPanelProvider extends PanelProvider
         $this->data = GeneralSetting::first()?->toArray() ?: [];
 
         $this->plugins = [
-            \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+            \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+                ->gridColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                    'lg' => 3
+                ])
+                ->sectionColumnSpan(1)
+                ->checkboxListColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                    'lg' => 4,
+                ])
+                ->resourceCheckboxListColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                ]),
             \GeoSot\FilamentEnvEditor\FilamentEnvEditorPlugin::make()
                 ->navigationGroup('Settings')
                 ->navigationLabel('Environment')
                 ->navigationIcon('heroicon-o-command-line')
-                ->navigationSort(2),
+                ->navigationSort(2)
+                ->viewPage(EnvEditorPage::class),
             \Awcodes\Curator\CuratorPlugin::make()
                 ->label('Media')
                 ->navigationIcon('heroicon-o-photo')
@@ -58,12 +76,9 @@ class AdminPanelProvider extends PanelProvider
                 ->navigationCountBadge(false)
                 ->registerNavigation(true)
                 ->defaultListView('grid')
-                ->resource(\Awcodes\Curator\Resources\MediaResource::class)
+                ->resource(\Awcodes\Curator\Resources\MediaResource::class),
+            // \BezhanSalleh\FilamentGoogleAnalytics\FilamentGoogleAnalyticsPlugin::make()
         ];
-
-        if ($this->data['features']['analytics'] && $this->data['google_analytics_tag']) {
-            array_push($this->plugins, \BezhanSalleh\FilamentGoogleAnalytics\FilamentGoogleAnalyticsPlugin::make());
-        }
 
         return $panel
             ->default()
@@ -88,15 +103,15 @@ class AdminPanelProvider extends PanelProvider
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Dashboard::class,
+                DashboardPage::class,
                 GeneralSettingsPage::class,
             ])
             ->widgets([
-                OptimizeButton::class,
+                //
             ])
             ->navigationItems([
                 NavigationItem::make('Go to web')
-                    ->url('/', shouldOpenInNewTab: true)
+                    ->url('/home', shouldOpenInNewTab: true)
                     ->icon('heroicon-o-globe-alt')
                     ->sort(-1),
             ])

@@ -2,6 +2,8 @@
 
 namespace App\Filament\Forms;
 
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 
@@ -10,11 +12,22 @@ class AnalyticsFieldsForm
     public static function get(): array
     {
         return [
-            TextInput::make('google_analytics_tag')
-                ->placeholder('G-ANALYTICS')
-                ->helperText('Also configure your google analytics property id in environment setting.'),
-            // Textarea::make('posthog_html_snippet')
-            //     ->placeholder('<script src=\'https://app.posthog.com/123456789.js\'></script>'),
+            Grid::make()
+                ->schema([
+                    TextInput::make('google_analytics_tag')
+                        ->placeholder('G-ANALYTICS'),
+                    TextInput::make('google_property_id')
+                        ->disabled()
+                        ->default(env("ANALYTICS_PROPERTY_ID"))
+                        ->helperText('Configure this one at environment setting.'),
+                ])
+                ->columns(1)
+                ->columnSpan(['lg' => 1]),
+            FileUpload::make('service-account-credentials')
+                ->disk('analytics')
+                ->getUploadedFileNameForStorageUsing(fn () => 'service-account-credentials.json')
+                ->acceptedFileTypes(['application/json'])
+                ->columnSpan(['lg' => 2]),
         ];
     }
 }

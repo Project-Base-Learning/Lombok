@@ -72,31 +72,35 @@ class PageResource extends Resource
         return $table
             ->reorderable('sort_order')
             ->defaultSortOptionLabel('sort_order')
+            ->groups([
+                'editor.name'
+            ])
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('editor.name')
+                    ->label('Last edited by')
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('creator.name')
-                    ->label('Created by')
-                    ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('editor.name')
-                    ->label('Last edited by')
-                    ->searchable()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([

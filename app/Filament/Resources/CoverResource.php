@@ -43,6 +43,7 @@ class CoverResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('image_path'),
                 Tables\Columns\TextColumn::make('alt')
+                    ->sortable()
                     ->searchable(),
             ])
             ->filters([

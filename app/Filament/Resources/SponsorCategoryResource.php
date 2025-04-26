@@ -38,12 +38,16 @@ class SponsorCategoryResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->reorderable('sort_order')
+            ->defaultSortOptionLabel('sort_order')
             ->columns([
                 Tables\Columns\TextColumn::make('category_name')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('sort_order')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
             ])
             ->filters([
                 //

@@ -111,8 +111,10 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('category_name')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('layout_detail_path')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\IconColumn::make('default')
                     ->boolean(),
