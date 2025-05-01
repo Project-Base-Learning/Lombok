@@ -7,20 +7,16 @@ use App\Filament\Forms\ApplicationFieldsForm;
 use App\Filament\Forms\EmailFieldsForm;
 use App\Filament\Forms\SocialNetworkFieldsForm;
 use App\Filament\Forms\TemplateFieldsForm;
-use App\Helpers\EmailDataHelper;
 use App\Models\GeneralSetting;
 use Filament\Actions;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
-use App\Services\MailSettingsService;
 use BezhanSalleh\FilamentShield\Traits\HasPageShield;
-
 class GeneralSettingsPage extends Page
 {
     use HasPageShield;
@@ -43,10 +39,6 @@ class GeneralSettingsPage extends Page
     {
         $this->data = GeneralSetting::first()?->toArray() ?: [];
 
-        // $this->data['seo_description'] = $this->data['seo_description'] ?? '';
-        // $this->data['seo_preview'] = $this->data['seo_preview'] ?? '';
-        // $this->data['theme_color'] = $this->data['theme_color'] ?? '';
-        // $this->data['seo_metadata'] = $this->data['seo_metadata'] ?? [];
         // $this->data = EmailDataHelper::getEmailConfigFromDatabase($this->data);
 
         if (isset($this->data['site_logo']) && is_string($this->data['site_logo'])) {
@@ -82,7 +74,8 @@ class GeneralSettingsPage extends Page
         $arrTabs[] = Tabs\Tab::make('Email')
             ->icon('heroicon-o-envelope')
             ->schema(EmailFieldsForm::get())
-            ->columns(3);
+            ->columns(3)
+            ->statePath('email_settings');
 
         $arrTabs[] = Tabs\Tab::make('Social Network')
             ->icon('heroicon-o-heart')
@@ -124,51 +117,21 @@ class GeneralSettingsPage extends Page
     public function update(): void
     {
         $data = $this->form->getState();
-        $data = EmailDataHelper::setEmailConfigToDatabase($data);
-        $data = $this->clearVariables($data);
+        unset($data['mail_to']);
 
         GeneralSetting::updateOrCreate([], $data);
-        Cache::forget('general_settings');
 
         $this->successNotification('Settings saved');
         redirect(request()?->header('Referer'));
     }
 
-    private function clearVariables(array $data): array
-    {
-        unset(
-            $data['seo_preview'],
-            $data['seo_description'],
-            $data['default_email_provider'],
-            $data['smtp_host'],
-            $data['smtp_port'],
-            $data['smtp_encryption'],
-            $data['smtp_timeout'],
-            $data['smtp_username'],
-            $data['smtp_password'],
-            $data['mailgun_domain'],
-            $data['mailgun_secret'],
-            $data['mailgun_endpoint'],
-            $data['postmark_token'],
-            $data['amazon_ses_key'],
-            $data['amazon_ses_secret'],
-            $data['amazon_ses_region'],
-            $data['mail_to'],
-        );
-
-        return $data;
-    }
-
-    public function sendTestMail(MailSettingsService $mailSettingsService): void
+    public function sendTestMail(): void
     {
         $data = $this->form->getState();
-        $email = $data['mail_to'];
-
-        $settings = $mailSettingsService->loadToConfig($data);
+        $email = $data['email_settings']['mail_to'];
 
         try {
-            Mail::mailer($settings['default_email_provider'])
-                ->to($email)
+            Mail::to($email)
                 ->send(new TestMail([
                     'subject' => 'This is a test email to verify SMTP settings',
                     'body' => 'This is for testing email using smtp.',

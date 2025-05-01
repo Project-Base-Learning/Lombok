@@ -72,7 +72,6 @@ class SponsorCategoryResource extends Resource
 
     public static function canAccess(): bool
     {
-        $data = GeneralSetting::first()?->toArray() ?: [];
-        return $data['features']['sponsors'];
+        return config('general-settings.features.sponsors', false);
     }
 }

@@ -7,14 +7,12 @@ use App\Filament\Pages\Auth\EditProfile;
 use App\Filament\Pages\DashboardPage;
 use App\Filament\Pages\EnvEditor\EnvEditorPage;
 use App\Filament\Pages\GeneralSettings\GeneralSettingsPage;
-use App\Filament\Widgets\OptimizeClearWidget;
 use App\Models\GeneralSetting;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Navigation\MenuItem;
 use Filament\Navigation\NavigationItem;
-use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Assets\Css;
@@ -43,7 +41,7 @@ class AdminPanelProvider extends PanelProvider
 
     public function panel(Panel $panel): Panel
     {
-        $this->data = GeneralSetting::first()?->toArray() ?: [];
+        $this->data = config('general-settings') ?: [];
 
         $this->plugins = [
             \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
@@ -67,7 +65,13 @@ class AdminPanelProvider extends PanelProvider
                 ->navigationLabel('Environment')
                 ->navigationIcon('heroicon-o-command-line')
                 ->navigationSort(2)
-                ->viewPage(EnvEditorPage::class),
+                ->viewPage(EnvEditorPage::class)
+                ->hideKeys(
+                    'APP_MAINTENANCE_DRIVER',
+                    '# APP_MAINTENANCE_STORE',
+                    'PHP_CLI_SERVER_WORKERS',
+                    'BCRYPT_ROUNDS'
+                ),
             \Awcodes\Curator\CuratorPlugin::make()
                 ->label('Media')
                 ->navigationIcon('heroicon-o-photo')
@@ -77,7 +81,6 @@ class AdminPanelProvider extends PanelProvider
                 ->registerNavigation(true)
                 ->defaultListView('grid')
                 ->resource(\Awcodes\Curator\Resources\MediaResource::class),
-            // \BezhanSalleh\FilamentGoogleAnalytics\FilamentGoogleAnalyticsPlugin::make()
         ];
 
         return $panel

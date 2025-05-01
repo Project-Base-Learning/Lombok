@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
+use App\Traits\Cacheable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
 
 class GeneralSetting extends Model
