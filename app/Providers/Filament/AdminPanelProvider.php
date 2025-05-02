@@ -7,7 +7,6 @@ use App\Filament\Pages\Auth\EditProfile;
 use App\Filament\Pages\DashboardPage;
 use App\Filament\Pages\EnvEditor\EnvEditorPage;
 use App\Filament\Pages\GeneralSettings\GeneralSettingsPage;
-use App\Models\GeneralSetting;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;

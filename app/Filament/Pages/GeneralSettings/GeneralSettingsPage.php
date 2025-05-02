@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 use BezhanSalleh\FilamentShield\Traits\HasPageShield;
+use Filament\Support\Colors\Color;
+
 class GeneralSettingsPage extends Page
 {
     use HasPageShield;
@@ -39,8 +41,6 @@ class GeneralSettingsPage extends Page
     {
         $this->data = GeneralSetting::first()?->toArray() ?: [];
 
-        // $this->data = EmailDataHelper::getEmailConfigFromDatabase($this->data);
-
         if (isset($this->data['site_logo']) && is_string($this->data['site_logo'])) {
             $this->data['site_logo'] = [
                 'name' => $this->data['site_logo'],
@@ -57,6 +57,12 @@ class GeneralSettingsPage extends Page
             $this->data['google_analytics']['service-account-credentials'] = [
                 'name' => $this->data['google_analytics']['service-account-credentials'],
             ];
+        }
+
+        if ($this->data['theme']) {
+            foreach ($this->data['theme'] as $key => $value) {
+                $this->data['theme'][$key] = $value[500] ? 'rgb('.$value[500].')' : null;
+            }
         }
 
         $this->form->fill($this->data);
@@ -118,6 +124,10 @@ class GeneralSettingsPage extends Page
     {
         $data = $this->form->getState();
         unset($data['mail_to']);
+
+        foreach ($data['theme'] as $key => $value) {
+            $data['theme'][$key] = $value ? Color::rgb($value) : null;
+        }
 
         GeneralSetting::updateOrCreate([], $data);
 

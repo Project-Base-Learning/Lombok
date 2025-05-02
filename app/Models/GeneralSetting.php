@@ -20,10 +20,9 @@ class GeneralSetting extends Model
         'features',
         'user_features',
         'google_analytics',
-        'social_network',
+        'theme',
         'email_settings',
-        'email_from_name',
-        'email_from_address',
+        'social_network',
         'more_configs',
     ];
 
@@ -33,6 +32,7 @@ class GeneralSetting extends Model
         'features' => 'array',
         'user_features' => 'array',
         'google_analytics' => 'array',
+        'theme' => 'array',
         'email_settings' => 'array',
         'social_network' => 'array',
         'more_configs' => 'array',

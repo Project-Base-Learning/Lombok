@@ -5,17 +5,17 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
     content: [
-        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
-        "./vendor/filament/**/*.blade.php",
-        "./vendor/awcodes/filament-tiptap-editor/resources/**/*.blade.php",
-        "./vendor/awcodes/filament-curator/resources/**/*.blade.php",
-        "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
         "./resources/views/layouts/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
         "./resources/**/*.blade.php",
         "./resources/**/*.{js,vue}",
+        "./storage/framework/views/*.php",
+        "./vendor/awcodes/filament-tiptap-editor/resources/**/*.blade.php",
+        "./vendor/awcodes/filament-curator/resources/**/*.blade.php",
+        "./vendor/filament/**/*.blade.php",
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
     ],
     theme: {
         extend: {

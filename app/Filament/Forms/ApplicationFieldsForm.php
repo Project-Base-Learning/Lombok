@@ -10,7 +10,6 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-use Filament\Forms\Set;
 
 class ApplicationFieldsForm
 {
@@ -69,6 +68,19 @@ class ApplicationFieldsForm
                                 ->prefixIcon('heroicon-o-device-phone-mobile'),
                         ])
                         ->statePath('contacts'),
+                    Section::make('Theme')
+                        ->schema([
+                            ColorPicker::make('primary')
+                                ->rgb()
+                                ->regex('/^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/'),
+                            ColorPicker::make('secondary')
+                                ->rgb()
+                                ->regex('/^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/'),
+                            ColorPicker::make('tertiary')
+                                ->rgb()
+                                ->regex('/^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/'),
+                        ])
+                        ->statePath('theme'),
                     Section::make('Features')
                         ->description('Features you want to have.')
                         ->schema([
