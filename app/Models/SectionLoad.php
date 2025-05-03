@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class PatternLoad extends Model
+class SectionLoad extends Model
 {
-    protected $table = 'pattern_loads';
+    protected $table = 'section_loads';
     public $timestamps = false;
 
     protected $fillable = [

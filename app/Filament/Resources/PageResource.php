@@ -52,11 +52,11 @@ class PageResource extends Resource
                             ->label('Sections')
                             ->orderColumn('sort_order')
                             ->schema([
-                                Forms\Components\Select::make('pattern_id')
+                                Forms\Components\Select::make('section_id')
                                     ->required()
                                     ->searchable()
                                     ->preload()
-                                    ->relationship('pattern', 'title'),
+                                    ->relationship('section', 'title'),
                             ])
                             ->columnSpan('full')
                             ->addActionLabel('Add Another')

@@ -2,7 +2,7 @@
 
 namespace App\Filament\Forms;
 
-use App\Models\Pattern;
+use App\Models\Section;
 use Filament\Forms\Components\Select;
 
 class TemplateFieldsForm
@@ -11,9 +11,9 @@ class TemplateFieldsForm
     {
         return [
             Select::make('navigation')
-                ->options(Pattern::whereHas('type', fn ($query) => $query->where('type', 'Navigation'))->pluck('title', 'id')->toArray()),
+                ->options(Section::whereHas('type', fn ($query) => $query->where('type', 'Navigation'))->pluck('title', 'id')->toArray()),
             Select::make('footer')
-                ->options(Pattern::whereHas('type', fn ($query) => $query->where('type', 'Footer'))->pluck('title', 'id')->toArray()),
+                ->options(Section::whereHas('type', fn ($query) => $query->where('type', 'Footer'))->pluck('title', 'id')->toArray()),
         ];
     }
 }

@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class PatternType extends Model
+class SectionType extends Model
 {
-    protected $table = 'pattern_types';
+    protected $table = 'section_types';
     public $timestamps = false;
 
     protected $fillable = [
         'type',
     ];
 
-    public function patterns() : HasMany
+    public function sections() : HasMany
     {
-        return $this->hasMany(Pattern::class, 'type_id');
+        return $this->hasMany(Section::class, 'type_id');
     }
 }

@@ -19,6 +19,18 @@ return [
         'fqcn' => 'App\\Models\\User',
     ],
 
+    'super_admin' => [
+        'enabled' => false,
+        'name' => 'super_admin',
+        'define_via_gate' => false,
+        'intercept_gate' => 'before', // after
+    ],
+
+    'panel_user' => [
+        'enabled' => false,
+        'name' => 'panel_user',
+    ],
+
     'permission_prefixes' => [
         'resource' => [
             'view',

@@ -2,7 +2,6 @@
 
 namespace App\Filament\Forms;
 
-use App\Models\Pattern;
 use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Section;

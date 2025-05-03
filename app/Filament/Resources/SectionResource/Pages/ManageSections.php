@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\PatternResource\Pages;
+namespace App\Filament\Resources\SectionResource\Pages;
 
-use App\Filament\Resources\PatternResource;
+use App\Filament\Resources\SectionResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 
-class ManagePatterns extends ManageRecords
+class ManageSections extends ManageRecords
 {
-    protected static string $resource = PatternResource::class;
+    protected static string $resource = SectionResource::class;
 
     protected function getHeaderActions(): array
     {

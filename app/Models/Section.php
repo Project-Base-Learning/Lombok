@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
 
-class Pattern extends Model
+class Section extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'patterns';
+    protected $table = 'sections';
 
     protected $fillable = [
         'title',
@@ -32,12 +32,12 @@ class Pattern extends Model
 
     public function type() : BelongsTo
     {
-        return $this->belongsTo(PatternType::class, 'type_id');
+        return $this->belongsTo(SectionType::class, 'type_id');
     }
 
     public function dataset() : HasOne
     {
-        return $this->hasOne(PatternLoad::class, 'pattern_id');
+        return $this->hasOne(SectionLoad::class, 'section_id');
     }
 
     protected static function booted()

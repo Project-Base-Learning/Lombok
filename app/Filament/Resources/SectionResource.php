@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PatternResource\Pages;
-use App\Models\Pattern;
+use App\Filament\Resources\SectionResource\Pages;
+use App\Models\Section;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,9 +12,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PatternResource extends Resource
+class SectionResource extends Resource
 {
-    protected static ?string $model = Pattern::class;
+    protected static ?string $model = Section::class;
 
     protected static ?string $navigationGroup = 'Settings';
     protected static ?int $navigationSort  = 4;
@@ -57,11 +57,11 @@ class PatternResource extends Resource
                         Forms\Components\TextInput::make('name_variable')
                             ->label('Name Variable')
                             ->required()
-                            ->unique('pattern_loads', 'name_variable', ignoreRecord: true),
+                            ->unique('Section_loads', 'name_variable', ignoreRecord: true),
                         Forms\Components\Select::make('dataset_id')
                             ->required()
                             ->live()
-                            ->relationship('tag', 'tag'),
+                            ->relationship('category', 'category_name'),
                         Forms\Components\TextInput::make('order_col')
                             ->label('Order Column')
                             ->default('published_at'),
@@ -145,7 +145,7 @@ class PatternResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManagePatterns::route('/'),
+            'index' => Pages\ManageSections::route('/'),
         ];
     }
 
