@@ -12,19 +12,19 @@ abstract class Controller
     {
         // Web Data
         $data = GeneralSetting::first()?->toArray() ?: [];
-        if (!empty($data['more_configs']['navigation'])) {
-            $data['more_configs']['navigation'] = Section::where('id', $data['more_configs']['navigation'])->first();
-        }
-        if (!empty($data['more_configs']['footer'])) {
-            $data['more_configs']['footer'] = Section::where('id', $data['more_configs']['footer'])->first();
-        }
-        // Navigation & Page
-        $data['navigation'] = Page::whereNotNull('published_at')->get();
-        foreach ($data['navigation'] as $page) {
-            if ($page->slug == $slug) {
-                $data['page'] = $page;
-            }
-        }
+        // if (!empty($data['more_configs']['navigation'])) {
+        //     $data['more_configs']['navigation'] = Section::where('id', $data['more_configs']['navigation'])->first();
+        // }
+        // if (!empty($data['more_configs']['footer'])) {
+        //     $data['more_configs']['footer'] = Section::where('id', $data['more_configs']['footer'])->first();
+        // }
+        // // Navigation & Page
+        // $data['navigation'] = Page::whereNotNull('published_at')->get();
+        // foreach ($data['navigation'] as $page) {
+        //     if ($page->slug == $slug) {
+        //         $data['page'] = $page;
+        //     }
+        // }
         return $data;
     }
 }

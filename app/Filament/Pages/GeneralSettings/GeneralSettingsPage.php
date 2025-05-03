@@ -6,8 +6,8 @@ use App\Filament\Forms\AnalyticsFieldsForm;
 use App\Filament\Forms\ApplicationFieldsForm;
 use App\Filament\Forms\ChatbotFieldsForm;
 use App\Filament\Forms\EmailFieldsForm;
+use App\Filament\Forms\NavigationFieldsForm;
 use App\Filament\Forms\SocialNetworkFieldsForm;
-use App\Filament\Forms\TemplateFieldsForm;
 use App\Models\GeneralSetting;
 use Filament\Actions;
 use Filament\Forms\Components\Tabs;
@@ -90,6 +90,12 @@ class GeneralSettingsPage extends Page
             ->columns(2)
             ->statePath('social_network');
 
+        $arrTabs[] = Tabs\Tab::make('Navigation')
+            ->icon('heroicon-o-list-bullet')
+            ->schema(NavigationFieldsForm::get())
+            ->columns(['lg' => 3])
+            ->statePath('navigation');
+
         if (!empty($this->data['features']['analytics'])) {
             $arrTabs[] = Tabs\Tab::make('Analytics')
                 ->icon('heroicon-o-globe-alt')
@@ -97,12 +103,6 @@ class GeneralSettingsPage extends Page
                 ->columns(['lg' => 3])
                 ->statePath('google_analytics');
         }
-
-        $arrTabs[] = Tabs\Tab::make('Template')
-            ->icon('heroicon-o-rectangle-group')
-            ->schema(TemplateFieldsForm::get())
-            ->columns(2)
-            ->statePath('more_configs');
 
         if (!empty($this->data['user_features']['chatbot'])) {
             $arrTabs[] = Tabs\Tab::make('Chatbot')

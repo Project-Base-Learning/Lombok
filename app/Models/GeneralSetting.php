@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Traits\Cacheable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
@@ -17,27 +16,27 @@ class GeneralSetting extends Model
         'site_favicon',
         'location',
         'contacts',
-        'features',
-        'user_features',
-        'google_analytics',
-        'chatbot_settings',
         'theme',
         'email_settings',
         'social_network',
-        'more_configs',
+        'navigation',
+        'features',
+        'google_analytics',
+        'user_features',
+        'chatbot_settings',
     ];
 
     protected $casts = [
         'location' => 'array',
         'contacts' => 'array',
-        'features' => 'array',
-        'user_features' => 'array',
-        'google_analytics' => 'array',
-        'chatbot_settings' => 'array',
         'theme' => 'array',
         'email_settings' => 'array',
         'social_network' => 'array',
-        'more_configs' => 'array',
+        'navigation' => 'array',
+        'features' => 'array',
+        'google_analytics' => 'array',
+        'user_features' => 'array',
+        'chatbot_settings' => 'array',
     ];
 
     protected static function booted()

@@ -63,24 +63,19 @@ class PageResource extends Resource
                             ->columns(1),
                     ])
                     ->columns(1)
-                    ->columnSpan(['lg' => 1]),
-            ]);
+                    ->columnSpan(['lg' => 2]),
+            ])
+            ->columns(['lg' => 3]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-            ->reorderable('sort_order')
-            ->defaultSortOptionLabel('sort_order')
             ->groups([
                 'editor.name'
             ])
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->sortable()
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('published_at')
-                    ->dateTime()
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('editor.name')
@@ -108,30 +103,6 @@ class PageResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\Action::make('publish')
-                    ->label('Publish')
-                    ->action(function ($record) {
-                        $record->update([
-                            'published_at' => now(),
-                        ]);
-                        Notification::make()
-                            ->title('Published')
-                            ->success()
-                            ->send();
-                    })
-                    ->visible(fn ($record) => empty($record->published_at)),
-                Tables\Actions\Action::make('unpublish')
-                    ->label('Unpublish')
-                    ->action(function ($record) {
-                        $record->update([
-                            'published_at' => null,
-                        ]);
-                        Notification::make()
-                            ->title('Unpublished')
-                            ->success()
-                            ->send();
-                    })
-                    ->visible(fn ($record) => $record->published_at),
                 Tables\Actions\DeleteAction::make(),
                 Tables\Actions\ForceDeleteAction::make(),
                 Tables\Actions\RestoreAction::make(),

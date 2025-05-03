@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 03, 2025 at 03:17 AM
+-- Generation Time: May 03, 2025 at 09:28 AM
 -- Server version: 5.7.33
 -- PHP Version: 8.3.19
 
@@ -94,9 +94,7 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36', 'i:1;', 1746240617),
-('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36:timer', 'i:1746240617;', 1746240617),
-('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:131:{i:0;a:4:{s:1:\"a\";i:129;s:1:\"b\";s:12:\"view_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:1;a:4:{s:1:\"a\";i:130;s:1:\"b\";s:16:\"view_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:2;a:4:{s:1:\"a\";i:131;s:1:\"b\";s:14:\"create_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:3;a:4:{s:1:\"a\";i:132;s:1:\"b\";s:14:\"update_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:4;a:4:{s:1:\"a\";i:133;s:1:\"b\";s:15:\"restore_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:5;a:4:{s:1:\"a\";i:134;s:1:\"b\";s:19:\"restore_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:6;a:4:{s:1:\"a\";i:135;s:1:\"b\";s:17:\"replicate_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:7;a:4:{s:1:\"a\";i:136;s:1:\"b\";s:15:\"reorder_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:8;a:4:{s:1:\"a\";i:137;s:1:\"b\";s:14:\"delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:9;a:4:{s:1:\"a\";i:138;s:1:\"b\";s:18:\"delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:10;a:4:{s:1:\"a\";i:139;s:1:\"b\";s:20:\"force_delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:11;a:4:{s:1:\"a\";i:140;s:1:\"b\";s:24:\"force_delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:12;a:4:{s:1:\"a\";i:141;s:1:\"b\";s:13:\"view_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:13;a:4:{s:1:\"a\";i:142;s:1:\"b\";s:17:\"view_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:14;a:4:{s:1:\"a\";i:143;s:1:\"b\";s:15:\"create_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:15;a:4:{s:1:\"a\";i:144;s:1:\"b\";s:15:\"update_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:16;a:4:{s:1:\"a\";i:145;s:1:\"b\";s:16:\"restore_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:17;a:4:{s:1:\"a\";i:146;s:1:\"b\";s:20:\"restore_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:18;a:4:{s:1:\"a\";i:147;s:1:\"b\";s:18:\"replicate_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:19;a:4:{s:1:\"a\";i:148;s:1:\"b\";s:16:\"reorder_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:20;a:4:{s:1:\"a\";i:149;s:1:\"b\";s:15:\"delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:21;a:4:{s:1:\"a\";i:150;s:1:\"b\";s:19:\"delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:22;a:4:{s:1:\"a\";i:151;s:1:\"b\";s:21:\"force_delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:23;a:4:{s:1:\"a\";i:152;s:1:\"b\";s:25:\"force_delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:24;a:4:{s:1:\"a\";i:153;s:1:\"b\";s:10:\"view_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:25;a:4:{s:1:\"a\";i:154;s:1:\"b\";s:14:\"view_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:26;a:4:{s:1:\"a\";i:155;s:1:\"b\";s:12:\"create_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:27;a:4:{s:1:\"a\";i:156;s:1:\"b\";s:12:\"update_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:28;a:4:{s:1:\"a\";i:157;s:1:\"b\";s:13:\"restore_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:29;a:4:{s:1:\"a\";i:158;s:1:\"b\";s:17:\"restore_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:30;a:4:{s:1:\"a\";i:159;s:1:\"b\";s:15:\"replicate_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:31;a:4:{s:1:\"a\";i:160;s:1:\"b\";s:13:\"reorder_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:32;a:4:{s:1:\"a\";i:161;s:1:\"b\";s:12:\"delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:33;a:4:{s:1:\"a\";i:162;s:1:\"b\";s:16:\"delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:34;a:4:{s:1:\"a\";i:163;s:1:\"b\";s:18:\"force_delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:35;a:4:{s:1:\"a\";i:164;s:1:\"b\";s:22:\"force_delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:36;a:4:{s:1:\"a\";i:165;s:1:\"b\";s:10:\"view_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:37;a:4:{s:1:\"a\";i:166;s:1:\"b\";s:14:\"view_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:38;a:4:{s:1:\"a\";i:167;s:1:\"b\";s:12:\"create_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:39;a:4:{s:1:\"a\";i:168;s:1:\"b\";s:12:\"update_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:40;a:4:{s:1:\"a\";i:169;s:1:\"b\";s:13:\"restore_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:41;a:4:{s:1:\"a\";i:170;s:1:\"b\";s:17:\"restore_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:42;a:4:{s:1:\"a\";i:171;s:1:\"b\";s:15:\"replicate_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:43;a:4:{s:1:\"a\";i:172;s:1:\"b\";s:13:\"reorder_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:44;a:4:{s:1:\"a\";i:173;s:1:\"b\";s:12:\"delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:45;a:4:{s:1:\"a\";i:174;s:1:\"b\";s:16:\"delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:46;a:4:{s:1:\"a\";i:175;s:1:\"b\";s:18:\"force_delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:47;a:4:{s:1:\"a\";i:176;s:1:\"b\";s:22:\"force_delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:48;a:4:{s:1:\"a\";i:177;s:1:\"b\";s:9:\"view_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:49;a:4:{s:1:\"a\";i:178;s:1:\"b\";s:13:\"view_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:50;a:4:{s:1:\"a\";i:179;s:1:\"b\";s:11:\"create_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:51;a:4:{s:1:\"a\";i:180;s:1:\"b\";s:11:\"update_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:52;a:4:{s:1:\"a\";i:181;s:1:\"b\";s:12:\"restore_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:53;a:4:{s:1:\"a\";i:182;s:1:\"b\";s:16:\"restore_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:54;a:4:{s:1:\"a\";i:183;s:1:\"b\";s:14:\"replicate_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:55;a:4:{s:1:\"a\";i:184;s:1:\"b\";s:12:\"reorder_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:56;a:4:{s:1:\"a\";i:185;s:1:\"b\";s:11:\"delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:57;a:4:{s:1:\"a\";i:186;s:1:\"b\";s:15:\"delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:58;a:4:{s:1:\"a\";i:187;s:1:\"b\";s:17:\"force_delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:59;a:4:{s:1:\"a\";i:188;s:1:\"b\";s:21:\"force_delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:60;a:4:{s:1:\"a\";i:189;s:1:\"b\";s:12:\"view_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:61;a:4:{s:1:\"a\";i:190;s:1:\"b\";s:16:\"view_any_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:62;a:4:{s:1:\"a\";i:191;s:1:\"b\";s:14:\"create_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:63;a:4:{s:1:\"a\";i:192;s:1:\"b\";s:14:\"update_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:64;a:4:{s:1:\"a\";i:193;s:1:\"b\";s:15:\"restore_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:65;a:4:{s:1:\"a\";i:194;s:1:\"b\";s:19:\"restore_any_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:66;a:4:{s:1:\"a\";i:195;s:1:\"b\";s:17:\"replicate_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:67;a:4:{s:1:\"a\";i:196;s:1:\"b\";s:15:\"reorder_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:68;a:4:{s:1:\"a\";i:197;s:1:\"b\";s:14:\"delete_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:69;a:4:{s:1:\"a\";i:198;s:1:\"b\";s:18:\"delete_any_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:70;a:4:{s:1:\"a\";i:199;s:1:\"b\";s:20:\"force_delete_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:71;a:4:{s:1:\"a\";i:200;s:1:\"b\";s:24:\"force_delete_any_pattern\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:72;a:4:{s:1:\"a\";i:201;s:1:\"b\";s:9:\"view_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:73;a:4:{s:1:\"a\";i:202;s:1:\"b\";s:13:\"view_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:74;a:4:{s:1:\"a\";i:203;s:1:\"b\";s:11:\"create_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:75;a:4:{s:1:\"a\";i:204;s:1:\"b\";s:11:\"update_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:76;a:4:{s:1:\"a\";i:205;s:1:\"b\";s:11:\"delete_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:77;a:4:{s:1:\"a\";i:206;s:1:\"b\";s:15:\"delete_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:78;a:4:{s:1:\"a\";i:207;s:1:\"b\";s:12:\"view_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:79;a:4:{s:1:\"a\";i:208;s:1:\"b\";s:16:\"view_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:80;a:4:{s:1:\"a\";i:209;s:1:\"b\";s:14:\"create_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:81;a:4:{s:1:\"a\";i:210;s:1:\"b\";s:14:\"update_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:82;a:4:{s:1:\"a\";i:211;s:1:\"b\";s:15:\"restore_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:83;a:4:{s:1:\"a\";i:212;s:1:\"b\";s:19:\"restore_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:84;a:4:{s:1:\"a\";i:213;s:1:\"b\";s:17:\"replicate_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:85;a:4:{s:1:\"a\";i:214;s:1:\"b\";s:15:\"reorder_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:86;a:4:{s:1:\"a\";i:215;s:1:\"b\";s:14:\"delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:87;a:4:{s:1:\"a\";i:216;s:1:\"b\";s:18:\"delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:88;a:4:{s:1:\"a\";i:217;s:1:\"b\";s:20:\"force_delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:89;a:4:{s:1:\"a\";i:218;s:1:\"b\";s:24:\"force_delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:90;a:4:{s:1:\"a\";i:219;s:1:\"b\";s:22:\"view_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:91;a:4:{s:1:\"a\";i:220;s:1:\"b\";s:26:\"view_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:92;a:4:{s:1:\"a\";i:221;s:1:\"b\";s:24:\"create_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:93;a:4:{s:1:\"a\";i:222;s:1:\"b\";s:24:\"update_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:94;a:4:{s:1:\"a\";i:223;s:1:\"b\";s:25:\"restore_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:95;a:4:{s:1:\"a\";i:224;s:1:\"b\";s:29:\"restore_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:96;a:4:{s:1:\"a\";i:225;s:1:\"b\";s:27:\"replicate_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:97;a:4:{s:1:\"a\";i:226;s:1:\"b\";s:25:\"reorder_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:98;a:4:{s:1:\"a\";i:227;s:1:\"b\";s:24:\"delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:99;a:4:{s:1:\"a\";i:228;s:1:\"b\";s:28:\"delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:100;a:4:{s:1:\"a\";i:229;s:1:\"b\";s:30:\"force_delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:101;a:4:{s:1:\"a\";i:230;s:1:\"b\";s:34:\"force_delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:6;}}i:102;a:4:{s:1:\"a\";i:231;s:1:\"b\";s:8:\"view_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:103;a:4:{s:1:\"a\";i:232;s:1:\"b\";s:12:\"view_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:104;a:4:{s:1:\"a\";i:233;s:1:\"b\";s:10:\"create_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:105;a:4:{s:1:\"a\";i:234;s:1:\"b\";s:10:\"update_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:106;a:4:{s:1:\"a\";i:235;s:1:\"b\";s:11:\"restore_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:107;a:4:{s:1:\"a\";i:236;s:1:\"b\";s:15:\"restore_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:108;a:4:{s:1:\"a\";i:237;s:1:\"b\";s:13:\"replicate_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:109;a:4:{s:1:\"a\";i:238;s:1:\"b\";s:11:\"reorder_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:110;a:4:{s:1:\"a\";i:239;s:1:\"b\";s:10:\"delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:111;a:4:{s:1:\"a\";i:240;s:1:\"b\";s:14:\"delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:112;a:4:{s:1:\"a\";i:241;s:1:\"b\";s:16:\"force_delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:113;a:4:{s:1:\"a\";i:242;s:1:\"b\";s:20:\"force_delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:114;a:4:{s:1:\"a\";i:243;s:1:\"b\";s:9:\"view_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:115;a:4:{s:1:\"a\";i:244;s:1:\"b\";s:13:\"view_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:116;a:4:{s:1:\"a\";i:245;s:1:\"b\";s:11:\"create_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:117;a:4:{s:1:\"a\";i:246;s:1:\"b\";s:11:\"update_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:118;a:4:{s:1:\"a\";i:247;s:1:\"b\";s:12:\"restore_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:119;a:4:{s:1:\"a\";i:248;s:1:\"b\";s:16:\"restore_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:120;a:4:{s:1:\"a\";i:249;s:1:\"b\";s:14:\"replicate_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:121;a:4:{s:1:\"a\";i:250;s:1:\"b\";s:12:\"reorder_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:122;a:4:{s:1:\"a\";i:251;s:1:\"b\";s:11:\"delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:123;a:4:{s:1:\"a\";i:252;s:1:\"b\";s:15:\"delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:124;a:4:{s:1:\"a\";i:253;s:1:\"b\";s:17:\"force_delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:125;a:4:{s:1:\"a\";i:254;s:1:\"b\";s:21:\"force_delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:126;a:4:{s:1:\"a\";i:255;s:1:\"b\";s:24:\"page_GeneralSettingsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:127;a:3:{s:1:\"a\";i:256;s:1:\"b\";s:12:\"page_ViewEnv\";s:1:\"c\";s:3:\"web\";}i:128;a:4:{s:1:\"a\";i:257;s:1:\"b\";s:21:\"widget_OptimizeButton\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:129;a:4:{s:1:\"a\";i:258;s:1:\"b\";s:18:\"page_EnvEditorPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}i:130;a:4:{s:1:\"a\";i:259;s:1:\"b\";s:24:\"page_GoogleAnalyticsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:6;}}}s:5:\"roles\";a:3:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:9:\"Developer\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:5:\"Admin\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:6;s:1:\"b\";s:11:\"super_admin\";s:1:\"c\";s:3:\"web\";}}}', 1746289510);
+('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:156:{i:0;a:4:{s:1:\"a\";i:129;s:1:\"b\";s:12:\"view_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:1;a:4:{s:1:\"a\";i:130;s:1:\"b\";s:16:\"view_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:2;a:4:{s:1:\"a\";i:131;s:1:\"b\";s:14:\"create_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:3;a:4:{s:1:\"a\";i:132;s:1:\"b\";s:14:\"update_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:4;a:4:{s:1:\"a\";i:133;s:1:\"b\";s:15:\"restore_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:5;a:4:{s:1:\"a\";i:134;s:1:\"b\";s:19:\"restore_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:6;a:4:{s:1:\"a\";i:135;s:1:\"b\";s:17:\"replicate_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:7;a:4:{s:1:\"a\";i:136;s:1:\"b\";s:15:\"reorder_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:8;a:4:{s:1:\"a\";i:137;s:1:\"b\";s:14:\"delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:9;a:4:{s:1:\"a\";i:138;s:1:\"b\";s:18:\"delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:10;a:4:{s:1:\"a\";i:139;s:1:\"b\";s:20:\"force_delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:11;a:4:{s:1:\"a\";i:140;s:1:\"b\";s:24:\"force_delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:12;a:4:{s:1:\"a\";i:141;s:1:\"b\";s:13:\"view_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:13;a:4:{s:1:\"a\";i:142;s:1:\"b\";s:17:\"view_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:14;a:4:{s:1:\"a\";i:143;s:1:\"b\";s:15:\"create_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:15;a:4:{s:1:\"a\";i:144;s:1:\"b\";s:15:\"update_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:16;a:4:{s:1:\"a\";i:145;s:1:\"b\";s:16:\"restore_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:17;a:4:{s:1:\"a\";i:146;s:1:\"b\";s:20:\"restore_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:18;a:4:{s:1:\"a\";i:147;s:1:\"b\";s:18:\"replicate_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:19;a:4:{s:1:\"a\";i:148;s:1:\"b\";s:16:\"reorder_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:20;a:4:{s:1:\"a\";i:149;s:1:\"b\";s:15:\"delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:21;a:4:{s:1:\"a\";i:150;s:1:\"b\";s:19:\"delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:22;a:4:{s:1:\"a\";i:151;s:1:\"b\";s:21:\"force_delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:23;a:4:{s:1:\"a\";i:152;s:1:\"b\";s:25:\"force_delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:24;a:4:{s:1:\"a\";i:153;s:1:\"b\";s:10:\"view_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:25;a:4:{s:1:\"a\";i:154;s:1:\"b\";s:14:\"view_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:26;a:4:{s:1:\"a\";i:155;s:1:\"b\";s:12:\"create_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:27;a:4:{s:1:\"a\";i:156;s:1:\"b\";s:12:\"update_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:28;a:4:{s:1:\"a\";i:157;s:1:\"b\";s:13:\"restore_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:29;a:4:{s:1:\"a\";i:158;s:1:\"b\";s:17:\"restore_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:30;a:4:{s:1:\"a\";i:159;s:1:\"b\";s:15:\"replicate_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:31;a:4:{s:1:\"a\";i:160;s:1:\"b\";s:13:\"reorder_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:32;a:4:{s:1:\"a\";i:161;s:1:\"b\";s:12:\"delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:33;a:4:{s:1:\"a\";i:162;s:1:\"b\";s:16:\"delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:34;a:4:{s:1:\"a\";i:163;s:1:\"b\";s:18:\"force_delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:35;a:4:{s:1:\"a\";i:164;s:1:\"b\";s:22:\"force_delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:36;a:4:{s:1:\"a\";i:165;s:1:\"b\";s:10:\"view_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:37;a:4:{s:1:\"a\";i:166;s:1:\"b\";s:14:\"view_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:38;a:4:{s:1:\"a\";i:167;s:1:\"b\";s:12:\"create_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:39;a:4:{s:1:\"a\";i:168;s:1:\"b\";s:12:\"update_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:40;a:4:{s:1:\"a\";i:169;s:1:\"b\";s:13:\"restore_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:41;a:4:{s:1:\"a\";i:170;s:1:\"b\";s:17:\"restore_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:42;a:4:{s:1:\"a\";i:171;s:1:\"b\";s:15:\"replicate_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:43;a:4:{s:1:\"a\";i:172;s:1:\"b\";s:13:\"reorder_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:44;a:4:{s:1:\"a\";i:173;s:1:\"b\";s:12:\"delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:45;a:4:{s:1:\"a\";i:174;s:1:\"b\";s:16:\"delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:46;a:4:{s:1:\"a\";i:175;s:1:\"b\";s:18:\"force_delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:47;a:4:{s:1:\"a\";i:176;s:1:\"b\";s:22:\"force_delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:48;a:4:{s:1:\"a\";i:177;s:1:\"b\";s:9:\"view_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:49;a:4:{s:1:\"a\";i:178;s:1:\"b\";s:13:\"view_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:50;a:4:{s:1:\"a\";i:179;s:1:\"b\";s:11:\"create_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:51;a:4:{s:1:\"a\";i:180;s:1:\"b\";s:11:\"update_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:52;a:4:{s:1:\"a\";i:181;s:1:\"b\";s:12:\"restore_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:53;a:4:{s:1:\"a\";i:182;s:1:\"b\";s:16:\"restore_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:54;a:4:{s:1:\"a\";i:183;s:1:\"b\";s:14:\"replicate_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:55;a:4:{s:1:\"a\";i:184;s:1:\"b\";s:12:\"reorder_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:56;a:4:{s:1:\"a\";i:185;s:1:\"b\";s:11:\"delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:57;a:4:{s:1:\"a\";i:186;s:1:\"b\";s:15:\"delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:58;a:4:{s:1:\"a\";i:187;s:1:\"b\";s:17:\"force_delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:59;a:4:{s:1:\"a\";i:188;s:1:\"b\";s:21:\"force_delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:60;a:3:{s:1:\"a\";i:189;s:1:\"b\";s:12:\"view_pattern\";s:1:\"c\";s:3:\"web\";}i:61;a:3:{s:1:\"a\";i:190;s:1:\"b\";s:16:\"view_any_pattern\";s:1:\"c\";s:3:\"web\";}i:62;a:3:{s:1:\"a\";i:191;s:1:\"b\";s:14:\"create_pattern\";s:1:\"c\";s:3:\"web\";}i:63;a:3:{s:1:\"a\";i:192;s:1:\"b\";s:14:\"update_pattern\";s:1:\"c\";s:3:\"web\";}i:64;a:3:{s:1:\"a\";i:193;s:1:\"b\";s:15:\"restore_pattern\";s:1:\"c\";s:3:\"web\";}i:65;a:3:{s:1:\"a\";i:194;s:1:\"b\";s:19:\"restore_any_pattern\";s:1:\"c\";s:3:\"web\";}i:66;a:3:{s:1:\"a\";i:195;s:1:\"b\";s:17:\"replicate_pattern\";s:1:\"c\";s:3:\"web\";}i:67;a:3:{s:1:\"a\";i:196;s:1:\"b\";s:15:\"reorder_pattern\";s:1:\"c\";s:3:\"web\";}i:68;a:3:{s:1:\"a\";i:197;s:1:\"b\";s:14:\"delete_pattern\";s:1:\"c\";s:3:\"web\";}i:69;a:3:{s:1:\"a\";i:198;s:1:\"b\";s:18:\"delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:70;a:3:{s:1:\"a\";i:199;s:1:\"b\";s:20:\"force_delete_pattern\";s:1:\"c\";s:3:\"web\";}i:71;a:3:{s:1:\"a\";i:200;s:1:\"b\";s:24:\"force_delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:72;a:4:{s:1:\"a\";i:201;s:1:\"b\";s:9:\"view_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:73;a:4:{s:1:\"a\";i:202;s:1:\"b\";s:13:\"view_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:74;a:4:{s:1:\"a\";i:203;s:1:\"b\";s:11:\"create_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:75;a:4:{s:1:\"a\";i:204;s:1:\"b\";s:11:\"update_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:76;a:4:{s:1:\"a\";i:205;s:1:\"b\";s:11:\"delete_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:77;a:4:{s:1:\"a\";i:206;s:1:\"b\";s:15:\"delete_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:78;a:4:{s:1:\"a\";i:207;s:1:\"b\";s:12:\"view_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:79;a:4:{s:1:\"a\";i:208;s:1:\"b\";s:16:\"view_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:80;a:4:{s:1:\"a\";i:209;s:1:\"b\";s:14:\"create_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:81;a:4:{s:1:\"a\";i:210;s:1:\"b\";s:14:\"update_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:82;a:4:{s:1:\"a\";i:211;s:1:\"b\";s:15:\"restore_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:83;a:4:{s:1:\"a\";i:212;s:1:\"b\";s:19:\"restore_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:84;a:4:{s:1:\"a\";i:213;s:1:\"b\";s:17:\"replicate_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:85;a:4:{s:1:\"a\";i:214;s:1:\"b\";s:15:\"reorder_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:86;a:4:{s:1:\"a\";i:215;s:1:\"b\";s:14:\"delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:87;a:4:{s:1:\"a\";i:216;s:1:\"b\";s:18:\"delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:88;a:4:{s:1:\"a\";i:217;s:1:\"b\";s:20:\"force_delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:89;a:4:{s:1:\"a\";i:218;s:1:\"b\";s:24:\"force_delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:90;a:4:{s:1:\"a\";i:219;s:1:\"b\";s:22:\"view_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:91;a:4:{s:1:\"a\";i:220;s:1:\"b\";s:26:\"view_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:92;a:4:{s:1:\"a\";i:221;s:1:\"b\";s:24:\"create_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:93;a:4:{s:1:\"a\";i:222;s:1:\"b\";s:24:\"update_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:94;a:4:{s:1:\"a\";i:223;s:1:\"b\";s:25:\"restore_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:95;a:4:{s:1:\"a\";i:224;s:1:\"b\";s:29:\"restore_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:96;a:4:{s:1:\"a\";i:225;s:1:\"b\";s:27:\"replicate_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:97;a:4:{s:1:\"a\";i:226;s:1:\"b\";s:25:\"reorder_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:98;a:4:{s:1:\"a\";i:227;s:1:\"b\";s:24:\"delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:99;a:4:{s:1:\"a\";i:228;s:1:\"b\";s:28:\"delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:100;a:4:{s:1:\"a\";i:229;s:1:\"b\";s:30:\"force_delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:101;a:4:{s:1:\"a\";i:230;s:1:\"b\";s:34:\"force_delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:102;a:4:{s:1:\"a\";i:231;s:1:\"b\";s:8:\"view_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:103;a:4:{s:1:\"a\";i:232;s:1:\"b\";s:12:\"view_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:104;a:4:{s:1:\"a\";i:233;s:1:\"b\";s:10:\"create_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:105;a:4:{s:1:\"a\";i:234;s:1:\"b\";s:10:\"update_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:106;a:4:{s:1:\"a\";i:235;s:1:\"b\";s:11:\"restore_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:107;a:4:{s:1:\"a\";i:236;s:1:\"b\";s:15:\"restore_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:108;a:4:{s:1:\"a\";i:237;s:1:\"b\";s:13:\"replicate_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:109;a:4:{s:1:\"a\";i:238;s:1:\"b\";s:11:\"reorder_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:110;a:4:{s:1:\"a\";i:239;s:1:\"b\";s:10:\"delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:111;a:4:{s:1:\"a\";i:240;s:1:\"b\";s:14:\"delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:112;a:4:{s:1:\"a\";i:241;s:1:\"b\";s:16:\"force_delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:113;a:4:{s:1:\"a\";i:242;s:1:\"b\";s:20:\"force_delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:114;a:4:{s:1:\"a\";i:243;s:1:\"b\";s:9:\"view_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:115;a:4:{s:1:\"a\";i:244;s:1:\"b\";s:13:\"view_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:116;a:4:{s:1:\"a\";i:245;s:1:\"b\";s:11:\"create_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:117;a:4:{s:1:\"a\";i:246;s:1:\"b\";s:11:\"update_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:118;a:4:{s:1:\"a\";i:247;s:1:\"b\";s:12:\"restore_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:119;a:4:{s:1:\"a\";i:248;s:1:\"b\";s:16:\"restore_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:120;a:4:{s:1:\"a\";i:249;s:1:\"b\";s:14:\"replicate_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:121;a:4:{s:1:\"a\";i:250;s:1:\"b\";s:12:\"reorder_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:122;a:4:{s:1:\"a\";i:251;s:1:\"b\";s:11:\"delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:123;a:4:{s:1:\"a\";i:252;s:1:\"b\";s:15:\"delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:124;a:4:{s:1:\"a\";i:253;s:1:\"b\";s:17:\"force_delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:125;a:4:{s:1:\"a\";i:254;s:1:\"b\";s:21:\"force_delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:126;a:4:{s:1:\"a\";i:255;s:1:\"b\";s:24:\"page_GeneralSettingsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:127;a:3:{s:1:\"a\";i:256;s:1:\"b\";s:12:\"page_ViewEnv\";s:1:\"c\";s:3:\"web\";}i:128;a:3:{s:1:\"a\";i:257;s:1:\"b\";s:21:\"widget_OptimizeButton\";s:1:\"c\";s:3:\"web\";}i:129;a:4:{s:1:\"a\";i:258;s:1:\"b\";s:18:\"page_EnvEditorPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:130;a:4:{s:1:\"a\";i:259;s:1:\"b\";s:24:\"page_GoogleAnalyticsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:131;a:4:{s:1:\"a\";i:260;s:1:\"b\";s:12:\"view_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:132;a:4:{s:1:\"a\";i:261;s:1:\"b\";s:16:\"view_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:133;a:4:{s:1:\"a\";i:262;s:1:\"b\";s:14:\"create_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:134;a:4:{s:1:\"a\";i:263;s:1:\"b\";s:14:\"update_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:135;a:4:{s:1:\"a\";i:264;s:1:\"b\";s:15:\"restore_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:136;a:4:{s:1:\"a\";i:265;s:1:\"b\";s:19:\"restore_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:137;a:4:{s:1:\"a\";i:266;s:1:\"b\";s:17:\"replicate_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:138;a:4:{s:1:\"a\";i:267;s:1:\"b\";s:15:\"reorder_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:139;a:4:{s:1:\"a\";i:268;s:1:\"b\";s:14:\"delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:140;a:4:{s:1:\"a\";i:269;s:1:\"b\";s:18:\"delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:141;a:4:{s:1:\"a\";i:270;s:1:\"b\";s:20:\"force_delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:142;a:4:{s:1:\"a\";i:271;s:1:\"b\";s:24:\"force_delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:143;a:4:{s:1:\"a\";i:272;s:1:\"b\";s:18:\"view_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:144;a:4:{s:1:\"a\";i:273;s:1:\"b\";s:22:\"view_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:145;a:4:{s:1:\"a\";i:274;s:1:\"b\";s:20:\"create_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:146;a:4:{s:1:\"a\";i:275;s:1:\"b\";s:20:\"update_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:147;a:4:{s:1:\"a\";i:276;s:1:\"b\";s:21:\"restore_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:148;a:4:{s:1:\"a\";i:277;s:1:\"b\";s:25:\"restore_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:149;a:4:{s:1:\"a\";i:278;s:1:\"b\";s:23:\"replicate_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:150;a:4:{s:1:\"a\";i:279;s:1:\"b\";s:21:\"reorder_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:151;a:4:{s:1:\"a\";i:280;s:1:\"b\";s:20:\"delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:152;a:4:{s:1:\"a\";i:281;s:1:\"b\";s:24:\"delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:153;a:4:{s:1:\"a\";i:282;s:1:\"b\";s:26:\"force_delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:154;a:4:{s:1:\"a\";i:283;s:1:\"b\";s:30:\"force_delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:155;a:4:{s:1:\"a\";i:284;s:1:\"b\";s:18:\"page_DashboardPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}}s:5:\"roles\";a:3:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:9:\"Developer\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:5:\"Admin\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:7;s:1:\"b\";s:10:\"Superadmin\";s:1:\"c\";s:3:\"web\";}}}', 1746336896);
 
 -- --------------------------------------------------------
 
@@ -130,6 +128,21 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `category_name`, `default`, `fields`, `layout_detail_path`) VALUES
 (1, 'Test', 1, '[{\"name\": \"te\", \"rows\": null, \"type\": \"password\", \"field\": \"text\", \"label\": null, \"rules\": null, \"format\": null, \"options\": [], \"seconds\": false, \"required\": false, \"column_span\": 1, \"placeholder\": null}, {\"name\": \"st\", \"rows\": null, \"type\": null, \"field\": \"boolean\", \"label\": null, \"rules\": null, \"format\": null, \"options\": [], \"seconds\": false, \"required\": false, \"column_span\": 1, \"placeholder\": null}, {\"name\": \"test\", \"rows\": null, \"type\": null, \"field\": \"datetime\", \"label\": null, \"rules\": null, \"format\": null, \"options\": [], \"seconds\": false, \"required\": false, \"column_span\": 1, \"placeholder\": null}, {\"name\": \"tes\", \"rows\": \"10\", \"type\": null, \"field\": \"textarea\", \"label\": null, \"rules\": null, \"format\": null, \"options\": [], \"seconds\": false, \"required\": false, \"column_span\": \"2\", \"placeholder\": null}]', 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chatbot_interaction`
+--
+
+CREATE TABLE `chatbot_interaction` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `question` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -171,16 +184,16 @@ CREATE TABLE `general_settings` (
   `site_description` text COLLATE utf8mb4_unicode_ci,
   `site_logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `site_favicon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `location` json NOT NULL,
   `contacts` json DEFAULT NULL,
-  `location` json DEFAULT NULL,
+  `theme` json NOT NULL,
+  `email_settings` json NOT NULL,
+  `social_network` json NOT NULL,
+  `navigation` json NOT NULL,
   `features` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
+  `google_analytics` json NOT NULL,
   `user_features` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
-  `google_analytics` json DEFAULT NULL,
   `chatbot_settings` json DEFAULT NULL,
-  `theme` json DEFAULT NULL,
-  `email_settings` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
-  `social_network` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
-  `more_configs` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -189,8 +202,8 @@ CREATE TABLE `general_settings` (
 -- Dumping data for table `general_settings`
 --
 
-INSERT INTO `general_settings` (`id`, `site_name`, `site_description`, `site_logo`, `site_favicon`, `contacts`, `location`, `features`, `user_features`, `google_analytics`, `chatbot_settings`, `theme`, `email_settings`, `social_network`, `more_configs`, `created_at`, `updated_at`) VALUES
-(1, 'Content Manajement Syste', NULL, 'assets/site_logo.png', 'assets/site_favicon.ico', '{\"email\": null, \"phone\": null, \"whatsapp\": null}', '{\"address\": \"Kantor\", \"coordinate\": {\"lat\": -8.695344881691632, \"lng\": 115.21278619766235}}', '{\"sponsors\":true,\"analytics\":false}', '{\"chatbot\":false}', '{\"google_analytics_tag\": null, \"service-account-credentials\": null}', '{\"xai\": {\"url\": null, \"api_key\": null}, \"groq\": {\"url\": null, \"api_key\": null}, \"model\": null, \"gemini\": {\"url\": null, \"api_key\": null}, \"ollama\": {\"url\": null}, \"openai\": {\"url\": null, \"api_key\": null, \"project\": null, \"organization\": null}, \"prompt\": null, \"mistral\": {\"url\": null, \"api_key\": null}, \"deepseek\": {\"url\": null, \"api_key\": null}, \"provider\": \"groq\", \"voyageai\": {\"url\": null, \"api_key\": null}, \"anthropic\": {\"api_key\": null, \"version\": null, \"anthropic_beta\": null, \"default_thinking_budget\": null}}', '{\"primary\": {\"50\": \"253, 245, 245\", \"100\": \"250, 234, 234\", \"200\": \"243, 204, 204\", \"300\": \"236, 173, 173\", \"400\": \"221, 111, 111\", \"500\": \"207, 49, 49\", \"600\": \"186, 44, 44\", \"700\": \"155, 37, 37\", \"800\": \"124, 29, 29\", \"900\": \"101, 24, 24\", \"950\": \"62, 15, 15\"}, \"tertiary\": null, \"secondary\": null}', '{\"default_email_provider\":\"smtp\",\"smtp_host\":\"sandbox.smtp.mailtrap.io\",\"smtp_port\":\"2525\",\"smtp_encryption\":\"tls\",\"smtp_timeout\":null,\"smtp_username\":\"08c61c0b0a50c8\",\"smtp_password\":\"f9c7ce4781c953\",\"mailgun_domain\":null,\"mailgun_secret\":null,\"mailgun_endpoint\":null,\"postmark_token\":null,\"amazon_ses_key\":null,\"amazon_ses_secret\":null,\"amazon_ses_region\":null,\"email_from_name\":\"ExRyze\",\"email_from_address\":\"exryze4@gmail.com\",\"mail_to\":null}', '{\"tiktok\":null,\"youtube\":null,\"facebook\":null,\"linkedin\":null,\"whatsapp\":null,\"instagram\":null,\"pinterest\":null,\"x_twitter\":null}', '{\"footer\": \"1\", \"navigation\": \"2\"}', NULL, '2025-05-03 02:00:35');
+INSERT INTO `general_settings` (`id`, `site_name`, `site_description`, `site_logo`, `site_favicon`, `location`, `contacts`, `theme`, `email_settings`, `social_network`, `navigation`, `features`, `google_analytics`, `user_features`, `chatbot_settings`, `created_at`, `updated_at`) VALUES
+(1, 'Content Manajement Syste', NULL, 'assets/site_logo.png', 'assets/site_favicon.ico', '{\"address\": \"Kantor\", \"coordinate\": {\"lat\": -8.695344881691632, \"lng\": 115.21278619766235}}', '{\"email\": null, \"phone\": null, \"whatsapp\": null}', '{\"primary\": {\"50\": \"253, 245, 245\", \"100\": \"250, 234, 234\", \"200\": \"243, 204, 204\", \"300\": \"236, 173, 173\", \"400\": \"221, 111, 111\", \"500\": \"207, 49, 49\", \"600\": \"186, 44, 44\", \"700\": \"155, 37, 37\", \"800\": \"124, 29, 29\", \"900\": \"101, 24, 24\", \"950\": \"62, 15, 15\"}, \"tertiary\": null, \"secondary\": null}', '{\"mail_to\": null, \"smtp_host\": \"sandbox.smtp.mailtrap.io\", \"smtp_port\": \"2525\", \"smtp_timeout\": null, \"smtp_password\": \"f9c7ce4781c953\", \"smtp_username\": \"08c61c0b0a50c8\", \"amazon_ses_key\": null, \"mailgun_domain\": null, \"mailgun_secret\": null, \"postmark_token\": null, \"email_from_name\": \"ExRyze\", \"smtp_encryption\": \"tls\", \"mailgun_endpoint\": null, \"amazon_ses_region\": null, \"amazon_ses_secret\": null, \"email_from_address\": \"exryze4@gmail.com\", \"default_email_provider\": \"smtp\"}', '{\"tiktok\": null, \"youtube\": null, \"facebook\": null, \"linkedin\": null, \"whatsapp\": null, \"instagram\": null, \"pinterest\": null, \"x_twitter\": null}', '{\"footer\": \"1\", \"header\": \"2\", \"search\": null, \"nav_items\": [{\"link\": null, \"page\": \"1\", \"type\": \"page\"}]}', '{\"sponsors\":true,\"analytics\":false}', '{\"google_analytics_tag\": null, \"service-account-credentials\": null}', '{\"chatbot\":false}', '{\"xai\": {\"url\": null, \"api_key\": null}, \"groq\": {\"url\": null, \"api_key\": null}, \"model\": null, \"gemini\": {\"url\": null, \"api_key\": null}, \"ollama\": {\"url\": null}, \"openai\": {\"url\": null, \"api_key\": null, \"project\": null, \"organization\": null}, \"prompt\": null, \"mistral\": {\"url\": null, \"api_key\": null}, \"deepseek\": {\"url\": null, \"api_key\": null}, \"provider\": \"groq\", \"voyageai\": {\"url\": null, \"api_key\": null}, \"anthropic\": {\"api_key\": null, \"version\": null, \"anthropic_beta\": null, \"default_thinking_budget\": null}}', NULL, '2025-05-03 07:42:17');
 
 -- --------------------------------------------------------
 
@@ -303,7 +316,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (25, '2025_04_26_030400_update_google_analytics_settings', 7),
 (26, '2025_05_01_214356_delete_email_address_field', 8),
 (27, '2025_05_02_131109_create_theme_field', 9),
-(28, '2025_05_03_000742_create_chatbot_field', 10);
+(28, '2025_05_03_000742_create_chatbot_field', 10),
+(29, '2025_05_03_002036_create_chatbot_interaction_table', 11),
+(30, '2025_05_03_103806_rename_pattern_to_section', 11),
+(31, '2025_05_03_142441_general_settings_navigation_field', 12);
 
 -- --------------------------------------------------------
 
@@ -346,10 +362,8 @@ CREATE TABLE `pages` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sort_order` tinyint(4) NOT NULL DEFAULT '0',
   `created_by` bigint(20) UNSIGNED DEFAULT NULL,
   `updated_by` bigint(20) UNSIGNED DEFAULT NULL,
-  `published_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -359,12 +373,12 @@ CREATE TABLE `pages` (
 -- Dumping data for table `pages`
 --
 
-INSERT INTO `pages` (`id`, `title`, `slug`, `sort_order`, `created_by`, `updated_by`, `published_at`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Home', 'home', 1, 1, 1, '2025-04-12 09:31:48', '2025-03-28 00:00:02', '2025-04-12 09:31:48', NULL),
-(2, 'Articles', 'articles', 2, 1, 1, '2025-03-28 00:00:26', '2025-03-28 00:00:02', '2025-04-18 17:11:35', NULL),
-(3, 'Events', 'events', 3, 1, 1, '2025-03-28 00:00:26', '2025-03-28 00:00:02', '2025-03-28 00:00:26', NULL),
-(4, 'Contact', 'contact', 5, 1, 1, '2025-03-28 00:00:26', '2025-03-28 00:00:02', '2025-03-28 00:00:26', NULL),
-(6, 'About us', 'about-us', 4, 1, 1, '2025-03-28 00:00:26', '2025-03-28 00:00:02', '2025-03-28 00:00:26', NULL);
+INSERT INTO `pages` (`id`, `title`, `slug`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Home', 'home', 1, 1, '2025-03-28 00:00:02', '2025-04-12 09:31:48', NULL),
+(2, 'Articles', 'articles', 1, 1, '2025-03-28 00:00:02', '2025-04-18 17:11:35', NULL),
+(3, 'Events', 'events', 1, 1, '2025-03-28 00:00:02', '2025-03-28 00:00:26', NULL),
+(4, 'Contact', 'contact', 1, 1, '2025-03-28 00:00:02', '2025-03-28 00:00:26', NULL),
+(6, 'About us', 'about-us', 1, 1, '2025-03-28 00:00:02', '2025-03-28 00:00:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -376,14 +390,14 @@ CREATE TABLE `page_sections` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `page_id` bigint(20) UNSIGNED NOT NULL,
   `sort_order` tinyint(4) NOT NULL DEFAULT '0',
-  `pattern_id` bigint(20) UNSIGNED NOT NULL
+  `section_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `page_sections`
 --
 
-INSERT INTO `page_sections` (`id`, `page_id`, `sort_order`, `pattern_id`) VALUES
+INSERT INTO `page_sections` (`id`, `page_id`, `sort_order`, `section_id`) VALUES
 (5, 6, 1, 9),
 (6, 6, 2, 8),
 (7, 6, 3, 10),
@@ -417,102 +431,6 @@ CREATE TABLE `password_reset_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `patterns`
---
-
-CREATE TABLE `patterns` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `layout_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `has_dataset` tinyint(1) NOT NULL,
-  `type_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `patterns`
---
-
-INSERT INTO `patterns` (`id`, `title`, `layout_path`, `has_dataset`, `type_id`, `user_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Footer', 'footers/footer', 0, 1, 1, '2025-01-01 19:04:47', '2025-02-28 06:45:41', NULL),
-(2, 'Navigation', 'navigations/default', 0, 2, 1, '2025-02-28 05:11:02', '2025-02-28 05:11:02', NULL),
-(3, 'Carousel', 'heroes/carousel', 0, 3, 1, '2025-02-28 06:10:35', '2025-02-28 06:10:55', NULL),
-(4, 'Statistics', 'banners/statistics', 0, 4, 1, '2025-02-28 06:15:48', '2025-02-28 06:15:48', NULL),
-(5, 'Location', 'banners/location', 0, 4, 1, '2025-02-28 06:16:12', '2025-02-28 06:16:12', NULL),
-(6, 'Sponsors', 'others/sponsors', 0, 5, 1, '2025-02-28 06:17:43', '2025-04-12 13:13:59', NULL),
-(7, 'Footer v.2', 'footers/footerv2', 0, 1, 1, '2025-02-28 06:46:08', '2025-02-28 06:46:08', NULL),
-(8, 'Banner Image v.1', 'banners/imagev1', 0, 4, 1, '2025-02-28 06:46:56', '2025-02-28 06:46:56', NULL),
-(9, 'Hero About', 'heroes/about', 0, 3, 1, '2025-02-28 06:50:34', '2025-02-28 07:14:32', NULL),
-(10, 'Vision & Mision', 'others/visi_misi', 0, 5, 1, '2025-02-28 06:56:34', '2025-02-28 06:56:34', NULL),
-(11, 'ARC', 'others/arc', 0, 5, 1, '2025-02-28 06:56:57', '2025-02-28 06:56:57', NULL),
-(12, 'Members', 'others/members', 0, 5, 1, '2025-02-28 06:57:31', '2025-02-28 06:57:31', NULL),
-(13, 'Contact', 'others/contact', 0, 5, 1, '2025-02-28 07:16:09', '2025-02-28 07:16:09', NULL),
-(14, 'Article Latest', 'articles/latest', 1, 6, 1, '2025-03-02 20:59:05', '2025-04-18 17:13:15', NULL),
-(15, 'Event Latest', 'events/latest', 1, 7, 1, '2025-03-02 23:31:31', '2025-03-02 23:31:31', NULL),
-(16, 'Article Highlight', 'articles/highlight', 1, 6, 1, '2025-03-02 23:59:17', '2025-04-18 17:13:29', NULL),
-(17, 'Article Pagination', 'articles/pagination', 1, 6, 1, '2025-03-03 00:06:47', '2025-04-18 17:14:03', NULL),
-(18, 'Event Upcoming', 'events/upcoming', 1, 7, 1, '2025-03-03 00:15:07', '2025-03-03 00:15:59', NULL),
-(19, 'Event Pagination', 'events/pagination', 1, 7, 1, '2025-03-03 00:17:37', '2025-03-03 00:17:37', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pattern_loads`
---
-
-CREATE TABLE `pattern_loads` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `pattern_id` bigint(20) UNSIGNED NOT NULL,
-  `name_variable` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `dataset_id` bigint(20) UNSIGNED NOT NULL,
-  `order_col` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'published_at',
-  `order_sort` enum('asc','desc') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'asc',
-  `paginate` enum('default','simple') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `limit` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `pattern_loads`
---
-
-INSERT INTO `pattern_loads` (`id`, `pattern_id`, `name_variable`, `dataset_id`, `order_col`, `order_sort`, `paginate`, `limit`) VALUES
-(4, 14, 'postlatest', 1, 'published_at', 'asc', NULL, 4),
-(5, 15, 'eventlatest', 2, 'published_at', 'asc', NULL, 4),
-(6, 16, 'posthighlight', 1, 'published_at', 'asc', NULL, 4),
-(7, 17, 'postpagination', 1, 'published_at', 'asc', 'default', 16),
-(8, 18, 'eventupcoming', 2, 'published_at', 'asc', NULL, 4),
-(9, 19, 'eventpagination', 2, 'published_at', 'asc', 'default', 16);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pattern_types`
---
-
-CREATE TABLE `pattern_types` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `pattern_types`
---
-
-INSERT INTO `pattern_types` (`id`, `type`) VALUES
-(6, 'Article'),
-(4, 'Banner'),
-(7, 'Event'),
-(1, 'Footer'),
-(3, 'Hero'),
-(2, 'Navigation'),
-(5, 'Other');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `permissions`
 --
 
@@ -529,137 +447,162 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(129, 'view_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(130, 'view_any_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(131, 'create_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(132, 'update_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(133, 'restore_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(134, 'restore_any_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(135, 'replicate_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(136, 'reorder_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(137, 'delete_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(138, 'delete_any_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(139, 'force_delete_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(140, 'force_delete_any_article', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(141, 'view_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(142, 'view_any_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(143, 'create_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(144, 'update_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(145, 'restore_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(146, 'restore_any_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(147, 'replicate_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(148, 'reorder_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(149, 'delete_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(150, 'delete_any_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(151, 'force_delete_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(152, 'force_delete_any_category', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(153, 'view_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(154, 'view_any_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(155, 'create_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(156, 'update_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(157, 'restore_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(158, 'restore_any_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(159, 'replicate_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(160, 'reorder_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(161, 'delete_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(162, 'delete_any_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(163, 'force_delete_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(164, 'force_delete_any_cover', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(165, 'view_media', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(166, 'view_any_media', 'web', '2025-04-25 09:11:42', '2025-04-25 09:11:42'),
-(167, 'create_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(168, 'update_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(169, 'restore_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(170, 'restore_any_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(171, 'replicate_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(172, 'reorder_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(173, 'delete_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(174, 'delete_any_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(175, 'force_delete_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(176, 'force_delete_any_media', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(177, 'view_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(178, 'view_any_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(179, 'create_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(180, 'update_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(181, 'restore_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(182, 'restore_any_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(183, 'replicate_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(184, 'reorder_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(185, 'delete_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(186, 'delete_any_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(187, 'force_delete_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(188, 'force_delete_any_page', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(189, 'view_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(190, 'view_any_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(191, 'create_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(192, 'update_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(193, 'restore_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(194, 'restore_any_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(195, 'replicate_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(196, 'reorder_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(197, 'delete_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(198, 'delete_any_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(199, 'force_delete_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(200, 'force_delete_any_pattern', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(201, 'view_role', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(202, 'view_any_role', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(203, 'create_role', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(204, 'update_role', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(205, 'delete_role', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(206, 'delete_any_role', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(207, 'view_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(208, 'view_any_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(209, 'create_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(210, 'update_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(211, 'restore_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(212, 'restore_any_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(213, 'replicate_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(214, 'reorder_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(215, 'delete_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(216, 'delete_any_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(217, 'force_delete_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(218, 'force_delete_any_sponsor', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(219, 'view_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(220, 'view_any_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(221, 'create_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(222, 'update_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(223, 'restore_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(224, 'restore_any_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(225, 'replicate_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(226, 'reorder_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(227, 'delete_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(228, 'delete_any_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(229, 'force_delete_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(230, 'force_delete_any_sponsor::category', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(231, 'view_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(232, 'view_any_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(233, 'create_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(234, 'update_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(235, 'restore_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(236, 'restore_any_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(237, 'replicate_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(238, 'reorder_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(239, 'delete_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(240, 'delete_any_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(241, 'force_delete_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(242, 'force_delete_any_tag', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(243, 'view_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(244, 'view_any_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(245, 'create_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(246, 'update_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(247, 'restore_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(248, 'restore_any_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(249, 'replicate_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(250, 'reorder_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(251, 'delete_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(252, 'delete_any_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(253, 'force_delete_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(254, 'force_delete_any_user', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(255, 'page_GeneralSettingsPage', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(256, 'page_ViewEnv', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(257, 'widget_OptimizeButton', 'web', '2025-04-25 09:11:43', '2025-04-25 09:11:43'),
-(258, 'page_EnvEditorPage', 'web', '2025-04-25 20:11:12', '2025-04-25 20:11:12'),
-(259, 'page_GoogleAnalyticsPage', 'web', '2025-04-25 20:11:12', '2025-04-25 20:11:12');
+(129, 'view_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(130, 'view_any_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(131, 'create_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(132, 'update_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(133, 'restore_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(134, 'restore_any_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(135, 'replicate_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(136, 'reorder_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(137, 'delete_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(138, 'delete_any_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(139, 'force_delete_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(140, 'force_delete_any_article', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(141, 'view_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(142, 'view_any_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(143, 'create_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(144, 'update_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(145, 'restore_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(146, 'restore_any_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(147, 'replicate_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(148, 'reorder_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(149, 'delete_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(150, 'delete_any_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(151, 'force_delete_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(152, 'force_delete_any_category', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(153, 'view_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(154, 'view_any_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(155, 'create_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(156, 'update_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(157, 'restore_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(158, 'restore_any_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(159, 'replicate_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(160, 'reorder_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(161, 'delete_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(162, 'delete_any_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(163, 'force_delete_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(164, 'force_delete_any_cover', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(165, 'view_media', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(166, 'view_any_media', 'web', '2025-04-25 01:11:42', '2025-04-25 01:11:42'),
+(167, 'create_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(168, 'update_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(169, 'restore_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(170, 'restore_any_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(171, 'replicate_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(172, 'reorder_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(173, 'delete_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(174, 'delete_any_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(175, 'force_delete_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(176, 'force_delete_any_media', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(177, 'view_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(178, 'view_any_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(179, 'create_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(180, 'update_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(181, 'restore_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(182, 'restore_any_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(183, 'replicate_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(184, 'reorder_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(185, 'delete_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(186, 'delete_any_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(187, 'force_delete_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(188, 'force_delete_any_page', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(189, 'view_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(190, 'view_any_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(191, 'create_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(192, 'update_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(193, 'restore_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(194, 'restore_any_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(195, 'replicate_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(196, 'reorder_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(197, 'delete_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(198, 'delete_any_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(199, 'force_delete_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(200, 'force_delete_any_pattern', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(201, 'view_role', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(202, 'view_any_role', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(203, 'create_role', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(204, 'update_role', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(205, 'delete_role', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(206, 'delete_any_role', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(207, 'view_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(208, 'view_any_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(209, 'create_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(210, 'update_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(211, 'restore_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(212, 'restore_any_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(213, 'replicate_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(214, 'reorder_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(215, 'delete_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(216, 'delete_any_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(217, 'force_delete_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(218, 'force_delete_any_sponsor', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(219, 'view_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(220, 'view_any_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(221, 'create_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(222, 'update_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(223, 'restore_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(224, 'restore_any_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(225, 'replicate_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(226, 'reorder_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(227, 'delete_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(228, 'delete_any_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(229, 'force_delete_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(230, 'force_delete_any_sponsor::category', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(231, 'view_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(232, 'view_any_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(233, 'create_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(234, 'update_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(235, 'restore_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(236, 'restore_any_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(237, 'replicate_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(238, 'reorder_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(239, 'delete_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(240, 'delete_any_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(241, 'force_delete_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(242, 'force_delete_any_tag', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(243, 'view_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(244, 'view_any_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(245, 'create_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(246, 'update_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(247, 'restore_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(248, 'restore_any_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(249, 'replicate_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(250, 'reorder_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(251, 'delete_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(252, 'delete_any_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(253, 'force_delete_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(254, 'force_delete_any_user', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(255, 'page_GeneralSettingsPage', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(256, 'page_ViewEnv', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(257, 'widget_OptimizeButton', 'web', '2025-04-25 01:11:43', '2025-04-25 01:11:43'),
+(258, 'page_EnvEditorPage', 'web', '2025-04-25 12:11:12', '2025-04-25 12:11:12'),
+(259, 'page_GoogleAnalyticsPage', 'web', '2025-04-25 12:11:12', '2025-04-25 12:11:12'),
+(260, 'view_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(261, 'view_any_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(262, 'create_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(263, 'update_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(264, 'restore_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(265, 'restore_any_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(266, 'replicate_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(267, 'reorder_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(268, 'delete_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(269, 'delete_any_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(270, 'force_delete_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(271, 'force_delete_any_section', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(272, 'view_section::type', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(273, 'view_any_section::type', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(274, 'create_section::type', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(275, 'update_section::type', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(276, 'restore_section::type', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(277, 'restore_any_section::type', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(278, 'replicate_section::type', 'web', '2025-05-03 04:17:50', '2025-05-03 04:17:50'),
+(279, 'reorder_section::type', 'web', '2025-05-03 04:17:51', '2025-05-03 04:17:51'),
+(280, 'delete_section::type', 'web', '2025-05-03 04:17:51', '2025-05-03 04:17:51'),
+(281, 'delete_any_section::type', 'web', '2025-05-03 04:17:51', '2025-05-03 04:17:51'),
+(282, 'force_delete_section::type', 'web', '2025-05-03 04:17:51', '2025-05-03 04:17:51'),
+(283, 'force_delete_any_section::type', 'web', '2025-05-03 04:17:51', '2025-05-03 04:17:51'),
+(284, 'page_DashboardPage', 'web', '2025-05-03 04:17:51', '2025-05-03 04:17:51');
 
 -- --------------------------------------------------------
 
@@ -682,8 +625,8 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
 (1, 'Developer', 'web', '2025-03-27 10:56:00', '2025-03-27 10:56:00'),
 (2, 'Admin', 'web', '2025-04-25 09:13:06', '2025-04-25 09:13:06'),
-(5, 'panel_user', 'web', '2025-04-25 18:22:34', '2025-04-25 18:22:34'),
-(6, 'super_admin', 'web', '2025-04-25 20:11:31', '2025-04-25 20:11:31');
+(7, 'Superadmin', 'web', '2025-05-03 04:34:13', '2025-05-03 04:34:13'),
+(8, 'User', 'web', '2025-05-03 04:34:56', '2025-05-03 04:34:56');
 
 -- --------------------------------------------------------
 
@@ -761,18 +704,6 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (186, 1),
 (187, 1),
 (188, 1),
-(189, 1),
-(190, 1),
-(191, 1),
-(192, 1),
-(193, 1),
-(194, 1),
-(195, 1),
-(196, 1),
-(197, 1),
-(198, 1),
-(199, 1),
-(200, 1),
 (201, 1),
 (202, 1),
 (203, 1),
@@ -828,9 +759,33 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (253, 1),
 (254, 1),
 (255, 1),
-(257, 1),
 (258, 1),
 (259, 1),
+(260, 1),
+(261, 1),
+(262, 1),
+(263, 1),
+(264, 1),
+(265, 1),
+(266, 1),
+(267, 1),
+(268, 1),
+(269, 1),
+(270, 1),
+(271, 1),
+(272, 1),
+(273, 1),
+(274, 1),
+(275, 1),
+(276, 1),
+(277, 1),
+(278, 1),
+(279, 1),
+(280, 1),
+(281, 1),
+(282, 1),
+(283, 1),
+(284, 1),
 (129, 2),
 (130, 2),
 (131, 2),
@@ -903,136 +858,257 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (228, 2),
 (229, 2),
 (230, 2),
-(129, 6),
-(130, 6),
-(131, 6),
-(132, 6),
-(133, 6),
-(134, 6),
-(135, 6),
-(136, 6),
-(137, 6),
-(138, 6),
-(139, 6),
-(140, 6),
-(141, 6),
-(142, 6),
-(143, 6),
-(144, 6),
-(145, 6),
-(146, 6),
-(147, 6),
-(148, 6),
-(149, 6),
-(150, 6),
-(151, 6),
-(152, 6),
-(153, 6),
-(154, 6),
-(155, 6),
-(156, 6),
-(157, 6),
-(158, 6),
-(159, 6),
-(160, 6),
-(161, 6),
-(162, 6),
-(163, 6),
-(164, 6),
-(165, 6),
-(166, 6),
-(167, 6),
-(168, 6),
-(169, 6),
-(170, 6),
-(171, 6),
-(172, 6),
-(173, 6),
-(174, 6),
-(175, 6),
-(176, 6),
-(177, 6),
-(178, 6),
-(179, 6),
-(180, 6),
-(181, 6),
-(182, 6),
-(183, 6),
-(184, 6),
-(185, 6),
-(186, 6),
-(187, 6),
-(188, 6),
-(189, 6),
-(190, 6),
-(191, 6),
-(192, 6),
-(193, 6),
-(194, 6),
-(195, 6),
-(196, 6),
-(197, 6),
-(198, 6),
-(199, 6),
-(200, 6),
-(201, 6),
-(202, 6),
-(203, 6),
-(204, 6),
-(205, 6),
-(206, 6),
-(207, 6),
-(208, 6),
-(209, 6),
-(210, 6),
-(211, 6),
-(212, 6),
-(213, 6),
-(214, 6),
-(215, 6),
-(216, 6),
-(217, 6),
-(218, 6),
-(219, 6),
-(220, 6),
-(221, 6),
-(222, 6),
-(223, 6),
-(224, 6),
-(225, 6),
-(226, 6),
-(227, 6),
-(228, 6),
-(229, 6),
-(230, 6),
-(231, 6),
-(232, 6),
-(233, 6),
-(234, 6),
-(235, 6),
-(236, 6),
-(237, 6),
-(238, 6),
-(239, 6),
-(240, 6),
-(241, 6),
-(242, 6),
-(243, 6),
-(244, 6),
-(245, 6),
-(246, 6),
-(247, 6),
-(248, 6),
-(249, 6),
-(250, 6),
-(251, 6),
-(252, 6),
-(253, 6),
-(254, 6),
-(255, 6),
-(257, 6),
-(258, 6),
-(259, 6);
+(231, 2),
+(232, 2),
+(233, 2),
+(234, 2),
+(235, 2),
+(236, 2),
+(237, 2),
+(238, 2),
+(239, 2),
+(240, 2),
+(241, 2),
+(242, 2),
+(284, 2),
+(129, 7),
+(130, 7),
+(131, 7),
+(132, 7),
+(133, 7),
+(134, 7),
+(135, 7),
+(136, 7),
+(137, 7),
+(138, 7),
+(139, 7),
+(140, 7),
+(141, 7),
+(142, 7),
+(143, 7),
+(144, 7),
+(145, 7),
+(146, 7),
+(147, 7),
+(148, 7),
+(149, 7),
+(150, 7),
+(151, 7),
+(152, 7),
+(153, 7),
+(154, 7),
+(155, 7),
+(156, 7),
+(157, 7),
+(158, 7),
+(159, 7),
+(160, 7),
+(161, 7),
+(162, 7),
+(163, 7),
+(164, 7),
+(165, 7),
+(166, 7),
+(167, 7),
+(168, 7),
+(169, 7),
+(170, 7),
+(171, 7),
+(172, 7),
+(173, 7),
+(174, 7),
+(175, 7),
+(176, 7),
+(177, 7),
+(178, 7),
+(179, 7),
+(180, 7),
+(181, 7),
+(182, 7),
+(183, 7),
+(184, 7),
+(185, 7),
+(186, 7),
+(187, 7),
+(188, 7),
+(201, 7),
+(202, 7),
+(203, 7),
+(204, 7),
+(205, 7),
+(206, 7),
+(207, 7),
+(208, 7),
+(209, 7),
+(210, 7),
+(211, 7),
+(212, 7),
+(213, 7),
+(214, 7),
+(215, 7),
+(216, 7),
+(217, 7),
+(218, 7),
+(219, 7),
+(220, 7),
+(221, 7),
+(222, 7),
+(223, 7),
+(224, 7),
+(225, 7),
+(226, 7),
+(227, 7),
+(228, 7),
+(229, 7),
+(230, 7),
+(231, 7),
+(232, 7),
+(233, 7),
+(234, 7),
+(235, 7),
+(236, 7),
+(237, 7),
+(238, 7),
+(239, 7),
+(240, 7),
+(241, 7),
+(242, 7),
+(243, 7),
+(244, 7),
+(245, 7),
+(246, 7),
+(247, 7),
+(248, 7),
+(249, 7),
+(250, 7),
+(251, 7),
+(252, 7),
+(253, 7),
+(254, 7),
+(255, 7),
+(258, 7),
+(259, 7),
+(260, 7),
+(261, 7),
+(262, 7),
+(263, 7),
+(264, 7),
+(265, 7),
+(266, 7),
+(267, 7),
+(268, 7),
+(269, 7),
+(270, 7),
+(271, 7),
+(272, 7),
+(273, 7),
+(274, 7),
+(275, 7),
+(276, 7),
+(277, 7),
+(278, 7),
+(279, 7),
+(280, 7),
+(281, 7),
+(282, 7),
+(283, 7),
+(284, 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sections`
+--
+
+CREATE TABLE `sections` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `layout_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `has_dataset` tinyint(1) NOT NULL,
+  `type_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sections`
+--
+
+INSERT INTO `sections` (`id`, `title`, `layout_path`, `has_dataset`, `type_id`, `user_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Footer', 'footers/footer', 0, 1, 1, '2025-01-01 19:04:47', '2025-02-28 06:45:41', NULL),
+(2, 'Navigation', 'navigations/default', 0, 2, 1, '2025-02-28 05:11:02', '2025-02-28 05:11:02', NULL),
+(3, 'Carousel', 'heroes/carousel', 0, 3, 1, '2025-02-28 06:10:35', '2025-02-28 06:10:55', NULL),
+(4, 'Statistics', 'banners/statistics', 0, 4, 1, '2025-02-28 06:15:48', '2025-02-28 06:15:48', NULL),
+(5, 'Location', 'banners/location', 0, 4, 1, '2025-02-28 06:16:12', '2025-02-28 06:16:12', NULL),
+(6, 'Sponsors', 'others/sponsors', 0, 5, 1, '2025-02-28 06:17:43', '2025-04-12 13:13:59', NULL),
+(7, 'Footer v.2', 'footers/footerv2', 0, 1, 1, '2025-02-28 06:46:08', '2025-02-28 06:46:08', NULL),
+(8, 'Banner Image v.1', 'banners/imagev1', 0, 4, 1, '2025-02-28 06:46:56', '2025-02-28 06:46:56', NULL),
+(9, 'Hero About', 'heroes/about', 0, 3, 1, '2025-02-28 06:50:34', '2025-02-28 07:14:32', NULL),
+(10, 'Vision & Mision', 'others/visi_misi', 0, 5, 1, '2025-02-28 06:56:34', '2025-02-28 06:56:34', NULL),
+(11, 'ARC', 'others/arc', 0, 5, 1, '2025-02-28 06:56:57', '2025-02-28 06:56:57', NULL),
+(12, 'Members', 'others/members', 0, 5, 1, '2025-02-28 06:57:31', '2025-02-28 06:57:31', NULL),
+(13, 'Contact', 'others/contact', 0, 5, 1, '2025-02-28 07:16:09', '2025-02-28 07:16:09', NULL),
+(14, 'Article Latest', 'articles/latest', 1, 6, 1, '2025-03-02 20:59:05', '2025-04-18 17:13:15', NULL),
+(15, 'Event Latest', 'events/latest', 1, 7, 1, '2025-03-02 23:31:31', '2025-03-02 23:31:31', NULL),
+(16, 'Article Highlight', 'articles/highlight', 1, 6, 1, '2025-03-02 23:59:17', '2025-04-18 17:13:29', NULL),
+(17, 'Article Pagination', 'articles/pagination', 1, 6, 1, '2025-03-03 00:06:47', '2025-04-18 17:14:03', NULL),
+(18, 'Event Upcoming', 'events/upcoming', 1, 7, 1, '2025-03-03 00:15:07', '2025-03-03 00:15:59', NULL),
+(19, 'Event Pagination', 'events/pagination', 1, 7, 1, '2025-03-03 00:17:37', '2025-03-03 00:17:37', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `section_loads`
+--
+
+CREATE TABLE `section_loads` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `section_id` bigint(20) UNSIGNED NOT NULL,
+  `name_variable` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dataset_id` bigint(20) UNSIGNED NOT NULL,
+  `order_col` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'published_at',
+  `order_sort` enum('asc','desc') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'asc',
+  `paginate` enum('default','simple') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `limit` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `section_loads`
+--
+
+INSERT INTO `section_loads` (`id`, `section_id`, `name_variable`, `dataset_id`, `order_col`, `order_sort`, `paginate`, `limit`) VALUES
+(4, 14, 'postlatest', 1, 'published_at', 'asc', NULL, 4),
+(5, 15, 'eventlatest', 2, 'published_at', 'asc', NULL, 4),
+(6, 16, 'posthighlight', 1, 'published_at', 'asc', NULL, 4),
+(7, 17, 'postpagination', 1, 'published_at', 'asc', 'default', 16),
+(8, 18, 'eventupcoming', 2, 'published_at', 'asc', NULL, 4),
+(9, 19, 'eventpagination', 2, 'published_at', 'asc', 'default', 16);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `section_types`
+--
+
+CREATE TABLE `section_types` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `section_types`
+--
+
+INSERT INTO `section_types` (`id`, `type`) VALUES
+(6, 'Article'),
+(4, 'Banner'),
+(7, 'Event'),
+(1, 'Footer'),
+(2, 'Header'),
+(3, 'Hero'),
+(5, 'Other');
 
 -- --------------------------------------------------------
 
@@ -1054,7 +1130,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('WTimDLEMYiFXLELiVvQlx280btMO8MLljq3qKhrV', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNU83bHB1dHF3dHNFcEJGYkIwYXR5alk0SlRtbDgyc2dCYllvNWpoQyI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQ0OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vZ2VuZXJhbC1zZXR0aW5ncyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQ1bGl5dVhKMkIyM1FJUGE5MmtkSkx1MWh2NHAydXh4QUV6MC5Wdi9MSEVBMWJmMnBtTkF5VyI7czo4OiJmaWxhbWVudCI7YTowOnt9fQ==', 1746241248);
+('WTimDLEMYiFXLELiVvQlx280btMO8MLljq3qKhrV', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNU83bHB1dHF3dHNFcEJGYkIwYXR5alk0SlRtbDgyc2dCYllvNWpoQyI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQ0OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vZ2VuZXJhbC1zZXR0aW5ncyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQ1bGl5dVhKMkIyM1FJUGE5MmtkSkx1MWh2NHAydXh4QUV6MC5Wdi9MSEVBMWJmMnBtTkF5VyI7czo4OiJmaWxhbWVudCI7YTowOnt9fQ==', 1746263628);
 
 -- --------------------------------------------------------
 
@@ -1187,6 +1263,13 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `chatbot_interaction`
+--
+ALTER TABLE `chatbot_interaction`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `chatbot_interaction_user_id_foreign` (`user_id`);
+
+--
 -- Indexes for table `covers`
 --
 ALTER TABLE `covers`
@@ -1258,38 +1341,13 @@ ALTER TABLE `pages`
 ALTER TABLE `page_sections`
   ADD PRIMARY KEY (`id`),
   ADD KEY `page_sections_page_id_foreign` (`page_id`),
-  ADD KEY `page_sections_pattern_id_foreign` (`pattern_id`);
+  ADD KEY `page_sections_pattern_id_foreign` (`section_id`);
 
 --
 -- Indexes for table `password_reset_tokens`
 --
 ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`email`);
-
---
--- Indexes for table `patterns`
---
-ALTER TABLE `patterns`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `patterns_title_unique` (`title`),
-  ADD KEY `patterns_type_id_foreign` (`type_id`),
-  ADD KEY `patterns_user_id_foreign` (`user_id`);
-
---
--- Indexes for table `pattern_loads`
---
-ALTER TABLE `pattern_loads`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `pattern_loads_name_variable_unique` (`name_variable`),
-  ADD KEY `pattern_loads_pattern_id_foreign` (`pattern_id`),
-  ADD KEY `pattern_loads_dataset_id_foreign` (`dataset_id`);
-
---
--- Indexes for table `pattern_types`
---
-ALTER TABLE `pattern_types`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `pattern_types_type_unique` (`type`);
 
 --
 -- Indexes for table `permissions`
@@ -1311,6 +1369,31 @@ ALTER TABLE `roles`
 ALTER TABLE `role_has_permissions`
   ADD PRIMARY KEY (`permission_id`,`role_id`),
   ADD KEY `role_has_permissions_role_id_foreign` (`role_id`);
+
+--
+-- Indexes for table `sections`
+--
+ALTER TABLE `sections`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `patterns_title_unique` (`title`),
+  ADD KEY `patterns_type_id_foreign` (`type_id`),
+  ADD KEY `patterns_user_id_foreign` (`user_id`);
+
+--
+-- Indexes for table `section_loads`
+--
+ALTER TABLE `section_loads`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `pattern_loads_name_variable_unique` (`name_variable`),
+  ADD KEY `pattern_loads_pattern_id_foreign` (`section_id`),
+  ADD KEY `pattern_loads_dataset_id_foreign` (`dataset_id`);
+
+--
+-- Indexes for table `section_types`
+--
+ALTER TABLE `section_types`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `pattern_types_type_unique` (`type`);
 
 --
 -- Indexes for table `sessions`
@@ -1370,6 +1453,12 @@ ALTER TABLE `categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `chatbot_interaction`
+--
+ALTER TABLE `chatbot_interaction`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `covers`
 --
 ALTER TABLE `covers`
@@ -1403,7 +1492,7 @@ ALTER TABLE `media`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -1418,34 +1507,34 @@ ALTER TABLE `page_sections`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `patterns`
---
-ALTER TABLE `patterns`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `pattern_loads`
---
-ALTER TABLE `pattern_loads`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `pattern_types`
---
-ALTER TABLE `pattern_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=260;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=285;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `sections`
+--
+ALTER TABLE `sections`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `section_loads`
+--
+ALTER TABLE `section_loads`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `section_types`
+--
+ALTER TABLE `section_types`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sponsors`
@@ -1505,6 +1594,12 @@ ALTER TABLE `article_sponsors`
   ADD CONSTRAINT `articles_media_partners_media_partner_id_foreign` FOREIGN KEY (`sponsor_id`) REFERENCES `sponsors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `chatbot_interaction`
+--
+ALTER TABLE `chatbot_interaction`
+  ADD CONSTRAINT `chatbot_interaction_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `model_has_permissions`
 --
 ALTER TABLE `model_has_permissions`
@@ -1528,21 +1623,7 @@ ALTER TABLE `pages`
 --
 ALTER TABLE `page_sections`
   ADD CONSTRAINT `page_sections_page_id_foreign` FOREIGN KEY (`page_id`) REFERENCES `pages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `page_sections_pattern_id_foreign` FOREIGN KEY (`pattern_id`) REFERENCES `patterns` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `patterns`
---
-ALTER TABLE `patterns`
-  ADD CONSTRAINT `patterns_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `pattern_types` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `patterns_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
-
---
--- Constraints for table `pattern_loads`
---
-ALTER TABLE `pattern_loads`
-  ADD CONSTRAINT `pattern_loads_dataset_id_foreign` FOREIGN KEY (`dataset_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `pattern_loads_pattern_id_foreign` FOREIGN KEY (`pattern_id`) REFERENCES `patterns` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `page_sections_pattern_id_foreign` FOREIGN KEY (`section_id`) REFERENCES `sections` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `role_has_permissions`
@@ -1550,6 +1631,20 @@ ALTER TABLE `pattern_loads`
 ALTER TABLE `role_has_permissions`
   ADD CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `sections`
+--
+ALTER TABLE `sections`
+  ADD CONSTRAINT `patterns_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `section_types` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `patterns_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `section_loads`
+--
+ALTER TABLE `section_loads`
+  ADD CONSTRAINT `pattern_loads_dataset_id_foreign` FOREIGN KEY (`dataset_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pattern_loads_pattern_id_foreign` FOREIGN KEY (`section_id`) REFERENCES `sections` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `sponsors`
