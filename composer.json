@@ -12,12 +12,14 @@
         "bezhansalleh/filament-google-analytics": "^2.1",
         "bezhansalleh/filament-shield": "^3.3",
         "dotswan/filament-map-picker": "^1.8",
+        "erusev/parsedown": "^1.7",
         "filament/filament": "^3.2",
         "filament/forms": "^3.2",
         "geo-sot/filament-env-editor": "^0.0.6",
         "joshembling/image-optimizer": "^1.4",
         "laravel/framework": "^11.31",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "prism-php/prism": "^0.65.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

@@ -4,6 +4,7 @@ namespace App\Filament\Pages\GeneralSettings;
 
 use App\Filament\Forms\AnalyticsFieldsForm;
 use App\Filament\Forms\ApplicationFieldsForm;
+use App\Filament\Forms\ChatbotFieldsForm;
 use App\Filament\Forms\EmailFieldsForm;
 use App\Filament\Forms\SocialNetworkFieldsForm;
 use App\Filament\Forms\TemplateFieldsForm;
@@ -61,7 +62,7 @@ class GeneralSettingsPage extends Page
 
         if ($this->data['theme']) {
             foreach ($this->data['theme'] as $key => $value) {
-                $this->data['theme'][$key] = $value[500] ? 'rgb('.$value[500].')' : null;
+                $this->data['theme'][$key] = $value ? 'rgb('.$value[500].')' : null;
             }
         }
 
@@ -102,6 +103,14 @@ class GeneralSettingsPage extends Page
             ->schema(TemplateFieldsForm::get())
             ->columns(2)
             ->statePath('more_configs');
+
+        if (!empty($this->data['user_features']['chatbot'])) {
+            $arrTabs[] = Tabs\Tab::make('Chatbot')
+                ->icon('heroicon-o-chat-bubble-bottom-center-text')
+                ->schema(ChatbotFieldsForm::get())
+                ->columns(['lg' => 3])
+                ->statePath('chatbot_settings');
+        }
 
         return $form
             ->schema([
