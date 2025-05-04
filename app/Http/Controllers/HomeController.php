@@ -5,20 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Sponsor;
 use App\Models\Category;
+use App\Models\Page;
 use Illuminate\Support\Facades\Route;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $data = $this->page(Route::currentRouteName());
-        foreach ($data['page']->sections as $key => $section) {
-            $tmp = $section->pattern;
-            if ($tmp->has_dataset) {
-                $tmp = $tmp->dataset;
+        $data = config('general-settings');
+        if ($data['features']['sponsors']) {
+            $data['sponsors'] = Sponsor::where('featured', 1)->get();
+        }
+        $data['page'] = Page::where('slug', Route::currentRouteName())->firstOrFail();
+        $data['sections'] = [];
+        foreach ($data['page']->sections as $section) {
+            $data['sections'][] = $section->section;
+            if ($section->section->has_dataset) {
+                $tmp = $section->section->dataset;
                 $tmp2 = Article::query();
                 $tmp2 = $tmp2->where([
-                    // ['category_id', $tmp->category->id],
+                    ['category_id', $tmp->category->id],
                     ['private', 0]
                 ])->whereNotNull('published_at');
                 $tmp2 = $tmp2->orderBy($tmp->order_col, $tmp->order_sort);
@@ -34,12 +40,12 @@ class HomeController extends Controller
                 $data["$tmp->name_variable"] = $tmp2;
             }
         }
-        $data['sponsors'] = Sponsor::where('featured', 1)->get();
         return view('pages.index', compact('data'));
     }
 
-    public function detail(string $category, string $slug) {
-        $data = $this->page('home');
+    public function detail(string $category, string $slug)
+    {
+        $data = config('general-settings');
         $data['category'] = Category::where('category_name', $category)->firstOrFail();
         $data['article'] = Article::where('slug', $slug)->whereNotNull('published_at')->firstOrFail();
         $categories = [];

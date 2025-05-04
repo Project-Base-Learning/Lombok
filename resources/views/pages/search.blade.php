@@ -1,7 +1,7 @@
 @extends('layouts.landing-base')
 
 @section('content')
-    <form class="flex flex-col gap-4 px-8 pt-12 lg:pt-20 md:flex-row lg:px-40" action="{{ route('search') }}" method="GET" id="searchForm">
+    <form class="flex flex-col gap-4 px-8 pt-12 lg:pt-20 md:flex-row lg:px-40" action="{{ route($data['page']->slug) }}" method="GET" id="searchForm">
         <!-- Select (Data) Field -->
         <div class="w-full flex-0 md:w-auto">
             <select name="category" class="w-full text-sm border-gray-300 rounded-md">

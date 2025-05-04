@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Tag;
 use App\Models\Category;
+use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        $data = $this->page('home');
-        $data['page'] = (object) array('title' => 'Search');
+        $data = config('general-settings');
+        $data['page'] = Page::where('slug', Route::currentRouteName())->firstOrFail();
         $data['categories'] = Category::get();
         $data['tags'] = Tag::withoutTrashed()->get();
 

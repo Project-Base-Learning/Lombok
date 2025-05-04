@@ -33,6 +33,17 @@ class NavigationFieldsForm
                     Fieldset::make('Search Page')
                         ->schema([
                             Select::make('search')
+                                ->live()
+                                ->different('home')
+                                ->options(Page::pluck('title', 'id')->toArray()),
+                        ])
+                        ->columns(1),
+                    Fieldset::make('Home Page')
+                        ->schema([
+                            Select::make('home')
+                                ->required()
+                                ->live()
+                                ->different('search')
                                 ->options(Page::pluck('title', 'id')->toArray()),
                         ])
                         ->columns(1),
@@ -51,10 +62,17 @@ class NavigationFieldsForm
                                 ->options(Page::pluck('title', 'id')->toArray())
                                 ->columnSpan(['lg' => 2])
                                 ->visible(fn (Get $get) => $get('type') == 'page'),
-                            TextInput::make('link')
-                                ->required()
-                                ->url()
+                            Group::make()
+                                ->schema([
+                                    TextInput::make('label')
+                                        ->required()
+                                        ->maxLength(255),
+                                    TextInput::make('url')
+                                        ->required()
+                                        ->url(),
+                                ])
                                 ->columnSpan(['lg' => 2])
+                                ->statePath('link')
                                 ->visible(fn (Get $get) => $get('type') == 'link'),
                         ])
                         ->columns(['lg' => 3])

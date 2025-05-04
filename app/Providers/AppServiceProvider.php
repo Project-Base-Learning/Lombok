@@ -46,11 +46,13 @@ class AppServiceProvider extends ServiceProvider
         $navigation['header'] = $navigation['header'] ?? null;
         $navigation['footer'] = $navigation['footer'] ?? null;
         $navigation['search'] = $navigation['search'] ?? null;
+        $navigation['home'] = $navigation['home'] ?? null;
         $navigation['nav_items'] = $navigation['nav_items'] ?? [];
 
         $navigation['header'] = Section::find($navigation['header'])?->toArray();
         $navigation['footer'] = Section::find($navigation['footer'])?->toArray();
         $navigation['search'] = Page::find($navigation['search'])?->toArray();
+        $navigation['home'] = Page::find($navigation['home'])?->toArray();
 
 
         foreach ($navigation['nav_items'] as $key => $value) {
@@ -61,6 +63,15 @@ class AppServiceProvider extends ServiceProvider
 
         $data['navigation'] = $navigation;
         unset($navigation);
+
+        // theme
+        foreach ($data['theme'] as $keyColor => $color) {
+            if ($color) {
+                foreach ($color as $keyShade => $shade) {
+                    $data['theme'][$keyColor][$keyShade] = str_replace(',', '', $shade);
+                }
+            }
+        }
 
         // general-settings
         Config::set('general-settings', array_intersect_key($data, array_flip([
@@ -80,6 +91,7 @@ class AppServiceProvider extends ServiceProvider
         // analytics.property_id
         $analytics = $data['google_analytics'] ?? [];
         Config::set('analytics.property_id', $analytics['google_property_id'] ?? null);
+        Config::set('analytics.analytics_tag', $analytics['google_analytics_tag'] ?? null);
         unset($analytics);
 
         // mail

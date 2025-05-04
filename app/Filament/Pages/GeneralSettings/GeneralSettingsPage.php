@@ -138,6 +138,16 @@ class GeneralSettingsPage extends Page
             $data['theme'][$key] = $value ? Color::rgb($value) : null;
         }
 
+        if ($data['navigation']['nav_items']) {
+            foreach ($data['navigation']['nav_items'] as $key => $value) {
+                if ($value['type'] == 'link') {
+                    $data['navigation']['nav_items'][$key]['page'] = null;
+                } else {
+                    $data['navigation']['nav_items'][$key]['link'] = null;
+                }
+            }
+        }
+
         GeneralSetting::updateOrCreate([], $data);
 
         $this->successNotification('Settings saved');

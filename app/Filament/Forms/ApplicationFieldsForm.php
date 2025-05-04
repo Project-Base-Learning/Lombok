@@ -41,6 +41,8 @@ class ApplicationFieldsForm
                         ->schema([
                             TextInput::make('address')
                                 ->maxLength(255),
+                            TextInput::make('url')
+                                ->url(),
                             Map::make('coordinate')
                                 ->zoom(15)
                                 ->minZoom(0)

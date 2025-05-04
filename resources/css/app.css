@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
+:root {
     /* Primary - Indigo */
     --color-primary-50:    oklch(0.984 0.016 278.4);
     --color-primary-100:   oklch(0.963 0.029 275.9);

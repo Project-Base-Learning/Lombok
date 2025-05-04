@@ -1,19 +1,29 @@
 <?php
 
-// use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\HomeController;
-// use App\Http\Controllers\SearchController;
-// use App\Models\Page;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TestController;
 
-// $data['navigation'] = Page::whereNotNull('published_at')->get();
+$data = config('general-settings.navigation');
 
-// Route::get('/', fn () => redirect(route('home')));
-// foreach ($data['navigation'] as $item) {
-//     Route::get('/'.$item->slug, [HomeController::class, 'index'])->name($item->slug);
-// }
+Route::get('/', [HomeController::class, 'index'])->name('/');
 
-// Route::get('/{category}/{slug}', [HomeController::class, 'detail'])->name('detail');
+if ($data['home']) {
+    Route::get('/'.$data['home']['slug'], [HomeController::class, 'index'])->name($data['home']['slug']);
+}
 
-// Route::controller(SearchController::class)->group(function () {
-//     Route::get('/search', 'index')->name('search');
-// });
+if ($data['search']) {
+    Route::get('/'.$data['search']['slug'], [HomeController::class, 'index'])->name($data['search']['slug']);
+}
+
+foreach ($data['nav_items'] as $key => $value) {
+    if($value['type'] == 'page') {
+        Route::get('/'.$value['page']['slug'], [HomeController::class, 'index'])->name($value['page']['slug']);
+    }
+}
+
+Route::get('/{category}/{slug}', [HomeController::class, 'detail'])->name('detail');
+
+// Check if double nav item
+
+Route::get('/test', [TestController::class, 'index']);
