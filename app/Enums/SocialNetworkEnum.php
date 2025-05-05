@@ -8,6 +8,7 @@ enum SocialNetworkEnum: string
 {
     use WithOptions;
 
+    // Make sure the name of item as same as the icon brand in font awsome
     case FACEBOOK = 'facebook';
     case INSTAGRAM = 'instagram';
     case TWITTER = 'x_twitter';

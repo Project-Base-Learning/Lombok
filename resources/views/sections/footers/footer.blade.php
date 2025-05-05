@@ -29,22 +29,21 @@
         <div class="mb-6">
             <a class="text-2xl font-semibold md:text-3xl">For Businesses</a>
             <ul class="flex flex-col mt-3 space-y-2 text-base md:text-lg">
-                {{-- <li>
-                    <a href="mailto:{{ $data['contacts']['email'] }}" class="font-medium text-gray-700 hover:text-red">
-                        {{ $data['contacts']['email'] }}
-                    </a>
-                </li>
-                <li>
-                    <a href="tel:{{ $data['contacts']['phone'] }}" class="font-medium text-gray-700 hover:text-red">
-                        {{ $data['contacts']['phone'] }}
-                    </a>
-                </li> --}}
-                {{-- <li>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Denpasar+Utara,+Kota+Denpasar,+Bali"
-                       target="_blank" rel="noopener noreferrer" class="font-medium text-gray-700 hover:text-red">
-                        Denpasar Utara, Kota Denpasar, Bali
-                    </a>
-                </li> --}}
+                @if ({{ $data['contacts']['email'] }})
+                    <x-footer.contact_item url="mailto:{{ $data['contacts']['email'] }}">
+                    {{ $data['contacts']['email'] }}
+                    </x-footer.contact_item>
+                @endif
+                @if ({{ $data['contacts']['phone'] }})
+                    <x-footer.contact_item url="tel:{{ $data['contacts']['phone'] }}">
+                    {{ $data['contacts']['phone'] }}
+                    </x-footer.contact_item>
+                @endif
+                @if ({{ $data['location']['address'] }})
+                    <x-footer.contact_item url="{{ $data['location']['url'] }}">
+                    {{ $data['location']['address'] }}
+                    </x-footer.contact_item>
+                @endif
             </ul>
         </div>
 
@@ -52,9 +51,9 @@
         <div class="col-span-2 md:mb-6 md:col-span-1">
             <a class="text-2xl font-semibold md:text-3xl">Available On</a>
             <ul class="flex gap-3 mt-3">
-                {{-- <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="w-7 h-7 md:w-9 md:h-9 hover:scale-[1.1]">
-                    <i class="fa-brands fa-facebook"></i>
-                </a> --}}
+                @foreach ($data['social_network'] as $key => $value)
+                    <x-footer.social_network_item url="{{ $value['url'] }}" brand="{{ $key }}"/>
+                @endforeach
             </ul>
         </div>
     </div>

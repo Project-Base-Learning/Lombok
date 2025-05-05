@@ -3,6 +3,7 @@
 namespace App\Filament\Forms;
 
 use App\Enums\SocialNetworkEnum;
+use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\TextInput;
 
 class SocialNetworkFieldsForm
@@ -10,9 +11,16 @@ class SocialNetworkFieldsForm
     public static function get(): array
     {
         $fields = [];
-        foreach (SocialNetworkEnum::options() as $key => $value) {
-            $fields[] = TextInput::make($key)
-                ->label(ucfirst(strtolower($value)));
+        foreach (SocialNetworkEnum::options() as $value) {
+            $fields[] = Fieldset::make($value)
+                ->schema([
+                    TextInput::make('label')
+                        ->maxLength(255),
+                    TextInput::make('url')
+                        ->url(),
+                ])
+                ->columns(1)
+                ->statePath($value);
         }
 
         return $fields;
