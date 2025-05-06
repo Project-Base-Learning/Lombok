@@ -27,3 +27,5 @@ Route::get('/{category}/{slug}', [HomeController::class, 'detail'])->name('detai
 // Check if double nav item
 
 Route::get('/test', [TestController::class, 'index']);
+
+Route::get('users/{id}', [UserController::class, 'index'])->name('user.index');
