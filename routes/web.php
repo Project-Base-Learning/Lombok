@@ -22,8 +22,8 @@ foreach ($data['nav_items'] as $key => $value) {
     }
 }
 
-Route::get('/{category}/{slug}', [HomeController::class, 'detail'])->name('detail');
+Route::get('/detail/{category}/{slug}', [HomeController::class, 'detail'])->name('detail');
 
 // Check if double nav item
 
-Route::get('/test', [TestController::class, 'index']);
+// Route::get('/test', [TestController::class, 'index']);

@@ -55,7 +55,6 @@ class PageResource extends Resource
                                 Forms\Components\Select::make('section_id')
                                     ->required()
                                     ->searchable()
-                                    ->preload()
                                     ->relationship('section', 'title'),
                             ])
                             ->columnSpan('full')

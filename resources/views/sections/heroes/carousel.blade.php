@@ -2,35 +2,31 @@
     <div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
 
         {{-- Tagline --}}
-        <div class="absolute top-0 left-0 w-full overflow-hidden aspect-[16/9] z-[90] flex flex-col items-center justify-center py-6 px-[10%] text-center text-white bg-opacity-50 bg-red">
+        <div class="absolute top-0 left-0 w-full overflow-hidden aspect-[16/9] z-[90] flex flex-col items-center justify-center py-6 px-[10%] text-center text-white bg-cyan-500/10">
             <h2 class="mb-2 text-3xl font-bold sm:mb-4 md:text-5xl lg:text-7xl">Welcome To {{ $data['site_name'] }}</h2>
             <p class="hidden max-w-4xl mb-4 sm:block md:text-xl lg:text-2xl">Creator: To Create a Work to be Realized or Introduced Haichi: translated means “Showcasing” Thus, we are a community actively facilitating creators, especially in Bali, to showcase their original works.</p>
-            <a href="{{ route('events') }}" class="flex items-center gap-2 px-4 py-2 text-white transition-transform transform rounded-lg md:!px-6 md:!py-2 md:!text-lg lg:!text-xl lg:!py-4 lg:!px-8 bg-red hover:scale-105">
-                Lihat Event
-                <img src="{{ asset('image/arrow-right-white.svg') }}" alt="Arrow Right" class="lg:size-6 md:size-5 size-4">
-            </a>
         </div>
 
         <!-- Carousel wrapper -->
         <div class="relative w-full aspect-[16/9] overflow-hidden">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('image/home/banner1.webp') }}" class="block object-cover w-full h-full"
+                <img src="{{ asset('image/home/banner1.jpg') }}" class="block object-cover w-full h-full"
                     alt="Image 1">
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('image/home/banner2.webp') }}" class="block object-cover w-full h-full"
+                <img src="{{ asset('image/home/banner2.jpg') }}" class="block object-cover w-full h-full"
                     alt="Image 2">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('image/home/banner3.webp') }}" class="block object-cover w-full h-full"
+                <img src="{{ asset('image/home/banner3.jpg') }}" class="block object-cover w-full h-full"
                     alt="Image 3">
             </div>
             <!-- Item 4 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('image/home/banner4.webp') }}" class="block object-cover w-full h-full"
+                <img src="{{ asset('image/home/banner4.jpg') }}" class="block object-cover w-full h-full"
                     alt="Image 4">
             </div>
         </div>

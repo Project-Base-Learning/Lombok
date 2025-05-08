@@ -2,7 +2,11 @@
     <div class="flex flex-row items-center justify-between w-full px-4 mx-auto lg:px-0 lg:w-11/12">
         <!-- Logo -->
         <a href="{{ route('/') }}">
-            <img class="w-[80px] lg:!w-[120px] h-auto" src="{{ Storage::url($data['site_logo']) }}" alt="Logo">
+            @if ($data['site_logo'])
+                <img class="w-[80px] lg:!w-[120px] h-auto" src="{{ Storage::url($data['site_logo']) }}" alt="$data['site_name']">
+            @else
+                <h1 class="text-2xl font-bold">{{ $data['site_name'] }}</h1>
+            @endif
         </a>
 
         <!-- Navbar items -->
@@ -36,6 +40,10 @@
                     <i class="fa-solid fa-bars"></i>
                 </a>
             </form>
+        @else
+            <a id="showMenu" class="rounded-md cursor-pointer md:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         @endif
     </div>
 </header>

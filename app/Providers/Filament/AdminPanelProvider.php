@@ -84,10 +84,17 @@ class AdminPanelProvider extends PanelProvider
 
         return $panel
             ->default()
-            ->favicon(Storage::url($this->data['site_favicon'] ?? ''))
-            ->brandName($this->data['site_name'] ?? env('APP_NAME'))
+            ->favicon(function () {
+                $tmp = $this->data['site_favicon'] ?? null;
+                return $tmp ? Storage::url($tmp) : null;
+            })
+            ->brandName($this->data['site_name'] ?? config('app.name'))
+            ->brandLogo(function () {
+                $tmp = $this->data['site_logo'] ?? null;
+                return $tmp ? Storage::url($tmp) : null;
+            })
             ->id('dashboard')
-            ->path('admin')
+            ->path($this->data['site_dashboard_url'] ?? 'admin')
             ->login(Login::class)
             ->passwordReset()
             ->emailVerification()
@@ -99,7 +106,7 @@ class AdminPanelProvider extends PanelProvider
             ->userMenuItems([
                 MenuItem::make()
                     ->label('Dashboard')
-                    ->url('/admin')
+                    ->url('/'.($this->data['site_dashboard_url'] ?? 'admin'))
                     ->icon('heroicon-o-home'),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
@@ -113,8 +120,15 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->navigationItems([
                 NavigationItem::make('Go to web')
-                    ->url('/home', shouldOpenInNewTab: true)
+                    ->url(function () : string {
+                        $tmp = $this->data['navigation'] ?? '';
+                        return '/'.$tmp['home']['slug'];
+                    }, shouldOpenInNewTab: true)
                     ->icon('heroicon-o-globe-alt')
+                    ->visible(function () : bool {
+                        $tmp = $this->data['navigation'] ?? null;
+                        return isset($tmp['home']['slug']);
+                    })
                     ->sort(-1),
             ])
             ->navigationGroups([

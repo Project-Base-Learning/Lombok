@@ -14,6 +14,8 @@ class GeneralSetting extends Model
         'site_description',
         'site_logo',
         'site_favicon',
+        'site_url',
+        'site_dashboard_url',
         'location',
         'contacts',
         'theme',

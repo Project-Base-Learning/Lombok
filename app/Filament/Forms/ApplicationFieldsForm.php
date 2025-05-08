@@ -59,6 +59,14 @@ class ApplicationFieldsForm
                 ->columnSpan(['lg' => 2]),
             Grid::make()
                 ->schema([
+                    Section::make('Urls')
+                        ->schema([
+                            TextInput::make('site_url')
+                                ->url()
+                                ->placeholder('https://site.com'),
+                            TextInput::make('site_dashboard_url')
+                                ->prefix('/'),
+                        ]),
                     Section::make('Contact Supports')
                         ->schema([
                             TextInput::make('email')

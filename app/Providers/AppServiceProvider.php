@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\GeneralSetting;
 use App\Models\Page;
 use App\Models\Section;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
@@ -23,11 +24,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Cache::rememberForever('general-settings', function () {
+            return [];
+        });
+
         $data = GeneralSetting::select([
             'site_name',
             'site_description',
             'site_logo',
             'site_favicon',
+            'site_url',
+            'site_dashboard_url',
             'location',
             'contacts',
             'theme',
@@ -39,6 +46,9 @@ class AppServiceProvider extends ServiceProvider
             'user_features',
             'chatbot_settings',
         ])->first()->toArray();
+
+        // app url
+        Config::set('app.url', $data['site_url'] ?? env('APP_URL'));
 
         // navigation
         $navigation = $data['navigation'] ?? [];
@@ -79,6 +89,7 @@ class AppServiceProvider extends ServiceProvider
             'site_description',
             'site_logo',
             'site_favicon',
+            'site_dashboard_url',
             'location',
             'contacts',
             'theme',
@@ -139,5 +150,7 @@ class AppServiceProvider extends ServiceProvider
         unset($chatbot);
 
         unset($data);
+
+        // dd(config('general-settings'));
     }
 }

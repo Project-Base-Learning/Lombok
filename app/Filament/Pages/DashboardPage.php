@@ -9,7 +9,7 @@ class DashboardPage extends \Filament\Pages\Dashboard
     public function getActions(): array
     {
         return [
-            OptimizeClearAction::make('optimize-clear')
+            // OptimizeClearAction::make('optimize-clear')
         ];
     }
 }

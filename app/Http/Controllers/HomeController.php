@@ -24,7 +24,7 @@ class HomeController extends Controller
                 $tmp = $section->section->dataset;
                 $tmp2 = Article::query();
                 $tmp2 = $tmp2->where([
-                    ['category_id', $tmp->category->id],
+                    // ['category_id', $tmp->category->id],
                     ['private', 0]
                 ])->whereNotNull('published_at');
                 $tmp2 = $tmp2->orderBy($tmp->order_col, $tmp->order_sort);
