@@ -1,4 +1,4 @@
-<style>
+{{-- <style>
     :root {
     @foreach ($data['theme'] as $keyColor => $color)
         @if ($color)
@@ -8,4 +8,4 @@
         @endif
     @endforeach
     }
-</style>
+</style> --}}

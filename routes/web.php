@@ -8,6 +8,15 @@ $data = config('general-settings.navigation');
 
 Route::get('/', [HomeController::class, 'index'])->name('/');
 
+Route::get('/test-landing', function () {
+    return view('pages.landing');
+})->name('test.landing');
+
+Route::get('/berita', function () {
+    return view('pages.berita');
+})->name('berita');
+
+
 if ($data['home']) {
     Route::get('/'.$data['home']['slug'], [HomeController::class, 'index'])->name($data['home']['slug']);
 }

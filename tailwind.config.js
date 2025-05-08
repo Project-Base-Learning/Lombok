@@ -20,7 +20,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["'Open Sans'", ...defaultTheme.fontFamily.sans],
+                sans: ["'Nunito'", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 primary: {
