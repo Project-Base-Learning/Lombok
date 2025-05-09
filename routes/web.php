@@ -16,6 +16,22 @@ Route::get('/berita', function () {
     return view('pages.berita');
 })->name('berita');
 
+Route::get('/publikasi', function () {
+    return view('pages.publikasi');
+})->name('publikasi');
+
+Route::get('/program', function () {
+    return view('pages.program');
+})->name('program');
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
+
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
 
 if ($data['home']) {
     Route::get('/'.$data['home']['slug'], [HomeController::class, 'index'])->name($data['home']['slug']);

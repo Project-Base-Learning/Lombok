@@ -1,5 +1,5 @@
 @extends('layouts.landing-base')
-<x-chatbot />
+{{-- <x-chatbot /> --}}
 
 @section('css')
     <style>
@@ -7,8 +7,8 @@
             position: relative;
             overflow: hidden;
             margin: 10px;
-            min-width: 230px;
-            max-width: 315px;
+            min-width: 260px;
+            max-width: 380px;
             width: 100%;
             background: #20638f;
             text-align: left;
@@ -67,25 +67,26 @@
             left: 20px;
             right: 20px;
             border-bottom: 2px solid #ffffff;
-            padding-top: 20px;
+            padding-top: 24px;
             z-index: 1;
         }
 
-        .snip1369 h3,
-        .snip1369 p {
-            margin: 0;
+        /* Medium screen (md: <1024px) */
+        @media (max-width: 1366px) {
+            .snip1369 figcaption {
+                padding-top: 8px;
+            }
         }
 
-        .snip1369 h3 {
-            font-weight: 700;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+        /* Small screen (sm: <768px) */
+        @media (max-width: 767px) {
+            .snip1369 figcaption {
+                padding-top: 4px;
+            }
         }
 
         .snip1369 p {
-            font-size: 0.9em;
             letter-spacing: 1px;
-            font-weight: 400;
             opacity: 0;
         }
 
@@ -153,7 +154,7 @@
 @section('content')
     <div class="mx-auto">
         {{-- Carousel --}}
-        <div id="default-carousel" class="relative w-full h-full h-[600px]" data-carousel="slide">
+        <div id="default-carousel" class="relative w-full h-[600px]" data-carousel="slide">
 
             {{-- Tagline --}}
             <div
@@ -165,7 +166,7 @@
                 </p>
                 <a href="/"
                     class="inline-flex items-center gap-2 px-4 py-2 text-base text-white transition-transform transform rounded-3xl sm:px-6 sm:py-3 sm:text-lg bg-orange-500 hover:scale-105">
-                    Lihat Event
+                    Lihat Program
                     <!-- Font Awesome Arrow Icon -->
                     <i class="fas fa-arrow-right text-white"></i>
                 </a>
@@ -215,66 +216,121 @@
                 </button>
             </div>
         </div>
-
         {{-- New Section: Program Terbaru --}}
-        <div class="py-12">
-            <div class="max-w-screen-xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-8">Program Terbaru</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <figure class="snip1369 green rounded">
-                        <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1" />
-                        <div class="image">
-                            <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1" />
-                        </div>
-                        <figcaption>
-                            <h3>Judul Berita 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec libero
-                                scelerisque aliquet.</p>
-                            {{-- New meta info block --}}
-                            <div
-                                class="meta-info mt-2 text-sm flex items-center gap-2 text-white opacity-0 transition-opacity duration-300">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-eye"></i> 123
-                                </span>
-                                <span class="w-1 h-1 bg-orange-600 rounded-full"></span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-calendar-alt"></i> 01 Jan 2025
-                                </span>
+        <div class="py-12 px-8">
+            <div class="mx-auto max-w-[80%]">
+                <div class="relative mb-8 flex justify-center items-center">
+                    <h2 class="text-5xl font-bold text-center">Program Terbaru</h2>
+                    <a href="#"
+                        class="absolute right-0 text-lg text-orange-500 hover:underline flex items-center gap-1">
+                        See All <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+                    @foreach (range(1, 3) as $i)
+                        <figure class="snip1369 green rounded scale-105">
+                            <img src="{{ asset('storage/images/berita.svg') }}" alt="Card {{ $i }}" />
+                            <div class="image">
+                                <img src="{{ asset('storage/images/berita.svg') }}" alt="Card {{ $i }}" />
                             </div>
-                        </figcaption>
-                        <span class="read-more">Read More <i class="fas fa-arrow-right text-white"></i></span>
-                        <a href="#"></a>
-                    </figure>
+                            <figcaption>
+                                <h3 class="text-3xl font-semibold">Judul Berita {{ $i }}</h3>
+                                <p class="text-md font-regular mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.</p>
+                                <div class="meta-info mt-2 text-sm flex items-center gap-2 text-white">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-eye"></i> 123
+                                    </span>
+                                    <span class="w-1 h-1 bg-orange-600 rounded-full"></span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-calendar-alt"></i> 01 Jan 2025
+                                    </span>
+                                </div>
+                            </figcaption>
+                            <span class="read-more">Read More <i class="fas fa-arrow-right text-white"></i></span>
+                            <a href="#"></a>
+                        </figure>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        {{-- New Section: Berita --}}
+        <div class="py-12 px-8 bg-blue-900">
+            <div class="mx-auto max-w-7xl">
+                <div class="bg-blue-800 p-6 rounded-lg">
+                    <div class="p-6 bg-white rounded-2xl">
+                        <!-- Header section -->
+                        <div class="flex justify-between items-center mb-8">
+                            <h2 class="text-3xl font-bold">Berita Terbaru</h2>
+                            <a href="#" class="text-xl text-orange-600 hover:text-orange-800">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                    <!-- Card 2 -->
-                    <figure class="snip1369 orange rounded">
-                        <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 3" />
-                        <div class="image">
-                            <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 3" />
+                        <!-- Carousel container -->
+                        <div id="newsCarousel" class="relative" data-carousel="slide">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-[400px] overflow-hidden">
+                                <!-- Item 1 - ACTIVE by default -->
+                                <div class="duration-700 ease-in-out" data-carousel-item>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 h-full">
+                                        @foreach (range(1, 4) as $i)
+                                            <div class="p-4 rounded-lg">
+                                                <img src="{{ asset('storage/images/berita.svg') }}"
+                                                    alt="Card {{ $i }}"
+                                                    class="w-full h-[200px] object-contain mb-4 rounded-lg">
+                                                <h3 class="text-xl font-semibold mb-4">
+                                                    Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 2024
+                                                </h3>
+                                                <a href="#" class="text-orange-600 hover:text-orange-800">
+                                                    Lihat Berita <i class="fas fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+
+                                <!-- Item 2 -->
+                                <div class="duration-700 ease-in-out" data-carousel-item>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 h-full">
+                                        @foreach (range(5, 8) as $i)
+                                            <div class="p-4 rounded-lg">
+                                                <img src="{{ asset('storage/images/berita.svg') }}"
+                                                    alt="Card {{ $i }}"
+                                                    class="w-full h-[200px] object-contain mb-4 rounded-lg">
+                                                <h3 class="text-xl font-semibold mb-4">
+                                                    Berita Lainnya SIPD RI TA 2024
+                                                </h3>
+                                                <a href="#" class="text-orange-600 hover:text-orange-800">
+                                                    Lihat Berita <i class="fas fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Navigation buttons -->
+                            <button type="button"
+                                class="absolute top-1/2 left-0 -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-blue-900/30 hover:bg-blue-900/50 focus:outline-none"
+                                data-carousel-prev>
+                                <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                </svg>
+                            </button>
+                            <button type="button"
+                                class="absolute top-1/2 right-0 -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-blue-900/30 hover:bg-blue-900/50 focus:outline-none"
+                                data-carousel-next>
+                                <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                </svg>
+                            </button>
                         </div>
-                        <figcaption>
-                            <h3>Judul Berita 2</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec libero
-                                scelerisque aliquet.</p>
-                        </figcaption>
-                        <span class="read-more">Read More <i class="fas fa-arrow-right text-white"></i></span>
-                        <a href="#"></a>
-                    </figure>
-                    <!-- Card 3 -->
-                    <figure class="snip1369 orange rounded">
-                        <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 3" />
-                        <div class="image">
-                            <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 3" />
-                        </div>
-                        <figcaption>
-                            <h3>Judul Berita 3</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec libero
-                                scelerisque aliquet.</p>
-                        </figcaption>
-                        <span class="read-more">Read More <i class="fas fa-arrow-right text-white"></i></span>
-                        <a href="#"></a>
-                    </figure>
+                    </div>
                 </div>
             </div>
         </div>
@@ -283,54 +339,27 @@
             <div class="mx-auto text-start">
                 <div class="bg-dark-blue p-6 rounded-lg">
                     <!-- Title inside the card container -->
-                    <div class="p-6 bg-white rounded-2xl p-6">
-                        <h2 class="text-3xl font-bold mb-8">Berita Terbaru</h2>
-                        <a class="text-xl text-orange-600">Read More <i class="fas fa-arrow-right"></i></a>
+                    <div class="p-6 bg-white rounded-2xl">
+                        <div class="flex justify-between items-center mb-8">
+                            <h2 class="text-3xl font-bold">Berita Terbaru</h2>
+                            <a href="#" class="text-xl text-orange-600 hover:text-orange-800">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <!-- Small Card 1 -->
-                            <div class="p-6 rounded-lg">
-                                <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1"
-                                    class="w-full h-[200px] object-cover mb-4 rounded-lg">
-                                <h3 class="text-xl font-semibold mb-4">Desk Proses Penatausahaan Belanja Melalui SIPD RI TA
-                                    2024</h3>
-                                <a href="#" class="text-orange-600 hover:text-orange-800">
-                                    Lihat Berita
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                            <!-- Small Card 2 -->
-                            <div class="p-6 rounded-lg">
-                                <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1"
-                                    class="w-full h-[200px] object-cover mb-4 rounded-lg">
-                                <h3 class="text-xl font-semibold mb-4">Desk Proses Penatausahaan Belanja Melalui SIPD RI TA
-                                    2024</h3>
-                                <a href="#" class="text-orange-600 hover:text-orange-800">
-                                    Lihat Berita
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                            <!-- Small Card 3 -->
-                            <div class="p-6 rounded-lg">
-                                <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1"
-                                    class="w-full h-[200px] object-cover mb-4 rounded-lg">
-                                <h3 class="text-xl font-semibold mb-4">Desk Proses Penatausahaan Belanja Melalui SIPD RI TA
-                                    2024</h3>
-                                <a href="#" class="text-orange-600 hover:text-orange-800">
-                                    Lihat Berita
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                            <!-- Small Card 4 -->
-                            <div class="p-6 rounded-lg">
-                                <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1"
-                                    class="w-full h-[200px] object-cover mb-4 rounded-lg">
-                                <h3 class="text-xl font-semibold mb-4">Desk Proses Penatausahaan Belanja Melalui SIPD RI TA
-                                    2024</h3>
-                                <a href="#" class="text-orange-600 hover:text-orange-800">
-                                    Lihat Berita
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
+                            @foreach (range(1, 4) as $i)
+                                <div class="p-6 rounded-lg">
+                                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Card {{ $i }}"
+                                        class="w-full h-[200px] object-cover mb-4 rounded-lg">
+                                    <h3 class="text-xl font-semibold mb-4">
+                                        Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 2024
+                                    </h3>
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">
+                                        Lihat Berita <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -508,6 +537,13 @@
 
 
 @section('js')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = new Carousel(document.getElementById('newsCarousel'), {
+                interval: 4000
+            });
+        });
+    </script>
     <script>
         /* Demo purposes only */
         $(".hover").mouseleave(

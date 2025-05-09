@@ -67,10 +67,10 @@
             <div class="hidden lg:flex justify-center w-1/3 space-x-6 whitespace-nowrap overflow-visible">
                 <a href="test-landing" class="nav-link font-semibold transition-colors">Home</a>
                 <a href="berita" class="nav-link font-semibold transition-colors">Berita</a>
-                <a href="#publikasi" class="nav-link font-semibold transition-colors">Publikasi</a>
-                <a href="#program" class="nav-link font-semibold transition-colors">Program</a>
-                <a href="#about" class="nav-link font-semibold transition-colors">About Us</a>
-                <a href="#contact" class="nav-link font-semibold transition-colors">Contact Us</a>
+                <a href="publikasi" class="nav-link font-semibold transition-colors">Publikasi</a>
+                <a href="program" class="nav-link font-semibold transition-colors">Program</a>
+                <a href="about" class="nav-link font-semibold transition-colors">About Us</a>
+                <a href="contact" class="nav-link font-semibold transition-colors">Contact Us</a>
             </div>
 
             <!-- Right: Search & Hamburger -->
