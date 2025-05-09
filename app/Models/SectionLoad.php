@@ -11,7 +11,7 @@ class SectionLoad extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'name_variable',
+        'variable_name',
         'dataset_id',
         'order_col',
         'order_sort',

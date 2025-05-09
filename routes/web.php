@@ -6,14 +6,14 @@ use App\Http\Controllers\TestController;
 
 $data = config('general-settings.navigation');
 
-Route::get('/', [HomeController::class, 'index'])->name('/');
+Route::get('', [HomeController::class, 'index'])->name('/');
 
 if ($data['home']) {
     Route::get('/'.$data['home']['slug'], [HomeController::class, 'index'])->name($data['home']['slug']);
 }
 
 if ($data['search']) {
-    Route::get('/'.$data['search']['slug'], [HomeController::class, 'index'])->name($data['search']['slug']);
+    Route::get('/'.$data['search']['slug'], [HomeController::class, 'search'])->name($data['search']['slug']);
 }
 
 foreach ($data['nav_items'] as $key => $value) {
@@ -24,6 +24,15 @@ foreach ($data['nav_items'] as $key => $value) {
 
 Route::get('/detail/{category}/{slug}', [HomeController::class, 'detail'])->name('detail');
 
-// Check if double nav item
+// Testing routes
+if (config('app.debug')) {
+    Route::get('/test', [TestController::class, 'index']);
 
-// Route::get('/test', [TestController::class, 'index']);
+    Route::get('/test-landing', function () {
+        return view('tests.landing');
+    })->name('test.landing');
+
+    Route::get('/berita', function () {
+        return view('tests.berita');
+    })->name('berita');
+}

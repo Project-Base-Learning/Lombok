@@ -68,7 +68,6 @@ class ArticleResource extends Resource
                                             ->regex('/^[a-z0-9-]+$/')
                                             ->columnSpan(['lg' => 2]),
                                         Forms\Components\Select::make('cover')
-                                            ->required()
                                             ->relationship('cover')
                                             ->allowHtml()
                                             ->searchable()
@@ -85,25 +84,21 @@ class ArticleResource extends Resource
                                                 Forms\Components\TextInput::make('alt')
                                                     ->maxLength(255),
                                             ])
-                                            ->options(fn () => Cover::all()
+                                            ->options(fn () => collect(Cover::all())
                                                 ->mapWithKeys(fn ($item) => [
                                                     $item->id => static::getCleanOptionString($item)
                                                 ])
                                                 ->toArray(),
                                             )
                                             ->getSearchResultsUsing(function (string $query) {
-                                                $covers = Cover::where('alt', 'like', "%{$query}%")->limit(25)->get();
-                                                return $covers->mapWithKeys(fn ($item) => [
+                                                $covers = Cover::where('alt', 'like', "%{$query}%")->limit(10)->get();
+                                                return collect($covers)->mapWithKeys(fn ($item) => [
                                                     $item->id => static::getCleanOptionString($item)
                                                 ])
                                                 ->toArray();
                                             })
                                             ->getOptionLabelUsing(function ($value): string {
-                                                return Cover::find($value)
-                                                    ->mapWithKeys(fn ($item) => [
-                                                        $item->id => static::getCleanOptionString($item)
-                                                    ])
-                                                    ->toArray();
+                                                return static::getCleanOptionString(Cover::find($value));
                                             })
                                             ->columnSpan(2),
                                     ])
@@ -185,10 +180,13 @@ class ArticleResource extends Resource
                         Forms\Components\Tabs\Tab::make('Fields')
                             ->icon('heroicon-o-plus')
                             ->visible(
-                                fn ($record, $get) => Category::query()
-                                    ->where('id', $get('category_id'))
-                                    ->whereNotNull('fields')
-                                    ->exists()
+                                function ($record, $get) {
+                                    $fields = Category::query()
+                                        ->where('id', $get('category_id'))
+                                        ->whereNotNull('fields')
+                                        ->value('fields');
+                                    return !empty($fields);
+                                }
                             )
                             ->schema(
                                 function ($record, $get) {

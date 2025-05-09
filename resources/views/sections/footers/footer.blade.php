@@ -6,14 +6,19 @@
             @if ($data['site_logo'])
                 <img class="h-auto max-w-[150px] md:max-w-[192px] lg:max-h-[100px] lg:max-w-[180px]" src="{{ Storage::url($data['site_logo']) }}" alt="{{ $data['site_name'] }}">
             @else
-                <h2 class="text-3xl sm:text-4xl font-bold">{{ $data['site_name'] }}</h2>
+                <h2 class="text-3xl font-bold sm:text-4xl">{{ $data['site_name'] }}</h2>
             @endif
         </div>
 
         <!-- Discover Section -->
         <div class="mb-6">
-            <a class="text-2xl font-semibold md:text-3xl">Discover</a>
+            <a class="text-xl font-semibold md:text-2xl">Discover</a>
             <ul class="flex flex-col mt-3 space-y-2">
+                @if ($data['navigation']['home'])
+                    <x-navigation.nav_item slug="{{ $data['navigation']['home']['slug'] }}">
+                        {{ $data['navigation']['home']['title'] }}
+                    </x-navigation.nav_item>
+                @endif
                 @foreach ($data['navigation']['nav_items'] as $navItem)
                     @if ($navItem['type'] == 'link')
                         <x-footer.nav_item slug="{{ $navItem['link']['url'] }}">
@@ -30,7 +35,7 @@
 
         <!-- For Businesses Section -->
         <div class="mb-6">
-            <a class="text-2xl font-semibold md:text-3xl">For Businesses</a>
+            <a class="text-xl font-semibold md:text-2xl">For Businesses</a>
             <ul class="flex flex-col mt-3 space-y-2 text-base md:text-lg">
                 @if ($data['contacts']['email'])
                     <x-footer.contact_item url="mailto:{{ $data['contacts']['email'] }}">
@@ -52,13 +57,15 @@
 
         <!-- Available On Section -->
         <div class="col-span-2 md:mb-6 md:col-span-1">
-            <a class="text-2xl font-semibold md:text-3xl">Available On</a>
+            <a class="text-xl font-semibold md:text-2xl">Available On</a>
             <ul class="flex gap-3 mt-3">
-                @foreach ($data['social_network'] as $key => $value)
-                    @if ($value)
-                        <x-footer.social_network_item url="{{ $value['url'] }}" brand="{{ $key }}"/>
-                    @endif
-                @endforeach
+                @if ($data['social_network'])
+                    @foreach ($data['social_network'] as $key => $value)
+                        @if ($value['url'])
+                            <x-footer.social_network_item url="{{ $value['url'] }}" brand="{{ $key }}"/>
+                        @endif
+                    @endforeach
+                @endif
             </ul>
         </div>
     </div>

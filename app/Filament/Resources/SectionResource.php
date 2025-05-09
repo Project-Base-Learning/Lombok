@@ -54,10 +54,10 @@ class SectionResource extends Resource
                     )
                     ->relationship('dataset')
                     ->schema([
-                        Forms\Components\TextInput::make('name_variable')
+                        Forms\Components\TextInput::make('variable_name')
                             ->label('Name Variable')
                             ->required()
-                            ->unique('Section_loads', 'name_variable', ignoreRecord: true),
+                            ->unique('Section_loads', 'variable_name', ignoreRecord: true),
                         Forms\Components\Select::make('dataset_id')
                             ->required()
                             ->live()

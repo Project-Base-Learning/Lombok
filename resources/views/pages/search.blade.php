@@ -25,7 +25,7 @@
         </div>
 
         <!-- Dropdown Button -->
-        <button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg bg-red hover:scale-105 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 md:w-auto" type="button">Tags
+        <button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-500 hover:scale-105 focus:ring-2 focus:outline-none focus:ring-primary-600 md:w-auto" type="button">Tags
             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
@@ -34,19 +34,22 @@
         <!-- Dropdown Menu -->
         <div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700">
             <ul class="p-3 overflow-y-auto text-sm text-gray-700 h-max-48 dark:text-gray-200" aria-labelledby="dropdownSearchButton">
+                @if ($data['tags']->isEmpty())
+                    <p>Tags tidak ditemukan</p>
+                @endif
                 @foreach ($data['tags'] as $item)
                     <li>
                         <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
                             @if ($request->filled('tags'))
                                 @if (in_array($item->tag_name, explode(',', $request->tags)))
-                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-red focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" checked>
+                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500" checked>
                                     <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->tag_name }}</label>
                                 @else
-                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-red focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500">
                                     <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->tag_name }}</label>
                                 @endif
                             @else
-                                <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-red focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500">
                                 <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->tag_name }}</label>
                             @endif
                         </div>
@@ -58,7 +61,7 @@
         <input type="hidden" id="tagsInput" name="tags">
 
         <!-- Submit Button -->
-        <button type="submit" class="px-4 py-2 text-sm font-medium text-white transition-transform transform rounded-lg bg-red hover:scale-105 md:w-auto">Search</button>
+        <button type="submit" class="px-4 py-2 text-sm font-medium text-white transition-transform transform rounded-lg bg-primary-500 hover:scale-105 md:w-auto">Search</button>
     </form>
 
     <div class="px-8 py-12 mx-auto lg:px-40 lg:py-20 max-w-screen-3xl">
@@ -66,17 +69,9 @@
             @if ($data['result']->isEmpty())
                 <p class="text-xl text-center">Hasil tidak ditemukan</p>
             @else
-                @switch($request->input('tag'))
-                    @case('event')
-                        @foreach ($data['result'] as $item)
-                            @include('components.cardEvent')
-                        @endforeach
-                        @break
-                    @default
-                        @foreach ($data['result'] as $item)
-                            @include('components.cardPost')
-                        @endforeach
-                @endswitch
+                @foreach ($data['result'] as $item)
+                    @include('components.category_cards.'.$item->category->card_layout)
+                @endforeach
             @endif
         </div>
         {{ $data['result']->links() }}

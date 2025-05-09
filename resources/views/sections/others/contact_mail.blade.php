@@ -1,6 +1,3 @@
-<script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet" />
 <style>
     input:focus + label,
     input:not(:placeholder-shown) + label {
@@ -8,7 +5,7 @@
     }
 </style>
 
-<div class="px-8 py-20">
+<div class="lg:!px-40 lg:!py-12 md:!px-20 md:!py-12 px-8 py-6">
     <div class="grid grid-cols-1 gap-16 mx-auto max-w-7xl md:grid-cols-2">
         <!-- Left Side: Contact Form -->
         <div class="p-8" data-aos="fade-right">
@@ -41,19 +38,15 @@
                 <!-- Submit Button -->
                 <div>
                     <button type="submit"
-                        class="w-full text-red border-1 border-red font-medium py-2 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-[#F32055]/10 transition focus:ring-2 focus:ring-[#F32055]">
+                        class="flex items-center justify-center w-full gap-2 px-4 py-2 font-medium text-black transition border-2 rounded-lg bg-secondary-200 hover:border-black">
                         Kirim Pesan
-                        <!-- Arrow SVG -->
-                        <span>
-                            <img src="{{ asset("image/arrow-right.svg") }}" alt="">
-                        </span>
                     </button>
                 </div>
             </form>
         </div>
         <!-- Right Side: Image -->
         <div class="items-center justify-center hidden md:flex" data-aos="fade-left">
-            <img src="{{ asset("image/about/shape.svg") }}" alt="Contact Us Image" class="w-full max-w-lg drop-shadow-md">
+            <img src="{{ asset("image/home/shape.png") }}" alt="Contact Us Image" class="w-full max-w-lg drop-shadow-md">
         </div>
     </div>
 </div>

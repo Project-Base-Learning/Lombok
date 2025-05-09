@@ -11,8 +11,8 @@ class SocialNetworkFieldsForm
     public static function get(): array
     {
         $fields = [];
-        foreach (SocialNetworkEnum::options() as $value) {
-            $fields[] = Fieldset::make($value)
+        foreach (SocialNetworkEnum::options() as $key => $value) {
+            $fields[] = Fieldset::make(strtolower($value))
                 ->schema([
                     TextInput::make('label')
                         ->maxLength(255),
@@ -20,7 +20,8 @@ class SocialNetworkFieldsForm
                         ->url(),
                 ])
                 ->columns(1)
-                ->statePath($value);
+                ->columnSpan(1)
+                ->statePath(strtolower($value));
         }
 
         return $fields;

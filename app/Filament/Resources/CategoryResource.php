@@ -26,36 +26,43 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make()
-                    ->schema([
-                        Forms\Components\TextInput::make('category_name')
-                            ->required()
-                            ->maxLength(255)
-                            ->reactive()
-                            ->debounce(1000)
-                            ->afterStateUpdated(function (callable $set, $state) {
-                                $set('slug', Str::slug($state));
-                            }),
-                        Forms\Components\TextInput::make('slug')
-                            ->required()
-                            ->unique(ignoreRecord: true)
-                            ->maxLength(255)
-                            ->regex('/^[a-z0-9-]+$/'),
-                        Forms\Components\Group::make()
-                            ->schema([
-                                Forms\Components\Toggle::make('default')
-                                    ->default(false),
-                                Forms\Components\Toggle::make('has_card')
-                                    ->helperText('Card layout in view')
-                                    ->default(false),
-                                Forms\Components\Toggle::make('has_detail_page')
-                                    ->helperText('Detail page layout in view')
-                                    ->default(false),
-                            ])
-                            ->columns(['lg' => 3])
-                            ->columnSpanFull(),
+                Forms\Components\Split::make([
+                    Forms\Components\Section::make()
+                        ->schema([
+                            Forms\Components\TextInput::make('category_name')
+                                ->required()
+                                ->maxLength(255)
+                                ->reactive()
+                                ->debounce(1000)
+                                ->afterStateUpdated(function (callable $set, $state) {
+                                    $set('slug', Str::slug($state));
+                                }),
+                            Forms\Components\TextInput::make('slug')
+                                ->required()
+                                ->unique(ignoreRecord: true)
+                                ->maxLength(255)
+                                ->regex('/^[a-z0-9-]+$/'),
+                            Forms\Components\TextInput::make('card_layout')
+                                ->required()
+                                ->helperText('Name file of blade in views/components/category_cards/')
+                                ->maxLength(255),
+                            Forms\Components\TextInput::make('detail_page')
+                                ->nullable()
+                                ->helperText('Name file of blade in views/pages/detail/')
+                                ->maxLength(255),
+                        ])
+                        ->columns(['lg' => 2]),
+                    Forms\Components\Section::make()
+                        ->schema([
+                            Forms\Components\Toggle::make('default')
+                                ->default(false),
+                            Forms\Components\Toggle::make('searchable')
+                                ->default(false),
+                        ])
+                        ->grow(false)
                     ])
-                    ->columns(2),
+                    ->from('lg')
+                    ->columnSpanFull(),
                 Forms\Components\Repeater::make('fields')
                     ->schema([
                         Forms\Components\Section::make('Field')
@@ -135,10 +142,14 @@ class CategoryResource extends Resource
                     ->searchable(),
                 Tables\Columns\IconColumn::make('default')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('has_card')
+                Tables\Columns\IconColumn::make('searchable')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('has_detail_page')
-                    ->boolean(),
+                Tables\Columns\TextColumn::make('card_layout')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('detail_page')
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

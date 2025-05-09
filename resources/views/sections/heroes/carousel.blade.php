@@ -1,14 +1,14 @@
-<div class="w-full mx-auto aspect-[16/9] relative">
-    <div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
+<div class="w-full mx-auto lg:h-svh aspect-[16/9] relative">
+    <div id="default-carousel" class="relative w-full h-full lg:h-svh" data-carousel="slide">
 
         {{-- Tagline --}}
-        <div class="absolute top-0 left-0 w-full overflow-hidden aspect-[16/9] z-[90] flex flex-col items-center justify-center py-6 px-[10%] text-center text-white bg-cyan-500/10">
+        <div class="absolute top-0 left-0 w-full lg:h-svh overflow-hidden aspect-[16/9] z-[90] flex flex-col items-center justify-center py-6 px-[10%] text-center text-white bg-black/25">
             <h2 class="mb-2 text-3xl font-bold sm:mb-4 md:text-5xl lg:text-7xl">Welcome To {{ $data['site_name'] }}</h2>
-            <p class="hidden max-w-4xl mb-4 sm:block md:text-xl lg:text-2xl">Creator: To Create a Work to be Realized or Introduced Haichi: translated means “Showcasing” Thus, we are a community actively facilitating creators, especially in Bali, to showcase their original works.</p>
+            <p class="hidden max-w-4xl mb-4 sm:block md:text-xl lg:text-2xl">Jelajahi keindahan alam yang luar biasa, nikmati budaya yang kaya, dan rasakan pengalaman tak terlupakan di desa-desa wisata Lombok. Temukan kedamaian dan petualangan dalam setiap langkah.</p>
         </div>
 
         <!-- Carousel wrapper -->
-        <div class="relative w-full aspect-[16/9] overflow-hidden">
+        <div class="relative w-full lg:h-svh aspect-[16/9] overflow-hidden">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('image/home/banner1.jpg') }}" class="block object-cover w-full h-full"

@@ -14,15 +14,15 @@ class Category extends Model
         'category_name',
         'slug',
         'default',
-        'has_card',
-        'has_detail_page',
+        'searchable',
+        'card_layout',
+        'detail_page',
         'fields'
     ];
 
     protected $casts = [
         'default' => 'boolean',
-        'has_card' => 'boolean',
-        'has_detail_page' => 'boolean',
+        'searchable' => 'boolean',
         'fields' => 'array',
     ];
 

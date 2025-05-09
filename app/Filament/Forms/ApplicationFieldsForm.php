@@ -74,8 +74,6 @@ class ApplicationFieldsForm
                                 ->prefixIcon('heroicon-o-envelope'),
                             TextInput::make('phone')
                                 ->prefixIcon('heroicon-o-phone'),
-                            TextInput::make('whatsapp')
-                                ->prefixIcon('heroicon-o-device-phone-mobile'),
                         ])
                         ->statePath('contacts'),
                     Section::make('Theme')
@@ -96,24 +94,22 @@ class ApplicationFieldsForm
                         ->schema([
                             Toggle::make('analytics'),
                             Toggle::make('sponsors'),
-                            Toggle::make('testimonials')
-                                ->disabled(),
-                            Toggle::make('ticketings')
-                                ->disabled(),
-                            Toggle::make('views')
-                                ->disabled(),
+                            // Toggle::make('testimonials')
+                            //     ->disabled(),
+                            // Toggle::make('ticketings')
+                            //     ->disabled(),
                         ])
                         ->statePath('features'),
                     Section::make('User Features')
                         ->description('Features for User (Visitor).')
                         ->schema([
                             Toggle::make('chatbot'),
-                            Toggle::make('favorites')
-                                ->disabled(),
-                            Toggle::make('login')
-                                ->disabled(),
-                            Toggle::make('reviews')
-                                ->disabled(),
+                            // Toggle::make('favorites')
+                            //     ->disabled(),
+                            // Toggle::make('login')
+                            //     ->disabled(),
+                            // Toggle::make('reviews')
+                            //     ->disabled(),
                         ])
                         ->statePath('user_features'),
                 ])
