@@ -71,7 +71,7 @@
     <div class="mx-auto max-w-[90%]" data-aos="fade-up">
         <!-- Header + Filter -->
         <div class="relative mb-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
-            <h2 class="text-5xl font-bold text-center lg:text-left">Semua Publikasi</h2>
+            <h2 class="text-4xl font-bold text-center lg:text-left">Semua Publikasi</h2>
 
             <!-- Filter Dropdown -->
             <div class="w-full lg:w-auto">

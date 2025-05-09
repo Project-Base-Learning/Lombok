@@ -16,7 +16,7 @@
                         <div class="flex justify-center gap-6 px-4">
                             @foreach ($group as $i)
                                 <div
-                                    class="w-[400px] h-[460px] relative rounded shadow-md overflow-hidden flex-shrink-0 group">
+                                    class="w-[400px] h-[460px] relative rounded shadow-md overflow-hidden flex-shrink-0 group transform transition duration-300 hover:scale-105">
                                     <!-- Clickable Link Overlay -->
                                     <a href="#" class="absolute inset-0 z-20"></a>
                                     <!-- Full image -->
@@ -50,6 +50,7 @@
                     </div>
                 @endforeach
             </div>
+
             <!-- Navigation buttons -->
             <button type="button"
                 class="absolute top-1/2 left-0 z-30 flex items-center justify-center h-10 w-10 -translate-y-1/2 bg-white rounded-full shadow-md hover:bg-gray-100"
@@ -73,7 +74,7 @@
     <div class="mx-auto max-w-[90%]" data-aos="fade-up">
         <!-- Header + Filter -->
         <div class="relative mb-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
-            <h2 class="text-5xl font-bold text-center lg:text-left">Semua Berita</h2>
+            <h2 class="text-4xl font-bold text-center lg:text-left">Semua Berita</h2>
 
             <!-- Filter Dropdown -->
             <div class="w-full lg:w-auto">

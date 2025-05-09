@@ -69,36 +69,36 @@ class HomeController extends Controller
     }
 
 
-    public function showEvents()
-{
-    $events = [
-        (object) [
-            'title' => 'Event 1',
-            'description' => 'Deskripsi untuk event pertama.',
-            'date' => '01 Jan 2025',
-            'image' => 'berita.svg'
-        ],
-        (object) [
-            'title' => 'Event 2',
-            'description' => 'Deskripsi untuk event kedua.',
-            'date' => '02 Feb 2025',
-            'image' => 'berita.svg'
-        ],
-        (object) [
-            'title' => 'Event 3',
-            'description' => 'Deskripsi untuk event ketiga.',
-            'date' => '03 Mar 2025',
-            'image' => 'berita.svg'
-        ],
-        (object) [
-            'title' => 'Event 4',
-            'description' => 'Deskripsi untuk event keempat.',
-            'date' => '04 Apr 2025',
-            'image' => 'berita.svg'
-        ]
-    ];
+//     public function showEvents()
+// {
+//     $events = [
+//         (object) [
+//             'title' => 'Event 1',
+//             'description' => 'Deskripsi untuk event pertama.',
+//             'date' => '01 Jan 2025',
+//             'image' => 'berita.svg'
+//         ],
+//         (object) [
+//             'title' => 'Event 2',
+//             'description' => 'Deskripsi untuk event kedua.',
+//             'date' => '02 Feb 2025',
+//             'image' => 'berita.svg'
+//         ],
+//         (object) [
+//             'title' => 'Event 3',
+//             'description' => 'Deskripsi untuk event ketiga.',
+//             'date' => '03 Mar 2025',
+//             'image' => 'berita.svg'
+//         ],
+//         (object) [
+//             'title' => 'Event 4',
+//             'description' => 'Deskripsi untuk event keempat.',
+//             'date' => '04 Apr 2025',
+//             'image' => 'berita.svg'
+//         ]
+//     ];
 
-    return view('pages.publikasi', compact('events'));
-}
+//     return view('pages.publikasi', compact('events'));
+// }
 
 }

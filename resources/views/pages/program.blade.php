@@ -23,20 +23,21 @@
                                 </div>
                             </div>
                             <div class="flex-1 px-4 md:px-8">
-                                <h2 class="mb-2 text-2xl font-semibold sm:text-4xl">Bauran Kebijakan Nasional
+                                <h2 class="mb-2 text-3xl font-semibold sm:text-4xl">Bauran Kebijakan Nasional
                                     {{ $i }}</h2>
-                                <p class="mb-4 text-lg">Temukan distributor yang terverifikasi di dekat anda atau jadilah
+                                <p class="mb-4 text-xl">Temukan distributor yang terverifikasi di dekat anda atau jadilah
                                     distributor!</p>
-                                <div class="meta-info mt-2 mb-4 text-sm flex items-center gap-2 text-black">
-                                    <span class="flex items-center gap-1">
-                                        <i class="fas fa-calendar-alt"></i> 01 Jan 2025
-                                    </span>
-                                </div>
+                                    <div class="meta-info mt-2 mb-4 text-lg flex items-center gap-2 text-black">
+                                        <span class="flex items-center gap-2">
+                                            <i class="fas fa-calendar-alt text-xl font-semibold"></i>
+                                            <span>01 Jan 2025</span>
+                                        </span>
+                                    </div>
                                 <a href="#"
-                                    class="flex items-center justify-between w-56 px-4 py-2 text-white bg-orange-500 rounded-lg shadow-md">
-                                    <span class="truncate">Baca selengkapnya</span>
-                                    <i class="fas fa-arrow-right w-5 h-5 ml-2"></i>
-                                </a>
+                                class="flex items-center w-56 px-4 py-2 text-white bg-orange-500 rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                                 <span class="truncate text-lg font-semibold">Baca selengkapnya</span>
+                                 <i class="fas fa-arrow-right text-lg ml-2"></i>
+                             </a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +67,7 @@
     <div class="mx-auto max-w-[90%]" data-aos="fade-up">
         <!-- Header + Filter -->
         <div class="relative mb-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
-            <h2 class="text-5xl font-bold text-center lg:text-left">Semua Program</h2>
+            <h2 class="text-4xl font-bold text-center lg:text-left">Semua Program</h2>
 
             <!-- Filter Dropdown -->
             <div class="w-full lg:w-auto">

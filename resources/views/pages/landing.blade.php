@@ -178,7 +178,7 @@
 
             {{-- Carousel Items --}}
             <div class="relative w-full h-full overflow-hidden">
-                @foreach (['slide1.jpg', 'slide2.jpg'] as $i => $filename)
+                @foreach (['slide1.jpg', 'slide2.jpg', 'slide3.jpg', 'slide4.jpg'] as $i => $filename)
                     <div class="{{ $i === 0 ? 'block' : 'hidden' }} duration-700 ease-in-out" data-carousel-item>
                         <img src="{{ asset('storage/images/' . $filename) }}" class="block object-cover w-full h-full"
                             alt="Slide {{ $i + 1 }}">
@@ -265,7 +265,7 @@
                     <!-- Header with slider controls -->
                     <div class="flex justify-between items-center mb-8">
                         <div>
-                            <h2 class="text-3xl font-bold mb-2">Berita Terbaru</h2>
+                            <h2 class="text-4xl font-bold mb-2">Berita Terbaru</h2>
                             <a href="#" class="text-xl text-orange-500 hover:text-orange-800 inline-block">
                                 See all <i class="fas fa-arrow-right"></i>
                             </a>
@@ -273,28 +273,30 @@
                         <!-- Control buttons: still inside the carousel container -->
                         <div class="flex space-x-2">
                             <button type="button"
-                                class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-900/30 hover:bg-blue-900/50 focus:outline-none"
+                                class="flex items-center justify-center h-10 w-10 rounded-full bg-orange-500 hover:bg-orange-600 focus:outline-none"
                                 data-carousel-prev>
                                 <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 1 1 5l4 4" />
                                 </svg>
                             </button>
                             <button type="button"
-                                class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-900/30 hover:bg-blue-900/50 focus:outline-none"
+                                class="flex items-center justify-center h-10 w-10 rounded-full bg-orange-500 hover:bg-orange-600 focus:outline-none"
                                 data-carousel-next>
                                 <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="m1 9 4-4-4-4" />
                                 </svg>
                             </button>
                         </div>
                     </div>
                     <!-- Carousel wrapper -->
                     <div class="relative h-[360px] overflow-hidden">
-                        <div class="duration-700 ease-in-out" data-carousel-item>
+                        <!-- Slide 1 -->
+                        <div class="absolute inset-0 transition-all duration-700 ease-in-out transform"
+                            data-carousel-item="active">
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 h-full">
                                 @foreach (range(1, 4) as $i)
                                     <div class="p-4 rounded-lg w-fit max-w-full">
@@ -305,15 +307,17 @@
                                             Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 202{{ $i }}
                                         </h3>
                                         <a href="#"
-                                            class="text-orange-600 hover:text-orange-800 inline-flex items-center gap-1">
+                                            class="text-orange-500 text-xl hover:text-orange-800 inline-flex items-center gap-1">
                                             Lihat Berita <i class="fas fa-arrow-right"></i>
                                         </a>
                                     </div>
                                 @endforeach
                             </div>
                         </div>
-                        {{-- 2nd --}}
-                        <div class="duration-700 ease-in-out" data-carousel-item>
+
+                        <!-- Slide 2 -->
+                        <div class="absolute inset-0 transition-all duration-700 ease-in-out transform hidden"
+                            data-carousel-item>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 h-full">
                                 @foreach (range(5, 8) as $i)
                                     <div class="p-4 rounded-lg w-fit max-w-full">
@@ -324,7 +328,7 @@
                                             Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 202{{ $i }}
                                         </h3>
                                         <a href="#"
-                                            class="text-orange-600 hover:text-orange-800 inline-flex items-center gap-1">
+                                            class="text-orange-500 text-xl hover:text-orange-800 inline-flex items-center gap-1">
                                             Lihat Berita <i class="fas fa-arrow-right"></i>
                                         </a>
                                     </div>
@@ -370,8 +374,8 @@
             </div>
         </div>
         {{-- testimon --}}
-        <div class="py-12 px-20 mx-auto" data-aos="fade-right">
-            <h2 class="text-3xl font-bold text-black mb-8 text-start">Publikasi Populer</h2>
+        {{-- <div class="py-12 px-20 mx-auto" data-aos="fade-right">
+            <h2 class="text-4xl font-bold text-black mb-8 text-start">Publikasi Populer</h2>
             <div class="overflow-x-auto">
                 <div class="flex space-x-6 px-2 pb-4">
                     @for ($i = 1; $i <= 5; $i++)
@@ -400,62 +404,31 @@
                     @endfor
                 </div>
             </div>
-        </div>
+        </div> --}}
         {{-- APB --}}
         <div class="max-w-[90%] mx-auto px-4 py-8 mb-8" data-aos="fade-up">
             <h2 class="text-4xl font-bold text-black mt-8 mb-8 text-center">APB Lombok</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Column 1 -->
-                <div>
-                    <h2 class="text-xl font-bold mb-4 text-start">APBDes 2025 Pendapatan</h2>
-                    <h2 class="text-md font-semibold mb-4 text-start">Realisasi | Anggaran</h2>
-                    <div class="space-y-4">
-                        @for ($i = 1; $i <= 3; $i++)
-                            <div class="bg-white rounded-xl shadow p-6">
-                                <h3 class="text-lg font-semibold mb-2">Progress C {{ $i }}</h3>
-                                <h4 class="text-lg font-regular mb-4">Rp.10,000,500 | Rp. 20,000,100</h4>
-                                <div class="w-full bg-gray-200 rounded-full h-4">
-                                    <div class="bg-orange-400 h-4 rounded-full" style="width: 70%"></div>
+                <!-- Column -->
+                @for ($col = 1; $col <= 3; $col++)
+                    <div>
+                        <h2 class="text-xl font-bold mb-4 text-start">APBDes 2025 Pendapatan</h2>
+                        <h2 class="text-md font-semibold mb-4 text-start">Realisasi | Anggaran</h2>
+                        <div class="space-y-4">
+                            @for ($i = 1; $i <= 3; $i++)
+                                <div
+                                    class="bg-white rounded-xl shadow p-6 transform transition duration-300 hover:scale-105">
+                                    <h3 class="text-lg font-semibold mb-2">Progress C {{ $i }}</h3>
+                                    <h4 class="text-lg font-regular mb-4">Rp.10,000,500 | Rp. 20,000,100</h4>
+                                    <div class="w-full bg-gray-200 rounded-full h-4">
+                                        <div class="bg-orange-400 h-4 rounded-full" style="width: 70%"></div>
+                                    </div>
+                                    <p class="text-md font-semibold text-gray-500 mt-2">70% completed</p>
                                 </div>
-                                <p class="text-md font-semibold text-gray-500 mt-2">70% completed</p>
-                            </div>
-                        @endfor
+                            @endfor
+                        </div>
                     </div>
-                </div>
-                <!-- Column 2 -->
-                <div>
-                    <h2 class="text-xl font-bold mb-4 text-start">APBDes 2025 Pendapatan</h2>
-                    <h2 class="text-md font-semibold mb-4 text-start">Realisasi | Anggaran</h2>
-                    <div class="space-y-4">
-                        @for ($i = 1; $i <= 3; $i++)
-                            <div class="bg-white rounded-xl shadow p-6">
-                                <h3 class="text-lg font-semibold mb-2">Progress C {{ $i }}</h3>
-                                <h4 class="text-lg font-regular mb-4">Rp.10,000,500 | Rp. 20,000,100</h4>
-                                <div class="w-full bg-gray-200 rounded-full h-4">
-                                    <div class="bg-orange-400 h-4 rounded-full" style="width: 70%"></div>
-                                </div>
-                                <p class="text-md font-semibold text-gray-500 mt-2">70% completed</p>
-                            </div>
-                        @endfor
-                    </div>
-                </div>
-                <!-- Column 3 -->
-                <div>
-                    <h2 class="text-xl font-bold mb-4 text-start">APBDes 2025 Pendapatan</h2>
-                    <h2 class="text-md font-semibold mb-4 text-start">Realisasi | Anggaran</h2>
-                    <div class="space-y-4">
-                        @for ($i = 1; $i <= 3; $i++)
-                            <div class="bg-white rounded-xl shadow p-6">
-                                <h3 class="text-lg font-semibold mb-2">Progress C {{ $i }}</h3>
-                                <h4 class="text-lg font-regular mb-4">Rp.10,000,500 | Rp. 20,000,100</h4>
-                                <div class="w-full bg-gray-200 rounded-full h-4">
-                                    <div class="bg-orange-400 h-4 rounded-full" style="width: 70%"></div>
-                                </div>
-                                <p class="text-md font-semibold text-gray-500 mt-2">70% completed</p>
-                            </div>
-                        @endfor
-                    </div>
-                </div>
+                @endfor
             </div>
         </div>
     </div>
