@@ -159,13 +159,17 @@
             {{-- Tagline --}}
             <div
                 class="absolute top-0 left-0 w-full overflow-hidden h-full z-[90] flex flex-col items-center justify-center p-6 text-center text-white bg-opacity-50 bg-black/40">
-                <h2 class="mb-3 text-4xl font-bold sm:mb-4 sm:text-6xl md:text-7xl">Welcome To Page</h2>
-                <p class="max-w-4xl mb-4 text-lg sm:mb-6 sm:text-xl md:text-2xl">Sebagai informasi ISEI adalah Ikatan Sarjana
-                    Ekonomi Indonesia (ISEI) adalah sebuah organisasi profesional yang berfokus pada bidang ekonomi dan
-                    bisnis di Indonesia.
+                <h2 class="mb-3 text-4xl font-bold sm:mb-4 sm:text-6xl md:text-7xl" data-aos="fade-down">Welcome To Page</h2>
+                <p class="max-w-4xl mb-4 text-lg sm:mb-6 sm:text-xl md:text-2xl" data-aos="fade-down">Lorem ipsum dolor sit
+                    amet, consectetur
+                    adipiscing
+                    elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit
                 </p>
                 <a href="/"
-                    class="inline-flex items-center gap-2 px-4 py-2 text-base text-white transition-transform transform rounded-3xl sm:px-6 sm:py-3 sm:text-lg bg-orange-500 hover:scale-105">
+                    class="inline-flex items-center gap-2 px-4 py-2 text-base text-white transition-transform transform rounded-3xl sm:px-6 sm:py-3 sm:text-lg bg-orange-500 hover:scale-105"
+                    data-aos="fade-down">
                     Lihat Program
                     <!-- Font Awesome Arrow Icon -->
                     <i class="fas fa-arrow-right text-white"></i>
@@ -217,7 +221,7 @@
             </div>
         </div>
         {{-- New Section: Program Terbaru --}}
-        <div class="py-12 px-8">
+        <div class="py-12 px-8" data-aos="fade-right">
             <div class="mx-auto max-w-[80%]">
                 <div class="relative mb-8 flex justify-center items-center">
                     <h2 class="text-5xl font-bold text-center">Program Terbaru</h2>
@@ -255,201 +259,119 @@
             </div>
         </div>
         {{-- New Section: Berita --}}
-        <div class="py-12 px-8 bg-blue-900">
-            <div class="mx-auto max-w-7xl">
-                <div class="bg-blue-800 p-6 rounded-lg">
-                    <div class="p-6 bg-white rounded-2xl">
-                        <!-- Header section -->
-                        <div class="flex justify-between items-center mb-8">
-                            <h2 class="text-3xl font-bold">Berita Terbaru</h2>
-                            <a href="#" class="text-xl text-orange-600 hover:text-orange-800">
-                                Read More <i class="fas fa-arrow-right"></i>
+        <div class="py-12 px-8 bg-blue-900 max-h-[400px] mb-[260px]">
+            <div class="mx-auto max-w-[1720px]" data-aos="fade-right">
+                <div class="p-6 bg-white rounded-2xl shadow-lg relative" id="newsCarousel" data-carousel="slide">
+                    <!-- Header with slider controls -->
+                    <div class="flex justify-between items-center mb-8">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-2">Berita Terbaru</h2>
+                            <a href="#" class="text-xl text-orange-500 hover:text-orange-800 inline-block">
+                                See all <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
-
-                        <!-- Carousel container -->
-                        <div id="newsCarousel" class="relative" data-carousel="slide">
-                            <!-- Carousel wrapper -->
-                            <div class="relative h-[400px] overflow-hidden">
-                                <!-- Item 1 - ACTIVE by default -->
-                                <div class="duration-700 ease-in-out" data-carousel-item>
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 h-full">
-                                        @foreach (range(1, 4) as $i)
-                                            <div class="p-4 rounded-lg">
-                                                <img src="{{ asset('storage/images/berita.svg') }}"
-                                                    alt="Card {{ $i }}"
-                                                    class="w-full h-[200px] object-contain mb-4 rounded-lg">
-                                                <h3 class="text-xl font-semibold mb-4">
-                                                    Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 2024
-                                                </h3>
-                                                <a href="#" class="text-orange-600 hover:text-orange-800">
-                                                    Lihat Berita <i class="fas fa-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-
-                                <!-- Item 2 -->
-                                <div class="duration-700 ease-in-out" data-carousel-item>
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 h-full">
-                                        @foreach (range(5, 8) as $i)
-                                            <div class="p-4 rounded-lg">
-                                                <img src="{{ asset('storage/images/berita.svg') }}"
-                                                    alt="Card {{ $i }}"
-                                                    class="w-full h-[200px] object-contain mb-4 rounded-lg">
-                                                <h3 class="text-xl font-semibold mb-4">
-                                                    Berita Lainnya SIPD RI TA 2024
-                                                </h3>
-                                                <a href="#" class="text-orange-600 hover:text-orange-800">
-                                                    Lihat Berita <i class="fas fa-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Navigation buttons -->
+                        <!-- Control buttons: still inside the carousel container -->
+                        <div class="flex space-x-2">
                             <button type="button"
-                                class="absolute top-1/2 left-0 -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-blue-900/30 hover:bg-blue-900/50 focus:outline-none"
+                                class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-900/30 hover:bg-blue-900/50 focus:outline-none"
                                 data-carousel-prev>
-                                <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 6 10">
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 6 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="M5 1 1 5l4 4" />
                                 </svg>
                             </button>
                             <button type="button"
-                                class="absolute top-1/2 right-0 -translate-y-1/2 z-30 flex items-center justify-center h-10 w-10 rounded-full bg-blue-900/30 hover:bg-blue-900/50 focus:outline-none"
+                                class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-900/30 hover:bg-blue-900/50 focus:outline-none"
                                 data-carousel-next>
-                                <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 6 10">
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 6 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
                             </button>
                         </div>
                     </div>
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-[360px] overflow-hidden">
+                        <div class="duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 h-full">
+                                @foreach (range(1, 4) as $i)
+                                    <div class="p-4 rounded-lg w-fit max-w-full">
+                                        <img src="{{ asset('storage/images/berita.svg') }}"
+                                            alt="Card {{ $i }}"
+                                            class="w-full h-[200px] object-cover mb-4 rounded-lg">
+                                        <h3 class="text-xl font-semibold mb-4 max-w-[40ch]">
+                                            Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 202{{ $i }}
+                                        </h3>
+                                        <a href="#"
+                                            class="text-orange-600 hover:text-orange-800 inline-flex items-center gap-1">
+                                            Lihat Berita <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        {{-- 2nd --}}
+                        <div class="duration-700 ease-in-out" data-carousel-item>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 h-full">
+                                @foreach (range(5, 8) as $i)
+                                    <div class="p-4 rounded-lg w-fit max-w-full">
+                                        <img src="{{ asset('storage/images/berita.svg') }}"
+                                            alt="Card {{ $i }}"
+                                            class="w-full h-[200px] object-cover mb-4 rounded-lg">
+                                        <h3 class="text-xl font-semibold mb-4 max-w-[40ch]">
+                                            Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 202{{ $i }}
+                                        </h3>
+                                        <a href="#"
+                                            class="text-orange-600 hover:text-orange-800 inline-flex items-center gap-1">
+                                            Lihat Berita <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        {{-- New Section: Berita --}}
-        <div class="py-12 px-8 bg-blue-900">
-            <div class="mx-auto text-start">
-                <div class="bg-dark-blue p-6 rounded-lg">
-                    <!-- Title inside the card container -->
-                    <div class="p-6 bg-white rounded-2xl">
-                        <div class="flex justify-between items-center mb-8">
-                            <h2 class="text-3xl font-bold">Berita Terbaru</h2>
-                            <a href="#" class="text-xl text-orange-600 hover:text-orange-800">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            @foreach (range(1, 4) as $i)
-                                <div class="p-6 rounded-lg">
-                                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Card {{ $i }}"
-                                        class="w-full h-[200px] object-cover mb-4 rounded-lg">
-                                    <h3 class="text-xl font-semibold mb-4">
-                                        Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 2024
-                                    </h3>
-                                    <a href="#" class="text-orange-600 hover:text-orange-800">
-                                        Lihat Berita <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
+        {{-- Publikasi --}}
+        <div class="mx-auto max-w-[90%]" data-aos="fade-right">
+            <div class="relative mb-8 flex justify-start items-center">
+                <h2 class="text-5xl font-bold text-center">Publikasi Terbaru</h2>
+                <a href="#"
+                    class="absolute right-0 text-lg text-orange-500 hover:underline flex items-center gap-1">
+                    See All <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-        </div>
-        {{-- publikasi --}}
-        <div class="py-12 px-8">
-            <h2 class="text-3xl font-bold text-black mb-8">Publikasi Terbaru</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-white rounded-2xl">
-                <!-- Small Card 1 -->
-                <div class="p-6 rounded-lg max-w-[420px]">
-                    <!-- Main image -->
-                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1"
-                        class="w-[420px] h-[320px] object-cover mb-4 rounded-lg">
-                    <!-- Publisher Info -->
-                    <div class="flex items-center mb-3">
-                        <img src="{{ asset('storage/images/fate.jpg') }}" alt="Publisher"
-                            class="w-8 h-8 rounded-full mr-3 object-cover">
-                        <span class="w-2 h-2 bg-orange-600 rounded-full mx-2"></span>
-                        <span class="text-sm font-medium text-gray-700">Nama Publisher</span>
-                    </div>
-                    <!-- Title -->
-                    <h3 class="text-xl font-semibold">Judul Berita 1</h3>
-                    <!-- Description -->
-                    <p class="mb-4 text-medium">
-                        temukan distributor yang terverifikasi di dekat anda atau jadilah distributor!
-                    </p>
-                </div>
-                <!-- Small Card 2 -->
-                <div class="p-6 rounded-lg max-w-[420px]">
-                    <!-- Main image -->
-                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1"
-                        class="w-[420px] h-[320px] object-cover mb-4 rounded-lg">
-                    <!-- Publisher Info -->
-                    <div class="flex items-center mb-3">
-                        <img src="{{ asset('storage/images/fate.jpg') }}" alt="Publisher"
-                            class="w-8 h-8 rounded-full mr-3 object-cover">
-                        <span class="w-2 h-2 bg-orange-600 rounded-full mx-2"></span>
-                        <span class="text-sm font-medium text-gray-700">Nama Publisher</span>
-                    </div>
-                    <!-- Title -->
-                    <h3 class="text-xl font-semibold">Judul Berita 1</h3>
-                    <!-- Description -->
-                    <p class="mb-4 text-medium">
-                        temukan distributor yang terverifikasi di dekat anda atau jadilah distributor!
-                    </p>
-                </div>
-                <!-- Small Card 3 -->
-                <div class="p-6 rounded-lg max-w-[420px]">
-                    <!-- Main image -->
-                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1"
-                        class="w-[420px] h-[320px] object-cover mb-4 rounded-lg">
-                    <!-- Publisher Info -->
-                    <div class="flex items-center mb-3">
-                        <img src="{{ asset('storage/images/fate.jpg') }}" alt="Publisher"
-                            class="w-8 h-8 rounded-full mr-3 object-cover">
-                        <span class="w-2 h-2 bg-orange-600 rounded-full mx-2"></span>
-                        <span class="text-sm font-medium text-gray-700">Nama Publisher</span>
-                    </div>
-                    <!-- Title -->
-                    <h3 class="text-xl font-semibold">Judul Berita 1</h3>
-                    <!-- Description -->
-                    <p class="mb-4 text-medium">
-                        temukan distributor yang terverifikasi di dekat anda atau jadilah distributor!
-                    </p>
-                </div>
-                <!-- Small Card 4 -->
-                <div class="p-6 rounded-lg max-w-[420px]">
-                    <!-- Main image -->
-                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Card 1"
-                        class="w-[420px] h-[320px] object-cover mb-4 rounded-lg">
-                    <!-- Publisher Info -->
-                    <div class="flex items-center mb-3">
-                        <img src="{{ asset('storage/images/fate.jpg') }}" alt="Publisher"
-                            class="w-8 h-8 rounded-full mr-3 object-cover">
-                        <span class="w-2 h-2 bg-orange-600 rounded-full mx-2"></span>
-                        <span class="text-sm font-medium text-gray-700">Nama Publisher</span>
-                    </div>
-                    <!-- Title -->
-                    <h3 class="text-xl font-semibold">Judul Berita 1</h3>
-                    <!-- Description -->
-                    <p class="mb-4 text-medium">
-                        temukan distributor yang terverifikasi di dekat anda atau jadilah distributor!
-                    </p>
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-white rounded-2xl gap-4">
+                @foreach (range(1, 4) as $i)
+                    <a href="#"
+                        class="block p-6 rounded-lg max-w-[420px] transform transition-transform duration-300 hover:scale-105">
+                        <!-- Main image -->
+                        <img src="{{ asset('storage/images/berita.svg') }}" alt="Card {{ $i }}"
+                            class="w-[420px] h-[320px] object-cover mb-4 rounded-lg">
+                        <!-- Publisher Info -->
+                        <div class="flex items-center mb-3">
+                            <img src="{{ asset('storage/images/fate.jpg') }}" alt="Publisher"
+                                class="w-8 h-8 rounded-full mr-3 object-cover">
+                            <span class="text-md font-semibold">Wildan Ganteng</span>
+                            <span class="w-2 h-2 bg-orange-600 rounded-full mx-2"></span>
+                            <span class="text-md font-semibold">Penelitian</span>
+                        </div>
+                        <!-- Title -->
+                        <h3 class="text-2xl font-semibold">Judul Berita {{ $i }}</h3>
+                        <!-- Description -->
+                        <p class="mb-4 font-reguler text-md">
+                            temukan distributor yang terverifikasi di dekat anda atau jadilah distributor!
+                        </p>
+                    </a>
+                @endforeach
             </div>
         </div>
         {{-- testimon --}}
-        <div class="py-12 px-20 mx-auto">
-            <h2 class="text-3xl font-bold text-black mb-8 text-start">Berita Terbaru</h2>
+        <div class="py-12 px-20 mx-auto" data-aos="fade-right">
+            <h2 class="text-3xl font-bold text-black mb-8 text-start">Publikasi Populer</h2>
             <div class="overflow-x-auto">
                 <div class="flex space-x-6 px-2 pb-4">
                     @for ($i = 1; $i <= 5; $i++)
@@ -480,7 +402,8 @@
             </div>
         </div>
         {{-- APB --}}
-        <div class="max-w-screen-xl mx-auto px-4 py-8">
+        <div class="max-w-[90%] mx-auto px-4 py-8 mb-8" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-black mt-8 mb-8 text-center">APB Lombok</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Column 1 -->
                 <div>
@@ -489,11 +412,12 @@
                     <div class="space-y-4">
                         @for ($i = 1; $i <= 3; $i++)
                             <div class="bg-white rounded-xl shadow p-6">
-                                <h3 class="text-lg font-semibold mb-4">Progress C{{ $i }}</h3>
+                                <h3 class="text-lg font-semibold mb-2">Progress C {{ $i }}</h3>
+                                <h4 class="text-lg font-regular mb-4">Rp.10,000,500 | Rp. 20,000,100</h4>
                                 <div class="w-full bg-gray-200 rounded-full h-4">
                                     <div class="bg-orange-400 h-4 rounded-full" style="width: 70%"></div>
                                 </div>
-                                <p class="text-sm text-gray-500 mt-2">70% completed</p>
+                                <p class="text-md font-semibold text-gray-500 mt-2">70% completed</p>
                             </div>
                         @endfor
                     </div>
@@ -505,11 +429,12 @@
                     <div class="space-y-4">
                         @for ($i = 1; $i <= 3; $i++)
                             <div class="bg-white rounded-xl shadow p-6">
-                                <h3 class="text-lg font-semibold mb-4">Progress C{{ $i }}</h3>
+                                <h3 class="text-lg font-semibold mb-2">Progress C {{ $i }}</h3>
+                                <h4 class="text-lg font-regular mb-4">Rp.10,000,500 | Rp. 20,000,100</h4>
                                 <div class="w-full bg-gray-200 rounded-full h-4">
                                     <div class="bg-orange-400 h-4 rounded-full" style="width: 70%"></div>
                                 </div>
-                                <p class="text-sm text-gray-500 mt-2">70% completed</p>
+                                <p class="text-md font-semibold text-gray-500 mt-2">70% completed</p>
                             </div>
                         @endfor
                     </div>
@@ -521,11 +446,12 @@
                     <div class="space-y-4">
                         @for ($i = 1; $i <= 3; $i++)
                             <div class="bg-white rounded-xl shadow p-6">
-                                <h3 class="text-lg font-semibold mb-4">Progress C{{ $i }}</h3>
+                                <h3 class="text-lg font-semibold mb-2">Progress C {{ $i }}</h3>
+                                <h4 class="text-lg font-regular mb-4">Rp.10,000,500 | Rp. 20,000,100</h4>
                                 <div class="w-full bg-gray-200 rounded-full h-4">
                                     <div class="bg-orange-400 h-4 rounded-full" style="width: 70%"></div>
                                 </div>
-                                <p class="text-sm text-gray-500 mt-2">70% completed</p>
+                                <p class="text-md font-semibold text-gray-500 mt-2">70% completed</p>
                             </div>
                         @endfor
                     </div>
@@ -544,6 +470,7 @@
             });
         });
     </script>
+
     <script>
         /* Demo purposes only */
         $(".hover").mouseleave(
