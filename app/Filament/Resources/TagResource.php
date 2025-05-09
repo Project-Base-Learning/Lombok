@@ -18,7 +18,7 @@ class TagResource extends Resource
     protected static ?string $model = Tag::class;
 
     protected static ?string $navigationGroup = 'Article';
-    protected static ?int $navigationSort  = 3;
+    protected static ?int $navigationSort  = 4;
 
     protected static ?string $navigationIcon = 'heroicon-o-hashtag';
 
@@ -36,6 +36,7 @@ class TagResource extends Resource
                     }),
                 Forms\Components\TextInput::make('slug')
                     ->required()
+                    ->readOnly()
                     ->unique(ignoreRecord: true)
                     ->maxLength(255)
                     ->regex('/^[a-z0-9-]+$/'),

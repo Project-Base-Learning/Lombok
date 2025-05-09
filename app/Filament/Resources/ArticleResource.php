@@ -116,15 +116,15 @@ class ArticleResource extends Resource
                                             ->disabledOn('edit')
                                             ->live()
                                             ->relationship('category', 'category_name'),
-                                        Forms\Components\Select::make('categories')
+                                        Forms\Components\Select::make('tags')
                                             ->multiple()
-                                            ->relationship('categories', 'category_name')
+                                            ->relationship('tags', 'tag_name')
                                             ->createOptionForm([
-                                                Forms\Components\TextInput::make('category_name')
+                                                Forms\Components\TextInput::make('tag_name')
                                                     ->required()
                                                     ->maxLength(255)
-                                                    ->unique(column: 'category_name')
-                                                    ->label('Category name'),
+                                                    ->unique(column: 'tag_name')
+                                                    ->label('Tag name'),
                                             ])
                                             ->searchable(),
                                         Forms\Components\Select::make('sponsors')

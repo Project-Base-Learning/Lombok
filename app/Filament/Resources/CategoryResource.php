@@ -2,24 +2,23 @@
 
 namespace App\Filament\Resources;
 
+use Illuminate\Support\Str;
 use App\Enums\TypeFieldEnum;
 use App\Enums\TypeTextEnum;
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Models\Category;
-use Dotswan\FilamentCodeEditor\Fields\CodeEditor;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Riodwanto\FilamentAceEditor\AceEditor;
 
 class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
 
     protected static ?string $navigationGroup = 'Article';
-    protected static ?int $navigationSort  = 4;
+    protected static ?int $navigationSort  = 3;
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
 
@@ -31,12 +30,30 @@ class CategoryResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('category_name')
                             ->required()
-                            ->maxLength(255),
-                        Forms\Components\TextInput::make('layout_detail_path')
+                            ->maxLength(255)
+                            ->reactive()
+                            ->debounce(1000)
+                            ->afterStateUpdated(function (callable $set, $state) {
+                                $set('slug', Str::slug($state));
+                            }),
+                        Forms\Components\TextInput::make('slug')
                             ->required()
-                            ->maxLength(255),
-                        Forms\Components\Toggle::make('default')
-                            ->default(false),
+                            ->unique(ignoreRecord: true)
+                            ->maxLength(255)
+                            ->regex('/^[a-z0-9-]+$/'),
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\Toggle::make('default')
+                                    ->default(false),
+                                Forms\Components\Toggle::make('has_card')
+                                    ->helperText('Card layout in view')
+                                    ->default(false),
+                                Forms\Components\Toggle::make('has_detail_page')
+                                    ->helperText('Detail page layout in view')
+                                    ->default(false),
+                            ])
+                            ->columns(['lg' => 3])
+                            ->columnSpanFull(),
                     ])
                     ->columns(2),
                 Forms\Components\Repeater::make('fields')
@@ -113,11 +130,25 @@ class CategoryResource extends Resource
                 Tables\Columns\TextColumn::make('category_name')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('layout_detail_path')
+                Tables\Columns\TextColumn::make('slug')
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\IconColumn::make('default')
                     ->boolean(),
+                Tables\Columns\IconColumn::make('has_card')
+                    ->boolean(),
+                Tables\Columns\IconColumn::make('has_detail_page')
+                    ->boolean(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //

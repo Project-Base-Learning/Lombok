@@ -2,23 +2,27 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
     protected $table = 'categories';
-    public $timestamps = false;
 
     protected $fillable = [
         'category_name',
+        'slug',
         'default',
-        'fields',
-        'layout_detail_path'
+        'has_card',
+        'has_detail_page',
+        'fields'
     ];
 
     protected $casts = [
         'default' => 'boolean',
+        'has_card' => 'boolean',
+        'has_detail_page' => 'boolean',
         'fields' => 'array',
     ];
 
@@ -30,6 +34,10 @@ class Category extends Model
     protected static function booted()
     {
         static::saving(function ($data) {
+            if ($data->isDirty('category_name') && empty($data->slug)) {
+                $data->slug = Str::slug($data->tag_name);
+            }
+
             $records = Category::where([['id', '!=', $data->id], ['default', 1]])->get();
             if (!$records->isEmpty()) {
                 $records->update(['default', 0]);
