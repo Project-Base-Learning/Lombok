@@ -17,11 +17,13 @@
 @overwrite
 
 @section('pagination')
-    <div class="flex justify-center mt-8">
-        {{-- <a href="{{ route('articles') }}"
-            class="flex items-center gap-2 font-semibold transition-transform text-red hover:scale-105">
-            See All
-            <img class="w-4 h-4 transition-transform hover:scale-105" src="{{ asset('image/arrow-right-red.svg') }}" alt="Arrow Right">
-        </a> --}}
-    </div>
+    @if ($section->dataset->paginate)
+        {{ $data['loads'][$section->dataset->variable_name]->appends([$section->dataset->variable_name.'_page' => $data['loads'][$section->dataset->variable_name]->currentPage()])->links() }}
+    @elseif ($data['navigation']['search'])
+        <div class="flex justify-center py-4 border-b-2">
+            <a href="{{ route($data['navigation']['search']['slug'], ['category' => $section->dataset->category->slug]) }}" class="flex items-center gap-2 font-semibold transition-transform text-primary-500 hover:scale-105">
+                See All
+            </a>
+        </div>
+    @endif
 @overwrite

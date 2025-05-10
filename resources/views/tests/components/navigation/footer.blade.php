@@ -1,7 +1,7 @@
 <footer class="bg-gray-900 text-white pt-12 pb-8 px-4">
     <div class="mx-auto px-4 container overflow-hidden flex flex-col lg:flex-row justify-between">
         <a href="/" class="block mr-4 w-1/3">
-            <img src="{{ asset('storage/images/logos.svg') }}" class="w-40 ml-4 lg:ml-0" alt="logo">
+            <img src="{{ asset('storage/images/logoswhite.svg') }}" class="w-40 ml-4 lg:ml-0" alt="logo">
         </a>
         <div class="w-2/3 block sm:flex text-sm mt-6 lg:mt-0">
             <ul class="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
@@ -43,5 +43,5 @@
             </div>
         </div>
     </div>
-    <div class="pt-4 mt-4 pt-6 text-gray-600 border-t border-gray-800 text-center"> © 2019 WeTeach. All rights reserved.</div>
+    <div class="pt-4 mt-4 pt-6 text-gray-600 border-t border-gray-800 text-center"> © 2025 WildanGanteng. All rights reserved.</div>
 </footer>

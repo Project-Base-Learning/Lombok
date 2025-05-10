@@ -35,13 +35,13 @@
 <body class="antialiased text-gray-900 break-words">
 
     {{-- Header --}}
-    @includeIf('components.navigation.navbar')
+    @includeIf('tests.components.navigation.navbar')
 
     {{-- Main Content --}}
     @yield('content')
 
     {{-- Footer --}}
-    @includeIf('components.navigation.footer')
+    @includeIf('tests.components.navigation.footer')
 
     <script src="https://kit.fontawesome.com/f87eaab4e6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
@@ -54,20 +54,6 @@
             });
         });
     </script>
-
-    {{-- Optional Google Tag Manager --}}
-    @if (config('general-settings.features.analytics'))
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('analytics.analytics_tag') }}"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', '{{ config('analytics.analytics_tag') }}');
-        </script>
-    @endif
 
     @yield('js')
 </body>

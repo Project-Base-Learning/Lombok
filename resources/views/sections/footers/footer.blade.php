@@ -1,4 +1,4 @@
-<footer class="px-4 py-10 mx-auto w-full max-w-screen-lg lg:max-w-[80%]" data-aos="fade-up">
+<footer class="lg:!px-40 lg:!py-12 md:!px-20 md:!py-12 px-8 py-6 border-t-2" data-aos="fade-up">
     <div class="grid grid-cols-2 gap-y-8 md:grid-cols-3 lg:grid-cols-4">
 
         <!-- Logo Section (No Stretching, Center on Mobile, Left on Tablet/Desktop) -->
@@ -15,9 +15,9 @@
             <a class="text-xl font-semibold md:text-2xl">Discover</a>
             <ul class="flex flex-col mt-3 space-y-2">
                 @if ($data['navigation']['home'])
-                    <x-navigation.nav_item slug="{{ $data['navigation']['home']['slug'] }}">
+                    <x-footer.nav_item slug="{{ $data['navigation']['home']['slug'] }}">
                         {{ $data['navigation']['home']['title'] }}
-                    </x-navigation.nav_item>
+                    </x-footer.nav_item>
                 @endif
                 @foreach ($data['navigation']['nav_items'] as $navItem)
                     @if ($navItem['type'] == 'link')

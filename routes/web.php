@@ -26,8 +26,6 @@ Route::get('/detail/{category}/{slug}', [HomeController::class, 'detail'])->name
 
 // Testing routes
 if (config('app.debug')) {
-    Route::get('/test', [TestController::class, 'index']);
-
     Route::get('/test-landing', function () {
         return view('tests.landing');
     })->name('test.landing');
@@ -35,4 +33,20 @@ if (config('app.debug')) {
     Route::get('/berita', function () {
         return view('tests.berita');
     })->name('berita');
+
+    Route::get('/publikasi', function () {
+        return view('tests.publikasi');
+    })->name('publikasi');
+
+    Route::get('/program', function () {
+        return view('tests.program');
+    })->name('program');
+
+    Route::get('/about', function () {
+        return view('tests.about');
+    })->name('about');
+
+    // Route::get('/contact', function () {
+    //     return view('tests.contact');
+    // })->name('contact');
 }

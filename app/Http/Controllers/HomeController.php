@@ -14,41 +14,13 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $data = config('general-settings');
-        if ($data['features']['sponsors']) {
-            $data['sponsors'] = Sponsor::where('featured', 1)->get();
-        }
-        $data['page'] = Page::where('slug', Route::currentRouteName())->firstOrFail();
-        $data['sections'] = [];
-        foreach ($data['page']->sections as $section) {
-            $data['sections'][$section->section->title] = $section->section;
-            if ($section->section->has_dataset) {
-                $tmp = $section->section->dataset;
-                $tmp2 = Article::query()->whereNotNull('published_at');
-                $tmp2 = $tmp2->where([
-                    ['category_id', $tmp->category->id],
-                    ['private', 0]
-                ]);
-                $tmp2 = $tmp2->orderBy($tmp->order_col, $tmp->order_sort);
-                if ($tmp->paginate) {
-                    if ($tmp->paginate == 'default') {
-                        $tmp2 = $tmp2->paginate($tmp->limit);
-                    } else if ($tmp->paginate == 'simple') {
-                        $tmp2 = $tmp2->simplePaginate($tmp->limit);
-                    }
-                } else {
-                    $tmp2 = $tmp2->take($tmp->limit)->get();
-                }
-                $data['loads'][$tmp->variable_name] = $tmp2;
-            }
-        }
+        $data = $this->data();
         return view('pages.index', compact('data'));
     }
 
     public function search(Request $request)
     {
-        $data = config('general-settings');
-        $data['page'] = Page::where('slug', Route::currentRouteName())->firstOrFail();
+        $data = $this->data();
         $data['categories'] = Category::where('searchable', 1)->get();
         $data['tags'] = Tag::withoutTrashed()->get();
 
@@ -75,8 +47,7 @@ class HomeController extends Controller
             $tmp->where('title', 'like', '%'.$request->search.'%');
         }
 
-        $data["result"] = $tmp->paginate(16)->withQueryString();
-        // dd($data);
+        $data["result"] = $tmp->orderBy('published_at', 'desc')->paginate(16)->withQueryString();
         return view('pages.search', compact('data', 'request'));
     }
 

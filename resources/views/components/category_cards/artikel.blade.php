@@ -1,20 +1,12 @@
 <div class="relative flex flex-row pb-4 mb-4 border-b border-gray-300 sm:!flex-col group lg:border-none" title="{{ $item->title }}">
-    <a href={{ route('detail', ['category' => $item->category->slug, 'slug' => $item->slug]) }} class="absolute top-0 bottom-0 left-0 right-0 z-10 {{ $item->category->detail_page ? '' : 'pointer-events-none cursor-default' }}"></a>
+    <x-links.detail category='{{ $item->category->slug }}' slug='{{ $item->slug }}' class='absolute top-0 bottom-0 left-0 right-0 z-10' has_detail_page='{{ $item->category->detail_page ? true : false }}' />
     <div class="w-3/12 mr-4 sm:mr-0 sm:!mb-4 sm:!w-full">
-        <img src="{{ Storage::url($item->cover->first()?->image_path) }}" alt="{{ $item->title }}" class="object-cover w-full transition-transform rounded-lg shadow-md group-hover:scale-105 aspect-[5/4] sm:aspect-[16/9]" loading="lazy">
+        <img src="{{ Storage::url($item->cover->first()?->image_path) }}" alt="{{ $item->cover->first()?->alt ?? $item->title }}" class="object-cover w-full transition-transform rounded-lg shadow-md group-hover:scale-105 aspect-[5/4] sm:aspect-[16/9]" loading="lazy">
     </div>
-    <div class="flex flex-col w-9/12 sm:!w-full">
+    <div class="flex flex-col w-9/12 sm:!w-full grow">
         <div class="flex flex-wrap mb-0.5">
             @foreach ($item->tags as $tag)
-                @if ($data['navigation']['search'])
-                    <a href="{{ route('search', ['categories' => $tag->tag_name]) }}" class="text-black text-[0.625rem] me-2 px-1 py-0.5 md:px-2 md:text-xs  rounded bg-gray-200 border border-gray-700 z-20 font-semibold" title="{{ $tag->tag_name }}">
-                        {{ $tag->tag_name }}
-                    </a>
-                @else
-                    <p class="text-black text-[0.625rem] me-2 px-1 py-0.5 md:px-2 md:text-xs  rounded bg-gray-200 border border-gray-700 z-20 font-semibold" title="{{ $tag->tag_name }}">
-                        {{ $tag->tag_name }}
-                    </p>
-                @endif
+                <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" tag='{{ $tag->slug }}' />
             @endforeach
         </div>
         <div class="flex flex-col justify-between grow">

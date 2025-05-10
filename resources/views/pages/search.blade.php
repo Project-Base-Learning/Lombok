@@ -76,6 +76,13 @@
         </div>
         {{ $data['result']->links() }}
     </div>
+
+    @foreach ($data['page']->sections as $section)
+        @php
+            $section = $section->section;
+        @endphp
+        @include('sections.'.$section->layout_path)
+    @endforeach()
 @endsection
 
 @section('js')

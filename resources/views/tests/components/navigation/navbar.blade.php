@@ -1,38 +1,32 @@
 <style>
     header .nav-link {
+        font-size: 1.2rem;
         color: #000000;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    header .nav-link:hover {
+        transform: scale(1.05);
     }
 
     header .nav-link.active {
-        color: #F32055 !important;
+        color: #F97316 !important;
+        /* Tailwind's orange-500 */
+        font-weight: 700;
     }
 
     header.scrolled {
         background-color: #ffffff;
     }
 
-    header.scrolled .nav-link {
-        /* color: #ffffff !important;
-        opacity: 75% !important; */
-    }
-
-    header.scrolled .nav-link.active {
-        /* color: #ffffff !important;
-        opacity: 100% !important; */
-    }
-
     @media (max-width: 1024px) {
-        header.scrolled {
-            background-color: #ffffff;
-        }
-
         header .nav-link {
-            font-size: 1.2rem;
             color: #ffffff !important;
         }
     }
 
+    /* Hamburger toggle styling */
     #navbar-toggler.toggle span:nth-child(1) {
         transform: rotate(45deg);
         top: 10px;
@@ -48,29 +42,30 @@
     }
 
     #navbar-toggler.toggle span {
-        background-color: #F32055 !important;
+        background-color: #F97316 !important;
     }
 </style>
+
 
 <header id="navbar"
     class="sticky top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm transition-colors duration-300 z-[1000]">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
+        <div class="flex items-center justify-between h-[86px]">
             <!-- Left: Logo -->
             <div class="flex items-center w-1/3">
                 <a href="{{ url('/') }}" class="flex items-center space-x-2 text-xl font-bold text-black">
-                    <img src="{{ asset('storage/images/logos.svg') }}" alt="Logo" class="h-8 w-auto">
+                    <img src="{{ asset('storage/images/logos2.svg') }}" alt="Logo" class="h-10 w-auto">
                 </a>
             </div>
 
             <!-- Center: Navigation -->
-            <div class="hidden lg:flex justify-center w-1/3 space-x-6 whitespace-nowrap overflow-visible">
-                <a href="test-landing" class="nav-link font-semibold transition-colors">Home</a>
-                <a href="berita" class="nav-link font-semibold transition-colors">Berita</a>
-                <a href="#publikasi" class="nav-link font-semibold transition-colors">Publikasi</a>
-                <a href="#program" class="nav-link font-semibold transition-colors">Program</a>
-                <a href="#about" class="nav-link font-semibold transition-colors">About Us</a>
-                <a href="#contact" class="nav-link font-semibold transition-colors">Contact Us</a>
+            <div class="hidden lg:flex justify-center gap-6 whitespace-nowrap overflow-visible">
+                <a href="{{ url('test-landing') }}" class="nav-link font-semibold {{ request()->is('test-landing') ? 'active' : '' }}">Home</a>
+                <a href="{{ url('berita') }}" class="nav-link font-semibold {{ request()->is('berita') ? 'active' : '' }}">Berita</a>
+                <a href="{{ url('publikasi') }}" class="nav-link font-semibold {{ request()->is('publikasi') ? 'active' : '' }}">Publikasi</a>
+                <a href="{{ url('program') }}" class="nav-link font-semibold {{ request()->is('program') ? 'active' : '' }}">Program</a>
+                {{-- <a href="{{ url('about') }}" class="nav-link font-semibold {{ request()->is('about') ? 'active' : '' }}">About Us</a> --}}
+                <a href="{{ url('contact') }}" class="nav-link font-semibold {{ request()->is('contact') ? 'active' : '' }}">Contact Us</a>
             </div>
 
             <!-- Right: Search & Hamburger -->

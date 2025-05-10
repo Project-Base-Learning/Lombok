@@ -4,48 +4,41 @@
 @endsection
 
 @section('content')
-    {{-- card acousel --}}
-    <div class="px-4 py-12 mx-auto lg:px-20" data-aos="fade-right">
-        <h2 class="mb-8 text-5xl font-bold text-center text-black">Berita Terbaru</h2>
+    {{-- highlight --}}
+    <div class="flex flex-col w-full gap-8 px-8 py-20 lg:px-20" data-aos="fade-right">
+        <h1 class="text-5xl font-semibold text-center">Program Populer</h1>
 
-        <div id="multi-card-carousel" class="relative w-full" data-carousel="slide">
-            <!-- Carousel wrapper -->
-            <div class="relative overflow-hidden rounded-lg h-[500px]">
-                @foreach (array_chunk(range(1, 8), 4) as $group)
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <div class="flex justify-center gap-6 px-4">
-                            @foreach ($group as $i)
-                                <div
-                                    class="w-[400px] h-[460px] relative rounded shadow-md overflow-hidden flex-shrink-0 group transform transition duration-300 hover:scale-105">
-                                    <!-- Clickable Link Overlay -->
-                                    <a href="#" class="absolute inset-0 z-20"></a>
-                                    <!-- Full image -->
-                                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Card {{ $i }}"
-                                        class="absolute inset-0 object-cover w-full h-full">
-                                    <!-- Overlay content -->
-                                    <div
-                                        class="relative z-10 flex flex-col justify-end h-full p-4 text-white bg-gradient-to-t from-black/70 via-black/35 to-transparent">
-                                        <!-- Title -->
-                                        <h3 class="mb-1 text-3xl font-semibold">Laporan data keuangan
-                                            SKPD 202{{ $i }}</h3>
-                                        <!-- Description -->
-                                        <p class="mb-2 text-md">
-                                            Temukan distributor yang terverifikasi di dekat Anda atau jadilah distributor!
-                                        </p>
-                                        <div class="flex items-center gap-3 text-base text-white meta-info">
-                                            <span class="flex items-center gap-2">
-                                                <i class="text-lg fas fa-eye"></i>
-                                                <span class="text-base">123</span>
-                                            </span>
-                                            <span class="w-2 h-2 bg-orange-600 rounded-full"></span>
-                                            <span class="flex items-center gap-2">
-                                                <i class="text-lg fas fa-calendar-alt"></i>
-                                                <span class="text-base">01 Jan 2025</span>
-                                            </span>
-                                        </div>
-                                    </div>
+        <!-- Carousel Wrapper -->
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel container -->
+            <div class="relative min-h-[400px] overflow-hidden px-6 sm:px-8 md:px-12">
+                @foreach (range(1, 4) as $i)
+                    <div class="duration-1000 ease-out {{ $i === 1 ? '' : 'hidden' }}"
+                        data-carousel-item="{{ $i === 1 ? 'active' : '' }}">
+                        <div class="flex flex-col items-center h-full gap-8 sm:flex-row-reverse mx-[3%]">
+                            <div class="flex-1 px-4 md:px-8">
+                                <div class="flex items-center justify-center w-full h-full rounded-lg">
+                                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Event {{ $i }}"
+                                        class="object-contain w-full max-w-[800px] h-auto">
                                 </div>
-                            @endforeach
+                            </div>
+                            <div class="flex-1 px-4 md:px-8">
+                                <h2 class="mb-2 text-3xl font-semibold sm:text-4xl">Bauran Kebijakan Nasional
+                                    {{ $i }}</h2>
+                                <p class="mb-4 text-xl">Temukan distributor yang terverifikasi di dekat anda atau jadilah
+                                    distributor!</p>
+                                    <div class="flex items-center gap-2 mt-2 mb-4 text-lg text-black meta-info">
+                                        <span class="flex items-center gap-2">
+                                            <i class="text-xl font-semibold fas fa-calendar-alt"></i>
+                                            <span>01 Jan 2025</span>
+                                        </span>
+                                    </div>
+                                <a href="#"
+                                class="flex items-center w-56 px-4 py-2 text-white transition duration-300 transform bg-orange-500 rounded-lg shadow-md hover:scale-105">
+                                 <span class="text-lg font-semibold truncate">Baca selengkapnya</span>
+                                 <i class="ml-2 text-lg fas fa-arrow-right"></i>
+                             </a>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -74,7 +67,7 @@
     <div class="mx-auto max-w-[90%]" data-aos="fade-up">
         <!-- Header + Filter -->
         <div class="relative flex flex-col items-start justify-between gap-4 mb-6 lg:flex-row lg:items-center">
-            <h2 class="text-4xl font-bold text-center lg:text-left">Semua Berita</h2>
+            <h2 class="text-4xl font-bold text-center lg:text-left">Semua Program</h2>
 
             <!-- Filter Dropdown -->
             <div class="w-full lg:w-auto">

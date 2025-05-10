@@ -4,77 +4,74 @@
 @endsection
 
 @section('content')
-    {{-- card acousel --}}
-    <div class="px-4 py-12 mx-auto lg:px-20" data-aos="fade-right">
-        <h2 class="mb-8 text-5xl font-bold text-center text-black">Berita Terbaru</h2>
-
-        <div id="multi-card-carousel" class="relative w-full" data-carousel="slide">
-            <!-- Carousel wrapper -->
-            <div class="relative overflow-hidden rounded-lg h-[500px]">
-                @foreach (array_chunk(range(1, 8), 4) as $group)
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <div class="flex justify-center gap-6 px-4">
-                            @foreach ($group as $i)
-                                <div
-                                    class="w-[400px] h-[460px] relative rounded shadow-md overflow-hidden flex-shrink-0 group transform transition duration-300 hover:scale-105">
-                                    <!-- Clickable Link Overlay -->
-                                    <a href="#" class="absolute inset-0 z-20"></a>
-                                    <!-- Full image -->
-                                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Card {{ $i }}"
-                                        class="absolute inset-0 object-cover w-full h-full">
-                                    <!-- Overlay content -->
-                                    <div
-                                        class="relative z-10 flex flex-col justify-end h-full p-4 text-white bg-gradient-to-t from-black/70 via-black/35 to-transparent">
-                                        <!-- Title -->
-                                        <h3 class="mb-1 text-3xl font-semibold">Laporan data keuangan
-                                            SKPD 202{{ $i }}</h3>
-                                        <!-- Description -->
-                                        <p class="mb-2 text-md">
-                                            Temukan distributor yang terverifikasi di dekat Anda atau jadilah distributor!
-                                        </p>
-                                        <div class="flex items-center gap-3 text-base text-white meta-info">
-                                            <span class="flex items-center gap-2">
-                                                <i class="text-lg fas fa-eye"></i>
-                                                <span class="text-base">123</span>
-                                            </span>
-                                            <span class="w-2 h-2 bg-orange-600 rounded-full"></span>
-                                            <span class="flex items-center gap-2">
-                                                <i class="text-lg fas fa-calendar-alt"></i>
-                                                <span class="text-base">01 Jan 2025</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
+    <div class="px-8 py-12 mx-auto lg:px-40 lg:py-20 max-w-[100%]" data-aos="fade-right">
+        <div class="flex items-center justify-between mb-8">
+            <h1 class="w-full text-5xl font-semibold text-center">Publikasi Populer</h1>
+        </div>
+        <div class="flex flex-col gap-8 lg:flex-row">
+            <!-- Large Highlight -->
+            <div class="relative group rounded shadow-md overflow-hidden max-w-[600px] max-h-[800px] md:w-1/2">
+                <a href="#">
+                    <img src="{{ asset('storage/images/berita.svg') }}" alt="Highlight Image"
+                        class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 flex flex-col items-start justify-end p-4 mx-auto text-left text-white bg-black bg-opacity-25">
+                        <h5 class="mb-2 text-4xl font-bold">Laporan data keuangan
+                            SKPD 2024</h5>
+                        <p class="mt-2 mb-3 text-lg text-justify line-clamp-3">temukan distributor yang terverifikasi di
+                            dekat anda atau jadilah distributor! temukan yang di dekat anda atau jadilah distributor!
+                        </p>
+                        <div class="flex items-center gap-3 text-base text-white meta-info">
+                            <span class="flex items-center gap-2">
+                                <i class="text-lg fas fa-eye"></i>
+                                <span class="text-base">123</span>
+                            </span>
+                            <span class="w-2 h-2 bg-orange-600 rounded-full"></span>
+                            <span class="flex items-center gap-2">
+                                <i class="text-lg fas fa-calendar-alt"></i>
+                                <span class="text-base">01 Jan 2025</span>
+                            </span>
                         </div>
                     </div>
-                @endforeach
+                </a>
             </div>
-
-            <!-- Navigation buttons -->
-            <button type="button"
-                class="absolute left-0 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white rounded-full shadow-md top-1/2 hover:bg-gray-100"
-                data-carousel-prev>
-                <svg aria-hidden="true" class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <button type="button"
-                class="absolute right-0 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white rounded-full shadow-md top-1/2 hover:bg-gray-100"
-                data-carousel-next>
-                <svg aria-hidden="true" class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
+            <!-- Three Smaller Highlights -->
+            <div class="flex flex-col gap-6">
+                @for ($i = 0; $i < 3; $i++)
+                    <div class="flex flex-col gap-4 overflow-hidden lg:flex-row max-w-[800px]">
+                        <a href="#" class="block w-full h-[250px] md:w-1/2 md:h-[200px]">
+                            <div class="flex-none w-full h-full overflow-hidden rounded-lg group">
+                                <img src="{{ asset('storage/images/berita.svg') }}" alt="Small Card Image"
+                                    class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                        </a>
+                        <div class="flex flex-col justify-between w-full">
+                                <h5 class="mb-2 text-2xl font-semibold">Laporan data keuangan SKPD 2024</h5>
+                                <p class="text-lg font-semibold text-justify text-gray-600">Temukan
+                                    distributor yang terverifikasi di dekat anda atau jadilah distributor! Temukan yang di
+                                    dekat anda atau jadilah distributor!</p>
+                            <div class="flex items-center gap-3 text-base text-black meta-info">
+                                <span class="flex items-center gap-2">
+                                    <i class="text-lg fas fa-eye"></i>
+                                    <span class="text-base">123</span>
+                                </span>
+                                <span class="w-2 h-2 bg-orange-600 rounded-full"></span>
+                                <span class="flex items-center gap-2">
+                                    <i class="text-lg fas fa-calendar-alt"></i>
+                                    <span class="text-base">01 Jan 2025</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                @endfor
+            </div>
         </div>
     </div>
     {{-- Beritas --}}
     <div class="mx-auto max-w-[90%]" data-aos="fade-up">
         <!-- Header + Filter -->
         <div class="relative flex flex-col items-start justify-between gap-4 mb-6 lg:flex-row lg:items-center">
-            <h2 class="text-4xl font-bold text-center lg:text-left">Semua Berita</h2>
+            <h2 class="text-4xl font-bold text-center lg:text-left">Semua Publikasi</h2>
 
             <!-- Filter Dropdown -->
             <div class="w-full lg:w-auto">

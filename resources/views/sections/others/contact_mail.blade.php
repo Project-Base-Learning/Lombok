@@ -1,10 +1,3 @@
-<style>
-    input:focus + label,
-    input:not(:placeholder-shown) + label {
-        font-size: 0.875rem;
-    }
-</style>
-
 <div class="lg:!px-40 lg:!py-12 md:!px-20 md:!py-12 px-8 py-6">
     <div class="grid grid-cols-1 gap-16 mx-auto max-w-7xl md:grid-cols-2">
         <!-- Left Side: Contact Form -->
@@ -17,28 +10,28 @@
                 <!-- Email Field -->
                 <div>
                     <input type="email" id="email" name="email" required
-                        class="w-full p-2 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-red focus:border-red"
+                        class="w-full p-2 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
                         placeholder="Email Anda *">
                 </div>
 
                 <!-- Name Field -->
                 <div>
                     <input type="text" id="name" name="name"
-                        class="w-full p-2 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-red focus:border-red"
+                        class="w-full p-2 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
                         placeholder="Nama Anda (opsional)">
                 </div>
 
                 <!-- Message Field -->
                 <div>
                     <textarea id="message" name="message" required rows="6"
-                        class="w-full p-2 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-red focus:border-red"
+                        class="w-full p-2 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
                         placeholder="Tulis pesan Anda di sini *"></textarea>
                 </div>
 
                 <!-- Submit Button -->
                 <div>
                     <button type="submit"
-                        class="flex items-center justify-center w-full gap-2 px-4 py-2 font-medium text-black transition border-2 rounded-lg bg-secondary-200 hover:border-black">
+                        class="flex items-center justify-center w-full gap-2 px-4 py-2 font-medium text-black transition border-2 rounded-lg bg-secondary-200 hover:border-secondary-500">
                         Kirim Pesan
                     </button>
                 </div>
