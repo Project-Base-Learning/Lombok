@@ -12,10 +12,16 @@ abstract class Controller
     protected function data()
     {
         $data = config('general-settings');
+
+        if (Route::currentRouteName() == '/' && !empty($data['navigation']['home'])) {
+            $data['page'] = Page::where('slug', $data['navigation']['home']['slug'])->firstOrFail();
+        } else {
+            $data['page'] = Page::where('slug', Route::currentRouteName())->firstOrFail();
+        }
+
         if ($data['features']['sponsors']) {
             $data['sponsors'] = Sponsor::where('featured', 1)->get();
         }
-        $data['page'] = Page::where('slug', Route::currentRouteName())->firstOrFail();
         $data['sections'] = [];
         foreach ($data['page']->sections as $section) {
             $data['sections'][$section->section->title] = $section->section;
