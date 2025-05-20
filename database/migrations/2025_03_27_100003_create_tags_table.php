@@ -11,19 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->unique();
+            $table->string('tag_name')->unique();
             $table->string('slug')->unique();
-            $table->text('content')->nullable();
-            $table->boolean('private')->default(0);
-            $table->foreignId('tag_id')->nullable()->constrained('tags')->cascadeOnUpdate()->nullOnDelete();
-            $table->json('metadata')->nullable();
             $table->foreignId('created_by')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
             $table->foreignId('updated_by')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
-            $table->dateTime('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
+        });
+
+        Schema::create('articles_tags', function (Blueprint $table) {
+            $table->foreignId('article_id')->constrained('articles')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('tag_id')->constrained('tags')->cascadeOnUpdate()->cascadeOnDelete();
         });
     }
 
@@ -32,6 +32,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('tags');
+        Schema::dropIfExists('articles_categories');
     }
 };
