@@ -9,7 +9,7 @@ enum EmailProviderEnum: string
     use WithOptions;
 
     case SMTP = 'SMTP';
-    case MAILGUN = 'Mailgun';
-    case SES = 'Amazon SES';
-    case POSTMARK = 'Postmark';
+    // case MAILGUN = 'Mailgun';
+    // case SES = 'Amazon SES';
+    // case POSTMARK = 'Postmark';
 }

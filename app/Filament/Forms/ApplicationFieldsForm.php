@@ -2,6 +2,7 @@
 
 namespace App\Filament\Forms;
 
+use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
@@ -17,71 +18,97 @@ class ApplicationFieldsForm
         return [
             Grid::make()
                 ->schema([
-                    Section::make()
+                    Section::make('Site Config')
                         ->schema([
                             TextInput::make('site_name')
-                                ->autofocus()
-                                ->columnSpanFull(),
-                            Textarea::make('site_description')
-                                ->columnSpanFull(),
-                            Grid::make()
-                                ->schema([
-                                    FileUpload::make('site_logo')
-                                        ->image()
-                                        ->directory('assets')
-                                        ->visibility('public')
-                                        ->moveFiles()
-                                        ->imageEditor()
-                                        ->getUploadedFileNameForStorageUsing(fn () => 'site_logo.png')
-                                        ->columnSpan(['default' => 1, 'lg' => 2]),
-                                    FileUpload::make('site_favicon')
-                                        ->image()
-                                        ->directory('assets')
-                                        ->visibility('public')
-                                        ->moveFiles()
-                                        ->getUploadedFileNameForStorageUsing(fn () => 'site_favicon.ico')
-                                        ->acceptedFileTypes(['image/x-icon', 'image/vnd.microsoft.icon'])
-                                        ->columnSpan(['default' => 1, 'lg' => 2]),
-                                ])
-                                ->columns(2),
+                                ->autofocus(),
+                            Textarea::make('site_description'),
+                            FileUpload::make('site_logo')
+                                ->image()
+                                ->disk('public')
+                                ->directory('assets')
+                                ->imageEditor()
+                                ->getUploadedFileNameForStorageUsing(fn () => 'site_logo.png'),
+                            FileUpload::make('site_favicon')
+                                ->image()
+                                ->disk('public')
+                                ->directory('assets')
+                                ->getUploadedFileNameForStorageUsing(fn () => 'site_favicon.ico')
+                                ->acceptedFileTypes(['image/x-icon', 'image/vnd.microsoft.icon']),
                         ])
+                        ->columns(1),
+                    Section::make('Location')
+                        ->schema([
+                            TextInput::make('address')
+                                ->maxLength(255),
+                            TextInput::make('url')
+                                ->url(),
+                            Map::make('coordinate')
+                                ->zoom(15)
+                                ->minZoom(0)
+                                ->maxZoom(28)
+                                ->tilesUrl("https://tile.openstreetmap.de/{z}/{x}/{y}.png")
+                                ->detectRetina(true)
+                                ->showFullscreenControl(true)
+                                ->showZoomControl(true)
+                                ->extraStyles(['min-height: 50dvh']),
+                        ])
+                        ->columns(1)
+                        ->statePath('location'),
                 ])
                 ->columnSpan(['lg' => 2]),
             Grid::make()
                 ->schema([
-                    Section::make()
+                    Section::make('Urls')
                         ->schema([
-                            TextInput::make('support_email')
-                                ->prefixIcon('heroicon-o-envelope'),
-                            TextInput::make('support_phone')
-                                ->prefixIcon('heroicon-o-phone'),
-                            ColorPicker::make('theme_color')
-                                ->prefixIcon('heroicon-o-swatch'),
+                            TextInput::make('site_url')
+                                ->url()
+                                ->placeholder('https://site.com'),
+                            TextInput::make('site_dashboard_url')
+                                ->prefix('/'),
                         ]),
+                    Section::make('Contact Supports')
+                        ->schema([
+                            TextInput::make('email')
+                                ->email()
+                                ->prefixIcon('heroicon-o-envelope'),
+                            TextInput::make('phone')
+                                ->prefixIcon('heroicon-o-phone'),
+                        ])
+                        ->statePath('contacts'),
+                    Section::make('Theme')
+                        ->schema([
+                            ColorPicker::make('primary')
+                                ->rgb()
+                                ->regex('/^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/'),
+                            ColorPicker::make('secondary')
+                                ->rgb()
+                                ->regex('/^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/'),
+                            ColorPicker::make('tertiary')
+                                ->rgb()
+                                ->regex('/^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/'),
+                        ])
+                        ->statePath('theme'),
                     Section::make('Features')
                         ->description('Features you want to have.')
                         ->schema([
                             Toggle::make('analytics'),
                             Toggle::make('sponsors'),
-                            Toggle::make('testimonials')
-                                ->disabled(),
-                            Toggle::make('ticketings')
-                                ->disabled(),
-                            Toggle::make('views')
-                                ->disabled(),
+                            // Toggle::make('testimonials')
+                            //     ->disabled(),
+                            // Toggle::make('ticketings')
+                            //     ->disabled(),
                         ])
                         ->statePath('features'),
                     Section::make('User Features')
                         ->description('Features for User (Visitor).')
                         ->schema([
-                            Toggle::make('chatbot')
-                                ->disabled(),
-                            Toggle::make('favorites')
-                                ->disabled(),
-                            Toggle::make('login')
-                                ->disabled(),
-                            Toggle::make('reviews')
-                                ->disabled(),
+                            // Toggle::make('favorites')
+                            //     ->disabled(),
+                            // Toggle::make('login')
+                            //     ->disabled(),
+                            // Toggle::make('reviews')
+                            //     ->disabled(),
                         ])
                         ->statePath('user_features'),
                 ])

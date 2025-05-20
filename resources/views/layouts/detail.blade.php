@@ -23,9 +23,9 @@
                 <p>{{ $data['article']->creator->name }} at {{ date('d/m/Y', strtotime($data['article']->published_at)) }}</p>
             </div>
             <div class="flex flex-wrap mb-4">
-                @foreach ($data['article']->categories as $category)
-                    <a href="{{ route('search', ['categories[]' => $category->category_name]) }}"
-                        class="bg-pink-100 text-pink-800 text-xs me-2 px-2 py-0.5 rounded dark:bg-gray-700 dark:text-pink-400 border border-pink-400">{{ $category->category_name }}</a>
+                @foreach ($data['article']->tags as $tag)
+                    <a href="{{ route($data['navigation']['search']['slug'], ['categories[]' => $tag->tag_name]) }}"
+                        class="bg-pink-100 text-pink-800 text-xs me-2 px-2 py-0.5 rounded dark:bg-gray-700 dark:text-pink-400 border border-pink-400">{{ $tag->tag_name }}</a>
                 @endforeach
             </div>
         </div>

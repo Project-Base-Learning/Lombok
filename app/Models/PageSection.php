@@ -12,7 +12,7 @@ class PageSection extends Model
 
     protected $fillable = [
         'sort_order',
-        'pattern_id',
+        'section_id',
     ];
 
     public function page() : BelongsTo
@@ -20,8 +20,8 @@ class PageSection extends Model
         return $this->belongsTo(User::class, 'page_id');
     }
 
-    public function pattern() : BelongsTo
+    public function section() : BelongsTo
     {
-        return $this->belongsTo(Pattern::class, 'pattern_id');
+        return $this->belongsTo(Section::class, 'section_id');
     }
 }

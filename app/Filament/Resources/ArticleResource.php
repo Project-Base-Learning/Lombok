@@ -2,13 +2,14 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Forms\CustomForms;
 use Illuminate\Support\Str;
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Models\Article;
-use App\Models\Cover;
 use App\Models\GeneralSetting;
 use App\Models\Sponsor;
-use App\Models\Tag;
+use App\Models\Category;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
@@ -53,7 +54,6 @@ class ArticleResource extends Resource
                                             ->rows(3)
                                             ->required()
                                             ->maxLength(255)
-                                            ->columnSpan(['lg' => 2])
                                             ->reactive()
                                             ->debounce(1000)
                                             ->afterStateUpdated(function (callable $set, $state) {
@@ -64,66 +64,29 @@ class ArticleResource extends Resource
                                             ->rows(3)
                                             ->unique(ignoreRecord: true)
                                             ->maxLength(255)
-                                            ->regex('/^[a-z0-9-]+$/')
-                                            ->columnSpan(['lg' => 2]),
-                                        Forms\Components\Select::make('cover')
-                                            ->required()
-                                            ->relationship('cover')
-                                            ->allowHtml()
-                                            ->searchable()
-                                            ->createOptionForm([
-                                                Forms\Components\FileUpload::make('image_path')
-                                                    ->label('Image')
-                                                    ->image()
-                                                    ->imageEditor()
-                                                    ->optimize('webp')
-                                                    ->resize(50)
-                                                    ->directory('covers')
-                                                    ->maxSize(2048)
-                                                    ->required(),
-                                                Forms\Components\TextInput::make('alt')
-                                                    ->maxLength(255),
-                                            ])
-                                            ->options(fn () => Cover::all()
-                                                ->mapWithKeys(fn ($item) => [
-                                                    $item->id => static::getCleanOptionString($item)
-                                                ])
-                                                ->toArray(),
-                                            )
-                                            ->getSearchResultsUsing(function (string $query) {
-                                                $covers = Cover::where('alt', 'like', "%{$query}%")->limit(25)->get();
-                                                return $covers->mapWithKeys(fn ($item) => [
-                                                    $item->id => static::getCleanOptionString($item)
-                                                ])
-                                                ->toArray();
-                                            })
-                                            ->getOptionLabelUsing(function ($value): string {
-                                                return Cover::find($value)
-                                                    ->mapWithKeys(fn ($item) => [
-                                                        $item->id => static::getCleanOptionString($item)
-                                                    ])
-                                                    ->toArray();
-                                            })
-                                            ->columnSpan(2),
+                                            ->regex('/^[a-z0-9-]+$/'),
+                                        CuratorPicker::make('cover_id')
+                                            ->label('Cover')
+                                            ->relationship('cover', 'id'),
                                     ])
-                                    ->columns(2)
+                                    ->columns(1)
                                     ->columnSpan(['lg' => 2]),
                                 Forms\Components\Section::make()
                                     ->schema([
-                                        Forms\Components\Select::make('tag_id')
+                                        Forms\Components\Select::make('category_id')
                                             ->required()
                                             ->disabledOn('edit')
                                             ->live()
-                                            ->relationship('tag', 'tag'),
-                                        Forms\Components\Select::make('categories')
+                                            ->relationship('category', 'category_name'),
+                                        Forms\Components\Select::make('tags')
                                             ->multiple()
-                                            ->relationship('categories', 'category_name')
+                                            ->relationship('tags', 'tag_name')
                                             ->createOptionForm([
-                                                Forms\Components\TextInput::make('category_name')
+                                                Forms\Components\TextInput::make('tag_name')
                                                     ->required()
                                                     ->maxLength(255)
-                                                    ->unique(column: 'category_name')
-                                                    ->label('Category name'),
+                                                    ->unique(column: 'tag_name')
+                                                    ->label('Tag name'),
                                             ])
                                             ->searchable(),
                                         Forms\Components\Select::make('sponsors')
@@ -181,61 +144,28 @@ class ArticleResource extends Resource
                             ])
                             ->columns(2)
                             ->statePath('metadata'),
-                        Forms\Components\Tabs\Tab::make('Other')
+                        Forms\Components\Tabs\Tab::make('Fields')
                             ->icon('heroicon-o-plus')
                             ->visible(
-                                fn ($record, $get) => Tag::query()
-                                    ->where([
-                                        'id' => $get('tag_id'),
-                                        'tag' => 'event'
-                                    ])->exists()
+                                function ($record, $get) {
+                                    $fields = Category::query()
+                                        ->where('id', $get('category_id'))
+                                        ->whereNotNull('fields')
+                                        ->value('fields');
+                                    return !empty($fields);
+                                }
                             )
-                            ->schema([
-                                Forms\Components\Section::make()
-                                    ->schema([
-                                        Forms\Components\DateTimePicker::make('start_date')
-                                            ->seconds(false)
-                                            ->reactive(),
-                                        Forms\Components\DateTimePicker::make('finish_date')
-                                            ->seconds(false)
-                                            ->reactive()
-                                            ->after('start_date'),
-                                        Forms\Components\TextInput::make('location')
-                                            ->label('Location link')
-                                            ->url()
-                                            ->default('https://maps.app.goo.gl/RG4syWQQ9GnQWpiS8'),
-                                        Forms\Components\Toggle::make('has_ticket')
-                                            ->label('Enable Ticketing')
-                                            ->default(false)
-                                            ->live(),
-                                    ])
-                                    ->columns(1)
-                                    ->columnSpan(['lg' => 2]),
-                                Forms\Components\Fieldset::make('Ticketing')
-                                    ->visible(
-                                        fn ($record, $get): bool => $get('has_ticket') == true
-                                    )
-                                    ->schema([
-                                        Forms\Components\TextInput::make('price')
-                                            ->minValue(1)
-                                            ->numeric()
-                                            ->prefix('Rp.'),
-                                        Forms\Components\TextInput::make('quota')
-                                            ->minValue(1)
-                                            ->numeric()
-                                            ->prefix('People'),
-                                        Forms\Components\TextInput::make('link')
-                                            ->label('Register link')
-                                            ->url()
-                                            ->required()
-                                            ->maxLength(255),
-                                    ])
-                                    ->columns(1)
-                                    ->columnSpan(['lg' => 1])
-                                    ->statePath('ticketing'),
-                            ])
-                            ->columns(3)
-                            ->statePath('others'),
+                            ->schema(
+                                function ($record, $get) {
+                                    $fields = Category::query()
+                                        ->where('id', $get('category_id'))
+                                        ->whereNotNull('fields')
+                                        ->value('fields');
+                                    return $fields ? CustomForms::get($fields) : [];
+                                }
+                            )
+                            ->columns(2)
+                            ->statePath('fields'),
                     ])
                     ->columnSpan(2),
             ]);
@@ -244,16 +174,22 @@ class ArticleResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->defaultGroup('tag.tag')
+            ->groups([
+                'creator.name',
+                'editor.name'
+            ])
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->limit(50)
+                    ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('tag.tag')
-                    ->numeric()
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('category.category_name')
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\IconColumn::make('private')
                     ->boolean()
                     ->trueIcon('heroicon-o-check-circle')
@@ -261,27 +197,30 @@ class ArticleResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('creator.name')
                     ->label('Created by')
-                    ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('editor.name')
                     ->label('Last edited by')
-                    ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                Tables\Filters\SelectFilter::make('tag')->relationship('tag', 'tag'),
+                Tables\Filters\SelectFilter::make('category')->relationship('category', 'category_name'),
                 Tables\Filters\TrashedFilter::make(),
             ])
             ->actions([

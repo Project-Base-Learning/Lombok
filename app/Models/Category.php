@@ -4,38 +4,45 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
-    use SoftDeletes;
-
     protected $table = 'categories';
 
     protected $fillable = [
         'category_name',
         'slug',
+        'default',
+        'searchable',
+        'card_layout',
+        'detail_page',
+        'fields'
     ];
 
-    public function user() : BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
+    protected $casts = [
+        'default' => 'boolean',
+        'searchable' => 'boolean',
+        'fields' => 'array',
+    ];
 
-    public function articles() : BelongsToMany
+    public function articles() : HasMany
     {
-        return $this->belongsToMany(Article::class, 'articles_categories');
+        return $this->hasMany(Article::class, 'category_id');
     }
 
     protected static function booted()
     {
         static::saving(function ($data) {
-            $data->user_id = Auth::user()->id;
             if ($data->isDirty('category_name') && empty($data->slug)) {
-                $data->slug = Str::slug($data->category_name);
+                $data->slug = Str::slug($data->tag_name);
+            }
+
+            $records = Category::where([['id', '!=', $data->id], ['default', 1]])->get();
+            if (!$records->isEmpty()) {
+                $records->update(['default', 0]);
+            } else {
+                $data->default = 1;
             }
         });
     }

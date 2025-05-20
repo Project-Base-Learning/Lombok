@@ -29,3 +29,6 @@ composer install <br />
 php artisan key:generate <br />
 ln -s [target_path] [link_name] (ex. ln -s .../project/storage/app/public .../project/public/storage, help: use pwd command in terminal to get relative path)<br />
 php artisan optimize <br />
+<br />
+Notes : <br />
+After setting the roles, generate the policies by running this command (php artisan shield:generate --all)

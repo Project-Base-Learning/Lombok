@@ -41,6 +41,7 @@ class PageResource extends Resource
                             ->required()
                             ->unique(ignoreRecord: true)
                             ->maxLength(255)
+                            ->doesntStartWith([config('general-settings.site_dashboard_url'), 'mail', 'details'])
                             ->regex('/^[a-z0-9-]+$/'),
                     ])
                     ->columns(1)
@@ -52,51 +53,49 @@ class PageResource extends Resource
                             ->label('Sections')
                             ->orderColumn('sort_order')
                             ->schema([
-                                Forms\Components\Select::make('pattern_id')
+                                Forms\Components\Select::make('section_id')
                                     ->required()
                                     ->searchable()
-                                    ->preload()
-                                    ->relationship('pattern', 'title'),
+                                    ->relationship('section', 'title'),
                             ])
                             ->columnSpan('full')
                             ->addActionLabel('Add Another')
                             ->columns(1),
                     ])
                     ->columns(1)
-                    ->columnSpan(['lg' => 1]),
-            ]);
+                    ->columnSpan(['lg' => 2]),
+            ])
+            ->columns(['lg' => 3]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-            ->reorderable('sort_order')
-            ->defaultSortOptionLabel('sort_order')
+            ->groups([
+                'editor.name'
+            ])
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('published_at')
-                    ->dateTime()
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('editor.name')
+                    ->label('Last edited by')
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('creator.name')
-                    ->label('Created by')
-                    ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('editor.name')
-                    ->label('Last edited by')
-                    ->searchable()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
@@ -104,30 +103,6 @@ class PageResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\Action::make('publish')
-                    ->label('Publish')
-                    ->action(function ($record) {
-                        $record->update([
-                            'published_at' => now(),
-                        ]);
-                        Notification::make()
-                            ->title('Published')
-                            ->success()
-                            ->send();
-                    })
-                    ->visible(fn ($record) => empty($record->published_at)),
-                Tables\Actions\Action::make('unpublish')
-                    ->label('Unpublish')
-                    ->action(function ($record) {
-                        $record->update([
-                            'published_at' => null,
-                        ]);
-                        Notification::make()
-                            ->title('Unpublished')
-                            ->success()
-                            ->send();
-                    })
-                    ->visible(fn ($record) => $record->published_at),
                 Tables\Actions\DeleteAction::make(),
                 Tables\Actions\ForceDeleteAction::make(),
                 Tables\Actions\RestoreAction::make(),
