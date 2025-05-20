@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MailRequest;
+use App\Mail\TestMail;
 use App\Models\Article;
 use App\Models\Sponsor;
 use App\Models\Category;
 use App\Models\Page;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 class HomeController extends Controller
@@ -76,5 +79,21 @@ class HomeController extends Controller
             $data['sponsors'] = $data['article']->sponsors()->get();
         }
         return view('pages.details.'.$data['category']->detail_page, compact('data'));
+    }
+
+    public function mail(MailRequest $request)
+    {
+        $validated = $request->validated();
+
+        try {
+            Mail::to($validated['email'])
+                ->send(new TestMail([
+                    'subject' => $validated['subject'],
+                    'body' => $validated['message'],
+                ]));
+            return back()->with('success', 'Pesan berhasil dikirim!');
+        } catch (\Exception $e) {
+            return back()->with('danger', 'Pesan gagal dikirim!');
+        }
     }
 }

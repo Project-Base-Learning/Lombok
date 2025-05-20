@@ -4,7 +4,6 @@ namespace App\Filament\Pages\GeneralSettings;
 
 use App\Filament\Forms\AnalyticsFieldsForm;
 use App\Filament\Forms\ApplicationFieldsForm;
-use App\Filament\Forms\ChatbotFieldsForm;
 use App\Filament\Forms\EmailFieldsForm;
 use App\Filament\Forms\NavigationFieldsForm;
 use App\Filament\Forms\SocialNetworkFieldsForm;
@@ -102,14 +101,6 @@ class GeneralSettingsPage extends Page
                 ->schema(AnalyticsFieldsForm::get())
                 ->columns(['lg' => 3])
                 ->statePath('google_analytics');
-        }
-
-        if (!empty($this->data['user_features']['chatbot'])) {
-            $arrTabs[] = Tabs\Tab::make('Chatbot')
-                ->icon('heroicon-o-chat-bubble-bottom-center-text')
-                ->schema(ChatbotFieldsForm::get())
-                ->columns(['lg' => 3])
-                ->statePath('chatbot_settings');
         }
 
         return $form

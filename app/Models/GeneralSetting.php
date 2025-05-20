@@ -25,7 +25,6 @@ class GeneralSetting extends Model
         'features',
         'google_analytics',
         'user_features',
-        'chatbot_settings',
     ];
 
     protected $casts = [

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Awcodes\Curator\Models\Media;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -42,9 +43,9 @@ class Article extends Model
         return $this->belongsTo(User::class, 'updated_by');
     }
 
-    public function cover() : BelongsToMany
+    public function cover(): BelongsTo
     {
-        return $this->belongsToMany(Cover::class, 'articles_cover');
+        return $this->belongsTo(Media::class, 'cover_id', 'id');
     }
 
     public function tags() : BelongsToMany
@@ -73,10 +74,6 @@ class Article extends Model
             if ($data->isDirty('title') && empty($data->slug)) {
                 $data->slug = Str::slug($data->title);
             }
-        });
-
-        static::forceDeleting(function ($data) {
-            Cover::where('id', $data->cover->first()->id)->first()->delete();
         });
     }
 }

@@ -5,8 +5,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\SponsorResource\Pages;
 use App\Models\GeneralSetting;
 use App\Models\Sponsor;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Split;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
@@ -29,47 +32,42 @@ class SponsorResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
-                Select::make('category')
-                    ->relationship('category', 'category_name')
-                    ->createOptionForm([
-                        TextInput::make('category_name')
-                            ->required()
-                            ->maxLength(255)
-                            ->unique(column: 'category_name')
-                            ->label('Category name'),
-                        TextInput::make('sort_order')
-                            ->required()
-                            ->numeric()
-                            ->default(0),
+                Split::make([
+                    section::make()
+                    ->schema([
+                        CuratorPicker::make('image_id')
+                            ->label('Image')
+                            ->relationship('image', 'id')
+                    ]),
+                    Section::make()
+                        ->schema([
+                            TextInput::make('title')
+                                ->required()
+                                ->maxLength(255),
+                            Select::make('category')
+                                ->relationship('category', 'category_name')
+                                ->createOptionForm([
+                                    TextInput::make('category_name')
+                                        ->required()
+                                        ->maxLength(255)
+                                        ->unique(column: 'category_name')
+                                        ->label('Category name'),
+                                    TextInput::make('sort_order')
+                                        ->required()
+                                        ->numeric()
+                                        ->default(0),
+                                ])
+                                ->preload()
+                                ->searchable()
+                                ->required()
+                                ->label('Category'),
+                            Toggle::make('featured')
+                                ->default(0),
+                        ])
+                        ->grow(false)
                     ])
-                    ->preload()
-                    ->searchable()
-                    ->required()
-                    ->label('Category'),
-                FileUpload::make('image_path')
-                    ->required()
-                    ->image()
-                    ->directory('media_partners')
-                    ->imageEditor()
-                    ->optimize('webp')
-                    ->resize(50)
-                    ->maxSize(2048),
-                TextInput::make('alt')
-                    ->maxLength(255),
-                TextInput::make('width')
-                    ->numeric()
-                    ->minValue(0),
-                TextInput::make('height')
-                    ->numeric()
-                    ->minValue(0),
-                Toggle::make('lazy')
-                    ->default(1),
-                Toggle::make('featured')
-                    ->default(0),
-            ]);
+            ])
+            ->columns(['default' => 1, 'lg' => 3]);
     }
 
     public static function table(Table $table): Table
@@ -77,33 +75,25 @@ class SponsorResource extends Resource
         return $table
             ->groups([
                 'category.category_name',
-                'user.name'
+                'creator.name',
+                'editor.name'
             ])
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->sortable()
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image.path')
+                    ->label('Image'),
                 Tables\Columns\TextColumn::make('category.category_name')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image_path')
-                    ->label('Image'),
-                Tables\Columns\TextColumn::make('alt')
-                    ->sortable()
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('width')
-                    ->numeric()
-                    ->sortable()
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('height')
-                    ->numeric()
-                    ->sortable()
-                    ->searchable(),
-                Tables\Columns\IconColumn::make('lazy')
-                    ->boolean(),
                 Tables\Columns\IconColumn::make('featured')
                     ->boolean(),
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('creator.name')
+                    ->label('Created by')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('editor.name')
                     ->label('Last edited by')
                     ->sortable()
                     ->searchable(),

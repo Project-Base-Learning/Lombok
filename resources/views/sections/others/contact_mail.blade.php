@@ -6,7 +6,8 @@
             <h2 class="mb-4 text-4xl font-semibold tracking-wider text-gray-800 md:text-5xl lg:text-6xl">Contact Us</h2>
             <p class="mb-6 text-gray-800">Tanyakan hal yang ingin Anda ketahui tentang kami pada kolom di bawah ini!</p>
             <!-- Form -->
-            <form action="#" method="POST" class="space-y-6">
+            <form action="{{ route('mail') }}" method="POST" class="space-y-6">
+                @csrf
                 <!-- Email Field -->
                 <div>
                     <input type="email" id="email" name="email" required
@@ -14,11 +15,11 @@
                         placeholder="Email Anda *">
                 </div>
 
-                <!-- Name Field -->
+                <!-- Subject Field -->
                 <div>
-                    <input type="text" id="name" name="name"
+                    <input type="text" id="subject" name="subject" required
                         class="w-full p-2 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="Nama Anda (opsional)">
+                        placeholder="Subject *">
                 </div>
 
                 <!-- Message Field -->

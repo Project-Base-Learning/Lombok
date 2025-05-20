@@ -103,7 +103,6 @@ class ApplicationFieldsForm
                     Section::make('User Features')
                         ->description('Features for User (Visitor).')
                         ->schema([
-                            Toggle::make('chatbot'),
                             // Toggle::make('favorites')
                             //     ->disabled(),
                             // Toggle::make('login')

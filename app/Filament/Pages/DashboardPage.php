@@ -2,14 +2,14 @@
 
 namespace App\Filament\Pages;
 
-use GeoSot\FilamentEnvEditor\Pages\Actions\OptimizeClearAction;
+use App\Filament\Actions\OptimizeAction;
 
 class DashboardPage extends \Filament\Pages\Dashboard
 {
     public function getActions(): array
     {
         return [
-            // OptimizeClearAction::make('optimize-clear')
+            OptimizeAction::make('optimize')
         ];
     }
 }

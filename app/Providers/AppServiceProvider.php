@@ -44,7 +44,6 @@ class AppServiceProvider extends ServiceProvider
             'features',
             'google_analytics',
             'user_features',
-            'chatbot_settings',
         ])->first()->toArray();
 
         // app url
@@ -119,35 +118,6 @@ class AppServiceProvider extends ServiceProvider
             'mail.from.name' => $mail['email_from_name'] ?? 'Example',
         ]);
         unset($mail);
-
-        // chatbot (prism)
-        $chatbot = $data['chatbot_settings'] ?? [];
-        Config::set([
-            'prism.provider.default' => $chatbot['provider'] ?? null,
-            'prism.provider.model' => $chatbot['model'] ?? null,
-            'prism.providers.openai.url' => $chatbot['openai']['url'] ?? 'https://api.openai.com/v1',
-            'prism.providers.openai.api_key' => $chatbot['openai']['api_key'] ?? '',
-            'prism.providers.openai.organization' => $chatbot['openai']['organization'] ?? null,
-            'prism.providers.openai.project' => $chatbot['openai']['project'] ?? null,
-            'prism.providers.anthropic.api_key' => $chatbot['anthropic']['api_key'] ?? '',
-            'prism.providers.anthropic.version' => $chatbot['anthropic']['version'] ?? '2023-06-01',
-            'prism.providers.anthropic.default_thinking_budget' => $chatbot['anthropic']['default_thinking_budget'] ?? 1024,
-            'prism.providers.anthropic.anthropic_beta' => $chatbot['anthropic']['anthropic_beta'] ?? null,
-            'prism.providers.ollama.url' => $chatbot['ollama']['url'] ?? 'http://localhost:11434',
-            'prism.providers.mistral.api_key' => $chatbot['mistral']['api_key'] ?? '',
-            'prism.providers.mistral.url' => $chatbot['mistral']['url'] ?? 'https://api.mistral.ai/v1',
-            'prism.providers.groq.api_key' => $chatbot['groq']['api_key'] ?? '',
-            'prism.providers.groq.url' => $chatbot['groq']['url'] ?? 'https://api.groq.com/openai/v1',
-            'prism.providers.xai.api_key' => $chatbot['xai']['api_key'] ?? '',
-            'prism.providers.xai.url' => $chatbot['xai']['url'] ?? 'https://api.x.ai/v1',
-            'prism.providers.gemini.api_key' => $chatbot['gemini']['api_key'] ?? '',
-            'prism.providers.gemini.url' => $chatbot['gemini']['url'] ?? 'https://generativelanguage.googleapis.com/v1beta/models',
-            'prism.providers.deepseek.api_key' => $chatbot['deepseek']['api_key'] ?? '',
-            'prism.providers.deepseek.url' => $chatbot['deepseek']['url'] ?? 'https://api.deepseek.com/v1',
-            'prism.providers.voyageai.api_key' => $chatbot['voyageai']['api_key'] ?? '',
-            'prism.providers.voyageai.url' => $chatbot['voyageai']['url'] ?? 'https://api.voyageai.com/v1',
-        ]);
-        unset($chatbot);
 
         unset($data);
 

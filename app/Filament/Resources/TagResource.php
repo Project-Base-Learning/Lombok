@@ -47,7 +47,8 @@ class TagResource extends Resource
     {
         return $table
             ->groups([
-                'user.name'
+                'creator.name',
+                'editor.name'
             ])
             ->columns([
                 Tables\Columns\TextColumn::make('tag_name')
@@ -56,7 +57,11 @@ class TagResource extends Resource
                 Tables\Columns\TextColumn::make('slug')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('creator.name')
+                    ->label('Created by')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('editor.name')
                     ->label('Last edited by')
                     ->sortable()
                     ->searchable(),

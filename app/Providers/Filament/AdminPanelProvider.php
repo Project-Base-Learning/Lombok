@@ -75,7 +75,7 @@ class AdminPanelProvider extends PanelProvider
                 ->label('Media')
                 ->navigationIcon('heroicon-o-photo')
                 ->navigationGroup('Article')
-                ->navigationSort(5)
+                ->navigationSort(2)
                 ->navigationCountBadge(false)
                 ->registerNavigation(true)
                 ->defaultListView('grid')

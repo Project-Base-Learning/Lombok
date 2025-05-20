@@ -6,10 +6,10 @@ use App\Filament\Forms\CustomForms;
 use Illuminate\Support\Str;
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Models\Article;
-use App\Models\Cover;
 use App\Models\GeneralSetting;
 use App\Models\Sponsor;
 use App\Models\Category;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
@@ -54,7 +54,6 @@ class ArticleResource extends Resource
                                             ->rows(3)
                                             ->required()
                                             ->maxLength(255)
-                                            ->columnSpan(['lg' => 2])
                                             ->reactive()
                                             ->debounce(1000)
                                             ->afterStateUpdated(function (callable $set, $state) {
@@ -65,44 +64,12 @@ class ArticleResource extends Resource
                                             ->rows(3)
                                             ->unique(ignoreRecord: true)
                                             ->maxLength(255)
-                                            ->regex('/^[a-z0-9-]+$/')
-                                            ->columnSpan(['lg' => 2]),
-                                        Forms\Components\Select::make('cover')
-                                            ->relationship('cover')
-                                            ->allowHtml()
-                                            ->searchable()
-                                            ->createOptionForm([
-                                                Forms\Components\FileUpload::make('image_path')
-                                                    ->label('Image')
-                                                    ->image()
-                                                    ->imageEditor()
-                                                    ->optimize('webp')
-                                                    ->resize(50)
-                                                    ->directory('covers')
-                                                    ->maxSize(2048)
-                                                    ->required(),
-                                                Forms\Components\TextInput::make('alt')
-                                                    ->maxLength(255),
-                                            ])
-                                            ->options(fn () => collect(Cover::all())
-                                                ->mapWithKeys(fn ($item) => [
-                                                    $item->id => static::getCleanOptionString($item)
-                                                ])
-                                                ->toArray(),
-                                            )
-                                            ->getSearchResultsUsing(function (string $query) {
-                                                $covers = Cover::where('alt', 'like', "%{$query}%")->limit(10)->get();
-                                                return collect($covers)->mapWithKeys(fn ($item) => [
-                                                    $item->id => static::getCleanOptionString($item)
-                                                ])
-                                                ->toArray();
-                                            })
-                                            ->getOptionLabelUsing(function ($value): string {
-                                                return static::getCleanOptionString(Cover::find($value));
-                                            })
-                                            ->columnSpan(2),
+                                            ->regex('/^[a-z0-9-]+$/'),
+                                        CuratorPicker::make('cover_id')
+                                            ->label('Cover')
+                                            ->relationship('cover', 'id'),
                                     ])
-                                    ->columns(2)
+                                    ->columns(1)
                                     ->columnSpan(['lg' => 2]),
                                 Forms\Components\Section::make()
                                     ->schema([
@@ -208,12 +175,12 @@ class ArticleResource extends Resource
     {
         return $table
             ->groups([
-                'category.category_name',
                 'creator.name',
                 'editor.name'
             ])
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->limit(50)
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('category.category_name')

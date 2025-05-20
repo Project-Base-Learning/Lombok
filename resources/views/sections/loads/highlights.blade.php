@@ -12,7 +12,7 @@
                         class='relative'
                         has_detail_page='{{ $item->category->detail_page ? true : false }}'
                     >
-                        <img src="{{ Storage::url($item->cover->first()?->image_path) }}" class="block object-cover w-full h-full" alt="Image {{ $item->cover->first()?->alt ?? $item->title }}">
+                        <img src="{{ Storage::url($item->cover?->path) }}" class="block object-cover w-full h-full" alt="Image {{ $item->cover?->alt ?? $item->title }}">
                         <div class="absolute top-0 left-0 w-full overflow-hidden aspect-[16/9] z-[90] flex flex-col items-center justify-end p-6 text-center text-white bg-black/25">
                             <div class="w-full pb-0 sm:pb-6 md:pb-10">
                                 <h2 class="w-full mx-auto mb-0 text-xl font-bold sm:w-4/5 md:w-3/4 sm:text-3xl md:text-4xl line-clamp-2">{{ $item->title }}</h2>
@@ -89,8 +89,8 @@
                 has_detail_page='{{ $first->category->detail_page ? true : false }}'
             >
                 <img
-                    src="{{ Storage::url($first->cover->first()?->image_path) }}"
-                    alt="{{ $first->cover->first()?->alt ?? $first->title }}"
+                    src="{{ Storage::url($first->cover?->path) }}"
+                    alt="{{ $first->cover?->alt ?? $first->title }}"
                     class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                 >
                 <div class="absolute inset-0 flex flex-col items-start justify-end p-4 text-left text-white bg-black/25">
@@ -118,7 +118,7 @@
                             has_detail_page='{{ $item->category->detail_page ?? false }}'
                         >
                             <div class="relative flex-none w-full h-full overflow-hidden rounded-lg group">
-                                <img src="{{ Storage::url($item->cover->first()->image_path) }}" alt="{{ $item->cover->first()?->alt ?? $item->title }}" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 ">
+                                <img src="{{ Storage::url($item->cover?->path) }}" alt="{{ $item->cover?->alt ?? $item->title }}" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 ">
                                 <div class="absolute inset-0 bg-black/25"></div>
                             </div>
                         </x-links.detail>

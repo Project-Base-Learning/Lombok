@@ -18,16 +18,20 @@ class Section extends Model
         'title',
         'layout_path',
         'has_dataset',
-        'type_id'
     ];
 
     protected $casts = [
         'has_dataset' => 'boolean',
     ];
 
-    public function user() : BelongsTo
+    public function creator() : BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function editor() : BelongsTo
+    {
+        return $this->belongsTo(User::class, 'updated_by');
     }
 
     public function type() : BelongsTo
@@ -42,8 +46,12 @@ class Section extends Model
 
     protected static function booted()
     {
+        static::creating(function ($data) {
+            $data->created_by = Auth::user()->id;
+        });
+
         static::saving(function ($data) {
-            $data->user_id = Auth::user()->id;
+            $data->updated_by = Auth::user()->id;
         });
     }
 }

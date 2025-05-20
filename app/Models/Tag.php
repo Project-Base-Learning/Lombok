@@ -20,9 +20,14 @@ class Tag extends Model
         'slug',
     ];
 
-    public function user() : BelongsTo
+    public function creator() : BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function editor() : BelongsTo
+    {
+        return $this->belongsTo(User::class, 'updated_by');
     }
 
     public function articles() : BelongsToMany
@@ -32,8 +37,12 @@ class Tag extends Model
 
     protected static function booted()
     {
+        static::creating(function ($data) {
+            $data->created_by = Auth::user()->id;
+        });
+
         static::saving(function ($data) {
-            $data->user_id = Auth::user()->id;
+            $data->updated_by = Auth::user()->id;
             if ($data->isDirty('tag_name') && empty($data->slug)) {
                 $data->slug = Str::slug($data->tag_name);
             }

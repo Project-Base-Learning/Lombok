@@ -41,7 +41,7 @@ class PageResource extends Resource
                             ->required()
                             ->unique(ignoreRecord: true)
                             ->maxLength(255)
-                            ->doesntStartWith([config('general-settings.site_dashboard_url'), 'details'])
+                            ->doesntStartWith([config('general-settings.site_dashboard_url'), 'mail', 'details'])
                             ->regex('/^[a-z0-9-]+$/'),
                     ])
                     ->columns(1)

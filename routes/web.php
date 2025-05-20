@@ -22,6 +22,8 @@ foreach ($data['nav_items'] as $key => $value) {
     }
 }
 
+Route::post('/mail', [HomeController::class, 'mail'])->name('mail');
+
 Route::get('/detail/{category}/{slug}', [HomeController::class, 'detail'])->name('detail');
 
 // Testing routes
