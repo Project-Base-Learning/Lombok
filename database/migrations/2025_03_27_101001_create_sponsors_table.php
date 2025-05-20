@@ -20,14 +20,11 @@ return new class extends Migration
         Schema::create('sponsors', function (Blueprint $table) {
             $table->id();
             $table->string('title')->unique();
+            $table->foreignId('image_id')->nullable()->constrained(app(config('curator.model'))->getTable())->cascadeOnUpdate()->nullOnDelete();
             $table->foreignId('category_id')->nullable()->constrained('sponsor_categories')->cascadeOnUpdate()->nullOnDelete();
-            $table->string('image_path');
-            $table->string('alt')->nullable();
-            $table->integer('width')->nullable();
-            $table->integer('height')->nullable();
-            $table->boolean('lazy')->default(1);
             $table->boolean('featured')->default(0);
-            $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
+            $table->foreignId('created_by')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
+            $table->foreignId('updated_by')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });
