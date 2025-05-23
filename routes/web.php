@@ -33,6 +33,10 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
+Route::get('/berita_detail', function () {
+    return view('pages.berita_detail');
+})->name('berita_detail');
+
 if ($data['home']) {
     Route::get('/'.$data['home']['slug'], [HomeController::class, 'index'])->name($data['home']['slug']);
 }

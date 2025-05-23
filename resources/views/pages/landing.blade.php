@@ -306,7 +306,7 @@
                                         <h3 class="text-xl font-semibold mb-4 max-w-[40ch]">
                                             Desk Proses Penatausahaan Belanja Melalui SIPD RI TA 202{{ $i }}
                                         </h3>
-                                        <a href="#"
+                                        <a href="berita_detail"
                                             class="text-orange-500 text-xl hover:text-orange-800 inline-flex items-center gap-1">
                                             Lihat Berita <i class="fas fa-arrow-right"></i>
                                         </a>
