@@ -58,4 +58,8 @@ if (config('app.debug')) {
     // Route::get('/contact', function () {
     //     return view('tests.contact');
     // })->name('contact');
+
+    Route::get('/berita_detail', function () {
+        return view('tests.berita_detail');
+    })->name('berita_detail');
 }
