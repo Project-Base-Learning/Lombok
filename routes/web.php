@@ -3,6 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\ChatbotController;
+
+Route::controller(ChatbotController::class)->group(function () {
+    Route::post('/api/chatbot/send', 'send');
+    Route::get('/api/chatbot/sessions', 'getSessions');
+    Route::get('/api/chatbot/messages/{id}', 'getMessages');
+});
 
 $data = config('general-settings.navigation');
 
