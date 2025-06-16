@@ -11,6 +11,8 @@ use App\Models\Sponsor;
 use App\Models\Category;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms;
+use Filament\Forms\Components\Actions\Action;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
@@ -20,6 +22,7 @@ use FilamentTiptapEditor\TiptapEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Http;
 
 class ArticleResource extends Resource
 {
@@ -33,8 +36,8 @@ class ArticleResource extends Resource
     public static function getCleanOptionString(Model $data): string
     {
         return view('filament.components.select_option_image')
-            ->with('image', $data->image_path)
-            ->with('label', $data->title ?? $data->alt)
+            ->with('image', $data->image?->path)
+            ->with('label', $data->category->category_name." - ".$data->title)
             ->render();
     }
 
@@ -67,6 +70,7 @@ class ArticleResource extends Resource
                                             ->regex('/^[a-z0-9-]+$/'),
                                         CuratorPicker::make('cover_id')
                                             ->label('Cover')
+                                            ->required()
                                             ->relationship('cover', 'id'),
                                     ])
                                     ->columns(1)
@@ -75,7 +79,7 @@ class ArticleResource extends Resource
                                     ->schema([
                                         Forms\Components\Select::make('category_id')
                                             ->required()
-                                            ->disabledOn('edit')
+                                            // ->disabledOn('edit')
                                             ->live()
                                             ->relationship('category', 'category_name'),
                                         Forms\Components\Select::make('tags')
@@ -127,9 +131,49 @@ class ArticleResource extends Resource
                         Forms\Components\Tabs\Tab::make('Content')
                             ->icon('heroicon-o-pencil')
                             ->schema([
+                                Textarea::make('preview_content'),
                                 TiptapEditor::make('content')
                                     ->profile('default')
-                                    ->columnSpanFull(),
+                                    ->hintAction(
+                                        Action::make('Generate')
+                                            ->label('Generate')
+                                            ->icon('heroicon-o-sparkles')
+                                            ->disabled(function ($get) {
+                                                return ! $get('title') || ! $get('cover_id');
+                                            })
+                                            ->tooltip('Klik untuk generate artikel beserta SEO berdasarkan judul dan gambar kover')
+                                            ->form([
+                                                Textarea::make('prompt'),
+                                            ])
+                                            ->action(function (array $data, $get, $set) {
+                                                $title = $get('title');
+                                                $prompt = $data['prompt'];
+                                                $cover = $get('cover_id');
+                                                $cover = reset($cover);
+                                                $cover = $cover['path'] ?? null;
+
+                                                try {
+                                                    $res = app(\App\Http\Controllers\ChatbotController::class)->generateArticle($title, $cover, $prompt);
+
+                                                    $set('content', $res[0] ?? 'Gagal');
+                                                    $set('preview_content', $res[1] ?? 'Gagal');
+                                                    $set('metadata.meta_title', $res[2] ?? 'Gagal');
+                                                    $set('metadata.meta_desc', $res[3] ?? 'Gagal');
+
+                                                    Notification::make()
+                                                        ->success()
+                                                        ->title('Berhasil generate artikel')
+                                                        ->send();
+
+                                                } catch (\Throwable $e) {
+                                                    Notification::make()
+                                                        ->danger()
+                                                        ->title('Gagal memanggil API')
+                                                        ->body($e->getMessage())
+                                                        ->send();
+                                                }
+                                            })
+                                    ),
                             ])
                             ->columns(1),
                         Forms\Components\Tabs\Tab::make('SEO')

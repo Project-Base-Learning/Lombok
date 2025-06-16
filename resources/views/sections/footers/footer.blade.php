@@ -62,7 +62,7 @@
                 @if ($data['social_network'])
                     @foreach ($data['social_network'] as $key => $value)
                         @if ($value['url'])
-                            <x-footer.social_network_item url="{{ $value['url'] }}" brand="{{ $key }}"/>
+                            <x-footer.social_network_item title="{{ $value['label'] }}" url="{{ $value['url'] }}" brand="{{ $key }}"/>
                         @endif
                     @endforeach
                 @endif

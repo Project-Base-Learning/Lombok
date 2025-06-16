@@ -6,6 +6,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\ChatbotController;
 
 Route::controller(ChatbotController::class)->group(function () {
+    Route::post('/api/article/generate', 'generateArticle');
     Route::post('/api/chatbot/send', 'send');
     Route::get('/api/chatbot/sessions', 'getSessions');
     Route::get('/api/chatbot/messages/{id}', 'getMessages');
@@ -35,31 +36,31 @@ Route::get('/detail/{category}/{slug}', [HomeController::class, 'detail'])->name
 
 // Testing routes
 if (config('app.debug')) {
-    Route::get('/test-landing', function () {
+    Route::get('/test/landing', function () {
         return view('tests.landing');
     })->name('test.landing');
 
-    Route::get('/berita', function () {
+    Route::get('/test/berita', function () {
         return view('tests.berita');
     })->name('berita');
 
-    Route::get('/publikasi', function () {
+    Route::get('/test/publikasi', function () {
         return view('tests.publikasi');
     })->name('publikasi');
 
-    Route::get('/program', function () {
+    Route::get('/test/program', function () {
         return view('tests.program');
     })->name('program');
 
-    Route::get('/about', function () {
+    Route::get('/test/about', function () {
         return view('tests.about');
     })->name('about');
 
-    // Route::get('/contact', function () {
+    // Route::get('/test/contact', function () {
     //     return view('tests.contact');
     // })->name('contact');
 
-    Route::get('/berita_detail', function () {
+    Route::get('/test/berita_detail', function () {
         return view('tests.berita_detail');
     })->name('berita_detail');
 }

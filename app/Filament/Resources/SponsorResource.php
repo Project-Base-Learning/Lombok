@@ -34,11 +34,14 @@ class SponsorResource extends Resource
             ->schema([
                 Split::make([
                     section::make()
-                    ->schema([
-                        CuratorPicker::make('image_id')
-                            ->label('Image')
-                            ->relationship('image', 'id')
-                    ]),
+                        ->schema([
+                            CuratorPicker::make('image_id')
+                                ->label('Image')
+                                ->required()
+                                ->relationship('image', 'id')
+                        ])
+                        ->columns(1)
+                        ->grow(true),
                     Section::make()
                         ->schema([
                             TextInput::make('title')
@@ -64,10 +67,12 @@ class SponsorResource extends Resource
                             Toggle::make('featured')
                                 ->default(0),
                         ])
+                        ->columns(1)
                         ->grow(false)
                     ])
+                ->columns(['default' => 1, 'lg' => 3]),
             ])
-            ->columns(['default' => 1, 'lg' => 3]);
+            ->columns(1);
     }
 
     public static function table(Table $table): Table

@@ -39,6 +39,7 @@ class CategoryResource extends Resource
                                 }),
                             Forms\Components\TextInput::make('slug')
                                 ->required()
+                                ->helperText('https://website.com/detail/{slug}')
                                 ->unique(ignoreRecord: true)
                                 ->maxLength(255)
                                 ->regex('/^[a-z0-9-]+$/'),

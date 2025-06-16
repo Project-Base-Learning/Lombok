@@ -46,11 +46,11 @@
     </div>
 
     @if (!$data['article']->sponsors->isEmpty())
-        @include('patterns.others.sponsors')
+        @include('sections.others.sponsors')
     @endif
 
     {{-- other event --}}
     @if (!$data['related']->isEmpty())
-        @include('patterns.posts.related')
+        @include('sections.others.related')
     @endif
 @endsection

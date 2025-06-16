@@ -46,7 +46,7 @@ class Sponsor extends Model
 
     public function articles() : BelongsToMany
     {
-        return $this->belongsToMany(Article::class, 'articles_categories');
+        return $this->belongsToMany(Article::class, 'article_sponsors');
     }
 
     protected static function booted()
@@ -57,6 +57,10 @@ class Sponsor extends Model
 
         static::saving(function ($data) {
             $data->updated_by = Auth::user()->id;
+        });
+
+        static::deleting(function ($data) {
+            $data->articles()->detach();
         });
     }
 }

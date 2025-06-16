@@ -6,7 +6,7 @@
         <div class="w-full flex-0 md:w-auto">
             <select name="category" class="w-full text-sm border-gray-300 rounded-md">
                 @foreach ($data['categories'] as $category)
-                    <option value="{{ $category->category_name }}" @selected($request->category ? $request->category == $category->category_name : $category->default)>{{ $category->category_name }}</option>
+                    <option value="{{ $category->slug }}" @selected($request->category ? $request->category == $category->slug : $category->default)>{{ $category->category_name }}</option>
                 @endforeach
             </select>
         </div>
@@ -41,15 +41,15 @@
                     <li>
                         <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
                             @if ($request->filled('tags'))
-                                @if (in_array($item->tag_name, explode(',', $request->tags)))
-                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500" checked>
+                                @if (in_array($item->slug, explode(',', $request->tags)))
+                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->slug }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500" checked>
                                     <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->tag_name }}</label>
                                 @else
-                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500">
+                                    <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->slug }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500">
                                     <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->tag_name }}</label>
                                 @endif
                             @else
-                                <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->tag_name }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500">
+                                <input id="checkbox-item-{{ $item->id }}" type="checkbox" name="tags" value="{{ $item->slug }}" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-500">
                                 <label for="checkbox-item-11" class="w-full text-sm font-medium text-gray-900 rounded ms-2 dark:text-gray-300">{{ $item->tag_name }}</label>
                             @endif
                         </div>
