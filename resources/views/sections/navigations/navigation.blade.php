@@ -1,4 +1,4 @@
-<header id="navbar" class="w-full sticky top-0 z-[9999] bg-white py-2 text-black transition-all border-b-2">
+<header id="navbar" class="w-full sticky top-0 z-[9999] bg-white py-5 text-black transition-all border-b-2">
     <div class="flex flex-row items-center justify-between w-full px-4 mx-auto lg:px-0 lg:w-11/12">
         <!-- Logo -->
         <a href="{{ route($data['navigation']['home'] ? $data['navigation']['home']['slug'] : '/') }}">

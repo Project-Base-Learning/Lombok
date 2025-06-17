@@ -3,11 +3,25 @@
     'url' => null
 ])
 
+@php
+    $isActive = request()->is(trim($slug, '/'));
+@endphp
+
 <li class="w-full px-4 md:px-0 md:w-fit">
-    <a href="{{ $url ?? route($slug) }}"
+    <a href="{{ $url ?? url($slug) }}"
         @class([
-            'hover:block block font-semibold md:hover:scale-110 hover:font-bold hover:underline py-2 px-8 md:py-0 md:px-0',
-            'font-bold underline' => request()->routeIs($slug)
+            // Base styles
+            'nav-link block font-semibold py-2 px-8 md:py-0 md:px-0 transition-all duration-300 transform origin-center text-[1.2rem]',
+
+            // Hover styles
+            'hover:scale-105',
+
+            // Active styles
+            'text-orange-500 font-bold' => $isActive,
+            'text-black' => !$isActive,
+            'max-lg:text-white' => true,
         ])
-    >{{ $slot }}</a>
+    >
+        {{ $slot }}
+    </a>
 </li>
