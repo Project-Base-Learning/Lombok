@@ -1,0 +1,23 @@
+<div class="w-full">
+    <div class="relative">
+        <img class="object-cover w-full h-[250px] sm:h-[350px] lg:h-80" src="{{ asset('image/home/banner4.webp') }}" alt="image description">
+        <div class="absolute inset-0 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center text-white bg-secondary-500/25 gap-4 p-6 sm:h-[400px] lg:h-[360px]">
+            <div class="flex flex-col items-center justify-center w-full text-center" data-aos="fade-up">
+                <h1 class="mb-2 text-3xl font-semibold break-words sm:text-4xl md:text-5xl lg:text-6xl">3+</h1>
+                <p class="text-base break-words sm:text-lg md:text-xl lg:text-2xl">Years Experience</p>
+            </div>
+            <div class="flex flex-col items-center justify-center w-full text-center" data-aos="fade-up">
+                <h1 class="mb-2 text-3xl font-semibold break-words sm:text-4xl md:text-5xl lg:text-6xl">10+</h1>
+                <p class="text-base break-words sm:text-lg md:text-xl lg:text-2xl">Outgoing Events</p>
+            </div>
+            <div class="flex flex-col items-center justify-center w-full text-center" data-aos="fade-up">
+                <h1 class="mb-2 text-3xl font-semibold break-words sm:text-4xl md:text-5xl lg:text-6xl">2000+</h1>
+                <p class="text-base break-words sm:text-lg md:text-xl lg:text-2xl">Visits</p>
+            </div>
+            <div class="flex flex-col items-center justify-center w-full text-center" data-aos="fade-up">
+                <h1 class="mb-2 text-3xl font-semibold break-words sm:text-4xl md:text-5xl lg:text-6xl">55+</h1>
+                <p class="text-base break-words sm:text-lg md:text-xl lg:text-2xl">Community Circle</p>
+            </div>
+        </div>
+    </div>
+</div>

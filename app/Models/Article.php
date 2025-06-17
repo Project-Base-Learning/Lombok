@@ -17,8 +17,10 @@ class Article extends Model
     protected $table = 'articles';
 
     protected $fillable = [
+        'views',
         'title',
         'slug',
+        'preview_content',
         'content',
         'private',
         'fields',

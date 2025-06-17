@@ -38,11 +38,12 @@ class Category extends Model
                 $data->slug = Str::slug($data->tag_name);
             }
 
-            $records = Category::where([['id', '!=', $data->id], ['default', 1]])->get();
-            if (!$records->isEmpty()) {
-                $records->update(['default', 0]);
-            } else {
+            $record = Category::where([['id', '!=', $data->id], ['default', 1]])->first();
+            if (!empty($record) && $data->default == 1) {
+                $record->update(['default' => 0]);
+            } else if (empty($record) && $data->default == 1) {
                 $data->default = 1;
+                $data->searchable = 1;
             }
         });
     }
