@@ -2,10 +2,10 @@
 
 @section('css')
     <style>
-        #content * {
+        .tiptap * {
             all: revert;
             max-width: 100%;
-            overflow: hidden
+            overflow: hidden;
         }
     </style>
 @endsection
@@ -37,10 +37,8 @@
             <div class="absolute inset-0 w-full h-full bg-red bg-opacity-10"></div>
         </div>
 
-        @yield('ticketing')
-
         <!-- Event Description -->
-        <div id="content" class="mt-4 text-gray-800 tiptap">
+        <div class="mt-4 text-gray-800 tiptap">
             {!! tiptap_converter()->asHTML($data['article']->content) !!}
         </div>
     </div>

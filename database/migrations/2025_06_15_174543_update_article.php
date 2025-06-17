@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
             $table->unsignedBigInteger('views')->after('id')->default(0);
-            $table->text('preview_content')->after('slug');
+            $table->text('preview_content')->after('slug')->nullable();
         });
     }
 
