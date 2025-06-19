@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    /* Primary - Indigo */
+    --color-primary-50: transparent;
+    --color-primary-100: transparent;
+    --color-primary-200: transparent;
+    --color-primary-300: transparent;
+    --color-primary-400: transparent;
+    --color-primary-500: transparent;
+    --color-primary-600: transparent;
+    --color-primary-700: transparent;
+    --color-primary-800: transparent;
+    --color-primary-900: transparent;
+    --color-primary-950: transparent;
+
+    /* Secondary – Cyan */
+    --color-secondary-50: transparent;
+    --color-secondary-100: transparent;
+    --color-secondary-200: transparent;
+    --color-secondary-300: transparent;
+    --color-secondary-400: transparent;
+    --color-secondary-500: transparent;
+    --color-secondary-600: transparent;
+    --color-secondary-700: transparent;
+    --color-secondary-800: transparent;
+    --color-secondary-900: transparent;
+    --color-secondary-950: transparent;
+
+    /* Tertiary – Rose */
+    --color-tertiary-50: transparent;
+    --color-tertiary-100: transparent;
+    --color-tertiary-200: transparent;
+    --color-tertiary-300: transparent;
+    --color-tertiary-400: transparent;
+    --color-tertiary-500: transparent;
+    --color-tertiary-600: transparent;
+    --color-tertiary-700: transparent;
+    --color-tertiary-800: transparent;
+    --color-tertiary-900: transparent;
+    --color-tertiary-950: transparent;
+}
+
 @layer base {
     body {
         @apply font-sans;
@@ -15,5 +56,5 @@
     .no-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
-  }
+    }
 }

@@ -2,7 +2,10 @@
 
 @section('content')
     @foreach ($data['page']->sections as $section)
-        @include('patterns.'.$section->pattern->layout_path)
+        @php
+            $section = $section->section;
+        @endphp
+        @include('sections.'.$section->layout_path)
     @endforeach()
 @endsection
 

@@ -29,6 +29,12 @@ return [
     */
 
     'disks' => [
+        'analytics' => [
+            'driver' => 'local',
+            'root' => storage_path('app/analytics'),
+            'serve' => true,
+            'throw' => false,
+        ],
 
         'local' => [
             'driver' => 'local',

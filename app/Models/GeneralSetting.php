@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Foundation\Console\OptimizeCommand;
+use Illuminate\Support\Facades\Artisan;
 
 class GeneralSetting extends Model
 {
@@ -14,36 +16,49 @@ class GeneralSetting extends Model
         'site_description',
         'site_logo',
         'site_favicon',
-        // 'support_email',
-        // 'support_phone',
-        // 'theme_color',
-        'features',
-        'user_features',
-        'google_analytics_tag',
-        'social_network',
+        'site_url',
+        'site_dashboard_url',
+        'location',
+        'contacts',
+        'theme',
         'email_settings',
-        'email_from_name',
-        'email_from_address',
-        'more_configs',
+        'social_network',
+        'navigation',
+        'features',
+        'google_analytics',
+        'user_features',
     ];
 
     protected $casts = [
-        'features' => 'array',
-        'user_features' => 'array',
+        'location' => 'array',
+        'contacts' => 'array',
+        'theme' => 'array',
         'email_settings' => 'array',
         'social_network' => 'array',
-        'more_configs' => 'array',
+        'navigation' => 'array',
+        'features' => 'array',
+        'google_analytics' => 'array',
+        'user_features' => 'array',
+        'chatbot_settings' => 'array',
     ];
 
     protected static function booted()
     {
-        static::updating(function ($data) {
+        static::saving(function ($data) {
             if ($data->isDirty('site_logo') && Storage::disk('public')->exists($data->getOriginal('site_logo'))) {
                 Storage::disk('public')->delete($data->getOriginal('site_logo'));
             }
             if ($data->isDirty('site_favicon') && Storage::disk('public')->exists($data->getOriginal('site_favicon'))) {
                 Storage::disk('public')->delete($data->getOriginal('site_favicon'));
             }
+            // Set env of google_property_id ...
+            if ($data->isDirty('google_analytics') && empty($data->google_analytics['service-account-credentials']) && Storage::disk('analytics')->exists('service-account-credentials.json')) {
+                Storage::disk('analytics')->delete('service-account-credentials.json');
+            }
+        });
+
+        static::updated(function ($data) {
+            Artisan::call(OptimizeCommand::class);
         });
 
         static::deleting(function ($data) {
@@ -52,6 +67,9 @@ class GeneralSetting extends Model
             }
             if (Storage::disk('public')->exists($data->site_favicon)) {
                 Storage::disk('public')->delete($data->site_favicon);
+            }
+            if (Storage::disk('analytics')->exists('service-account-credentials.json')) {
+                Storage::disk('analytics')->delete('service-account-credentials.json');
             }
         });
     }

@@ -18,8 +18,6 @@ class Page extends Model
     protected $fillable = [
         'title',
         'slug',
-        'sort_order',
-        'published_at',
     ];
 
     public function creator() : BelongsTo

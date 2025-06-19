@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Awcodes\Curator\Models\Media;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -16,18 +17,20 @@ class Article extends Model
     protected $table = 'articles';
 
     protected $fillable = [
+        'views',
         'title',
         'slug',
+        'preview_content',
         'content',
         'private',
-        'others',
+        'fields',
         'metadata',
         'published_at',
     ];
 
     protected $casts = [
         'privated' => 'boolean',
-        'others' => 'array',
+        'fields' => 'array',
         'metadata' => 'array',
         'published_at' => 'datetime'
     ];
@@ -42,19 +45,19 @@ class Article extends Model
         return $this->belongsTo(User::class, 'updated_by');
     }
 
-    public function cover() : BelongsToMany
+    public function cover(): BelongsTo
     {
-        return $this->belongsToMany(Cover::class, 'articles_cover');
+        return $this->belongsTo(Media::class, 'cover_id', 'id');
     }
 
-    public function categories() : BelongsToMany
+    public function tags() : BelongsToMany
     {
-        return $this->belongsToMany(Category::class, 'articles_categories');
+        return $this->belongsToMany(Tag::class, 'articles_tags');
     }
 
-    public function tag() : BelongsTo
+    public function category() : BelongsTo
     {
-        return $this->belongsTo(Tag::class, 'tag_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     public function sponsors(): BelongsToMany
@@ -73,10 +76,6 @@ class Article extends Model
             if ($data->isDirty('title') && empty($data->slug)) {
                 $data->slug = Str::slug($data->title);
             }
-        });
-
-        static::forceDeleting(function ($data) {
-            Cover::where('id', $data->cover->first()->id)->first()->delete();
         });
     }
 }

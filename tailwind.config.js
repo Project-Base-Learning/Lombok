@@ -5,65 +5,73 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
     content: [
-        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
-        "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
         "./resources/views/layouts/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
         "./resources/**/*.blade.php",
         "./resources/**/*.{js,vue}",
+        "./storage/framework/views/*.php",
+        "./vendor/awcodes/filament-tiptap-editor/resources/**/*.blade.php",
+        "./vendor/awcodes/filament-curator/resources/**/*.blade.php",
+        "./vendor/filament/**/*.blade.php",
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
     ],
     theme: {
         extend: {
             fontFamily: {
-                sans: ["'Open Sans'", ...defaultTheme.fontFamily.sans],
+                sans: ["'Nunito'", ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                red: {
-                    DEFAULT: '#F32055',
+                primary: {
+                    50:  "var(--color-primary-50)",
+                    100: "var(--color-primary-100)",
+                    200: "var(--color-primary-200)",
+                    300: "var(--color-primary-300)",
+                    400: "var(--color-primary-400)",
+                    500: "var(--color-primary-500)",
+                    600: "var(--color-primary-600)",
+                    700: "var(--color-primary-700)",
+                    800: "var(--color-primary-800)",
+                    900: "var(--color-primary-900)",
+                    950: "var(--color-primary-950)",
                 },
-                s2condPurple: '#a32eff',
-                s2condPink: '#ff0099',
-                s2condOrange: '#ff5f55',
-                s2condYellow: '#ffe600',
-                s2condRed: '#F90218',
-                s2condMint: '#2af1b5',
+                secondary: {
+                    50:  "var(--color-secondary-50)",
+                    100: "var(--color-secondary-100)",
+                    200: "var(--color-secondary-200)",
+                    300: "var(--color-secondary-300)",
+                    400: "var(--color-secondary-400)",
+                    500: "var(--color-secondary-500)",
+                    600: "var(--color-secondary-600)",
+                    700: "var(--color-secondary-700)",
+                    800: "var(--color-secondary-800)",
+                    900: "var(--color-secondary-900)",
+                    950: "var(--color-secondary-950)",
+                },
+                tertiary: {
+                    50:  "var(--color-tertiary-50)",
+                    100: "var(--color-tertiary-100)",
+                    200: "var(--color-tertiary-200)",
+                    300: "var(--color-tertiary-300)",
+                    400: "var(--color-tertiary-400)",
+                    500: "var(--color-tertiary-500)",
+                    600: "var(--color-tertiary-600)",
+                    700: "var(--color-tertiary-700)",
+                    800: "var(--color-tertiary-800)",
+                    900: "var(--color-tertiary-900)",
+                    950: "var(--color-tertiary-950)",
+                },
             },
-
-            borderColor: {
-                s2condRed: '#F90218',
-            },
-
-            width: {
-                'c1': '400px',
-                'c2': '800px',
-                'c3': '600px',
-               },
-
-            height: {
-                'c1': '680px',
-                'c1a': '720px',
-                'c2': '250px',
-               },
         },
     },
     plugins: [require("flowbite/plugin")],
     safelist: [
         {
-            pattern: /(bg|text|border)-s2cond(Purple|Pink|Orange|Yellow|Lime|Mint|Test|Test2)/,
+          pattern: /(bg|text|border)-(red|blue|green|gray|yellow|indigo|purple|pink)-(50|100|200|300|400|500|600|700|800|900|950)/,
         },
         {
-            pattern: /(mt|mb|mr|ml|my|mx|px|py|pt|pb|pl|pr)-[0-9]+/,
-        },
-        {
-            pattern: /flex-.*/,
-        },
-        {
-            pattern: /(bottom|right|top|left)-[0-9]+/,
-        },
-        {
-            pattern: /(w|h)-[0-9]+/,
+          pattern: /(w|h|px|py|mt|mb|ml|mr|grid|gap|flex|items|justify|text|font|underline|tracking)-.*/,
         },
     ],
 };

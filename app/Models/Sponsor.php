@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
+use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 class Sponsor extends Model
 {
@@ -17,22 +17,26 @@ class Sponsor extends Model
 
     protected $fillable = [
         'title',
-        'position_id',
-        'image_path',
-        'alt',
-        'width',
-        'height',
-        'lazy',
-        'user_id'
+        'featured'
     ];
 
     protected $casts = [
-        'lazy' => 'boolean',
+        'featured' => 'boolean',
     ];
 
-    public function user() : BelongsTo
+    public function creator() : BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function editor() : BelongsTo
+    {
+        return $this->belongsTo(User::class, 'updated_by');
+    }
+
+    public function image(): BelongsTo
+    {
+        return $this->belongsTo(Media::class, 'image_id', 'id');
     }
 
     public function category() : BelongsTo
@@ -42,25 +46,21 @@ class Sponsor extends Model
 
     public function articles() : BelongsToMany
     {
-        return $this->belongsToMany(Article::class, 'articles_categories');
+        return $this->belongsToMany(Article::class, 'article_sponsors');
     }
 
     protected static function booted()
     {
+        static::creating(function ($data) {
+            $data->created_by = Auth::user()->id;
+        });
+
         static::saving(function ($data) {
-            $data->user_id = Auth::user()->id;
+            $data->updated_by = Auth::user()->id;
         });
 
-        static::updating(function ($data) {
-            if ($data->isDirty('image_path') && Storage::disk('public')->exists($data->getOriginal('image_path'))) {
-                Storage::disk('public')->delete($data->getOriginal('image_path'));
-            }
-        });
-
-        static::forceDeleting(function ($data) {
-            if (Storage::disk('public')->exists($data->image_path)) {
-                Storage::disk('public')->delete($data->image_path);
-            }
+        static::deleting(function ($data) {
+            $data->articles()->detach();
         });
     }
 }

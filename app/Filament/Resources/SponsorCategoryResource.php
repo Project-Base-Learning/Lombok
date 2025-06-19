@@ -10,6 +10,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\Auth;
 
 class SponsorCategoryResource extends Resource
 {
@@ -38,12 +39,16 @@ class SponsorCategoryResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->reorderable('sort_order')
+            ->defaultSortOptionLabel('sort_order')
             ->columns([
                 Tables\Columns\TextColumn::make('category_name')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('sort_order')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable(),
             ])
             ->filters([
                 //
@@ -68,7 +73,6 @@ class SponsorCategoryResource extends Resource
 
     public static function canAccess(): bool
     {
-        $data = GeneralSetting::first()?->toArray() ?: [];
-        return $data['features']['sponsors'];
+        return Auth::user()->can('view_sponsor::category') ? config('general-settings.features.sponsors', false) : false;
     }
 }
