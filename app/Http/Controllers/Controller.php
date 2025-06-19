@@ -20,7 +20,9 @@ abstract class Controller
         }
 
         if ($data['features']['sponsors']) {
-            $data['sponsors'] = Sponsor::where('featured', 1)->get();
+            $data['sponsors'] = Sponsor::where('featured', 1)->with('category')->get()->sortBy(function ($item) {
+                return $item->category->sort_order ?? 999;
+            });
         }
         $data['sections'] = [];
         foreach ($data['page']->sections as $section) {

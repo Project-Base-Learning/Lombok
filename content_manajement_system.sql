@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 20, 2025 at 01:16 PM
+-- Generation Time: Jun 19, 2025 at 06:18 AM
 -- Server version: 5.7.33
 -- PHP Version: 8.3.19
 
@@ -29,9 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `articles` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `views` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `cover_id` bigint(20) UNSIGNED DEFAULT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `preview_content` text COLLATE utf8mb4_unicode_ci,
   `content` text COLLATE utf8mb4_unicode_ci,
   `private` tinyint(1) NOT NULL DEFAULT '0',
   `category_id` bigint(20) UNSIGNED DEFAULT NULL,
@@ -49,12 +51,13 @@ CREATE TABLE `articles` (
 -- Dumping data for table `articles`
 --
 
-INSERT INTO `articles` (`id`, `cover_id`, `title`, `slug`, `content`, `private`, `category_id`, `fields`, `metadata`, `created_by`, `updated_by`, `published_at`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 6, 'Berjalan-jalan ke \"Kampung Lontong\" Punia di Mataram', 'berjalan-jalan-ke-kampung-lontong-punia-di-mataram', '<p style=\"text-align: justify; ;\">MATARAM, <a href=\"http://KOMPAS.com\">KOMPAS.com</a> -Sebuah Kampung di Kelurahan Punia, Kota Mataram, Nusa Tenggara Barat (NTB) dikenal dengan julukan kampung lontong. Sebutan itu muncul karena banyak warga yang berdomisili di kampung tersebut berprofesi sebagai perajin lontong. Baca juga: Mandi Balimau Kasai di Sungai Kampar, Tradisi Bersihkan Diri Jelang Ramadhan Kampung lontong terletak di Kelurahan Punia, Kota Mataram, tepatnya di lingkungan Karang Kateng dan Karang Kelayu. Saat <a href=\"http://Kompas.com\">Kompas.com</a> berkunjung pada Selasa (12/3/2024) sore, sejumlah warga di sepanjang gang Lingkungan Punia Karang Kateng tampak sibuk. Beberapa di antara mereka sedang mengisi beras ke dalam daun pisang. Sedangkan yang lainnya mengelap daun pisang yang akan dijadikan sebagai pembungkus.</p><p style=\"text-align: center; ;\"><img src=\"http://127.0.0.1:8000/storage/images/bc7c2f78-4890-465a-8740-cb35aa0e309c.jpeg\" title=\"65eff5139b2f9\" width=\"750\" height=\"500\"></p><p style=\"text-align: justify; ;\">Nur Istiarah (42), warga lingkungan Karang Keteng Punia yang sehari-hari membuat lontong, baru saja selesai mengelap ratusan lembar daun pisang. Beberapa kantong beras dituang ke dalam satu ember besar. Istiarah mencampurnya dengan garam lalu mengaduknya sampai tercampur rata. &quot;Biar ada rasanya, biar tidak hambar,&quot; kata Istiarah sambil mengaduk beras.   Baca juga: Jadi DPO OPM, Lenis Kogoya: Saya Tidak Pernah Takut 30 kg beras sehari Setiap hari Istiarah membuat 25-30 kilogram beras untuk dijadikan lontong. Beras yang digunakan merupakan campuran antara beras kualitas premium dan beras medium. Setelah beras siap, Istiarah duduk di teras rumahnya dan mulai mengisi lontong. Dengan terampil, tangan Istiarah lalu membentuk daun pisang menyerupai kerucut, mengisinya dengan beras, dan menyematkan dengan lidi. Baca juga: Daftar Tanggal Merah dan Cuti Bersama Mei 2025, Siap-siap Libur Panjang Awal Pekan Nanti Berbeda dengan lontong di daerah lain, lontong khas Lombok rata-rata berbentuk seperti kerucut dengan ujung lancip. Lontong-lontong berbentuk kerucut ini lalu ditata di dalam panci berukuran besar dan direbus selama delapan jam. &quot;Ada ukuran besar, tanggung sama ukuran kecil,&quot;  kata Istiarah.</p><p style=\"text-align: center; ;\"><img src=\"http://127.0.0.1:8000/storage/images/b5dacb1b-fa8d-4baa-99d2-675e074ee97a.jpg\" title=\"65eff226e5b93\" width=\"750\" height=\"500\"></p><p style=\"text-align: justify; ;\">Proses perebusan lontong biasanya dimulai malam hari sekitar pukul 20.00 Wita hingga pagi hari pukul 04.00 Wita. Baca juga: Toko Mama Khas Banjar Tutup, Pemilik: Mental Kami Hancur, Kami Trauma Setiap pagi usai shalat Subuh, lontong yang baru matang ditata di dalam bakul dan diangkut ke pasar-pasar tradisional di seputaran kota Mataram untuk dijual. Harga satu buah lontong beragam, mulai dari Rp 500 hingga Rp 1.250 per bijinya, tergantung dari besar kecil lontong. Lontong buatan Istiarah ini tahan selama satu hari karena menggunakan bahan alami dan tanpa pengawet. Baca juga: Tradisi Unik Merayakan Ramadhan Negara Muslim di Dunia Turun temurun Istiarah mengatakan ketrampilan membuat lontong diturunkan dari ibunya yang dulunya juga seorang perjain lontong. Ia merupakan generasi ketiga pembuat lontong di keluarganya. Kini ketrampilan membuat lontong dia ajarkan ke anaknya yang masih duduk di bangku sekolah menengah pertama, sebagai bekal keterampilan. Baca juga: Mobil Listrik Bekas Taksi BYD e6 Dijual Rp 30 Juta, Layak Dibeli? &quot;Saya terapkan, saya ajarkan dia, supaya dia bisa,&quot; ujar Istiarah. Para pengrajin lontong yang ada di kelurahan Punia, rata-rata mewarisi keterampilan membuat lontong secara turun-temurun dari orang tua mereka. Rumini (64) misalnya, warga Lingkungan Karang Kelayu Punia  mengaku sudah membuat lontong sejak tahun 1982. Baca juga: Menengok Tradisi Sedekah Bumi dan Gunungan Tempe untuk Sambut Ramadhan di Sidoarjo</p><p style=\"text-align: center; ;\"><img src=\"http://127.0.0.1:8000/storage/images/bcf57cb8-318a-4b22-b9de-6ab2624e454d.jpg\" title=\"65eff22b4120e\" width=\"750\" height=\"500\"></p><p style=\"text-align: justify; ;\">Awalnya Rumini belajar membuat lontong dari ibu dan kakaknya. Sampai sekarang, Rumini masih menjadi perajin lontong dan kerap menerima pesanan. Lurah Kelurahan Punia, Lalu Suyudi Atmanegara mengatakan, keberadaan perajin lontong di kelurahan Punia sudah ada dari generasi ke generasi. Suyudi menyebutkan, dari 400 KK yang ada di Lingkungan Karang Kateng sekitar 100 KK merupakan perajin lontong. Baca juga: Rektor UGM hingga Pembimbing Skripsi Jokowi Digugat ke PN Sleman, Terkait Ijazah &quot;Lingkungan Karang Kateng dan Karang Kelayu bisa dikategorikan kampung lontong. Karena mereka saling menularkan ilmunya,&quot; kata Suyudi. Julukan kampung lontong sendiri sebenarnya berasal dari warga luar kampung, karena melihat banyaknya penjual dan perajin lontong berasal dari Punia maka kampung tersebut dijuluki kampung lontong. Ramadhan dan berkah perajin lontong</p><p style=\"text-align: center; ;\"><img src=\"http://127.0.0.1:8000/storage/images/f90afa32-2b7a-4eca-b04e-9ec835834f48.jpeg\" title=\"65eff6e37d6a2\" width=\"750\" height=\"500\"></p><p style=\"text-align: justify; ;\">Baca juga: Gaspol Hari Ini: Mahfud MD Angkat Bicara Persoalan Gibran dan Dugaan Ijazah Palsu Jokowi Selama Ramadhan, setiap sore banyak warga Punia yang menjual takjil dan makanan untuk berbuka puasa. Selain lontong, para pedagang juga menyediakan beraneka macam sayur dan lauk pauk. Seperti plecing kangkung, ebatan, opor hingga aneka sate dengan bumbu pedas khas Lombok. Puncaknya pada H-1 Lebaran hingga Lebaran ketupat, banyak warga Punia menggelar dagangan di pinggir-pinggir jalan. Dengan menggunakan meja-meja kecil, puluhan pedagang dadakan ini menjual aneka masakan khas lebaran seperti ketupat, lontong, sayur opor, jaje tujak, hingga jajan bantal khas Lombok. Baca juga: 8 Tradisi Daerah di Indonesia untuk Sambut Ramadhan   Omzet penjualan lontong dan ketupat pun ikut melonjak saat Lebaran. Jika hari biasa perajin lontong rata-rata membuat 25 kilogram beras untuk dijual di pasar, pada hari raya pembuatan lontong bisa mencapai 30-35 kilogram. Selain perajin lontong yang memang setiap hari berjualan, menjelang Lebaran banyak warga Punia yang tadinya tidak berjualan lontong ikut membuat lontong. Sejumlah warga bahkan membuat lontong dan merebusnya di pinggir jalan utama kampung Punia. Baca juga: Panasonic Akan PHK 10.000 Karyawan, Siapkan Biaya Restrukturisasi Rp 14 Triliun Suyudi mengatakan, meski hanya berjualan saat hari raya, bukan berarti penjual musiman ini tidak memiliki keahlian dalam membuat lontong dan ketupat. &quot;Yang mendadak ini bukan tidak punya skill karena lingkungan mereka secara tidak langsung sudah mengajarkan cara rebus, cara masukkan beras dalam daun, cara memanaskan api, dan berapa lama dia direbus. Jadi yang bukan pembuat (pengrajin) lontong, karena sehari-hari lihat cara membuat lontong pasti tahu,&quot; kata Suyudi. Suyudi menambahkan, saat ini pihak kelurahan Punia telah melakukan pendataan terhadap perajin lontong yang ada di kelurahan Punia. Pihaknya juga menggandeng OPD terkait untuk membina UMKM lontong dari segi kemasan dan segi higienis. Selain itu, pihak Kelurahan juga mendorong warga memanfaatkan media sosial untuk pemasaran lontong.</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-09 14:45:52', '2025-05-09 06:40:50', '2025-05-20 09:46:41', NULL),
-(2, NULL, 'Tupat, Lontong dan Kue Bantal yang Tak Tergantikan', 'tupat-lontong-dan-kue-bantal-yang-tak-tergantikan', '<p>Janur yang disulam dengan tangan atau daun pisang yang dibentuk mengerucut kemudian dituangi beras dan direbus, jika ditarik kebelakang tidak saja simbol sebuah proses kehidupan antar manusia melainkan juga keharmonisan dengan alam.</p><p>Jutaan manusia di Pulau Lombok secara turun temurun memiliki hubungan erat dengan kedua tanaman itu yakni pisang dan kelapa. Nyaris tak ada lahan pertanian tanpa keduanya yang tidak saja memberi penghidupan melainkan juga mewarnai nilai estetik alam semesta.</p><p>Bagi sebagian warga, janur dan daun pisang merupakan nikmat hidup sebagai sarana memulai hari dan mengatur waktu, terutama di kalangan perajin sekaligus pengusaha tupat lontong.</p><p>Para perajin ini dalam kesehariannya harus memulai dengan membersihkan dan pisang dan janur, merangkainya, mengisinya dengan butiran beras, memasaknya dalam waktu belasan jam. Malam hari membuatnya, subuh hari membawanya ke pasar hingga ludes terjual.</p><p>Bagi sebagian warga, matahari yang terbit atau terbenam di sela sela pohon kelapa yang menjulang memberi nilai estetik yang tiada taranya. Tidaklah keliru jika kedua tanaman ini menjadi sumber inspirasi banyak orang dan telah berlangsung puluhan bahkan ratusam tahun lamanya.</p><p>Di Kelurahan Punia Kota Mataram, pada hampir seluruh kampung seperti Punia Saba, Karang Keteng dan Karang Kelayu, janur dan daun pisang menjadi bagian penting kehidupan masyarakat dalam membuat penganan khas itu. Tidak hanya di hari raya, pun pada hari hari biasa.</p><p>Setiap hari ratusan warga Punia menyuplai ribuan tupat dan lontong ke seantero Kota Mataram. Tingkat konsumsi yang cukup tinggi akan membludak di hari raya ketika menu menu khas seperti opor seakan mewajibkan kehadiran saudara kembarnya ini.</p><p>Pada momentum hari raya, lapak lapak memenuhi pinggir jalan Airlangga dan Abdul Kadir Munsyi. Mereka yang semula bekerja dibalik layar turun langsung menjajakan dagangannya untuk melayani pembeli</p><p>Karena itu, kelurahan yang padat penduduk ini menjadi hidup sebagai kawasan kuliner yang cukup ramai setiap hari serta semakin padat pada hari hari tertentu seperti Idul Fitri, Lebaran Topat, Idul Adha, dan Maulid Nabi.</p><p>Kendati menjadi salah satu sentra penghasil tupat lontong, kehidupan para pewaris makanan tradisional ini belumlah beranjak naik. Pemasaran produk yang rutin setiap hari, hasilnya hanya cukup untuk memenuhi standar kebutuhan dasar walau mereka harus menghabiskan bahan baku berupa beras 15-30 kg</p><p>Menghabiskan waktu berjam-jam di depan tungku untuk menghasilkan kualitas baik ratusan tupat lontong, satu keluarga perajin kadang hanya tercukupi kebutuhan pokoknya. Ketika menghadapi biaya kesehatan dan biaya pendidikan, di sanalah masalah kerap muncul.</p><p>Berbagai cara dilakukan para perajin untuk bertahan di tengah arus perubahan dan naiknya harga-harga, salah satunya membuka lapak lapak secara mandiri untuk menaikkan pendapatan guna memenuhi kebutuhan hidup yang kian membengkak. Selain itu, memperbanyak variasi produk seperti kue bantal.</p><p>Produk kuliner tradisional masyarakat ini memiliki pasaran yang cukup baik, terlebih ketika bermunculan pedagang bakso di setiap sudut kota. Namun, bukan berarti para perajin tupat lontong tidak membutuhkan perhatian.</p><p>Pasalnya, untuk mendapatkan hasil yang cukup, produk yang dibuat setiap hari ratusan jumlahnya dengan jam kerja lebih dari 8 jam sehari. Hal ini memerlukan energi yang tidak kecil. Sedangkan harga tupat lontong hanya sedikit beranjak naik ditengah harga beras yang menanjak.</p><p>Daya tahan para perajin tupat lontong khususnya di Kelurahan Punia patut diacungi jempol. Tidak sedikit di antara mereka yang meregenerasi keterampilan itu karena keterampilan itulah yang mereka miliki.</p><p>Kawasan ini pada akhirnya menjadi salah satu yang masih mempertahankan produk kuliner lokal yang jika ditingggalkan maka hilanglah salah satu ciri kekayaan kuliner Kota Mataram.</p><p>Karena itu, pemerintah mesti mengambil peran lebih untuk mempertahankan eksistensi masyarakat setempat, tidak sebatas pelatihan dan higienitas melainkan juga pengayaan produk, bantuan pemasaran di jajaran aparatur pemerintahan jika menggelar event tertentu.</p><p>Adanya kepastian pesanan penganan seperti kue bantal dan kue tradisional lainnya setidaknya memompakan semangat baru jika pesanan itu datang setiap kali pegawai melakukan meeting di lingkungan OPD.</p><p>Bagaimana pun, tupat, lontong dan kue bantal, sadar atau tidak telah membersamai   Kota Mataram sejak lama sehingga pemerintahsetempat pun selayaknya membersamai para perajinnya yang memberi efek ganda kepada petani. riyanto rabbah</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-10 00:27:00', '2025-05-09 16:17:52', '2025-05-09 16:27:00', NULL),
-(3, NULL, 'Cerita Pedagang Ketupat Menjelang Lebaran Topat di Lombok', 'cerita-pedagang-ketupat-menjelang-lebaran-topat-di-lombok', '<p><a href=\"http://TEMPO.CO\">TEMPO.CO</a>, Mataram - Masyarakat Pulau Lombok memiliki tradisi Idul Fitri yang menarik, yaitu Lebaran Ketupat atau Lebaran Topat. Namun Lebaran ini tak diadakan pada hari pertama Idul Fitri 1 Syawal melainkan pada hari ketujuh yang tahun ini jatuh pada Sabtu, 29 April 2023.</p><p>Seperti namanya, hal utama dalam tradisi ini adalah ketupat. Karena itu, tak heran menjelang tradisi ini, penjual ketupat dapat mudah ditemukan.</p><p>Para pedagang ketupat bermunculan di sejumlah ruas jalan, termasuk di sekitar Kota Mataram. Kebanyakan dari mereka adalah warga Kelurahan Punia yang berdagang di atas trotoar sepanjang Jalan Airlangga dan Majapahit.</p><p>Para pedagang menggunakan satu meja di bawah tenda payung untuk menggelar ketupat yang digantung di atas panci berisi lauknya, seperti opor dan urap. Setiap pedagang menyiapkan ratusan biji ketupat yang diisi belasan kilogram beras. Setiap biji ketupat dijualnya Rp 3 ribu atau per ikat sebanyak lima biji seharga Rp 15 ribu.</p><p>Salah satunya adalah Maesarah, 55 tahun, yang berdagang ketupat sehari sebelum Lebaran Topat, Jumat, 28 April 2023. Rencananya, ia akan berjualan hingga malam hari atau jika masih tersisa ia menjualnya hingga hari H.</p><p>&quot;Silakan beli. Masih sepi ini,&quot; kata Maesarah, di ujung barat Majapahit.</p><p>Menurut Maesarah, sepinya pembeli karena lebih banyak warga yang melakukan mudik Lebaran setelah meredanya pandemi Covid-19. &quot;Jika dibanding dulu, lebih ramai karena mereka tidak pergi mudik ke kampung halamannya,&quot; ujarnya.</p><p>Seorang pedagang lainnya, Srianah, 53 tahun, menyatakan berjualan ketupat dan lontong ini adalah mata pencahariannya sehari-hari. Jika bukan Lebaran, mereka berdagang lontong di berbagai pasar di kota Mataram.</p><p>Lebaran Topat di Lombok biasanya diisi dengan sejumlah acara. Tradisi itu akan diawali dengan ziarah ke makam keramat, lalu menyantap ketupat bersama-sama. Setelah itu, masyarakat memanfaatkan momentum libur itu untuk rekreasi di berbagai pantai.</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-10 00:27:03', '2025-05-09 16:20:49', '2025-05-09 16:27:03', NULL),
-(4, NULL, 'Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor', 'lebaran-topat-dimanfaatkan-warga-punia-kota-mataram-berjualan-ketupat-dan-opor', '<p><a href=\"http://TRIBUNLOMBOK.COM\">TRIBUNLOMBOK.COM</a>, MATARAM- Perayaan lebaran topat atau Lebaran Ketupat dimanfaatkan warga Kelurahan Punia, Kota Mataram untuk berjualan ketupat di sepanjang Jalan Airlangga, Jumat (28/4/2023).</p><p>Para pedagang tersebut membuka lapak di samping kiri dan kanan jalan. Sebagian besar dari mereka membuka lapak di samping Taman Budaya Nusa Tenggara Barat. Lebaran Ketupat akan dirayakan pada Sabtu, 29 April 2023.</p><p>Seorang pedagang ketupat, Sriyanah mengaku dirinya dan warga yang lain tetap berjualan setiap tahun. Dikatakan Sriyanah dalam sehari ia bisa memasak untuk 25 sampai 50 kilogram ketupat.</p><p>&quot;Tergantung pembeli, kadang 25 kilogram, kadang lebih,&quot; Kata Sriyanah kepada <a href=\"http://TribunLombok.com\">TribunLombok.com</a>.</p><div data-youtube-video=\"true\" class=\"responsive\"><iframe src=\"https://www.youtube.com/embed/VQlc9CY4AbM?controls=1\" width=\"1600\" height=\"900\" allowfullscreen=\"true\" allow=\"autoplay; fullscreen; picture-in-picture\" style=\"aspect-ratio:1600/900; width: 100%; height: auto;\"></iframe></div><p>Di lapak sederhana yang terbuat dari meja kayu dan satu payung besar milik Sriyanah digantung berbagai ukuran ketupat mulai dari yang kecil hingga besar.</p><p>Tidak hanya itu, warga Punia ini juga menjual berbagai jenis lontong, terdapat lontong panjang, lontong kecil.</p><p>Selain menjual ketupat Sriyanah juga menjual opor ayam, opor telur dan sayur nangka.</p><p>Harga masing-masing menu tersebut bervariasi. Untuk satu ikat ketupat yang berisi lima biji dihargai Rp 15.000. Sama halnya dengan satu ikat lontong berukuran kecil.</p><p style=\"text-align: center; ;\"><img src=\"http://127.0.0.1:8000/storage/images/1cbb080e-6f12-445e-9c59-4584f36d08ec.jpg\" title=\"Jual-ketupat-untuk-lebaran\" width=\"700\" height=\"393\"></p><p>Sementara untuk opor dan urap-urap, Sriyanah mengatakan tergantung berapa yang ingin dibeli oleh pengunjung yang datang.</p><p>Dikatakan Sriyanah waktu berjalannya hanya berlangsung selama dua hari, yakni sehari sebelum lebaran ketupat dan pada saat hari lebaran.</p><p>Setiap hari Sriyanah akan menutup lapaknya apabila ketupat yang dijual telah habis.</p><p>Kota Mataram pada Jumat sore sekira pukul 16.00 WITA dilanda hujan deras. Meskipun begitu Sriyanah dan pedagang yang lain tetap berjualan dengan menutup ketupat dagangannya menggunakan plastik.</p><p>Pengunjung yang datang semakin sore terlihat ramai. Meskipun sedang dilanda hujan tidak menyurutkan niat mereka datang membeli ketupat.</p><p>Dengan menggunakan mantel mereka menerobos hujan demi satu porsi ketupat opor.</p><p>Tidak hanya untuk dibawa pulang sebagai dari mereka juga memilih makan di tempat. Untuk satu porsi ketupat opor dengan pilihan menu daging ayam dan telur dihargai mulai dari Rp 10.000 sampai Rp 15.000.</p><p>Sriyanah mengaku modal yang digunakan merupakan hasil pinjaman dari bank keliling. Ia mendapat pinjaman Rp 1 juta kemudian setiap hari harus membayar Rp 20.000 selama dua bulan. (*)</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-10 00:27:06', '2025-05-09 16:25:17', '2025-05-09 16:27:06', NULL),
-(5, NULL, 'Di Mataram, Puluhan Warga Berjualan Ketupat di Sepanjang Jalan Airlangga dan Majapahit', 'di-mataram-puluhan-warga-berjualan-ketupat-di-sepanjang-jalan-airlangga-dan-majapahit', '<p>MATARAM – Sehari menjelang Lebaran Ketupat yang di Lombok dikenal sebagai tradisi Lebaran Topat, bakda Dzuhur Jum’at 28 April 2023 siang tadi telah bermunculan pedagang ketupat di kota Mataram. Terbanyak mereka yang mayoritas warga Kelurahan Punia berdagang di atas trotoar sepanjang jalan Airlangga dan Majapahit.</p><p>Mereka rata-rata menggunakan satu meja di bawah tenda payung untuk menggelar ketupat yang digantung di atas panci berisi lauknya diantarannya opor dan urap. Setiap pedagang menyiapkan ratusan biji ketupat yang diisi belasan kilogram beras. Setiap biji ketupat dijualnya Rp 3 ribu atau perikat lima biji seharga Rp 15 ribu.</p><p>Seorang pedagang menawarkan membeli jualannya karena masih sepi. Rencananya ia berjualan hingga malam hari atau jika masih tersisa ia menjualnya Sabtu 29 April 2023 pagi. ‘’Silahkan pak beli. Masih sepi ini,’’ kata Maesarah, 55 tahun, di ujung barat Majapahit.</p><p>Menurutnya, sepinya pembeli karena lebih banyak warga yang melakukan mudik lebaran setelah meredanya pandemic Covid-19. ‘’Jika dibanding dulu, lebih ramai karena mereka tidak pergi mudik ke kampung halamannya,’’ ujar Maesarah.</p><p>Seorang pedagang lainnya Srianah, 53 tahun, menyatakan berjualan ketupat dan lontong ini adalah mata pencahariannya sehari-hari. Jika bukan lebaran, mereka berdagang lontong di berbagai pasar di kota Mataram.</p><p>Sabtu 29 April 2023 besok dipastikan tradisi Lebaran Topat di Lombok akan ramai. Di seluruh wilayah di Mataramk, Lombok Barat, Lombok Utara, Lombok Tengah dan Lombok Timur warga memanfaatkannya untuk rekreasi di berbagai pantai setelah melakukan ziarah kubur makam keramat yang dikenal sebagai penyebar Islam di Lombok.(*)</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-10 00:27:08', '2025-05-09 16:26:49', '2025-05-09 16:27:08', NULL);
+INSERT INTO `articles` (`id`, `views`, `cover_id`, `title`, `slug`, `preview_content`, `content`, `private`, `category_id`, `fields`, `metadata`, `created_by`, `updated_by`, `published_at`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 0, 6, 'Berjalan-jalan ke \"Kampung Lontong\" Punia di Mataram', 'berjalan-jalan-ke-kampung-lontong-punia-di-mataram', 'Kampung Lontong Punia, pusat lontong legendaris di Mataram.', '<p style=\"text-align: justify; ;\">**Berjalan-jalan ke &quot;Kampung Lontong&quot; Punia di Mataram** Jika Anda berkunjung ke Mataram, Nusa Tenggara Barat, jangan lewatkan kesempatan untuk mencicipi kuliner khasnya, lontong. Salah satu tempat yang terkenal dengan lontongnya adalah &quot;Kampung Lontong&quot; Punia. Terletak di Kelurahan Punia, Kecamatan Mataram, tempat ini menjadi pusat pembuatan dan penjualan lontong yang sudah melegenda. Kampung Lontong Punia bukanlah sekadar tempat makan. Di sini, Anda bisa melihat langsung proses pembuatan lontong secara tradisional. Para pengrajin lontong dengan cekatan mengisi beras ke dalam anyaman daun lontar berbentuk silinder, kemudian merebusnya dalam kuali besar selama berjam-jam hingga matang sempurna. Aroma khas lontong yang direbus memenuhi udara, membangkitkan selera siapa pun yang melewatinya. Lontong di Kampung Punia disajikan dengan berbagai macam lauk yang menggugah selera. Anda bisa memilih lontong sayur dengan kuah santan kental yang kaya rempah, dilengkapi dengan sayuran seperti labu siam, kacang panjang, dan terong. Pilihan lainnya adalah lontong sate, di mana lontong disiram dengan bumbu sate yang lezat dan ditaburi bawang goreng. Bagi pecinta pedas, jangan lupa tambahkan sambal khas Lombok yang akan membuat hidangan semakin nikmat. Selain lontong sayur dan lontong sate, Anda juga bisa menemukan berbagai macam jajanan tradisional lainnya di Kampung Lontong Punia. Ada klepon, lupis, cenil, dan berbagai macam kue basah lainnya yang bisa menjadi teman menikmati lontong. Mengunjungi Kampung Lontong Punia bukan hanya sekadar wisata kuliner, tetapi juga merupakan pengalaman budaya yang menarik. Anda bisa berinteraksi dengan para pengrajin lontong, belajar tentang proses pembuatannya, dan merasakan keramahan masyarakat setempat. Jadi, jika Anda sedang berada di Mataram, jangan lupa untuk menyempatkan diri berkunjung ke Kampung Lontong Punia. Rasakan nikmatnya lontong khas Mataram dan nikmati suasana kampung yang masih terjaga keasliannya. Dijamin, pengalaman ini akan menjadi kenangan manis selama perjalanan Anda.</p>', 0, 2, NULL, '{\"meta_title\":\"Kampung Lontong Punia: Wisata Kuliner Khas Mataram\",\"meta_desc\":\"Jelajahi Kampung Lontong Punia di Mataram! Nikmati lontong lezat, lihat proses pembuatan tradisional, & rasakan budaya lokal.\"}', 1, 1, '2025-05-09 14:45:52', '2025-05-09 06:40:50', '2025-06-16 18:34:20', NULL),
+(2, 0, 4, 'Tupat, Lontong dan Kue Bantal yang Tak Tergantikan', 'tupat-lontong-dan-kue-bantal-yang-tak-tergantikan', 'Tupat, Lontong, Kue Bantal: Hidangan khas yang tak tergantikan.', '<p>**Tupat, Lontong dan Kue Bantal yang Tak Tergantikan** Hari raya rasanya kurang lengkap tanpa kehadiran hidangan khas yang satu ini: Ketupat, Lontong, dan Kue Bantal. Lebih dari sekadar makanan, ketiga hidangan berbahan dasar beras ini telah menjadi simbol tradisi dan kebersamaan, terutama saat perayaan Idul Fitri dan acara-acara penting lainnya di berbagai daerah di Indonesia. Meskipun sekilas terlihat mirip, ketiganya memiliki perbedaan yang cukup signifikan. Ketupat, dengan anyaman janur kuningnya yang khas, memberikan aroma unik saat direbus. Bentuknya pun beragam, mulai dari ketupat bawang, ketupat sate, hingga ketupat jantung. Lontong, di sisi lain, dibungkus dengan daun pisang, menghasilkan aroma yang lebih lembut dan rasa yang sedikit berbeda. Proses memasaknya pun lebih lama, sehingga teksturnya lebih padat. Sementara itu, kue bantal, yang sering ditemui di pasar tradisional, memiliki bentuk persegi panjang dan dibungkus dengan daun pisang yang dilipat rapi. Rasanya lebih gurih karena seringkali dicampur dengan santan. Ketiga hidangan ini biasanya disajikan dengan berbagai macam lauk pendamping. Opor ayam menjadi pilihan klasik yang tak pernah gagal. Rendang, dengan cita rasa rempahnya yang kaya, juga sering menjadi teman setia ketupat dan lontong. Sayur labu siam, sambal goreng ati, dan kerupuk udang melengkapi hidangan, menciptakan harmoni rasa yang memanjakan lidah. Lebih dari sekadar rasa yang lezat, ketupat, lontong, dan kue bantal menyimpan makna yang mendalam. Anyaman ketupat seringkali diartikan sebagai simbol persatuan dan kebersamaan. Proses memasak yang memakan waktu mencerminkan kesabaran dan ketelitian. Sementara hidangan yang disajikan bersama keluarga dan kerabat mempererat tali silaturahmi. Di era modern ini, meskipun banyak makanan modern yang bermunculan, ketupat, lontong, dan kue bantal tetap memegang peranan penting dalam khazanah kuliner Indonesia. Kehadirannya selalu dinantikan, bukan hanya karena rasanya yang lezat, tetapi juga karena nilai-nilai tradisi dan kebersamaan yang terkandung di dalamnya. Jadi, mari lestarikan warisan kuliner yang tak tergantikan ini agar tetap bisa dinikmati oleh generasi mendatang.</p>', 0, 1, NULL, '{\"meta_title\":\"Tupat, Lontong, Kue Bantal: Simbol Tradisi & Kebersamaan\",\"meta_desc\":\"Kenali perbedaan dan makna dari Ketupat, Lontong, dan Kue Bantal. Hidangan khas Indonesia yang tak tergantikan saat hari raya dan acara penting.\"}', 1, 1, '2025-05-10 00:27:00', '2025-05-09 16:17:52', '2025-06-16 07:38:38', NULL),
+(3, 0, 3, 'Cerita Pedagang Ketupat Menjelang Lebaran Topat di Lombok', 'cerita-pedagang-ketupat-menjelang-lebaran-topat-di-lombok', '', '<p><a href=\"http://TEMPO.CO\">TEMPO.CO</a>, Mataram - Masyarakat Pulau Lombok memiliki tradisi Idul Fitri yang menarik, yaitu Lebaran Ketupat atau Lebaran Topat. Namun Lebaran ini tak diadakan pada hari pertama Idul Fitri 1 Syawal melainkan pada hari ketujuh yang tahun ini jatuh pada Sabtu, 29 April 2023.</p><p>Seperti namanya, hal utama dalam tradisi ini adalah ketupat. Karena itu, tak heran menjelang tradisi ini, penjual ketupat dapat mudah ditemukan.</p><p>Para pedagang ketupat bermunculan di sejumlah ruas jalan, termasuk di sekitar Kota Mataram. Kebanyakan dari mereka adalah warga Kelurahan Punia yang berdagang di atas trotoar sepanjang Jalan Airlangga dan Majapahit.</p><p>Para pedagang menggunakan satu meja di bawah tenda payung untuk menggelar ketupat yang digantung di atas panci berisi lauknya, seperti opor dan urap. Setiap pedagang menyiapkan ratusan biji ketupat yang diisi belasan kilogram beras. Setiap biji ketupat dijualnya Rp 3 ribu atau per ikat sebanyak lima biji seharga Rp 15 ribu.</p><p>Salah satunya adalah Maesarah, 55 tahun, yang berdagang ketupat sehari sebelum Lebaran Topat, Jumat, 28 April 2023. Rencananya, ia akan berjualan hingga malam hari atau jika masih tersisa ia menjualnya hingga hari H.</p><p>&quot;Silakan beli. Masih sepi ini,&quot; kata Maesarah, di ujung barat Majapahit.</p><p>Menurut Maesarah, sepinya pembeli karena lebih banyak warga yang melakukan mudik Lebaran setelah meredanya pandemi Covid-19. &quot;Jika dibanding dulu, lebih ramai karena mereka tidak pergi mudik ke kampung halamannya,&quot; ujarnya.</p><p>Seorang pedagang lainnya, Srianah, 53 tahun, menyatakan berjualan ketupat dan lontong ini adalah mata pencahariannya sehari-hari. Jika bukan Lebaran, mereka berdagang lontong di berbagai pasar di kota Mataram.</p><p>Lebaran Topat di Lombok biasanya diisi dengan sejumlah acara. Tradisi itu akan diawali dengan ziarah ke makam keramat, lalu menyantap ketupat bersama-sama. Setelah itu, masyarakat memanfaatkan momentum libur itu untuk rekreasi di berbagai pantai.</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-10 00:27:03', '2025-05-09 16:20:49', '2025-05-26 14:51:14', NULL),
+(4, 0, 5, 'Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor', 'lebaran-topat-dimanfaatkan-warga-punia-kota-mataram-berjualan-ketupat-dan-opor', NULL, NULL, 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-06-17 20:00:56', '2025-05-09 16:25:17', '2025-06-17 13:26:09', NULL),
+(5, 0, 5, 'Di Mataram, Puluhan Warga Berjualan Ketupat di Sepanjang Jalan Airlangga dan Majapahit', 'di-mataram-puluhan-warga-berjualan-ketupat-di-sepanjang-jalan-airlangga-dan-majapahit', '', '<p>MATARAM – Sehari menjelang Lebaran Ketupat yang di Lombok dikenal sebagai tradisi Lebaran Topat, bakda Dzuhur Jum’at 28 April 2023 siang tadi telah bermunculan pedagang ketupat di kota Mataram. Terbanyak mereka yang mayoritas warga Kelurahan Punia berdagang di atas trotoar sepanjang jalan Airlangga dan Majapahit.</p><p>Mereka rata-rata menggunakan satu meja di bawah tenda payung untuk menggelar ketupat yang digantung di atas panci berisi lauknya diantarannya opor dan urap. Setiap pedagang menyiapkan ratusan biji ketupat yang diisi belasan kilogram beras. Setiap biji ketupat dijualnya Rp 3 ribu atau perikat lima biji seharga Rp 15 ribu.</p><p>Seorang pedagang menawarkan membeli jualannya karena masih sepi. Rencananya ia berjualan hingga malam hari atau jika masih tersisa ia menjualnya Sabtu 29 April 2023 pagi. ‘’Silahkan pak beli. Masih sepi ini,’’ kata Maesarah, 55 tahun, di ujung barat Majapahit.</p><p>Menurutnya, sepinya pembeli karena lebih banyak warga yang melakukan mudik lebaran setelah meredanya pandemic Covid-19. ‘’Jika dibanding dulu, lebih ramai karena mereka tidak pergi mudik ke kampung halamannya,’’ ujar Maesarah.</p><p>Seorang pedagang lainnya Srianah, 53 tahun, menyatakan berjualan ketupat dan lontong ini adalah mata pencahariannya sehari-hari. Jika bukan lebaran, mereka berdagang lontong di berbagai pasar di kota Mataram.</p><p>Sabtu 29 April 2023 besok dipastikan tradisi Lebaran Topat di Lombok akan ramai. Di seluruh wilayah di Mataramk, Lombok Barat, Lombok Utara, Lombok Tengah dan Lombok Timur warga memanfaatkannya untuk rekreasi di berbagai pantai setelah melakukan ziarah kubur makam keramat yang dikenal sebagai penyebar Islam di Lombok.(*)</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-10 00:27:08', '2025-05-09 16:26:49', '2025-05-26 14:51:48', NULL),
+(6, 0, 2, 'Testing', 'testing', NULL, '<p>testing</p><h1>testing</h1><h2>testing</h2><h3>testing</h3><h4>testing</h4><h5>testing</h5><h6>testing</h6><ul><li><p>testing</p></li><li><p>testing</p></li></ul><ol start=\"1\"><li><p>testing</p></li><li><p>testing</p></li></ol><ul class=\"checked-list\"><li><p>testing</p></li><li><p>testing</p></li></ul><blockquote><p>testing</p></blockquote><hr><p><strong>testing</strong></p><p><em>testing</em></p><p><strike>testing</strike></p><p><u>testing</u></p><p><sup>testing</sup></p><p><sub>testing</sub></p><div class=\"lead\"><p>testing</p></div><p><small>testing</small></p><p><span style=\"color: #f50000;\">testing</span></p><p><mark>testing</mark></p><p style=\"text-align: center;\">testing</p><p style=\"text-align: end;\">testing</p><p style=\"text-align: end;\"><a href=\"http://127.0.0.1:8000/dashboard/articles/4/edit\" data-as-button=\"false\">testing</a></p><p style=\"text-align: end;\"><a href=\"http://127.0.0.1:8000/dashboard/articles/4/edit\" data-as-button=\"true\" data-as-button-theme=\"primary\">testin</a></p><table style=\"min-width: 75px;\"><tbody><tr><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th></tr><tr><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td></tr></tbody></table><p>testing</p><div class=\"filament-tiptap-grid-builder\" data-type=\"responsive\" data-cols=\"2\" style=\"grid-template-columns: repeat(2, 1fr);\" data-stack-at=\"md\"><div class=\"filament-tiptap-grid-builder__column\" data-col-span=\"1\" style=\"grid-column: span 1;\"><p>testing</p></div><div class=\"filament-tiptap-grid-builder__column\" data-col-span=\"1\" style=\"grid-column: span 1;\"><p>testing</p></div></div><details><summary>testing</summary><div data-type=\"details-content\"><p>testing</p></div></details><p><code>testing</code></p><pre><code class=\"hljs \">testing</code></pre>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, NULL, '2025-06-17 13:26:50', '2025-06-17 13:57:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -67,6 +70,14 @@ CREATE TABLE `articles_tags` (
   `tag_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `articles_tags`
+--
+
+INSERT INTO `articles_tags` (`article_id`, `tag_id`) VALUES
+(2, 1),
+(1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -77,6 +88,13 @@ CREATE TABLE `article_sponsors` (
   `article_id` bigint(20) UNSIGNED NOT NULL,
   `sponsor_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `article_sponsors`
+--
+
+INSERT INTO `article_sponsors` (`article_id`, `sponsor_id`) VALUES
+(1, 1);
 
 -- --------------------------------------------------------
 
@@ -95,12 +113,14 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('356a192b7913b04c54574d18c28d46e6395428ab', 'i:1;', 1746811648),
-('356a192b7913b04c54574d18c28d46e6395428ab:timer', 'i:1746811648;', 1746811648),
-('general-settings', 'a:0:{}', 2062094642),
-('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36', 'i:1;', 1747735519),
-('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36:timer', 'i:1747735519;', 1747735519),
-('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:156:{i:0;a:4:{s:1:\"a\";i:129;s:1:\"b\";s:12:\"view_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:1;a:4:{s:1:\"a\";i:130;s:1:\"b\";s:16:\"view_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:2;a:4:{s:1:\"a\";i:131;s:1:\"b\";s:14:\"create_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:3;a:4:{s:1:\"a\";i:132;s:1:\"b\";s:14:\"update_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:4;a:4:{s:1:\"a\";i:133;s:1:\"b\";s:15:\"restore_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:5;a:4:{s:1:\"a\";i:134;s:1:\"b\";s:19:\"restore_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:6;a:4:{s:1:\"a\";i:135;s:1:\"b\";s:17:\"replicate_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:7;a:4:{s:1:\"a\";i:136;s:1:\"b\";s:15:\"reorder_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:8;a:4:{s:1:\"a\";i:137;s:1:\"b\";s:14:\"delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:9;a:4:{s:1:\"a\";i:138;s:1:\"b\";s:18:\"delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:10;a:4:{s:1:\"a\";i:139;s:1:\"b\";s:20:\"force_delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:11;a:4:{s:1:\"a\";i:140;s:1:\"b\";s:24:\"force_delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:12;a:4:{s:1:\"a\";i:141;s:1:\"b\";s:13:\"view_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:13;a:4:{s:1:\"a\";i:142;s:1:\"b\";s:17:\"view_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:14;a:4:{s:1:\"a\";i:143;s:1:\"b\";s:15:\"create_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:15;a:4:{s:1:\"a\";i:144;s:1:\"b\";s:15:\"update_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:16;a:4:{s:1:\"a\";i:145;s:1:\"b\";s:16:\"restore_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:17;a:4:{s:1:\"a\";i:146;s:1:\"b\";s:20:\"restore_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:18;a:4:{s:1:\"a\";i:147;s:1:\"b\";s:18:\"replicate_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:19;a:4:{s:1:\"a\";i:148;s:1:\"b\";s:16:\"reorder_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:20;a:4:{s:1:\"a\";i:149;s:1:\"b\";s:15:\"delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:21;a:4:{s:1:\"a\";i:150;s:1:\"b\";s:19:\"delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:22;a:4:{s:1:\"a\";i:151;s:1:\"b\";s:21:\"force_delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:23;a:4:{s:1:\"a\";i:152;s:1:\"b\";s:25:\"force_delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:24;a:4:{s:1:\"a\";i:153;s:1:\"b\";s:10:\"view_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:25;a:4:{s:1:\"a\";i:154;s:1:\"b\";s:14:\"view_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:26;a:4:{s:1:\"a\";i:155;s:1:\"b\";s:12:\"create_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:27;a:4:{s:1:\"a\";i:156;s:1:\"b\";s:12:\"update_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:28;a:4:{s:1:\"a\";i:157;s:1:\"b\";s:13:\"restore_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:29;a:4:{s:1:\"a\";i:158;s:1:\"b\";s:17:\"restore_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:30;a:4:{s:1:\"a\";i:159;s:1:\"b\";s:15:\"replicate_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:31;a:4:{s:1:\"a\";i:160;s:1:\"b\";s:13:\"reorder_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:32;a:4:{s:1:\"a\";i:161;s:1:\"b\";s:12:\"delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:33;a:4:{s:1:\"a\";i:162;s:1:\"b\";s:16:\"delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:34;a:4:{s:1:\"a\";i:163;s:1:\"b\";s:18:\"force_delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:35;a:4:{s:1:\"a\";i:164;s:1:\"b\";s:22:\"force_delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:36;a:4:{s:1:\"a\";i:165;s:1:\"b\";s:10:\"view_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:37;a:4:{s:1:\"a\";i:166;s:1:\"b\";s:14:\"view_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:38;a:4:{s:1:\"a\";i:167;s:1:\"b\";s:12:\"create_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:39;a:4:{s:1:\"a\";i:168;s:1:\"b\";s:12:\"update_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:40;a:4:{s:1:\"a\";i:169;s:1:\"b\";s:13:\"restore_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:41;a:4:{s:1:\"a\";i:170;s:1:\"b\";s:17:\"restore_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:42;a:4:{s:1:\"a\";i:171;s:1:\"b\";s:15:\"replicate_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:43;a:4:{s:1:\"a\";i:172;s:1:\"b\";s:13:\"reorder_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:44;a:4:{s:1:\"a\";i:173;s:1:\"b\";s:12:\"delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:45;a:4:{s:1:\"a\";i:174;s:1:\"b\";s:16:\"delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:46;a:4:{s:1:\"a\";i:175;s:1:\"b\";s:18:\"force_delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:47;a:4:{s:1:\"a\";i:176;s:1:\"b\";s:22:\"force_delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:48;a:4:{s:1:\"a\";i:177;s:1:\"b\";s:9:\"view_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:49;a:4:{s:1:\"a\";i:178;s:1:\"b\";s:13:\"view_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:50;a:4:{s:1:\"a\";i:179;s:1:\"b\";s:11:\"create_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:51;a:4:{s:1:\"a\";i:180;s:1:\"b\";s:11:\"update_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:52;a:4:{s:1:\"a\";i:181;s:1:\"b\";s:12:\"restore_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:53;a:4:{s:1:\"a\";i:182;s:1:\"b\";s:16:\"restore_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:54;a:4:{s:1:\"a\";i:183;s:1:\"b\";s:14:\"replicate_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:55;a:4:{s:1:\"a\";i:184;s:1:\"b\";s:12:\"reorder_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:56;a:4:{s:1:\"a\";i:185;s:1:\"b\";s:11:\"delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:57;a:4:{s:1:\"a\";i:186;s:1:\"b\";s:15:\"delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:58;a:4:{s:1:\"a\";i:187;s:1:\"b\";s:17:\"force_delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:59;a:4:{s:1:\"a\";i:188;s:1:\"b\";s:21:\"force_delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:60;a:3:{s:1:\"a\";i:189;s:1:\"b\";s:12:\"view_pattern\";s:1:\"c\";s:3:\"web\";}i:61;a:3:{s:1:\"a\";i:190;s:1:\"b\";s:16:\"view_any_pattern\";s:1:\"c\";s:3:\"web\";}i:62;a:3:{s:1:\"a\";i:191;s:1:\"b\";s:14:\"create_pattern\";s:1:\"c\";s:3:\"web\";}i:63;a:3:{s:1:\"a\";i:192;s:1:\"b\";s:14:\"update_pattern\";s:1:\"c\";s:3:\"web\";}i:64;a:3:{s:1:\"a\";i:193;s:1:\"b\";s:15:\"restore_pattern\";s:1:\"c\";s:3:\"web\";}i:65;a:3:{s:1:\"a\";i:194;s:1:\"b\";s:19:\"restore_any_pattern\";s:1:\"c\";s:3:\"web\";}i:66;a:3:{s:1:\"a\";i:195;s:1:\"b\";s:17:\"replicate_pattern\";s:1:\"c\";s:3:\"web\";}i:67;a:3:{s:1:\"a\";i:196;s:1:\"b\";s:15:\"reorder_pattern\";s:1:\"c\";s:3:\"web\";}i:68;a:3:{s:1:\"a\";i:197;s:1:\"b\";s:14:\"delete_pattern\";s:1:\"c\";s:3:\"web\";}i:69;a:3:{s:1:\"a\";i:198;s:1:\"b\";s:18:\"delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:70;a:3:{s:1:\"a\";i:199;s:1:\"b\";s:20:\"force_delete_pattern\";s:1:\"c\";s:3:\"web\";}i:71;a:3:{s:1:\"a\";i:200;s:1:\"b\";s:24:\"force_delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:72;a:4:{s:1:\"a\";i:201;s:1:\"b\";s:9:\"view_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:73;a:4:{s:1:\"a\";i:202;s:1:\"b\";s:13:\"view_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:74;a:4:{s:1:\"a\";i:203;s:1:\"b\";s:11:\"create_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:75;a:4:{s:1:\"a\";i:204;s:1:\"b\";s:11:\"update_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:76;a:4:{s:1:\"a\";i:205;s:1:\"b\";s:11:\"delete_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:77;a:4:{s:1:\"a\";i:206;s:1:\"b\";s:15:\"delete_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:78;a:4:{s:1:\"a\";i:207;s:1:\"b\";s:12:\"view_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:79;a:4:{s:1:\"a\";i:208;s:1:\"b\";s:16:\"view_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:80;a:4:{s:1:\"a\";i:209;s:1:\"b\";s:14:\"create_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:81;a:4:{s:1:\"a\";i:210;s:1:\"b\";s:14:\"update_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:82;a:4:{s:1:\"a\";i:211;s:1:\"b\";s:15:\"restore_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:83;a:4:{s:1:\"a\";i:212;s:1:\"b\";s:19:\"restore_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:84;a:4:{s:1:\"a\";i:213;s:1:\"b\";s:17:\"replicate_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:85;a:4:{s:1:\"a\";i:214;s:1:\"b\";s:15:\"reorder_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:86;a:4:{s:1:\"a\";i:215;s:1:\"b\";s:14:\"delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:87;a:4:{s:1:\"a\";i:216;s:1:\"b\";s:18:\"delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:88;a:4:{s:1:\"a\";i:217;s:1:\"b\";s:20:\"force_delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:89;a:4:{s:1:\"a\";i:218;s:1:\"b\";s:24:\"force_delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:90;a:4:{s:1:\"a\";i:219;s:1:\"b\";s:22:\"view_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:91;a:4:{s:1:\"a\";i:220;s:1:\"b\";s:26:\"view_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:92;a:4:{s:1:\"a\";i:221;s:1:\"b\";s:24:\"create_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:93;a:4:{s:1:\"a\";i:222;s:1:\"b\";s:24:\"update_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:94;a:4:{s:1:\"a\";i:223;s:1:\"b\";s:25:\"restore_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:95;a:4:{s:1:\"a\";i:224;s:1:\"b\";s:29:\"restore_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:96;a:4:{s:1:\"a\";i:225;s:1:\"b\";s:27:\"replicate_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:97;a:4:{s:1:\"a\";i:226;s:1:\"b\";s:25:\"reorder_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:98;a:4:{s:1:\"a\";i:227;s:1:\"b\";s:24:\"delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:99;a:4:{s:1:\"a\";i:228;s:1:\"b\";s:28:\"delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:100;a:4:{s:1:\"a\";i:229;s:1:\"b\";s:30:\"force_delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:101;a:4:{s:1:\"a\";i:230;s:1:\"b\";s:34:\"force_delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:102;a:4:{s:1:\"a\";i:231;s:1:\"b\";s:8:\"view_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:103;a:4:{s:1:\"a\";i:232;s:1:\"b\";s:12:\"view_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:104;a:4:{s:1:\"a\";i:233;s:1:\"b\";s:10:\"create_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:105;a:4:{s:1:\"a\";i:234;s:1:\"b\";s:10:\"update_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:106;a:4:{s:1:\"a\";i:235;s:1:\"b\";s:11:\"restore_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:107;a:4:{s:1:\"a\";i:236;s:1:\"b\";s:15:\"restore_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:108;a:4:{s:1:\"a\";i:237;s:1:\"b\";s:13:\"replicate_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:109;a:4:{s:1:\"a\";i:238;s:1:\"b\";s:11:\"reorder_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:110;a:4:{s:1:\"a\";i:239;s:1:\"b\";s:10:\"delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:111;a:4:{s:1:\"a\";i:240;s:1:\"b\";s:14:\"delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:112;a:4:{s:1:\"a\";i:241;s:1:\"b\";s:16:\"force_delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:113;a:4:{s:1:\"a\";i:242;s:1:\"b\";s:20:\"force_delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:114;a:4:{s:1:\"a\";i:243;s:1:\"b\";s:9:\"view_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:115;a:4:{s:1:\"a\";i:244;s:1:\"b\";s:13:\"view_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:116;a:4:{s:1:\"a\";i:245;s:1:\"b\";s:11:\"create_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:117;a:4:{s:1:\"a\";i:246;s:1:\"b\";s:11:\"update_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:118;a:4:{s:1:\"a\";i:247;s:1:\"b\";s:12:\"restore_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:119;a:4:{s:1:\"a\";i:248;s:1:\"b\";s:16:\"restore_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:120;a:4:{s:1:\"a\";i:249;s:1:\"b\";s:14:\"replicate_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:121;a:4:{s:1:\"a\";i:250;s:1:\"b\";s:12:\"reorder_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:122;a:4:{s:1:\"a\";i:251;s:1:\"b\";s:11:\"delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:123;a:4:{s:1:\"a\";i:252;s:1:\"b\";s:15:\"delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:124;a:4:{s:1:\"a\";i:253;s:1:\"b\";s:17:\"force_delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:125;a:4:{s:1:\"a\";i:254;s:1:\"b\";s:21:\"force_delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:126;a:4:{s:1:\"a\";i:255;s:1:\"b\";s:24:\"page_GeneralSettingsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:127;a:3:{s:1:\"a\";i:256;s:1:\"b\";s:12:\"page_ViewEnv\";s:1:\"c\";s:3:\"web\";}i:128;a:3:{s:1:\"a\";i:257;s:1:\"b\";s:21:\"widget_OptimizeButton\";s:1:\"c\";s:3:\"web\";}i:129;a:4:{s:1:\"a\";i:258;s:1:\"b\";s:18:\"page_EnvEditorPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:130;a:4:{s:1:\"a\";i:259;s:1:\"b\";s:24:\"page_GoogleAnalyticsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:131;a:4:{s:1:\"a\";i:260;s:1:\"b\";s:12:\"view_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:132;a:4:{s:1:\"a\";i:261;s:1:\"b\";s:16:\"view_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:133;a:4:{s:1:\"a\";i:262;s:1:\"b\";s:14:\"create_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:134;a:4:{s:1:\"a\";i:263;s:1:\"b\";s:14:\"update_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:135;a:4:{s:1:\"a\";i:264;s:1:\"b\";s:15:\"restore_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:136;a:4:{s:1:\"a\";i:265;s:1:\"b\";s:19:\"restore_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:137;a:4:{s:1:\"a\";i:266;s:1:\"b\";s:17:\"replicate_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:138;a:4:{s:1:\"a\";i:267;s:1:\"b\";s:15:\"reorder_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:139;a:4:{s:1:\"a\";i:268;s:1:\"b\";s:14:\"delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:140;a:4:{s:1:\"a\";i:269;s:1:\"b\";s:18:\"delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:141;a:4:{s:1:\"a\";i:270;s:1:\"b\";s:20:\"force_delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:142;a:4:{s:1:\"a\";i:271;s:1:\"b\";s:24:\"force_delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:143;a:4:{s:1:\"a\";i:272;s:1:\"b\";s:18:\"view_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:144;a:4:{s:1:\"a\";i:273;s:1:\"b\";s:22:\"view_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:145;a:4:{s:1:\"a\";i:274;s:1:\"b\";s:20:\"create_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:146;a:4:{s:1:\"a\";i:275;s:1:\"b\";s:20:\"update_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:147;a:4:{s:1:\"a\";i:276;s:1:\"b\";s:21:\"restore_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:148;a:4:{s:1:\"a\";i:277;s:1:\"b\";s:25:\"restore_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:149;a:4:{s:1:\"a\";i:278;s:1:\"b\";s:23:\"replicate_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:150;a:4:{s:1:\"a\";i:279;s:1:\"b\";s:21:\"reorder_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:151;a:4:{s:1:\"a\";i:280;s:1:\"b\";s:20:\"delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:152;a:4:{s:1:\"a\";i:281;s:1:\"b\";s:24:\"delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:153;a:4:{s:1:\"a\";i:282;s:1:\"b\";s:26:\"force_delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:154;a:4:{s:1:\"a\";i:283;s:1:\"b\";s:30:\"force_delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:155;a:4:{s:1:\"a\";i:284;s:1:\"b\";s:18:\"page_DashboardPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}}s:5:\"roles\";a:3:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:9:\"Developer\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:5:\"Admin\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:7;s:1:\"b\";s:10:\"Superadmin\";s:1:\"c\";s:3:\"web\";}}}', 1747821860);
+('356a192b7913b04c54574d18c28d46e6395428ab', 'i:1;', 1750066753),
+('356a192b7913b04c54574d18c28d46e6395428ab:timer', 'i:1750066753;', 1750066753),
+('general-settings', 'a:0:{}', 2065373429),
+('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36', 'i:1;', 1750313041),
+('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36:timer', 'i:1750313041;', 1750313041),
+('livewire-rate-limiter:62dcdddd2131784090e8a5916c260a90678e71b3', 'i:1;', 1750091443),
+('livewire-rate-limiter:62dcdddd2131784090e8a5916c260a90678e71b3:timer', 'i:1750091443;', 1750091443),
+('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:156:{i:0;a:4:{s:1:\"a\";i:129;s:1:\"b\";s:12:\"view_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:1;a:4:{s:1:\"a\";i:130;s:1:\"b\";s:16:\"view_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:2;a:4:{s:1:\"a\";i:131;s:1:\"b\";s:14:\"create_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:3;a:4:{s:1:\"a\";i:132;s:1:\"b\";s:14:\"update_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:4;a:4:{s:1:\"a\";i:133;s:1:\"b\";s:15:\"restore_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:5;a:4:{s:1:\"a\";i:134;s:1:\"b\";s:19:\"restore_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:6;a:4:{s:1:\"a\";i:135;s:1:\"b\";s:17:\"replicate_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:7;a:4:{s:1:\"a\";i:136;s:1:\"b\";s:15:\"reorder_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:8;a:4:{s:1:\"a\";i:137;s:1:\"b\";s:14:\"delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:9;a:4:{s:1:\"a\";i:138;s:1:\"b\";s:18:\"delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:10;a:4:{s:1:\"a\";i:139;s:1:\"b\";s:20:\"force_delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:11;a:4:{s:1:\"a\";i:140;s:1:\"b\";s:24:\"force_delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:12;a:4:{s:1:\"a\";i:141;s:1:\"b\";s:13:\"view_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:13;a:4:{s:1:\"a\";i:142;s:1:\"b\";s:17:\"view_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:14;a:4:{s:1:\"a\";i:143;s:1:\"b\";s:15:\"create_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:15;a:4:{s:1:\"a\";i:144;s:1:\"b\";s:15:\"update_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:16;a:4:{s:1:\"a\";i:145;s:1:\"b\";s:16:\"restore_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:17;a:4:{s:1:\"a\";i:146;s:1:\"b\";s:20:\"restore_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:18;a:4:{s:1:\"a\";i:147;s:1:\"b\";s:18:\"replicate_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:19;a:4:{s:1:\"a\";i:148;s:1:\"b\";s:16:\"reorder_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:20;a:4:{s:1:\"a\";i:149;s:1:\"b\";s:15:\"delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:21;a:4:{s:1:\"a\";i:150;s:1:\"b\";s:19:\"delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:22;a:4:{s:1:\"a\";i:151;s:1:\"b\";s:21:\"force_delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:23;a:4:{s:1:\"a\";i:152;s:1:\"b\";s:25:\"force_delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:24;a:4:{s:1:\"a\";i:153;s:1:\"b\";s:10:\"view_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:25;a:4:{s:1:\"a\";i:154;s:1:\"b\";s:14:\"view_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:26;a:4:{s:1:\"a\";i:155;s:1:\"b\";s:12:\"create_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:27;a:4:{s:1:\"a\";i:156;s:1:\"b\";s:12:\"update_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:28;a:4:{s:1:\"a\";i:157;s:1:\"b\";s:13:\"restore_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:29;a:4:{s:1:\"a\";i:158;s:1:\"b\";s:17:\"restore_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:30;a:4:{s:1:\"a\";i:159;s:1:\"b\";s:15:\"replicate_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:31;a:4:{s:1:\"a\";i:160;s:1:\"b\";s:13:\"reorder_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:32;a:4:{s:1:\"a\";i:161;s:1:\"b\";s:12:\"delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:33;a:4:{s:1:\"a\";i:162;s:1:\"b\";s:16:\"delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:34;a:4:{s:1:\"a\";i:163;s:1:\"b\";s:18:\"force_delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:35;a:4:{s:1:\"a\";i:164;s:1:\"b\";s:22:\"force_delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:36;a:4:{s:1:\"a\";i:165;s:1:\"b\";s:10:\"view_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:37;a:4:{s:1:\"a\";i:166;s:1:\"b\";s:14:\"view_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:38;a:4:{s:1:\"a\";i:167;s:1:\"b\";s:12:\"create_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:39;a:4:{s:1:\"a\";i:168;s:1:\"b\";s:12:\"update_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:40;a:4:{s:1:\"a\";i:169;s:1:\"b\";s:13:\"restore_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:41;a:4:{s:1:\"a\";i:170;s:1:\"b\";s:17:\"restore_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:42;a:4:{s:1:\"a\";i:171;s:1:\"b\";s:15:\"replicate_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:43;a:4:{s:1:\"a\";i:172;s:1:\"b\";s:13:\"reorder_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:44;a:4:{s:1:\"a\";i:173;s:1:\"b\";s:12:\"delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:45;a:4:{s:1:\"a\";i:174;s:1:\"b\";s:16:\"delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:46;a:4:{s:1:\"a\";i:175;s:1:\"b\";s:18:\"force_delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:47;a:4:{s:1:\"a\";i:176;s:1:\"b\";s:22:\"force_delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:48;a:4:{s:1:\"a\";i:177;s:1:\"b\";s:9:\"view_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:49;a:4:{s:1:\"a\";i:178;s:1:\"b\";s:13:\"view_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:50;a:4:{s:1:\"a\";i:179;s:1:\"b\";s:11:\"create_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:51;a:4:{s:1:\"a\";i:180;s:1:\"b\";s:11:\"update_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:52;a:4:{s:1:\"a\";i:181;s:1:\"b\";s:12:\"restore_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:53;a:4:{s:1:\"a\";i:182;s:1:\"b\";s:16:\"restore_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:54;a:4:{s:1:\"a\";i:183;s:1:\"b\";s:14:\"replicate_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:55;a:4:{s:1:\"a\";i:184;s:1:\"b\";s:12:\"reorder_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:56;a:4:{s:1:\"a\";i:185;s:1:\"b\";s:11:\"delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:57;a:4:{s:1:\"a\";i:186;s:1:\"b\";s:15:\"delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:58;a:4:{s:1:\"a\";i:187;s:1:\"b\";s:17:\"force_delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:59;a:4:{s:1:\"a\";i:188;s:1:\"b\";s:21:\"force_delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:60;a:3:{s:1:\"a\";i:189;s:1:\"b\";s:12:\"view_pattern\";s:1:\"c\";s:3:\"web\";}i:61;a:3:{s:1:\"a\";i:190;s:1:\"b\";s:16:\"view_any_pattern\";s:1:\"c\";s:3:\"web\";}i:62;a:3:{s:1:\"a\";i:191;s:1:\"b\";s:14:\"create_pattern\";s:1:\"c\";s:3:\"web\";}i:63;a:3:{s:1:\"a\";i:192;s:1:\"b\";s:14:\"update_pattern\";s:1:\"c\";s:3:\"web\";}i:64;a:3:{s:1:\"a\";i:193;s:1:\"b\";s:15:\"restore_pattern\";s:1:\"c\";s:3:\"web\";}i:65;a:3:{s:1:\"a\";i:194;s:1:\"b\";s:19:\"restore_any_pattern\";s:1:\"c\";s:3:\"web\";}i:66;a:3:{s:1:\"a\";i:195;s:1:\"b\";s:17:\"replicate_pattern\";s:1:\"c\";s:3:\"web\";}i:67;a:3:{s:1:\"a\";i:196;s:1:\"b\";s:15:\"reorder_pattern\";s:1:\"c\";s:3:\"web\";}i:68;a:3:{s:1:\"a\";i:197;s:1:\"b\";s:14:\"delete_pattern\";s:1:\"c\";s:3:\"web\";}i:69;a:3:{s:1:\"a\";i:198;s:1:\"b\";s:18:\"delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:70;a:3:{s:1:\"a\";i:199;s:1:\"b\";s:20:\"force_delete_pattern\";s:1:\"c\";s:3:\"web\";}i:71;a:3:{s:1:\"a\";i:200;s:1:\"b\";s:24:\"force_delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:72;a:4:{s:1:\"a\";i:201;s:1:\"b\";s:9:\"view_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:73;a:4:{s:1:\"a\";i:202;s:1:\"b\";s:13:\"view_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:74;a:4:{s:1:\"a\";i:203;s:1:\"b\";s:11:\"create_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:75;a:4:{s:1:\"a\";i:204;s:1:\"b\";s:11:\"update_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:76;a:4:{s:1:\"a\";i:205;s:1:\"b\";s:11:\"delete_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:77;a:4:{s:1:\"a\";i:206;s:1:\"b\";s:15:\"delete_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:78;a:4:{s:1:\"a\";i:207;s:1:\"b\";s:12:\"view_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:79;a:4:{s:1:\"a\";i:208;s:1:\"b\";s:16:\"view_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:80;a:4:{s:1:\"a\";i:209;s:1:\"b\";s:14:\"create_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:81;a:4:{s:1:\"a\";i:210;s:1:\"b\";s:14:\"update_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:82;a:4:{s:1:\"a\";i:211;s:1:\"b\";s:15:\"restore_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:83;a:4:{s:1:\"a\";i:212;s:1:\"b\";s:19:\"restore_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:84;a:4:{s:1:\"a\";i:213;s:1:\"b\";s:17:\"replicate_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:85;a:4:{s:1:\"a\";i:214;s:1:\"b\";s:15:\"reorder_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:86;a:4:{s:1:\"a\";i:215;s:1:\"b\";s:14:\"delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:87;a:4:{s:1:\"a\";i:216;s:1:\"b\";s:18:\"delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:88;a:4:{s:1:\"a\";i:217;s:1:\"b\";s:20:\"force_delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:89;a:4:{s:1:\"a\";i:218;s:1:\"b\";s:24:\"force_delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:90;a:4:{s:1:\"a\";i:219;s:1:\"b\";s:22:\"view_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:91;a:4:{s:1:\"a\";i:220;s:1:\"b\";s:26:\"view_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:92;a:4:{s:1:\"a\";i:221;s:1:\"b\";s:24:\"create_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:93;a:4:{s:1:\"a\";i:222;s:1:\"b\";s:24:\"update_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:94;a:4:{s:1:\"a\";i:223;s:1:\"b\";s:25:\"restore_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:95;a:4:{s:1:\"a\";i:224;s:1:\"b\";s:29:\"restore_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:96;a:4:{s:1:\"a\";i:225;s:1:\"b\";s:27:\"replicate_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:97;a:4:{s:1:\"a\";i:226;s:1:\"b\";s:25:\"reorder_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:98;a:4:{s:1:\"a\";i:227;s:1:\"b\";s:24:\"delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:99;a:4:{s:1:\"a\";i:228;s:1:\"b\";s:28:\"delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:100;a:4:{s:1:\"a\";i:229;s:1:\"b\";s:30:\"force_delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:101;a:4:{s:1:\"a\";i:230;s:1:\"b\";s:34:\"force_delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:102;a:4:{s:1:\"a\";i:231;s:1:\"b\";s:8:\"view_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:103;a:4:{s:1:\"a\";i:232;s:1:\"b\";s:12:\"view_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:104;a:4:{s:1:\"a\";i:233;s:1:\"b\";s:10:\"create_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:105;a:4:{s:1:\"a\";i:234;s:1:\"b\";s:10:\"update_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:106;a:4:{s:1:\"a\";i:235;s:1:\"b\";s:11:\"restore_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:107;a:4:{s:1:\"a\";i:236;s:1:\"b\";s:15:\"restore_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:108;a:4:{s:1:\"a\";i:237;s:1:\"b\";s:13:\"replicate_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:109;a:4:{s:1:\"a\";i:238;s:1:\"b\";s:11:\"reorder_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:110;a:4:{s:1:\"a\";i:239;s:1:\"b\";s:10:\"delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:111;a:4:{s:1:\"a\";i:240;s:1:\"b\";s:14:\"delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:112;a:4:{s:1:\"a\";i:241;s:1:\"b\";s:16:\"force_delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:113;a:4:{s:1:\"a\";i:242;s:1:\"b\";s:20:\"force_delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:114;a:4:{s:1:\"a\";i:243;s:1:\"b\";s:9:\"view_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:115;a:4:{s:1:\"a\";i:244;s:1:\"b\";s:13:\"view_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:116;a:4:{s:1:\"a\";i:245;s:1:\"b\";s:11:\"create_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:117;a:4:{s:1:\"a\";i:246;s:1:\"b\";s:11:\"update_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:118;a:4:{s:1:\"a\";i:247;s:1:\"b\";s:12:\"restore_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:119;a:4:{s:1:\"a\";i:248;s:1:\"b\";s:16:\"restore_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:120;a:4:{s:1:\"a\";i:249;s:1:\"b\";s:14:\"replicate_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:121;a:4:{s:1:\"a\";i:250;s:1:\"b\";s:12:\"reorder_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:122;a:4:{s:1:\"a\";i:251;s:1:\"b\";s:11:\"delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:123;a:4:{s:1:\"a\";i:252;s:1:\"b\";s:15:\"delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:124;a:4:{s:1:\"a\";i:253;s:1:\"b\";s:17:\"force_delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:125;a:4:{s:1:\"a\";i:254;s:1:\"b\";s:21:\"force_delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:126;a:4:{s:1:\"a\";i:255;s:1:\"b\";s:24:\"page_GeneralSettingsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:127;a:3:{s:1:\"a\";i:256;s:1:\"b\";s:12:\"page_ViewEnv\";s:1:\"c\";s:3:\"web\";}i:128;a:3:{s:1:\"a\";i:257;s:1:\"b\";s:21:\"widget_OptimizeButton\";s:1:\"c\";s:3:\"web\";}i:129;a:4:{s:1:\"a\";i:258;s:1:\"b\";s:18:\"page_EnvEditorPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:130;a:4:{s:1:\"a\";i:259;s:1:\"b\";s:24:\"page_GoogleAnalyticsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:131;a:4:{s:1:\"a\";i:260;s:1:\"b\";s:12:\"view_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:132;a:4:{s:1:\"a\";i:261;s:1:\"b\";s:16:\"view_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:133;a:4:{s:1:\"a\";i:262;s:1:\"b\";s:14:\"create_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:134;a:4:{s:1:\"a\";i:263;s:1:\"b\";s:14:\"update_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:135;a:4:{s:1:\"a\";i:264;s:1:\"b\";s:15:\"restore_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:136;a:4:{s:1:\"a\";i:265;s:1:\"b\";s:19:\"restore_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:137;a:4:{s:1:\"a\";i:266;s:1:\"b\";s:17:\"replicate_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:138;a:4:{s:1:\"a\";i:267;s:1:\"b\";s:15:\"reorder_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:139;a:4:{s:1:\"a\";i:268;s:1:\"b\";s:14:\"delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:140;a:4:{s:1:\"a\";i:269;s:1:\"b\";s:18:\"delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:141;a:4:{s:1:\"a\";i:270;s:1:\"b\";s:20:\"force_delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:142;a:4:{s:1:\"a\";i:271;s:1:\"b\";s:24:\"force_delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:143;a:4:{s:1:\"a\";i:272;s:1:\"b\";s:18:\"view_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:144;a:4:{s:1:\"a\";i:273;s:1:\"b\";s:22:\"view_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:145;a:4:{s:1:\"a\";i:274;s:1:\"b\";s:20:\"create_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:146;a:4:{s:1:\"a\";i:275;s:1:\"b\";s:20:\"update_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:147;a:4:{s:1:\"a\";i:276;s:1:\"b\";s:21:\"restore_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:148;a:4:{s:1:\"a\";i:277;s:1:\"b\";s:25:\"restore_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:149;a:4:{s:1:\"a\";i:278;s:1:\"b\";s:23:\"replicate_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:150;a:4:{s:1:\"a\";i:279;s:1:\"b\";s:21:\"reorder_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:151;a:4:{s:1:\"a\";i:280;s:1:\"b\";s:20:\"delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:152;a:4:{s:1:\"a\";i:281;s:1:\"b\";s:24:\"delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:153;a:4:{s:1:\"a\";i:282;s:1:\"b\";s:26:\"force_delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:154;a:4:{s:1:\"a\";i:283;s:1:\"b\";s:30:\"force_delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:155;a:4:{s:1:\"a\";i:284;s:1:\"b\";s:18:\"page_DashboardPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:7;i:3;i:8;}}}s:5:\"roles\";a:4:{i:0;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:5:\"Admin\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:7;s:1:\"b\";s:10:\"Superadmin\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:9:\"Developer\";s:1:\"c\";s:3:\"web\";}i:3;a:3:{s:1:\"a\";i:8;s:1:\"b\";s:4:\"User\";s:1:\"c\";s:3:\"web\";}}}', 1750398453);
 
 -- --------------------------------------------------------
 
@@ -138,7 +158,71 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `category_name`, `slug`, `default`, `searchable`, `card_layout`, `detail_page`, `fields`, `created_at`, `updated_at`) VALUES
-(1, 'Artikel', 'artikel', 1, 1, 'artikel', 'artikel', '[]', NULL, '2025-05-09 10:24:30');
+(1, 'Artikel', 'artikel', 1, 1, 'artikel', 'artikel', '[]', NULL, '2025-06-16 17:29:19'),
+(2, 'Event', 'event', 0, 0, 'event', 'event', '[]', '2025-06-16 17:24:41', '2025-06-16 17:29:26');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chatbot_messages`
+--
+
+CREATE TABLE `chatbot_messages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `session_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `sender` enum('user','bot') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `chatbot_messages`
+--
+
+INSERT INTO `chatbot_messages` (`id`, `session_id`, `sender`, `message`, `created_at`, `updated_at`) VALUES
+(38, 16, 'user', '1+1', '2025-06-13 09:16:45', '2025-06-13 09:16:45'),
+(39, 16, 'bot', '2\n', '2025-06-13 09:16:48', '2025-06-13 09:16:48'),
+(40, 16, 'user', '2+2', '2025-06-13 09:16:57', '2025-06-13 09:16:57'),
+(41, 16, 'bot', '4\n', '2025-06-13 09:16:58', '2025-06-13 09:16:58'),
+(42, 16, 'user', '3+3', '2025-06-13 09:17:05', '2025-06-13 09:17:05'),
+(43, 16, 'bot', '6\n', '2025-06-13 09:17:07', '2025-06-13 09:17:07'),
+(44, 16, 'user', '4+4', '2025-06-13 09:17:15', '2025-06-13 09:17:15'),
+(45, 16, 'bot', '8\n', '2025-06-13 09:17:17', '2025-06-13 09:17:17'),
+(46, 16, 'user', 'Penjumlahan yang kedua tadi berapa hasilnya?', '2025-06-13 09:17:59', '2025-06-13 09:17:59'),
+(47, 16, 'bot', 'Hasil penjumlahan yang kedua (2+2) adalah 4.\n', '2025-06-13 09:18:01', '2025-06-13 09:18:01'),
+(48, 16, 'user', '6*6?', '2025-06-16 18:58:04', '2025-06-16 18:58:04'),
+(49, 16, 'bot', '36\n', '2025-06-16 18:58:11', '2025-06-16 18:58:11'),
+(50, 17, 'bot', 'Oke, saya akan membuat artikel, ringkasan, meta title, dan meta description berdasarkan data yang Anda berikan. Karena Anda tidak memberikan label gambar, teks dalam gambar, topik terkait gambar, dan prompt tambahan, saya akan membuatnya secara umum berdasarkan judul artikel.\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, yang dirayakan seminggu setelah Idul Fitri, menjadi berkah tersendiri bagi warga Punia, Kota Mataram. Momen ini dimanfaatkan oleh banyak warga untuk menjajakan ketupat dan opor, hidangan khas yang selalu hadir dalam perayaan Lebaran Topat.\n\nDi sepanjang jalanan Punia, terlihat deretan lapak-lapak sederhana yang menjajakan ketupat yang baru matang, mengepulkan aroma pandan yang menggugah selera. Opor ayam dan daging sapi pun tak kalah menggoda, dengan kuah santan kental berwarna kuning keemasan.\n\n\"Alhamdulillah, setiap tahun Lebaran Topat selalu ramai. Banyak yang mencari ketupat dan opor untuk merayakan bersama keluarga,\" ujar Ibu Siti, salah seorang pedagang ketupat di Punia. \"Penjualan biasanya meningkat drastis dibanding hari biasa. Ini rezeki Lebaran Topat,\" tambahnya.\n\nLebaran Topat sendiri merupakan tradisi unik yang berasal dari Lombok, Nusa Tenggara Barat. Perayaan ini merupakan wujud syukur atas keberhasilan menjalankan ibadah puasa Ramadan sebulan penuh. Ketupat, yang terbuat dari beras yang dibungkus dengan anyaman janur kuning, menjadi simbol kesempurnaan dan keberkahan.\n\nSelain menjual ketupat dan opor, banyak warga Punia yang juga menjajakan berbagai jenis kue tradisional dan minuman segar. Suasana meriah dan penuh kekeluargaan sangat terasa di sepanjang jalanan Punia.\n\nTradisi Lebaran Topat tidak hanya menjadi momen untuk bersantap hidangan lezat, tetapi juga menjadi ajang silaturahmi dan mempererat tali persaudaraan antar warga. Keberadaan para pedagang ketupat dan opor di Punia menjadi bagian tak terpisahkan dari kemeriahan perayaan Lebaran Topat di Kota Mataram. Mereka berkontribusi dalam melestarikan tradisi dan menghidupkan perekonomian lokal.\n\n[Ringkasan]\n\nLebaran Topat: Warga Punia jualan ketupat & opor.\n\n[Meta Title]\n\nLebaran Topat: Warga Punia Raup Berkah Jualan Ketupat\n\n[Meta Description]\n\nLebaran Topat di Mataram, warga Punia manfaatkan berjualan ketupat dan opor. Tradisi yang membawa berkah ekonomi lokal.\n', '2025-06-17 20:12:41', '2025-06-17 20:12:41'),
+(51, 17, 'bot', 'Oke, ini dia draft artikel, ringkasan, meta title, dan meta description yang saya buat berdasarkan data yang Anda berikan:\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, yang dirayakan seminggu setelah Idul Fitri, menjadi berkah tersendiri bagi warga Kelurahan Punia, Kota Mataram. Momentum ini dimanfaatkan secara optimal oleh masyarakat setempat untuk menjajakan ketupat dan opor ayam, dua hidangan ikonik yang tak terpisahkan dari perayaan Lebaran Topat. Aroma gurih ketupat dan rempah opor ayam menguar di sepanjang jalanan Punia, mengundang selera siapapun yang melintas.\n\nPara pedagang dadakan ini mulai beraktivitas sejak pagi buta, mempersiapkan dagangan mereka dengan penuh semangat. Ketupat yang pulen dan opor ayam yang kaya rasa menjadi andalan utama. Tak jarang, resep opor ayam yang diturunkan dari generasi ke generasi menjadi daya tarik tersendiri bagi para pembeli.\n\n\"Setiap Lebaran Topat, saya selalu berjualan ketupat dan opor. Ini sudah menjadi tradisi keluarga,\" ujar Ibu Aminah, salah seorang pedagang ketupat di Punia. \"Alhamdulillah, setiap tahun selalu ramai pembeli. Rezeki Lebaran Topat memang berkah,\" tambahnya dengan senyum sumringah.\n\nLebaran Topat bukan hanya soal hidangan lezat, tetapi juga menjadi ajang silaturahmi dan mempererat tali persaudaraan. Masyarakat berbondong-bondong mengunjungi sanak saudara dan tetangga, membawa ketupat dan opor sebagai simbol kebersamaan. Suasana hangat dan penuh kekeluargaan terasa begitu kental di setiap sudut Kelurahan Punia.\n\nPemerintah Kota Mataram pun turut mendukung tradisi Lebaran Topat ini dengan mengadakan berbagai kegiatan budaya dan hiburan. Hal ini semakin memeriahkan suasana dan menarik wisatawan dari berbagai daerah untuk datang dan merasakan langsung kemeriahan Lebaran Topat di Kota Mataram. Dengan perpaduan antara tradisi kuliner, silaturahmi, dan dukungan pemerintah, Lebaran Topat di Punia, Kota Mataram, menjadi sebuah perayaan yang tak terlupakan.\n\n[Ringkasan]\n\nLebaran Topat berkah bagi penjual ketupat opor di Mataram.\n\n[Meta Title]\n\nLebaran Topat: Warga Mataram Jualan Ketupat Opor Raup Untung!\n\n[Meta Description]\n\nLebaran Topat di Mataram, warga Punia manfaatkan momen jual ketupat dan opor. Tradisi yang membawa berkah ekonomi dan silaturahmi.\n', '2025-06-17 20:19:24', '2025-06-17 20:19:24'),
+(52, 17, 'bot', 'Oke, saya akan membuat artikel, ringkasan, meta title, dan meta description berdasarkan data yang Anda berikan. Karena Anda tidak memberikan label, teks dalam gambar, topik terkait gambar, dan prompt tambahan, saya akan membuatnya berdasarkan judul artikel saja.\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, yang dirayakan seminggu setelah Idul Fitri, menjadi berkah tersendiri bagi warga Kelurahan Punia, Kota Mataram. Momen ini dimanfaatkan untuk menjajakan ketupat dan opor ayam, hidangan khas yang selalu dicari saat Lebaran Topat. Suasana di sekitar Punia pun mendadak ramai dengan lapak-lapak dadakan yang menjajakan kelezatan kuliner tradisional ini.\n\nDari pagi hingga sore hari, aroma harum ketupat yang direbus dan kuah opor yang menggugah selera menyeruak di udara. Para pembeli berdatangan dari berbagai penjuru kota untuk menikmati hidangan khas ini bersama keluarga dan kerabat. Lebaran Topat memang menjadi ajang silaturahmi dan berbagi kebahagiaan, dan kehadiran ketupat opor menjadi pelengkap yang tak terpisahkan.\n\n\"Alhamdulillah, setiap Lebaran Topat selalu jualan ketupat dan opor. Lumayan buat menambah penghasilan,\" ujar Ibu Aminah, salah seorang penjual ketupat opor di Punia. Ia mengaku, permintaan ketupat opor selalu meningkat menjelang dan saat Lebaran Topat. \"Banyak yang pesan untuk acara keluarga atau sekadar dinikmati bersama tetangga.\"\n\nTidak hanya Ibu Aminah, banyak warga Punia lainnya yang turut memanfaatkan momen ini untuk berjualan. Ada yang menjual ketupat saja, ada yang menjual opor, dan ada pula yang menawarkan paket lengkap ketupat dan opor. Harga yang ditawarkan pun bervariasi, tergantung ukuran dan kualitas bahan yang digunakan.\n\nKehadiran para penjual ketupat dan opor ini tidak hanya memberikan keuntungan ekonomi bagi warga Punia, tetapi juga turut melestarikan tradisi kuliner Lebaran Topat. Dengan menikmati hidangan khas ini, masyarakat tidak hanya merasakan kelezatan rasanya, tetapi juga ikut menghidupkan kembali tradisi yang telah diwariskan secara turun temurun.\n\nLebaran Topat di Punia, Kota Mataram, bukan hanya tentang perayaan keagamaan, tetapi juga tentang semangat gotong royong, kreativitas, dan kecintaan terhadap tradisi lokal. Semoga tradisi ini terus lestari dan menjadi daya tarik tersendiri bagi Kota Mataram.\n\n[Ringkasan]\n\nWarga Punia jual ketupat opor saat Lebaran Topat.\n\n[Meta Title]\n\nLebaran Topat: Warga Mataram Jualan Ketupat Opor\n\n[Meta Description]\n\nWarga Punia, Mataram, manfaatkan Lebaran Topat untuk berjualan ketupat dan opor. Tradisi kuliner yang meningkatkan ekonomi lokal.\n', '2025-06-18 00:04:22', '2025-06-18 00:04:22'),
+(53, 17, 'bot', 'Oke, berdasarkan data yang diberikan, berikut adalah artikel yang saya buat:\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, atau Lebaran Ketupat, yang dirayakan seminggu setelah Hari Raya Idul Fitri, menjadi berkah tersendiri bagi warga Kelurahan Punia, Kota Mataram. Momentum ini dimanfaatkan untuk mendulang rezeki dengan berjualan ketupat dan opor ayam, hidangan khas yang selalu hadir dalam perayaan Lebaran Topat.\n\nSejak pagi hari, aroma khas ketupat yang direbus memenuhi udara di sekitar Punia. Puluhan lapak dadakan berjejer di sepanjang jalan, menawarkan berbagai ukuran ketupat, mulai dari yang kecil hingga jumbo. Opor ayam, dengan kuah santan yang kaya rempah, juga menjadi primadona yang banyak dicari pembeli.\n\n\"Alhamdulillah, setiap tahun saat Lebaran Topat, jualan ketupat dan opor ini selalu ramai. Lumayan untuk menambah penghasilan keluarga,\" ujar Ibu Aminah, salah seorang pedagang ketupat di Punia. Ia mengaku sudah berjualan ketupat saat Lebaran Topat selama lebih dari 10 tahun.\n\nPara pembeli pun datang dari berbagai penjuru Kota Mataram dan sekitarnya. Mereka sengaja datang ke Punia untuk membeli ketupat dan opor yang terkenal enak dan murah. \"Rasanya beda dengan ketupat yang dijual di tempat lain. Di sini lebih otentik dan harganya juga terjangkau,\" kata Bapak Budi, seorang pembeli dari Cakranegara.\n\nLebaran Topat bukan hanya sekadar tradisi makan ketupat dan opor. Lebih dari itu, momen ini menjadi ajang silaturahmi antar keluarga dan kerabat. Setelah melaksanakan salat sunah Topat di masjid atau musala, masyarakat biasanya saling berkunjung untuk menikmati hidangan ketupat dan opor bersama.\n\nPemerintah Kota Mataram juga mendukung penuh tradisi Lebaran Topat ini. Berbagai kegiatan budaya digelar untuk memeriahkan perayaan tersebut, seperti pawai budaya, lomba masak ketupat, dan pertunjukan seni tradisional.\n\nDengan adanya dukungan dari pemerintah dan antusiasme masyarakat, Lebaran Topat di Kota Mataram semakin meriah dari tahun ke tahun. Tradisi ini diharapkan dapat terus dilestarikan sebagai bagian dari kekayaan budaya Indonesia.\n\n[Rinkasan]\n\nLebaran Topat, berkah bagi pedagang Punia\n\n[Meta Title]\n\nLebaran Topat: Warga Mataram Berjualan Ketupat & Opor!\n\n[Meta Description]\n\nLebaran Topat di Mataram: Warga Punia manfaatkan berjualan ketupat & opor. Tradisi, silaturahmi, dan berkah ekonomi!\n', '2025-06-18 00:23:48', '2025-06-18 00:23:48'),
+(54, 17, 'bot', 'Oke, siap! Berdasarkan data yang diberikan, berikut adalah artikel beserta metadata SEO yang diminta:\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, atau Lebaran Ketupat, menjadi berkah tersendiri bagi warga Kelurahan Punia, Kota Mataram. Sehari setelah Hari Raya Idul Fitri, kawasan ini dipenuhi oleh pedagang dadakan yang menjajakan ketupat dan opor ayam, makanan khas yang menjadi simbol perayaan Lebaran Topat.\n\nPantauan di lokasi menunjukkan, puluhan warga Punia memadati sepanjang jalan utama kelurahan, menggelar lapak sederhana dengan berbagai ukuran. Tumpukan ketupat yang baru matang, aroma opor ayam yang menggugah selera, serta berbagai lauk pauk pendamping lainnya, menjadi daya tarik utama bagi para pembeli.\n\n\"Alhamdulillah, setiap tahun saat Lebaran Topat, saya selalu berjualan ketupat dan opor di sini,\" ujar Ibu Aminah, salah seorang pedagang. \"Ini sudah menjadi tradisi turun temurun di keluarga kami. Hasilnya lumayan untuk menambah pendapatan keluarga.\"\n\nLebaran Topat sendiri merupakan tradisi perayaan yang dilakukan oleh masyarakat Muslim di Lombok, Nusa Tenggara Barat, seminggu setelah Hari Raya Idul Fitri. Perayaan ini ditandai dengan membuat dan menyantap ketupat, makanan yang terbuat dari beras yang dimasukkan ke dalam anyaman janur kelapa.\n\nSelain menjadi momen untuk bersilaturahmi dan berbagi kebahagiaan, Lebaran Topat juga menjadi ajang untuk melestarikan tradisi kuliner khas Lombok. Tak heran, setiap tahunnya, perayaan ini selalu meriah dan dipadati oleh warga, baik dari dalam maupun luar Kota Mataram.\n\nPara pedagang pun memanfaatkan momen ini untuk meraup rezeki. Harga ketupat dan opor ayam bervariasi, tergantung ukuran dan bahan yang digunakan. Namun, secara umum, harga masih terjangkau oleh masyarakat.\n\n\"Kami berharap, tradisi Lebaran Topat ini akan terus dilestarikan dan menjadi daya tarik wisata bagi Kota Mataram,\" harap Bapak Hasan, salah seorang tokoh masyarakat setempat. \"Dengan begitu, selain melestarikan budaya, juga dapat meningkatkan perekonomian masyarakat.\"\n\n[Ringkasan]\nWarga Punia Mataram jual ketupat saat Lebaran Topat.\n\n[Meta Title]\nLebaran Topat: Warga Punia Mataram Raup Rezeki Jualan Ketupat\n\n[Meta Description]\nLebaran Topat di Mataram dimanfaatkan warga Punia untuk berjualan ketupat dan opor ayam. Momen raih rezeki dan lestarikan tradisi.\n', '2025-06-18 00:24:32', '2025-06-18 00:24:32'),
+(55, 18, 'user', 'Berikan saya saran judul dari perjalanan wisata di lombok', '2025-06-18 00:33:40', '2025-06-18 00:33:40'),
+(56, 18, 'bot', 'Tentu, ini beberapa saran judul perjalanan wisata di Lombok, dikategorikan berdasarkan tema dan gaya:\n\nJudul Umum & Menarik:\n\n*   Lombok: Pesona yang Tersembunyi\n*   Lombok Calling: Petualangan di Pulau Seribu Masjid\n*   Eksplorasi Lombok: Surga Tersembunyi Indonesia\n*   Lombok: Lebih dari Sekadar Gili\n*   Lombok Diaries: Catatan Perjalanan Tak Terlupakan\n\nJudul yang Menekankan Keindahan Alam:\n\n*   Lombok: Emerald Island Getaway\n*   Menyapa Mentari di Pantai Lombok\n*   Lombok: Keajaiban Alam yang Memukau\n*   Dari Rinjani ke Laut: Keindahan Lombok yang Abadi\n*   Lombok: Simfoni Alam yang Mempesona\n\nJudul yang Lebih Spesifik (Jika Anda punya fokus tertentu):\n\n*   Lombok: Surga Para Peselancar (Jika fokus pada surfing)\n*   Rinjani Calling: Pendakian yang Menguji Adrenalin (Jika fokus pada pendakian Rinjani)\n*   Lombok\'s Culinary Journey: Menggugah Selera di Pulau Lombok (Jika fokus pada kuliner)\n*   Lombok\'s Underwater Wonders: Diving and Snorkeling Paradise (Jika fokus pada diving/snorkeling)\n*   Mengenal Budaya Sasak: Perjalanan Spiritual di Lombok (Jika fokus pada budaya)\n\nJudul yang Kreatif & Unik:\n\n*   Lombok: Bukan Sekadar Mimpi\n*   Lombok: Tempat di Mana Jantung Berdegup Lebih Kencang\n*   Lombok: Untold Story\n*   Lombok: Get Lost and Found\n*   Lombok: A Piece of Paradise\n\nTips Tambahan:\n\n*   Pertimbangkan target audiens Anda: Apakah ini untuk blog pribadi, media sosial, atau tujuan komersial?\n*   Gunakan kata kunci yang relevan: Jika Anda ingin orang menemukan perjalanan Anda secara online, gunakan kata kunci seperti \"Lombok\", \"wisata Lombok\", \"liburan Lombok\", dll.\n*   Jadikan judulnya singkat dan mudah diingat.\n*   Sesuaikan dengan isi perjalanan Anda: Pastikan judulnya mencerminkan apa yang akan Anda bagikan.\n\nSemoga ini membantu!', '2025-06-18 00:33:45', '2025-06-18 00:33:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chatbot_sessions`
+--
+
+CREATE TABLE `chatbot_sessions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `chatbot_sessions`
+--
+
+INSERT INTO `chatbot_sessions` (`id`, `title`, `user_id`, `created_at`, `updated_at`) VALUES
+(16, 'Penjumlahan Sederhana: 1+1', 1, '2025-06-13 09:16:45', '2025-06-13 09:16:45'),
+(17, 'Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor', 1, '2025-06-17 20:12:41', '2025-06-17 20:12:41'),
+(18, 'Wisata Lombok: Judul Singkat', 2, '2025-06-18 00:33:40', '2025-06-18 00:33:40');
 
 -- --------------------------------------------------------
 
@@ -188,7 +272,7 @@ CREATE TABLE `general_settings` (
 --
 
 INSERT INTO `general_settings` (`id`, `site_name`, `site_description`, `site_logo`, `site_favicon`, `site_url`, `site_dashboard_url`, `location`, `contacts`, `theme`, `email_settings`, `social_network`, `navigation`, `features`, `google_analytics`, `user_features`, `created_at`, `updated_at`) VALUES
-(1, 'Lombok', NULL, NULL, NULL, NULL, 'dashboard', '{\"url\": null, \"address\": null, \"coordinate\": {\"lat\": -8.695344881691632, \"lng\": 115.2128291130066}}', '{\"email\": \"lombok@gmail.com\", \"phone\": \"03701234\", \"whatsapp\": null}', '{\"primary\": {\"50\": \"245, 245, 253\", \"100\": \"235, 235, 250\", \"200\": \"204, 204, 243\", \"300\": \"173, 173, 236\", \"400\": \"112, 112, 221\", \"500\": \"50, 50, 207\", \"600\": \"45, 45, 186\", \"700\": \"38, 38, 155\", \"800\": \"30, 30, 124\", \"900\": \"25, 25, 101\", \"950\": \"15, 15, 62\"}, \"tertiary\": null, \"secondary\": null}', '{\"mail_to\": null, \"smtp_host\": \"sandbox.smtp.mailtrap.io\", \"smtp_port\": \"2525\", \"smtp_timeout\": null, \"smtp_password\": \"f9c7ce4781c953\", \"smtp_username\": \"08c61c0b0a50c8\", \"amazon_ses_key\": null, \"mailgun_domain\": null, \"mailgun_secret\": null, \"postmark_token\": null, \"email_from_name\": \"ExRyze\", \"smtp_encryption\": \"tls\", \"mailgun_endpoint\": null, \"amazon_ses_region\": null, \"amazon_ses_secret\": null, \"email_from_address\": \"exryze4@gmail.com\", \"default_email_provider\": \"smtp\"}', '{\"tiktok\": {\"url\": null, \"label\": null}, \"twitter\": {\"url\": null, \"label\": null}, \"youtube\": {\"url\": null, \"label\": null}, \"facebook\": {\"url\": null, \"label\": null}, \"linkedin\": {\"url\": null, \"label\": null}, \"whatsapp\": {\"url\": null, \"label\": null}, \"instagram\": {\"url\": null, \"label\": null}, \"pinterest\": {\"url\": null, \"label\": null}}', '{\"home\": \"1\", \"footer\": \"1\", \"header\": \"2\", \"search\": \"8\", \"nav_items\": [{\"link\": null, \"page\": \"10\", \"type\": \"page\"}, {\"link\": null, \"page\": \"9\", \"type\": \"page\"}]}', '{\"sponsors\":true,\"analytics\":false}', '{\"google_analytics_tag\": null, \"service-account-credentials\": null}', '{\"chatbot\":false}', NULL, '2025-05-20 10:01:30');
+(1, 'Lombok', NULL, NULL, NULL, NULL, 'dashboard', '{\"url\": \"http://127.0.0.1:8000/dashboard/general-settings\", \"address\": \"Kantor desa\", \"coordinate\": {\"lat\": -8.596655771786356, \"lng\": 116.09974429898593}}', '{\"email\": \"lombok@gmail.com\", \"phone\": \"03701234\", \"whatsapp\": null}', '{\"primary\": {\"50\": \"245, 245, 253\", \"100\": \"235, 235, 250\", \"200\": \"204, 204, 243\", \"300\": \"173, 173, 236\", \"400\": \"112, 112, 221\", \"500\": \"50, 50, 207\", \"600\": \"45, 45, 186\", \"700\": \"38, 38, 155\", \"800\": \"30, 30, 124\", \"900\": \"25, 25, 101\", \"950\": \"15, 15, 62\"}, \"tertiary\": null, \"secondary\": null}', '{\"mail_to\": null, \"smtp_host\": \"sandbox.smtp.mailtrap.io\", \"smtp_port\": \"2525\", \"smtp_timeout\": null, \"smtp_password\": \"f9c7ce4781c953\", \"smtp_username\": \"08c61c0b0a50c8\", \"amazon_ses_key\": null, \"mailgun_domain\": null, \"mailgun_secret\": null, \"postmark_token\": null, \"email_from_name\": \"ExRyze\", \"smtp_encryption\": \"tls\", \"mailgun_endpoint\": null, \"amazon_ses_region\": null, \"amazon_ses_secret\": null, \"email_from_address\": \"exryze4@gmail.com\", \"default_email_provider\": \"smtp\"}', '{\"tiktok\": {\"url\": null, \"label\": null}, \"twitter\": {\"url\": null, \"label\": null}, \"youtube\": {\"url\": null, \"label\": null}, \"facebook\": {\"url\": null, \"label\": null}, \"linkedin\": {\"url\": null, \"label\": null}, \"whatsapp\": {\"url\": null, \"label\": null}, \"instagram\": {\"url\": null, \"label\": null}, \"pinterest\": {\"url\": null, \"label\": null}}', '{\"home\": \"1\", \"footer\": \"1\", \"header\": \"2\", \"search\": \"8\", \"nav_items\": [{\"link\": null, \"page\": \"10\", \"type\": \"page\"}, {\"link\": null, \"page\": \"11\", \"type\": \"page\"}, {\"link\": null, \"page\": \"9\", \"type\": \"page\"}]}', '{\"sponsors\":true,\"analytics\":false}', '{\"google_analytics_tag\": null, \"service-account-credentials\": null}', '{\"chatbot\":false}', NULL, '2025-06-17 11:54:55');
 
 -- --------------------------------------------------------
 
@@ -263,7 +347,8 @@ INSERT INTO `media` (`id`, `disk`, `directory`, `visibility`, `name`, `path`, `w
 (3, 'public', 'images', 'public', 'b5dacb1b-fa8d-4baa-99d2-675e074ee97a', 'images/b5dacb1b-fa8d-4baa-99d2-675e074ee97a.jpg', 750, 500, 70030, 'image/jpeg', 'jpg', NULL, '65eff226e5b93', NULL, NULL, '{\"FileName\":\"HHnhR8xlKeBRInZnaeWZgfxhjd5nVO-metaNjVlZmYyMjZlNWI5My5qcGc=-.jpg\",\"FileDateTime\":1746810632,\"FileSize\":70030,\"FileType\":2,\"MimeType\":\"image\\/jpeg\",\"SectionsFound\":\"\",\"COMPUTED\":{\"html\":\"width=\\\"750\\\" height=\\\"500\\\"\",\"Height\":500,\"Width\":750,\"IsColor\":1}}', NULL, '2025-05-09 16:10:41', '2025-05-09 16:10:41', NULL),
 (4, 'public', 'images', 'public', 'bcf57cb8-318a-4b22-b9de-6ab2624e454d', 'images/bcf57cb8-318a-4b22-b9de-6ab2624e454d.jpg', 750, 500, 40523, 'image/jpeg', 'jpg', NULL, '65eff22b4120e', NULL, NULL, '{\"FileName\":\"AMmduU7lW8zrjPYITGNqmjNMb8Wjhc-metaNjVlZmYyMmI0MTIwZS5qcGc=-.jpg\",\"FileDateTime\":1746810744,\"FileSize\":40523,\"FileType\":2,\"MimeType\":\"image\\/jpeg\",\"SectionsFound\":\"\",\"COMPUTED\":{\"html\":\"width=\\\"750\\\" height=\\\"500\\\"\",\"Height\":500,\"Width\":750,\"IsColor\":1}}', NULL, '2025-05-09 16:12:27', '2025-05-09 16:12:27', NULL),
 (5, 'public', 'images', 'public', 'f90afa32-2b7a-4eca-b04e-9ec835834f48', 'images/f90afa32-2b7a-4eca-b04e-9ec835834f48.jpeg', 750, 500, 77286, 'image/jpeg', 'jpeg', NULL, '65eff6e37d6a2', NULL, NULL, '{\"FileName\":\"xWcGTJt27JltvbBvn1tNpuUjTwtGO6-metaNjVlZmY2ZTM3ZDZhMi5qcGVn-.jpeg\",\"FileDateTime\":1746810803,\"FileSize\":77286,\"FileType\":2,\"MimeType\":\"image\\/jpeg\",\"SectionsFound\":\"\",\"COMPUTED\":{\"html\":\"width=\\\"750\\\" height=\\\"500\\\"\",\"Height\":500,\"Width\":750,\"IsColor\":1}}', NULL, '2025-05-09 16:13:28', '2025-05-09 16:13:28', NULL),
-(6, 'public', 'images', 'public', '1cbb080e-6f12-445e-9c59-4584f36d08ec', 'images/1cbb080e-6f12-445e-9c59-4584f36d08ec.jpg', 700, 393, 64243, 'image/jpeg', 'jpg', NULL, 'Jual-ketupat-untuk-lebaran', NULL, NULL, '{\"FileName\":\"uF0Cr5mTPzOCmZ0hWr5CwIvKE7nCqr-metaSnVhbC1rZXR1cGF0LXVudHVrLWxlYmFyYW4uanBn-.jpg\",\"FileDateTime\":1746811495,\"FileSize\":64243,\"FileType\":2,\"MimeType\":\"image\\/jpeg\",\"SectionsFound\":\"COMMENT\",\"COMPUTED\":{\"html\":\"width=\\\"700\\\" height=\\\"393\\\"\",\"Height\":393,\"Width\":700,\"IsColor\":1},\"COMMENT\":[\"CREATOR: gd-jpeg v1.0 (using IJG JPEG v80), default quality\\n\"]}', NULL, '2025-05-09 16:25:02', '2025-05-09 16:25:02', NULL);
+(6, 'public', 'images', 'public', '1cbb080e-6f12-445e-9c59-4584f36d08ec', 'images/1cbb080e-6f12-445e-9c59-4584f36d08ec.jpg', 700, 393, 64243, 'image/jpeg', 'jpg', NULL, 'Jual-ketupat-untuk-lebaran', NULL, NULL, '{\"FileName\":\"uF0Cr5mTPzOCmZ0hWr5CwIvKE7nCqr-metaSnVhbC1rZXR1cGF0LXVudHVrLWxlYmFyYW4uanBn-.jpg\",\"FileDateTime\":1746811495,\"FileSize\":64243,\"FileType\":2,\"MimeType\":\"image\\/jpeg\",\"SectionsFound\":\"COMMENT\",\"COMPUTED\":{\"html\":\"width=\\\"700\\\" height=\\\"393\\\"\",\"Height\":393,\"Width\":700,\"IsColor\":1},\"COMMENT\":[\"CREATOR: gd-jpeg v1.0 (using IJG JPEG v80), default quality\\n\"]}', NULL, '2025-05-09 16:25:02', '2025-05-09 16:25:02', NULL),
+(7, 'public', 'media', 'public', '18e4e785-da6d-4b0b-84ce-d77c5c7be956', 'media/18e4e785-da6d-4b0b-84ce-d77c5c7be956.png', 510, 508, 45676, 'image/png', 'png', NULL, 'logo-pnb.3aae610b', NULL, NULL, NULL, NULL, '2025-06-16 08:38:18', '2025-06-16 08:38:18', NULL);
 
 -- --------------------------------------------------------
 
@@ -312,7 +397,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (36, '2025_05_09_162824_update_fields_of_categories', 16),
 (37, '2025_05_20_170652_creator_editor_in_section_tag_and_sponsor', 17),
 (38, '2025_05_20_173905_add_cover_field', 18),
-(39, '2025_05_20_193859_edit_sponsors', 19);
+(39, '2025_05_20_193859_edit_sponsors', 19),
+(40, '2025_06_12_165835_chatbot_session', 20),
+(41, '2025_06_15_174543_update_article', 21),
+(42, '2025_06_16_164830_deunique_title_in_sponsor', 22);
 
 -- --------------------------------------------------------
 
@@ -343,7 +431,10 @@ CREATE TABLE `model_has_roles` (
 --
 
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
-(1, 'App\\Models\\User', 1);
+(1, 'App\\Models\\User', 1),
+(2, 'App\\Models\\User', 2),
+(7, 'App\\Models\\User', 3),
+(8, 'App\\Models\\User', 4);
 
 -- --------------------------------------------------------
 
@@ -369,8 +460,10 @@ CREATE TABLE `pages` (
 INSERT INTO `pages` (`id`, `title`, `slug`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Home', 'home', 1, 1, '2025-03-28 00:00:02', '2025-04-12 09:31:48', NULL),
 (8, 'Search', 'search', 1, 1, '2025-05-09 09:37:20', '2025-05-09 09:37:20', NULL),
-(9, 'Contact', 'contact', 1, 1, '2025-05-09 09:37:44', '2025-05-09 10:28:37', NULL),
-(10, 'Artikel', 'artikel', 1, 1, '2025-05-10 03:46:52', '2025-05-10 03:46:52', NULL);
+(9, 'Contact', 'contact', 1, 1, '2025-05-09 09:37:44', '2025-06-16 17:42:04', NULL),
+(10, 'Artikel', 'artikel', 1, 1, '2025-05-10 03:46:52', '2025-05-10 03:46:52', NULL),
+(11, 'Event', 'event', 1, 1, '2025-06-16 17:38:57', '2025-06-16 17:38:57', NULL),
+(12, 'About us', 'about-us', 1, 1, '2025-06-17 11:23:52', '2025-06-17 11:23:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -391,10 +484,21 @@ CREATE TABLE `page_sections` (
 
 INSERT INTO `page_sections` (`id`, `page_id`, `sort_order`, `section_id`) VALUES
 (27, 1, 1, 3),
-(28, 1, 2, 20),
+(28, 1, 4, 20),
 (29, 9, 1, 21),
 (30, 10, 2, 23),
-(31, 10, 1, 24);
+(31, 10, 1, 24),
+(32, 1, 5, 22),
+(34, 1, 2, 26),
+(35, 1, 3, 25),
+(36, 11, 2, 26),
+(37, 11, 1, 27),
+(38, 12, 1, 28),
+(39, 12, 2, 29),
+(40, 12, 3, 30),
+(41, 12, 4, 31),
+(42, 12, 5, 22),
+(43, 12, 6, 33);
 
 -- --------------------------------------------------------
 
@@ -407,6 +511,13 @@ CREATE TABLE `password_reset_tokens` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_reset_tokens`
+--
+
+INSERT INTO `password_reset_tokens` (`email`, `token`, `created_at`) VALUES
+('superadmin@gmail.com', '$2y$12$fTR.Nk8szJqT2lB9arMoL.FTXljRIxnTlhMW0hrbQmBeV8sqiOHmK', '2025-06-16 15:29:44');
 
 -- --------------------------------------------------------
 
@@ -624,54 +735,6 @@ CREATE TABLE `role_has_permissions` (
 --
 
 INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
-(129, 1),
-(130, 1),
-(131, 1),
-(132, 1),
-(133, 1),
-(134, 1),
-(135, 1),
-(136, 1),
-(137, 1),
-(138, 1),
-(139, 1),
-(140, 1),
-(141, 1),
-(142, 1),
-(143, 1),
-(144, 1),
-(145, 1),
-(146, 1),
-(147, 1),
-(148, 1),
-(149, 1),
-(150, 1),
-(151, 1),
-(152, 1),
-(153, 1),
-(154, 1),
-(155, 1),
-(156, 1),
-(157, 1),
-(158, 1),
-(159, 1),
-(160, 1),
-(161, 1),
-(162, 1),
-(163, 1),
-(164, 1),
-(165, 1),
-(166, 1),
-(167, 1),
-(168, 1),
-(169, 1),
-(170, 1),
-(171, 1),
-(172, 1),
-(173, 1),
-(174, 1),
-(175, 1),
-(176, 1),
 (177, 1),
 (178, 1),
 (179, 1),
@@ -684,63 +747,8 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (186, 1),
 (187, 1),
 (188, 1),
-(201, 1),
-(202, 1),
-(203, 1),
-(204, 1),
-(205, 1),
-(206, 1),
-(207, 1),
-(208, 1),
-(209, 1),
-(210, 1),
-(211, 1),
-(212, 1),
-(213, 1),
-(214, 1),
-(215, 1),
-(216, 1),
-(217, 1),
-(218, 1),
-(219, 1),
-(220, 1),
-(221, 1),
-(222, 1),
-(223, 1),
-(224, 1),
-(225, 1),
-(226, 1),
-(227, 1),
-(228, 1),
-(229, 1),
-(230, 1),
-(231, 1),
-(232, 1),
-(233, 1),
-(234, 1),
-(235, 1),
-(236, 1),
-(237, 1),
-(238, 1),
-(239, 1),
-(240, 1),
-(241, 1),
-(242, 1),
-(243, 1),
-(244, 1),
-(245, 1),
-(246, 1),
-(247, 1),
-(248, 1),
-(249, 1),
-(250, 1),
-(251, 1),
-(252, 1),
-(253, 1),
-(254, 1),
 (255, 1),
 (258, 1),
-(259, 1),
 (260, 1),
 (261, 1),
 (262, 1),
@@ -875,18 +883,6 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (150, 7),
 (151, 7),
 (152, 7),
-(153, 7),
-(154, 7),
-(155, 7),
-(156, 7),
-(157, 7),
-(158, 7),
-(159, 7),
-(160, 7),
-(161, 7),
-(162, 7),
-(163, 7),
-(164, 7),
 (165, 7),
 (166, 7),
 (167, 7),
@@ -899,18 +895,6 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (174, 7),
 (175, 7),
 (176, 7),
-(177, 7),
-(178, 7),
-(179, 7),
-(180, 7),
-(181, 7),
-(182, 7),
-(183, 7),
-(184, 7),
-(185, 7),
-(186, 7),
-(187, 7),
-(188, 7),
 (201, 7),
 (202, 7),
 (203, 7),
@@ -965,34 +949,9 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (252, 7),
 (253, 7),
 (254, 7),
-(255, 7),
-(258, 7),
 (259, 7),
-(260, 7),
-(261, 7),
-(262, 7),
-(263, 7),
-(264, 7),
-(265, 7),
-(266, 7),
-(267, 7),
-(268, 7),
-(269, 7),
-(270, 7),
-(271, 7),
-(272, 7),
-(273, 7),
-(274, 7),
-(275, 7),
-(276, 7),
-(277, 7),
-(278, 7),
-(279, 7),
-(280, 7),
-(281, 7),
-(282, 7),
-(283, 7),
-(284, 7);
+(284, 7),
+(284, 8);
 
 -- --------------------------------------------------------
 
@@ -1022,10 +981,19 @@ INSERT INTO `sections` (`id`, `title`, `layout_path`, `has_dataset`, `type_id`, 
 (2, 'Navigation', 'navigations/navigation', 0, 2, NULL, NULL, '2025-02-28 05:11:02', '2025-05-09 01:41:43', NULL),
 (3, 'Hero - Carousel', 'heroes/carousel', 0, 3, NULL, NULL, '2025-02-28 06:10:35', '2025-05-09 01:42:19', NULL),
 (20, 'Load - Latest Article', 'loads/paginate_4_columns', 1, 8, NULL, NULL, '2025-05-09 06:10:41', '2025-05-10 00:41:59', NULL),
-(21, 'Other - Contact Mail', 'others/contact_mail', 0, 5, NULL, NULL, '2025-05-09 10:29:22', '2025-05-09 10:29:22', NULL),
-(22, 'Other - Sponsors', 'others/sponsors', 0, 5, NULL, NULL, '2025-05-10 03:43:03', '2025-05-10 03:43:03', NULL),
+(21, 'Contact Mail', 'others/contact_mail', 0, 5, NULL, 1, '2025-05-09 10:29:22', '2025-06-17 11:52:25', NULL),
+(22, 'Sponsors', 'others/sponsors', 0, 5, NULL, 1, '2025-05-10 03:43:03', '2025-06-17 11:52:37', NULL),
 (23, 'Load - Paginate Article', 'loads/paginate_4_columns', 1, 8, NULL, NULL, '2025-05-10 03:45:48', '2025-05-10 03:45:48', NULL),
-(24, 'Load - Highlights', 'loads/highlights', 1, 8, NULL, NULL, '2025-05-10 14:34:10', '2025-05-10 14:34:10', NULL);
+(24, 'Load - Highlights Article', 'loads/highlights', 1, 8, NULL, 1, '2025-05-10 14:34:10', '2025-06-16 18:05:18', NULL),
+(25, 'Location', 'others/location', 0, 5, 1, 1, '2025-06-16 15:37:23', '2025-06-17 11:52:48', NULL),
+(26, 'Load - Latest Event', 'loads/paginate_4_columns', 1, 8, 1, 1, '2025-06-16 17:32:15', '2025-06-16 17:34:10', NULL),
+(27, 'Load - Upcoming Event', 'loads/upcoming', 1, 8, 1, 1, '2025-06-16 18:05:05', '2025-06-16 18:05:05', NULL),
+(28, 'Title & Image', 'heroes/title_and_image', 0, 3, 1, 1, '2025-06-17 11:23:22', '2025-06-17 11:38:05', NULL),
+(29, 'Banner - Image v.1', 'others/banners/image_v1', 0, 5, 1, 1, '2025-06-17 11:27:48', '2025-06-17 11:52:05', NULL),
+(30, 'Vision & Mision', 'others/vision_and_mision', 0, 5, 1, 1, '2025-06-17 11:37:43', '2025-06-17 11:37:43', NULL),
+(31, 'Custom - ARC', 'others/customs/arc', 0, 5, 1, 1, '2025-06-17 11:45:14', '2025-06-17 11:45:14', NULL),
+(32, 'Banner - Statistics', 'others/banners/statistics', 0, 5, 1, 1, '2025-06-17 11:51:52', '2025-06-17 11:51:52', NULL),
+(33, 'Custom - Members', 'others/customs/members', 0, 5, 1, 1, '2025-06-17 11:53:23', '2025-06-17 11:53:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -1051,7 +1019,9 @@ CREATE TABLE `section_loads` (
 INSERT INTO `section_loads` (`id`, `section_id`, `variable_name`, `dataset_id`, `order_col`, `order_sort`, `paginate`, `limit`) VALUES
 (10, 20, 'latest_article', 1, 'published_at', 'desc', NULL, 4),
 (11, 23, 'paginate_article', 1, 'published_at', 'desc', 'default', 16),
-(12, 24, 'highlights_article', 1, 'published_at', 'desc', NULL, 4);
+(12, 24, 'highlights_article', 1, 'published_at', 'desc', NULL, 4),
+(13, 26, 'latest_event', 2, 'published_at', 'desc', NULL, 4),
+(14, 27, 'upcoming_event', 2, 'published_at', 'desc', NULL, 4);
 
 -- --------------------------------------------------------
 
@@ -1096,7 +1066,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('Rzo20hb38dBdWcw6gYZuOAhYKQPKvFFNYyka6HFd', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiSG9nb2ZQcXY3SlU1TmFLVjBBbVIzQUt6UEo2a2VaZEdhRkFGQmZDUiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI5OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvY29udGFjdCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQ1bGl5dVhKMkIyM1FJUGE5MmtkSkx1MWh2NHAydXh4QUV6MC5Wdi9MSEVBMWJmMnBtTkF5VyI7czo4OiJmaWxhbWVudCI7YTowOnt9fQ==', 1747746839);
+('Skf4fSWRNE5bsGPtDZoTqVMc9HVc4qYQMZPpwN0V', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidzBhM0tOUk1OclpCeHhLMjg2UHFxWjBBU3lzWnRpM2xGcDVoUFMyZCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQvbG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1750310066),
+('stb4rNfeewAylxUq0vRgPg6WB8AaIFanqryqnjL1', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZnk4ZkpLb2dIWTBudXRDOE4zMnV5R1VTcWFBeU9Rak9OUlY5YmpzcCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQvbG9naW4iO319', 1750313722),
+('v2LN62N2rl43dgWyecddidLMpsx1PIUK9BIuNgDu', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZDg3R2duYzM4Z0dlcjVYTERGd0cxR0RldlBNNDFubVR6RFpkanRyaCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQvbG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1750310069);
 
 -- --------------------------------------------------------
 
@@ -1117,6 +1089,14 @@ CREATE TABLE `sponsors` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `sponsors`
+--
+
+INSERT INTO `sponsors` (`id`, `title`, `image_id`, `category_id`, `featured`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Politeknik Negeri Bali', 7, 1, 1, 1, 1, '2025-06-16 08:38:39', '2025-06-16 08:38:39', NULL),
+(4, 'Politeknik Negeri Bali', 7, 2, 0, 1, 1, '2025-06-16 08:57:08', '2025-06-16 09:05:20', '2025-06-16 09:05:20');
+
 -- --------------------------------------------------------
 
 --
@@ -1128,6 +1108,14 @@ CREATE TABLE `sponsor_categories` (
   `category_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sort_order` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sponsor_categories`
+--
+
+INSERT INTO `sponsor_categories` (`id`, `category_name`, `sort_order`) VALUES
+(1, 'Main Partner', 1),
+(2, 'Side Partner', 2);
 
 -- --------------------------------------------------------
 
@@ -1145,6 +1133,13 @@ CREATE TABLE `tags` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tags`
+--
+
+INSERT INTO `tags` (`id`, `tag_name`, `slug`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Artikel', 'artikel', 1, 1, '2025-06-16 07:38:01', '2025-06-16 07:38:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -1170,7 +1165,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `email`, `profile_image`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Superadmin', '$2y$12$5liyuXJ2B23QIPa92kdJLu1hv4p2uxxAEz0.Vv/LHEA1bf2pmNAyW', 'superadmin@gmail.com', NULL, '2025-03-27 10:39:06', 'EAAY4KozdbTROg8YuaEHL2NN97uPSJyUhKffBRJfBIYHRH77QdnLM1x2dnR7', '2025-03-27 10:39:06', '2025-03-27 10:39:06', NULL);
+(1, 'Developer', '$2y$12$5liyuXJ2B23QIPa92kdJLu1hv4p2uxxAEz0.Vv/LHEA1bf2pmNAyW', 'developer@gmail.com', NULL, '2025-03-27 10:39:06', 'rMIXGb5ajH8AX0Tf7YG6QAImBlOIW3mrMh9LR4sahWBteLKbvNYoL5Zv56KS', '2025-03-27 10:39:06', '2025-06-19 04:24:12', NULL),
+(2, 'Admin', '$2y$12$u/gq39yaf.RdM3ONDEO9eOi/wuvzhh7MU9FwIjRAG.rb6mpoTP.0y', 'admin@gmail.com', NULL, NULL, NULL, '2025-06-18 00:29:41', '2025-06-18 00:29:41', NULL),
+(3, 'Superadmin', '$2y$12$lN.Hw6WoM1X6EGnNRE2JyuV.dojihfCw8RNCCHmEp6/7g3U8kjBaS', 'superadmin@gmail.com', NULL, '2025-06-19 05:43:00', NULL, '2025-06-19 04:24:44', '2025-06-19 04:24:44', NULL),
+(4, 'User', '$2y$12$y5oEc5hxiu44VeB31IW6AuLhb113BaGPHYE.azjiCEO7PZktQ129.', 'user@gmail.com', NULL, NULL, NULL, '2025-06-19 04:25:03', '2025-06-19 04:25:03', NULL);
 
 --
 -- Indexes for dumped tables
@@ -1220,6 +1218,20 @@ ALTER TABLE `cache_locks`
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `categories_slug_unique` (`slug`);
+
+--
+-- Indexes for table `chatbot_messages`
+--
+ALTER TABLE `chatbot_messages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `chatbot_messages_session_id_foreign` (`session_id`);
+
+--
+-- Indexes for table `chatbot_sessions`
+--
+ALTER TABLE `chatbot_sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `chatbot_sessions_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -1355,7 +1367,6 @@ ALTER TABLE `sessions`
 --
 ALTER TABLE `sponsors`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `sponsors_title_unique` (`title`),
   ADD KEY `sponsors_category_id_foreign` (`category_id`),
   ADD KEY `sponsors_updated_by_foreign` (`updated_by`),
   ADD KEY `sponsors_created_by_foreign` (`created_by`),
@@ -1394,13 +1405,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `chatbot_messages`
+--
+ALTER TABLE `chatbot_messages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- AUTO_INCREMENT for table `chatbot_sessions`
+--
+ALTER TABLE `chatbot_sessions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1424,25 +1447,25 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `page_sections`
 --
 ALTER TABLE `page_sections`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -1460,13 +1483,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `sections`
 --
 ALTER TABLE `sections`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `section_loads`
 --
 ALTER TABLE `section_loads`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `section_types`
@@ -1478,25 +1501,25 @@ ALTER TABLE `section_types`
 -- AUTO_INCREMENT for table `sponsors`
 --
 ALTER TABLE `sponsors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `sponsor_categories`
 --
 ALTER TABLE `sponsor_categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -1524,6 +1547,18 @@ ALTER TABLE `articles_tags`
 ALTER TABLE `article_sponsors`
   ADD CONSTRAINT `articles_media_partners_article_id_foreign` FOREIGN KEY (`article_id`) REFERENCES `articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `articles_media_partners_media_partner_id_foreign` FOREIGN KEY (`sponsor_id`) REFERENCES `sponsors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `chatbot_messages`
+--
+ALTER TABLE `chatbot_messages`
+  ADD CONSTRAINT `chatbot_messages_session_id_foreign` FOREIGN KEY (`session_id`) REFERENCES `chatbot_sessions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `chatbot_sessions`
+--
+ALTER TABLE `chatbot_sessions`
+  ADD CONSTRAINT `chatbot_sessions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `model_has_permissions`

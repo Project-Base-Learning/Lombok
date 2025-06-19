@@ -76,7 +76,9 @@ class HomeController extends Controller
             ->get();
 
         if ($data['features']['sponsors']) {
-            $data['sponsors'] = $data['article']->sponsors()->get();
+            $data['sponsors'] = $data['article']->sponsors()->with('category')->get()->sortBy(function ($item) {
+                return $item->category->sort_order ?? 999;
+            });
         }
         return view('pages.details.'.$data['category']->detail_page, compact('data'));
     }

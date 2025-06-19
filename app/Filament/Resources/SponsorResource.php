@@ -18,6 +18,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
 
 class SponsorResource extends Resource
 {
@@ -34,11 +35,14 @@ class SponsorResource extends Resource
             ->schema([
                 Split::make([
                     section::make()
-                    ->schema([
-                        CuratorPicker::make('image_id')
-                            ->label('Image')
-                            ->relationship('image', 'id')
-                    ]),
+                        ->schema([
+                            CuratorPicker::make('image_id')
+                                ->label('Image')
+                                ->required()
+                                ->relationship('image', 'id')
+                        ])
+                        ->columns(1)
+                        ->grow(true),
                     Section::make()
                         ->schema([
                             TextInput::make('title')
@@ -64,10 +68,12 @@ class SponsorResource extends Resource
                             Toggle::make('featured')
                                 ->default(0),
                         ])
+                        ->columns(1)
                         ->grow(false)
                     ])
+                ->columns(['default' => 1, 'lg' => 3]),
             ])
-            ->columns(['default' => 1, 'lg' => 3]);
+            ->columns(1);
     }
 
     public static function table(Table $table): Table
@@ -148,6 +154,6 @@ class SponsorResource extends Resource
 
     public static function canAccess(): bool
     {
-        return config('general-settings.features.sponsors', false);
+        return Auth::user()->can('view_sponsor') ? config('general-settings.features.sponsors', false) : false;
     }
 }

@@ -94,10 +94,10 @@
                     class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                 >
                 <div class="absolute inset-0 flex flex-col items-start justify-end p-4 text-left text-white bg-black/25">
-                    <h5 class="mb-2 text-4xl font-bold">{{ $first->title }}</h5>
+                    <h5 class="mb-2 text-4xl font-bold line-clamp-3">{{ $first->title }}</h5>
                     <div class="flex w-full mb-2 overflow-hidden flex-nowrap">
                         @foreach ($first->tags as $tag)
-                            <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" tag_name='{{ $tag->tag_name }}' />
+                            <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" category='{{ $first->category->slug }}' tag='{{ $tag->slug }}' />
                         @endforeach
                     </div>
                     <p class="text-sm">{{ date('d/m/Y', strtotime($first->published_at)) }}</p>
@@ -125,12 +125,13 @@
                         <!-- Text Section -->
                         <div class="flex flex-col justify-between w-full">
                             <div>
-                                <h5 class="mb-2 text-xl font-semibold">{{ $item->title }}</h5>
-                                <div class="flex w-full mb-2 overflow-hidden flex-nowrap">
-                                    @foreach ($data['loads'][$section->dataset->variable_name]->first()->tags as $tag)
-                                        <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" tag_name='{{ $tag->tag_name }}' />
+                                <h5 class="text-xl font-semibold line-clamp-1">{{ $item->title }}</h5>
+                                <div class="flex w-full overflow-hidden flex-nowrap">
+                                    @foreach ($item->tags as $tag)
+                                        <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" category='{{ $item->category->slug }}' tag='{{ $tag->slug }}' />
                                     @endforeach
                                 </div>
+                                <p class="line-clamp-2">{{ $item->preview_content }}</p>
                             </div>
                             <p class="text-sm">{{ date('d/m/Y', strtotime($item->published_at)) }}</p>
                         </div>

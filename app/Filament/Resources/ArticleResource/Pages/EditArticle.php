@@ -10,6 +10,8 @@ class EditArticle extends EditRecord
 {
     protected static string $resource = ArticleResource::class;
 
+    protected static string $view = 'filament.resources.articles.pages.edit-article';
+
     protected function getHeaderActions(): array
     {
         return [
