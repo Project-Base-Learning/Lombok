@@ -45,21 +45,21 @@ class GeneralSetting extends Model
     protected static function booted()
     {
         static::saving(function ($data) {
-            if ($data->isDirty('site_logo') && Storage::disk('public')->exists($data->getOriginal('site_logo'))) {
-                Storage::disk('public')->delete($data->getOriginal('site_logo'));
-            }
-            if ($data->isDirty('site_favicon') && Storage::disk('public')->exists($data->getOriginal('site_favicon'))) {
-                Storage::disk('public')->delete($data->getOriginal('site_favicon'));
-            }
+            // if ($data->isDirty('site_logo') && Storage::disk('public')->exists($data->getOriginal('site_logo'))) {
+            //     Storage::disk('public')->delete($data->getOriginal('site_logo'));
+            // }
+            // if ($data->isDirty('site_favicon') && Storage::disk('public')->exists($data->getOriginal('site_favicon'))) {
+            //     Storage::disk('public')->delete($data->getOriginal('site_favicon'));
+            // }
             // Set env of google_property_id ...
-            if ($data->isDirty('google_analytics') && empty($data->google_analytics['service-account-credentials']) && Storage::disk('analytics')->exists('service-account-credentials.json')) {
-                Storage::disk('analytics')->delete('service-account-credentials.json');
-            }
+            // if ($data->isDirty('google_analytics') && empty($data->google_analytics['service-account-credentials']) && Storage::disk('analytics')->exists('service-account-credentials.json')) {
+            //     Storage::disk('analytics')->delete('service-account-credentials.json');
+            // }
         });
 
-        static::updated(function ($data) {
-            Artisan::call(OptimizeCommand::class);
-        });
+        // static::updated(function ($data) {
+        //     Artisan::call(OptimizeCommand::class);
+        // });
 
         static::deleting(function ($data) {
             if (Storage::disk('public')->exists($data->site_logo)) {

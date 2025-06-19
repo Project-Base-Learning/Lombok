@@ -10,7 +10,7 @@
         </a>
 
         <!-- Navbar items -->
-        <ul id="navMenu" style="transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1), max-height 1000ms cubic-bezier(0.4, 0, 0.2, 1);" class="absolute left-0 flex flex-col items-end w-full overflow-y-auto text-sm text-center bg-white no-scrollbar max-h-0 md:max-h-fit md:overflow-visible md:items-center top-full md:top-0 md:w-fit md:justify-center md:flex-row md:gap-4 lg:text-base md:relative md:pb-0 border-b-2 md:border-b-0">
+        <ul id="navMenu" style="transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1), max-height 1000ms cubic-bezier(0.4, 0, 0.2, 1);" class="absolute left-0 flex flex-col items-end w-full overflow-y-auto text-sm text-center bg-white border-b-2 no-scrollbar max-h-0 md:max-h-fit md:overflow-visible md:items-center top-full md:top-0 md:w-fit md:justify-center md:flex-row md:gap-4 lg:text-base md:relative md:pb-0 md:border-b-0">
             @if ($data['navigation']['home'])
                 <x-navigation.nav_item slug="{{ $data['navigation']['home']['slug'] }}">
                     {{ $data['navigation']['home']['title'] }}
@@ -18,7 +18,7 @@
             @endif
             @foreach ($data['navigation']['nav_items'] as $navItem)
                 @if ($navItem['type'] == 'link')
-                    <x-navigation.nav_item slug="{{ $navItem['link']['url'] }}">
+                    <x-navigation.nav_item url="{{ $navItem['link']['url'] }}">
                         {{ $navItem['link']['label'] }}
                     </x-navigation.nav_item>
                 @else

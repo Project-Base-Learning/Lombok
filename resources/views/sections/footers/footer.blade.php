@@ -21,7 +21,7 @@
                 @endif
                 @foreach ($data['navigation']['nav_items'] as $navItem)
                     @if ($navItem['type'] == 'link')
-                        <x-footer.nav_item slug="{{ $navItem['link']['url'] }}">
+                        <x-footer.nav_item url="{{ $navItem['link']['url'] }}">
                             {{ $navItem['link']['label'] }}
                         </x-footer.nav_item>
                     @else

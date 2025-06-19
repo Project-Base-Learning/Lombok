@@ -6,7 +6,7 @@
     <div class="flex flex-col w-9/12 sm:!w-full grow">
         <div class="flex flex-wrap mb-0.5">
             @foreach ($item->tags as $tag)
-                <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" category='{{ $item->category->slug }}' tag='{{ $tag->slug }}' />
+                <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" category='{{ $item->category->slug }}' tag='{{ $tag->tag_name }}' slug='{{ $tag->slug }}' />
             @endforeach
         </div>
         <div class="flex flex-col justify-start grow">

@@ -14,7 +14,7 @@
     <div class="flex flex-col items-center gap-16 md:flex-row" data-aos="fade-up">
         <!-- Image -->
         <div class="items-center justify-center hidden w-full mb-6 lg:flex md:flex md:w-1/2 md:mb-0">
-            <img src="{{ asset('image/about/circle1.svg') }}" alt="Vision Image" class="drop-shadow-md">
+            <img src="{{ asset('image/home/circle1.png') }}" alt="Vision Image" class="drop-shadow-md">
         </div>
         <!-- Description -->
         <div class="flex flex-col items-start w-full text-left md:w-1/2">
@@ -44,7 +44,7 @@
         </div>
         <!-- Image -->
         <div class="items-center justify-center hidden w-full mb-6 lg:flex md:flex md:w-1/2 md:mb-0">
-            <img src="{{ asset('image/about/circle2.svg') }}" alt="Mission Image" class="drop-shadow-md">
+            <img src="{{ asset('image/home/circle2.png') }}" alt="Mission Image" class="drop-shadow-md">
         </div>
     </div>
 </div>

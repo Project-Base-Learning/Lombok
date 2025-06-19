@@ -12,7 +12,7 @@
         <meta name="description" content="{{ $data['article']->metadata['meta_desc'] ?? $data['article']->title }}">
         <meta property="og:title" content="{{ $data['article']->metadata['meta_title'] ?? $data['article']->title }}">
         <meta property="og:description" content="{{ $data['article']->metadata['meta_desc'] ?? $data['article']->title }}">
-        <meta property="og:image" content="{{ Storage::url($data['article']->cover->first()->image_path) }}">
+        <meta property="og:image" content="{{ Storage::url($data['article']->cover?->first()->image_path) }}">
         <meta property="og:url" content="{{ Request::url() }}">
         <meta property="og:type" content="website">
     @else

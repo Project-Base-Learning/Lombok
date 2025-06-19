@@ -9,11 +9,11 @@
             <p class="mb-4 text-lg text-gray-600">
                 Kami berkomitmen menghadirkan wadah-wadah yang akan menjadi ekonomi kreatif pop culture!!
             </p>
-            {{-- <a href="#"
+            <a href="#"
                 class="flex items-center justify-between w-56 px-4 py-2 text-white transition-transform transform rounded-lg shadow-md bg-secondary-500 hover:scale-105">
                 <span class="truncate text-semibold">Baca selengkapnya</span>
-                <img src="{{ asset('image/arrowalt-right-white.svg') }}" alt="Arrow Right" class="flex-shrink-0 w-5 h-5">
-            </a> --}}
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
         </div>
 
         <!-- Right Side: Image -->
