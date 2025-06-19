@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('views')->default(0);
             $table->foreignId('cover_id')->nullable()->constrained(app(config('curator.model'))->getTable())->cascadeOnUpdate()->nullOnDelete();
             $table->string('title')->unique();
             $table->string('slug')->unique();
+            $table->text('preview_content')->nullable();
             $table->text('content')->nullable();
             $table->boolean('private')->default(0);
             $table->foreignId('category_id')->nullable()->constrained('categories')->cascadeOnUpdate()->nullOnDelete();

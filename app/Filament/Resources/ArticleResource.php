@@ -139,7 +139,8 @@ class ArticleResource extends Resource
                                             ->label('Generate')
                                             ->icon('heroicon-o-sparkles')
                                             ->disabled(function ($get) {
-                                                return ! $get('title') || ! $get('cover_id');
+                                                // return ! $get('title') || ! $get('cover_id');
+                                                return true;
                                             })
                                             ->tooltip('Klik untuk generate artikel beserta SEO berdasarkan judul dan gambar kover')
                                             ->form([

@@ -10,6 +10,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\Auth;
 
 class SponsorCategoryResource extends Resource
 {
@@ -72,6 +73,6 @@ class SponsorCategoryResource extends Resource
 
     public static function canAccess(): bool
     {
-        return config('general-settings.features.sponsors', false);
+        return Auth::user()->can('view_sponsor::category') ? config('general-settings.features.sponsors', false) : false;
     }
 }

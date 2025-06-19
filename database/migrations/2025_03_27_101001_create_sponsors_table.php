@@ -19,7 +19,7 @@ return new class extends Migration
 
         Schema::create('sponsors', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->unique();
+            $table->string('title');
             $table->foreignId('image_id')->nullable()->constrained(app(config('curator.model'))->getTable())->cascadeOnUpdate()->nullOnDelete();
             $table->foreignId('category_id')->nullable()->constrained('sponsor_categories')->cascadeOnUpdate()->nullOnDelete();
             $table->boolean('featured')->default(0);

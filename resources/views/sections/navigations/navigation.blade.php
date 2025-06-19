@@ -1,4 +1,4 @@
-<header id="navbar" class="w-full sticky top-0 z-[9999] bg-white py-2 text-black transition-all border-b-2">
+<header id="navbar" class="w-full sticky top-0 z-[9999] bg-white py-2 text-black transition-all">
     <div class="flex flex-row items-center justify-between w-full px-4 mx-auto lg:px-0 lg:w-11/12">
         <!-- Logo -->
         <a href="{{ route($data['navigation']['home'] ? $data['navigation']['home']['slug'] : '/') }}">
@@ -49,19 +49,19 @@
 </header>
 
 <script>
-    // window.addEventListener('scroll', function() {
-    //     const navbar = document.getElementById('navbar');
-    //     const navMenu = document.getElementById('navMenu');
-    //     if (window.scrollY > 50) {
-    //         navbar.classList.add('!bg-primary-500');
-    //         navbar.classList.add('!text-white');
-    //         navMenu.classList.add('!bg-primary-500');
-    //     } else {
-    //         navbar.classList.remove('!bg-primary-500');
-    //         navbar.classList.remove('!text-white');
-    //         navMenu.classList.remove('!bg-primary-500');
-    //     }
-    // });
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const navMenu = document.getElementById('navMenu');
+        if (window.scrollY > 50) {
+            navbar.classList.add('!bg-primary-500');
+            navbar.classList.add('!text-white');
+            navMenu.classList.add('!bg-primary-500');
+        } else {
+            navbar.classList.remove('!bg-primary-500');
+            navbar.classList.remove('!text-white');
+            navMenu.classList.remove('!bg-primary-500');
+        }
+    });
 
     const showMenu = document.getElementById('showMenu');
     showMenu.addEventListener('click', function() {

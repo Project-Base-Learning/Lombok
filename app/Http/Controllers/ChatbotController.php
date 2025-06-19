@@ -21,7 +21,7 @@ class ChatbotController extends Controller
     public function requestChatbot(array $contents)
     {
         $response = Http::post(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyC9KL5RMMpJMHUh61RfDGQ4GDrlciQiR44",
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=", //API_KEY
             ['contents' => $contents]
         );
 
@@ -36,7 +36,7 @@ class ChatbotController extends Controller
         $base64 = base64_encode($image);
 
         $response = Http::post(
-            'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyC9KL5RMMpJMHUh61RfDGQ4GDrlciQiR44',
+            "https://vision.googleapis.com/v1/images:annotate?key=", //API_KEY
             [
                 'requests' => [[
                     'image' => ['content' => $base64],
@@ -90,6 +90,17 @@ class ChatbotController extends Controller
                         ['text' => $requestPrompt]
                     ]
                 ]
+            ]);
+
+            $session =  ChatbotSession::where('title', $title)->where('user_id', Auth::user()->id)->first()
+            ?? ChatbotSession::create([
+                'user_id' => Auth::user()->id,
+                'title' => $title,
+            ]);
+
+            $session->messages()->create([
+                'sender' => 'bot',
+                'message' => $reply,
             ]);
 
             $content = $metaTitle = $metaDescription = null;

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Foundation\Console\OptimizeCommand;
+use Illuminate\Support\Facades\Artisan;
 
 class GeneralSetting extends Model
 {
@@ -53,6 +55,10 @@ class GeneralSetting extends Model
             if ($data->isDirty('google_analytics') && empty($data->google_analytics['service-account-credentials']) && Storage::disk('analytics')->exists('service-account-credentials.json')) {
                 Storage::disk('analytics')->delete('service-account-credentials.json');
             }
+        });
+
+        static::updated(function ($data) {
+            Artisan::call(OptimizeCommand::class);
         });
 
         static::deleting(function ($data) {
