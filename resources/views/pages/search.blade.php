@@ -32,8 +32,8 @@
         </button>
 
         <!-- Dropdown Menu -->
-        <div id="dropdownSearch" class="z-50 hidden bg-white rounded-lg shadow w-96 dark:bg-gray-700">
-            <ul class="grid grid-cols-2 p-3 overflow-y-auto text-sm text-gray-700 h-max-48 dark:text-gray-200" aria-labelledby="dropdownSearchButton">
+        <div id="dropdownSearch" class="z-50 hidden bg-white rounded-lg shadow w-60 sm:w-96 dark:bg-gray-700">
+            <ul class="grid grid-cols-1 p-3 overflow-y-auto text-sm text-gray-700 sm:grid-cols-2 max-h-48 dark:text-gray-200" aria-labelledby="dropdownSearchButton">
                 @if ($data['tags']->isEmpty())
                     <p>Tags tidak ditemukan</p>
                 @endif

@@ -1,8 +1,8 @@
-<div class="flex flex-col gap-20 px-2 lg:px-8 md:px-8 py-20 mx-[10%]">
+<div class="flex flex-col gap-20 lg:!px-20 lg:!py-12 md:!px-16 md:!py-12 px-8 py-6">
     {{-- Header --}}
     <div class="flex flex-col text-left md:text-center" data-aos="fade-up">
-        <h2 class="mb-2 text-6xl font-semibold text-secondary-500">About Cre:Ha</h2>
-        <h3 class="mb-4 text-2xl font-semibold text-secondary-500">|Cre·a·tor| |Ha·ichi(配置)|</h3>
+        <h2 class="mb-2 text-4xl font-semibold sm:text-6xl text-secondary-500">About Cre:Ha</h2>
+        <h3 class="mb-4 text-xl font-semibold lg:text-2xl text-secondary-500">|Cre·a·tor| |Ha·ichi(配置)|</h3>
         <div class="text-lg font-normal lg:text-xl">
             <p>Makna Creator: Menciptakan Karya yang Direalisasikan atau Diperkenalkan.</p>
             <p>Makna Haichi: bermakna “Showcasing” atau menampilkan.</p>
@@ -18,7 +18,7 @@
         </div>
         <!-- Description -->
         <div class="flex flex-col items-start w-full text-left md:w-1/2">
-            <h2 class="mb-4 text-6xl font-semibold text-secondary-500">Our Vision</h2>
+            <h2 class="mb-4 text-4xl font-semibold sm:text-6xl text-secondary-500">Our Vision</h2>
             <p class="text-lg text-gray-600 lg:text-xl md:text-lg">
                 Menyediakan wadah untuk creator di Indonesia, khususnya di Bali, untuk merealisasikan dan memperkenalkan karya mereka kepada masyarakat luas.
             </p>
@@ -29,7 +29,7 @@
     <div class="flex flex-col items-center gap-16 md:flex-row" data-aos="fade-up">
         <!-- Description -->
         <div class="flex flex-col items-start w-full text-left md:w-1/2">
-            <h2 class="mb-4 text-6xl font-semibold text-secondary-500">Our Mission</h2>
+            <h2 class="mb-4 text-4xl font-semibold sm:text-6xl text-secondary-500">Our Mission</h2>
             <ul class="space-y-2 text-lg text-gray-600 list-disc lg:text-xl md:text-lg">
                 <li class="flex gap-2 mt-2">
                     <span>Menggali potensi para creator di Bali dan meningkatkan peluang mereka untuk hidup dari karya kreatif mereka.</span>

@@ -1,4 +1,4 @@
-<div class="px-20 py-20" data-aos="fade-up">
+<div class="lg:!px-20 lg:!py-12 md:!px-16 md:!py-12 px-8 py-6" data-aos="fade-up">
     <div class="flex flex-wrap items-center justify-center mx-auto">
         <!-- Left Side: Contact Form -->
         <div class="items-center w-full mb-6 lg:w-1/2 lg:mb-0">

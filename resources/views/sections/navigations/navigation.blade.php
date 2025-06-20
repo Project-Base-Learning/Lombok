@@ -1,7 +1,7 @@
 <header id="navbar" class="w-full sticky top-0 z-[9999] bg-white py-2 text-black transition-all">
     <div class="flex flex-row items-center justify-between w-full px-4 mx-auto lg:px-0 lg:w-11/12">
         <!-- Logo -->
-        <a href="{{ route($data['navigation']['home'] ? $data['navigation']['home']['slug'] : '/') }}">
+        <a href="{{ route('/') }}">
             @if ($data['site_logo'])
                 <img class="w-[80px] lg:!w-[120px] h-auto" src="{{ Storage::url($data['site_logo']) }}" alt="$data['site_name']">
             @else

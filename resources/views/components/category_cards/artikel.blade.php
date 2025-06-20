@@ -11,8 +11,8 @@
         </div>
         <div class="flex flex-col justify-start grow">
             <h5 class="text-sm font-bold sm:!text-lg line-clamp-2">{{ $item->title }}</h5>
-            <p class="text-[0.5rem] md:!text-sm mb-2">{{ \Carbon\Carbon::parse($item->published_at)->diffForHumans() }}</p>
-            <p class="line-clamp-2">{{ $item->preview_content }}</p>
+            <p class="text-[0.5rem] md:!text-sm mb-1 md:mb-2">{{ \Carbon\Carbon::parse($item->published_at)->diffForHumans() }}</p>
+            <p class="text-[0.5rem] md:!text-sm line-clamp-2">{{ $item->preview_content }}</p>
         </div>
     </div>
 </div>
