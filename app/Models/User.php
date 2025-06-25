@@ -17,11 +17,12 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
-class User extends Authenticatable implements FilamentUser
+class User extends Authenticatable implements FilamentUser, HasAvatar
 {
     use Notifiable, SoftDeletes, HasRoles, HasPanelShield;
 
     protected $table = 'users';
+    
 
     public function canAccessPanel(Panel $panel): bool
     {
