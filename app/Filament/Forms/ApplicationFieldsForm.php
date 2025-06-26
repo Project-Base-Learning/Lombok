@@ -92,13 +92,16 @@ class ApplicationFieldsForm
                     Section::make('Features')
                         ->description('Features you want to have.')
                         ->schema([
-                            Toggle::make('analytics'),
+                            Toggle::make('google_analytics'),
+                            Toggle::make('ai')
+                                ->label('AI'),
                             Toggle::make('sponsors'),
                             // Toggle::make('testimonials')
                             //     ->disabled(),
                             // Toggle::make('ticketings')
                             //     ->disabled(),
                         ])
+                        ->live()
                         ->statePath('features'),
                     Section::make('User Features')
                         ->description('Features for User (Visitor).')

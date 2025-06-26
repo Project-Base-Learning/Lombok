@@ -52,5 +52,7 @@
         <x-filament-panels::page.unsaved-data-changes-alert />
     </x-filament-panels::page>
 
-    {{-- @livewire('chatbot-widget') --}}
+    @if (config('general-settings.features.ai', false))
+        @livewire('chatbot-widget')
+    @endif
 </div>

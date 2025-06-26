@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages\GeneralSettings;
 
+use App\Filament\Forms\AIFieldsForm;
 use App\Filament\Forms\AnalyticsFieldsForm;
 use App\Filament\Forms\ApplicationFieldsForm;
 use App\Filament\Forms\EmailFieldsForm;
@@ -95,12 +96,22 @@ class GeneralSettingsPage extends Page
             ->columns(['lg' => 3])
             ->statePath('navigation');
 
-        if (!empty($this->data['features']['analytics'])) {
-            $arrTabs[] = Tabs\Tab::make('Analytics')
-                ->icon('heroicon-o-globe-alt')
+        if (!empty($this->data['features']['google_analytics'])) {
+            $arrTabs[] = Tabs\Tab::make('Google Analytics')
+                ->icon('heroicon-o-chart-bar')
                 ->schema(AnalyticsFieldsForm::get())
+                ->visible(fn ($get) => $get('features.google_analytics'))
                 ->columns(['lg' => 3])
                 ->statePath('google_analytics');
+        }
+
+        if (!empty($this->data['features']['ai'])) {
+            $arrTabs[] = Tabs\Tab::make('AI')
+                ->icon('heroicon-o-sparkles')
+                ->schema(AIFieldsForm::get())
+                ->visible(fn ($get) => $get('features.ai'))
+                ->columns(['lg' => 3])
+                ->statePath('ai');
         }
 
         return $form

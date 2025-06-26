@@ -22,16 +22,17 @@
                     alt={{ $data['article']->creator->name }}>
                 <p>{{ $data['article']->creator->name }} at {{ date('d/m/Y', strtotime($data['article']->published_at)) }}</p>
             </div>
+            {{-- @dd($data['article']->tags) --}}
             <div class="flex flex-wrap mb-4">
                 @foreach ($data['article']->tags as $tag)
-                    <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" category='{{ $data['article']->category->slug }}' tag='{{ $tag->tag_name }}' slug='{{ $tag->slug }}'/>
+                    <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" category="{{ $data['article']->category->slug }}" tag='{{ $tag->tag_name }}' slug='{{ $tag->slug }}' />
                 @endforeach
             </div>
         </div>
 
         <!-- Event Image Grid -->
         <div class="relative mb-4 overflow-hidden rounded-lg shadow-md group">
-            <img src={{ Storage::url($data['article']->cover?->first()->image_path) }} alt="{{ $data['article']->cover?->first()->alt }}"
+            <img src={{ Storage::url($data['article']->cover?->path) }} alt="{{ $data['article']->cover?->alt }}"
                 class="object-cover w-full transition-transform duration-300 group-hover:scale-105">
             <div class="absolute inset-0 w-full h-full bg-red bg-opacity-10"></div>
         </div>

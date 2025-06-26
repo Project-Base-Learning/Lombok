@@ -42,6 +42,7 @@ class AppServiceProvider extends ServiceProvider
             'social_network',
             'navigation',
             'features',
+            'ai',
             'google_analytics',
             'user_features',
         ])->first()->toArray();

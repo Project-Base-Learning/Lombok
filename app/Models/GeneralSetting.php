@@ -25,6 +25,7 @@ class GeneralSetting extends Model
         'social_network',
         'navigation',
         'features',
+        'ai',
         'google_analytics',
         'user_features',
     ];
@@ -37,6 +38,7 @@ class GeneralSetting extends Model
         'social_network' => 'array',
         'navigation' => 'array',
         'features' => 'array',
+        'ai' => 'array',
         'google_analytics' => 'array',
         'user_features' => 'array',
         'chatbot_settings' => 'array',
@@ -45,32 +47,32 @@ class GeneralSetting extends Model
     protected static function booted()
     {
         static::saving(function ($data) {
-            // if ($data->isDirty('site_logo') && Storage::disk('public')->exists($data->getOriginal('site_logo'))) {
-            //     Storage::disk('public')->delete($data->getOriginal('site_logo'));
-            // }
-            // if ($data->isDirty('site_favicon') && Storage::disk('public')->exists($data->getOriginal('site_favicon'))) {
-            //     Storage::disk('public')->delete($data->getOriginal('site_favicon'));
-            // }
-            // Set env of google_property_id ...
-            // if ($data->isDirty('google_analytics') && empty($data->google_analytics['service-account-credentials']) && Storage::disk('analytics')->exists('service-account-credentials.json')) {
-            //     Storage::disk('analytics')->delete('service-account-credentials.json');
-            // }
-        });
+            if ($data->features['ai'] == false) {
+                $originalData = $data->ai ?? [];
 
-        // static::updated(function ($data) {
-        //     Artisan::call(OptimizeCommand::class);
-        // });
+                $resetData = [];
+                foreach ($originalData as $key => $value) {
+                    $resetData[$key] = null;
+                }
 
-        static::deleting(function ($data) {
-            if (Storage::disk('public')->exists($data->site_logo)) {
-                Storage::disk('public')->delete($data->site_logo);
+                $data->ai = $resetData;
             }
-            if (Storage::disk('public')->exists($data->site_favicon)) {
-                Storage::disk('public')->delete($data->site_favicon);
-            }
-            if (Storage::disk('analytics')->exists('service-account-credentials.json')) {
-                Storage::disk('analytics')->delete('service-account-credentials.json');
+
+            if ($data->features['google_analytics'] == false) {
+                if (Storage::disk('analytics')->exists('service-account-credentials.json')) {
+                    Storage::disk('analytics')->delete('service-account-credentials.json');
+                }
+
+                $originalData = $data->google_analytics ?? [];
+
+                $resetData = [];
+                foreach ($originalData as $key => $value) {
+                    $resetData[$key] = null;
+                }
+
+                $data->google_analytics = $resetData;
             }
         });
     }
+
 }

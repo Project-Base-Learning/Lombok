@@ -57,7 +57,7 @@
         });
     </script>
     <!-- Google tag (gtag.js) -->
-    @if (config('general-settings.features.analytics'))
+    @if (config('general-settings.features.google_analytics'))
         <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('analytics.analytics_tag') }}"></script>
         <script>
             window.dataLayer = window.dataLayer || [];

@@ -138,9 +138,9 @@ class ArticleResource extends Resource
                                         Action::make('Generate')
                                             ->label('Generate')
                                             ->icon('heroicon-o-sparkles')
+                                            ->hidden(!(config('general-settings.features.ai', false)))
                                             ->disabled(function ($get) {
-                                                // return ! $get('title') || ! $get('cover_id');
-                                                return true;
+                                                return !$get('title') || !$get('cover_id');
                                             })
                                             ->tooltip('Klik untuk generate artikel beserta SEO berdasarkan judul dan gambar kover')
                                             ->form([

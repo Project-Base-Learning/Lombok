@@ -21,7 +21,8 @@ class ChatbotController extends Controller
     public function requestChatbot(array $contents)
     {
         $response = Http::post(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=", //API_KEY
+            // "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=",
+            config('general-settings.ai.url').config('general-settings.ai.api_key'),
             ['contents' => $contents]
         );
 
