@@ -5,6 +5,7 @@ namespace App\Filament\Pages\GoogleAnalytics;
 use App\Models\GeneralSetting;
 use Filament\Pages\Page;
 use BezhanSalleh\FilamentGoogleAnalytics\Widgets;
+use Illuminate\Support\Facades\Auth;
 
 class GoogleAnalyticsPage extends Page
 {
@@ -16,7 +17,7 @@ class GoogleAnalyticsPage extends Page
 
     public static function canAccess(): bool
     {
-        return config('general-settings.features.analytics', false);
+        return Auth::user()->can('page_GoogleAnalyticsPage') ? config('general-settings.features.google_analytics', false) : false;
     }
 
     protected function getHeaderWidgets(): array

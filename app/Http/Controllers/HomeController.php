@@ -32,7 +32,7 @@ class HomeController extends Controller
 
         $tmp = $tmp->whereHas('category', function ($query) use ($request) {
             if ($request->input('category')) {
-                $query->where('category_name', $request->input('category'));
+                $query->where('slug', $request->input('category'));
             } else {
                 $query->where('default', 1);
             }
@@ -42,7 +42,7 @@ class HomeController extends Controller
         if ($request->filled('tags')) {
             $selected = explode(',', $request->tags);
             $tmp->whereHas('tags', function ($q) use ($selected) {
-                $q->whereIn('tag_name', $selected);
+                $q->whereIn('slug', $selected);
             }, '=', count($selected));
         }
 

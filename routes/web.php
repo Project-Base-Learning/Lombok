@@ -5,12 +5,14 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ChatbotController;
 
-Route::controller(ChatbotController::class)->group(function () {
-    Route::post('/api/article/generate', 'generateArticle');
-    Route::post('/api/chatbot/send', 'send');
-    Route::get('/api/chatbot/sessions', 'getSessions');
-    Route::get('/api/chatbot/messages/{id}', 'getMessages');
-});
+if (config('general-settings.features.ai', false)) {
+    Route::controller(ChatbotController::class)->group(function () {
+        Route::post('/api/article/generate', 'generateArticle');
+        Route::post('/api/chatbot/send', 'send');
+        Route::get('/api/chatbot/sessions', 'getSessions');
+        Route::get('/api/chatbot/messages/{id}', 'getMessages');
+    });
+}
 
 $data = config('general-settings.navigation');
 
@@ -35,7 +37,7 @@ Route::post('/mail', [HomeController::class, 'mail'])->name('mail');
 Route::get('/detail/{category}/{slug}', [HomeController::class, 'detail'])->name('detail');
 
 // Testing routes
-if (config('app.debug')) {
+if (config('app.debug', false)) {
     Route::get('/test/landing', function () {
         return view('tests.landing');
     })->name('test.landing');

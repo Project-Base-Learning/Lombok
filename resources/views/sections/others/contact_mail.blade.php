@@ -1,7 +1,7 @@
 <div class="lg:!px-40 lg:!py-12 md:!px-20 md:!py-12 px-8 py-6">
     <div class="grid grid-cols-1 gap-16 mx-auto max-w-7xl md:grid-cols-2">
         <!-- Left Side: Contact Form -->
-        <div class="p-8" data-aos="fade-right">
+        <div class="md:p-8" data-aos="fade-right">
             <!-- Contact Us Title -->
             <h2 class="mb-4 text-4xl font-semibold tracking-wider text-gray-800 md:text-5xl lg:text-6xl">Contact Us</h2>
             <p class="mb-6 text-gray-800">Tanyakan hal yang ingin Anda ketahui tentang kami pada kolom di bawah ini!</p>
