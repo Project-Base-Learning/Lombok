@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 17, 2025 at 02:29 PM
+-- Generation Time: Jun 26, 2025 at 06:27 AM
 -- Server version: 5.7.33
 -- PHP Version: 8.3.19
 
@@ -57,7 +57,7 @@ INSERT INTO `articles` (`id`, `views`, `cover_id`, `title`, `slug`, `preview_con
 (3, 0, 3, 'Cerita Pedagang Ketupat Menjelang Lebaran Topat di Lombok', 'cerita-pedagang-ketupat-menjelang-lebaran-topat-di-lombok', '', '<p><a href=\"http://TEMPO.CO\">TEMPO.CO</a>, Mataram - Masyarakat Pulau Lombok memiliki tradisi Idul Fitri yang menarik, yaitu Lebaran Ketupat atau Lebaran Topat. Namun Lebaran ini tak diadakan pada hari pertama Idul Fitri 1 Syawal melainkan pada hari ketujuh yang tahun ini jatuh pada Sabtu, 29 April 2023.</p><p>Seperti namanya, hal utama dalam tradisi ini adalah ketupat. Karena itu, tak heran menjelang tradisi ini, penjual ketupat dapat mudah ditemukan.</p><p>Para pedagang ketupat bermunculan di sejumlah ruas jalan, termasuk di sekitar Kota Mataram. Kebanyakan dari mereka adalah warga Kelurahan Punia yang berdagang di atas trotoar sepanjang Jalan Airlangga dan Majapahit.</p><p>Para pedagang menggunakan satu meja di bawah tenda payung untuk menggelar ketupat yang digantung di atas panci berisi lauknya, seperti opor dan urap. Setiap pedagang menyiapkan ratusan biji ketupat yang diisi belasan kilogram beras. Setiap biji ketupat dijualnya Rp 3 ribu atau per ikat sebanyak lima biji seharga Rp 15 ribu.</p><p>Salah satunya adalah Maesarah, 55 tahun, yang berdagang ketupat sehari sebelum Lebaran Topat, Jumat, 28 April 2023. Rencananya, ia akan berjualan hingga malam hari atau jika masih tersisa ia menjualnya hingga hari H.</p><p>&quot;Silakan beli. Masih sepi ini,&quot; kata Maesarah, di ujung barat Majapahit.</p><p>Menurut Maesarah, sepinya pembeli karena lebih banyak warga yang melakukan mudik Lebaran setelah meredanya pandemi Covid-19. &quot;Jika dibanding dulu, lebih ramai karena mereka tidak pergi mudik ke kampung halamannya,&quot; ujarnya.</p><p>Seorang pedagang lainnya, Srianah, 53 tahun, menyatakan berjualan ketupat dan lontong ini adalah mata pencahariannya sehari-hari. Jika bukan Lebaran, mereka berdagang lontong di berbagai pasar di kota Mataram.</p><p>Lebaran Topat di Lombok biasanya diisi dengan sejumlah acara. Tradisi itu akan diawali dengan ziarah ke makam keramat, lalu menyantap ketupat bersama-sama. Setelah itu, masyarakat memanfaatkan momentum libur itu untuk rekreasi di berbagai pantai.</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-10 00:27:03', '2025-05-09 16:20:49', '2025-05-26 14:51:14', NULL),
 (4, 0, 5, 'Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor', 'lebaran-topat-dimanfaatkan-warga-punia-kota-mataram-berjualan-ketupat-dan-opor', NULL, NULL, 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-06-17 20:00:56', '2025-05-09 16:25:17', '2025-06-17 13:26:09', NULL),
 (5, 0, 5, 'Di Mataram, Puluhan Warga Berjualan Ketupat di Sepanjang Jalan Airlangga dan Majapahit', 'di-mataram-puluhan-warga-berjualan-ketupat-di-sepanjang-jalan-airlangga-dan-majapahit', '', '<p>MATARAM – Sehari menjelang Lebaran Ketupat yang di Lombok dikenal sebagai tradisi Lebaran Topat, bakda Dzuhur Jum’at 28 April 2023 siang tadi telah bermunculan pedagang ketupat di kota Mataram. Terbanyak mereka yang mayoritas warga Kelurahan Punia berdagang di atas trotoar sepanjang jalan Airlangga dan Majapahit.</p><p>Mereka rata-rata menggunakan satu meja di bawah tenda payung untuk menggelar ketupat yang digantung di atas panci berisi lauknya diantarannya opor dan urap. Setiap pedagang menyiapkan ratusan biji ketupat yang diisi belasan kilogram beras. Setiap biji ketupat dijualnya Rp 3 ribu atau perikat lima biji seharga Rp 15 ribu.</p><p>Seorang pedagang menawarkan membeli jualannya karena masih sepi. Rencananya ia berjualan hingga malam hari atau jika masih tersisa ia menjualnya Sabtu 29 April 2023 pagi. ‘’Silahkan pak beli. Masih sepi ini,’’ kata Maesarah, 55 tahun, di ujung barat Majapahit.</p><p>Menurutnya, sepinya pembeli karena lebih banyak warga yang melakukan mudik lebaran setelah meredanya pandemic Covid-19. ‘’Jika dibanding dulu, lebih ramai karena mereka tidak pergi mudik ke kampung halamannya,’’ ujar Maesarah.</p><p>Seorang pedagang lainnya Srianah, 53 tahun, menyatakan berjualan ketupat dan lontong ini adalah mata pencahariannya sehari-hari. Jika bukan lebaran, mereka berdagang lontong di berbagai pasar di kota Mataram.</p><p>Sabtu 29 April 2023 besok dipastikan tradisi Lebaran Topat di Lombok akan ramai. Di seluruh wilayah di Mataramk, Lombok Barat, Lombok Utara, Lombok Tengah dan Lombok Timur warga memanfaatkannya untuk rekreasi di berbagai pantai setelah melakukan ziarah kubur makam keramat yang dikenal sebagai penyebar Islam di Lombok.(*)</p>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, '2025-05-10 00:27:08', '2025-05-09 16:26:49', '2025-05-26 14:51:48', NULL),
-(6, 0, 2, 'Testing', 'testing', NULL, '<p>testing</p><h1>testing</h1><h2>testing</h2><h3>testing</h3><h4>testing</h4><h5>testing</h5><h6>testing</h6><ul><li><p>testing</p></li><li><p>testing</p></li></ul><ol start=\"1\"><li><p>testing</p></li><li><p>testing</p></li></ol><ul class=\"checked-list\"><li><p>testing</p></li><li><p>testing</p></li></ul><blockquote><p>testing</p></blockquote><hr><p><strong>testing</strong></p><p><em>testing</em></p><p><strike>testing</strike></p><p><u>testing</u></p><p><sup>testing</sup></p><p><sub>testing</sub></p><div class=\"lead\"><p>testing</p></div><p><small>testing</small></p><p><span style=\"color: #f50000;\">testing</span></p><p><mark>testing</mark></p><p style=\"text-align: center;\">testing</p><p style=\"text-align: end;\">testing</p><p style=\"text-align: end;\"><a href=\"http://127.0.0.1:8000/dashboard/articles/4/edit\" data-as-button=\"false\">testing</a></p><p style=\"text-align: end;\"><a href=\"http://127.0.0.1:8000/dashboard/articles/4/edit\" data-as-button=\"true\" data-as-button-theme=\"primary\">testin</a></p><table style=\"min-width: 75px;\"><tbody><tr><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th></tr><tr><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td></tr></tbody></table><p>testing</p><div class=\"filament-tiptap-grid-builder\" data-type=\"responsive\" data-cols=\"2\" style=\"grid-template-columns: repeat(2, 1fr);\" data-stack-at=\"md\"><div class=\"filament-tiptap-grid-builder__column\" data-col-span=\"1\" style=\"grid-column: span 1;\"><p>testing</p></div><div class=\"filament-tiptap-grid-builder__column\" data-col-span=\"1\" style=\"grid-column: span 1;\"><p>testing</p></div></div><details><summary>testing</summary><div data-type=\"details-content\"><p>testing</p></div></details><p><code>testing</code></p><pre><code class=\"hljs \">testing</code></pre>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, NULL, '2025-06-17 13:26:50', '2025-06-17 13:26:50', NULL);
+(6, 0, 2, 'Testing', 'testing', NULL, '<p>testing</p><h1>testing</h1><h2>testing</h2><h3>testing</h3><h4>testing</h4><h5>testing</h5><h6>testing</h6><ul><li><p>testing</p></li><li><p>testing</p></li></ul><ol start=\"1\"><li><p>testing</p></li><li><p>testing</p></li></ol><ul class=\"checked-list\"><li><p>testing</p></li><li><p>testing</p></li></ul><blockquote><p>testing</p></blockquote><hr><p><strong>testing</strong></p><p><em>testing</em></p><p><strike>testing</strike></p><p><u>testing</u></p><p><sup>testing</sup></p><p><sub>testing</sub></p><div class=\"lead\"><p>testing</p></div><p><small>testing</small></p><p><span style=\"color: #f50000;\">testing</span></p><p><mark>testing</mark></p><p style=\"text-align: center;\">testing</p><p style=\"text-align: end;\">testing</p><p style=\"text-align: end;\"><a href=\"http://127.0.0.1:8000/dashboard/articles/4/edit\" data-as-button=\"false\">testing</a></p><p style=\"text-align: end;\"><a href=\"http://127.0.0.1:8000/dashboard/articles/4/edit\" data-as-button=\"true\" data-as-button-theme=\"primary\">testin</a></p><table style=\"min-width: 75px;\"><tbody><tr><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th><th rowspan=\"1\" colspan=\"1\"><p>testing</p></th></tr><tr><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td><td rowspan=\"1\" colspan=\"1\"><p style=\"text-align: center;\">testing</p></td></tr></tbody></table><p>testing</p><div class=\"filament-tiptap-grid-builder\" data-type=\"responsive\" data-cols=\"2\" style=\"grid-template-columns: repeat(2, 1fr);\" data-stack-at=\"md\"><div class=\"filament-tiptap-grid-builder__column\" data-col-span=\"1\" style=\"grid-column: span 1;\"><p>testing</p></div><div class=\"filament-tiptap-grid-builder__column\" data-col-span=\"1\" style=\"grid-column: span 1;\"><p>testing</p></div></div><details><summary>testing</summary><div data-type=\"details-content\"><p>testing</p></div></details><p><code>testing</code></p><pre><code class=\"hljs \">testing</code></pre>', 0, 1, NULL, '{\"meta_title\":null,\"meta_desc\":null}', 1, 1, NULL, '2025-06-17 13:26:50', '2025-06-17 13:57:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -99,6 +99,28 @@ INSERT INTO `article_sponsors` (`article_id`, `sponsor_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `breezy_sessions`
+--
+
+CREATE TABLE `breezy_sessions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `authenticatable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `authenticatable_id` bigint(20) UNSIGNED NOT NULL,
+  `panel_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `guard` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text COLLATE utf8mb4_unicode_ci,
+  `expires_at` timestamp NULL DEFAULT NULL,
+  `two_factor_secret` text COLLATE utf8mb4_unicode_ci,
+  `two_factor_recovery_codes` text COLLATE utf8mb4_unicode_ci,
+  `two_factor_confirmed_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cache`
 --
 
@@ -113,14 +135,16 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('356a192b7913b04c54574d18c28d46e6395428ab', 'i:1;', 1750066753),
-('356a192b7913b04c54574d18c28d46e6395428ab:timer', 'i:1750066753;', 1750066753),
+('356a192b7913b04c54574d18c28d46e6395428ab', 'i:2;', 1750321537),
+('356a192b7913b04c54574d18c28d46e6395428ab:timer', 'i:1750321537;', 1750321537),
+('77de68daecd823babbb58edb1c8e14d7106e83bb', 'i:1;', 1750917715),
+('77de68daecd823babbb58edb1c8e14d7106e83bb:timer', 'i:1750917715;', 1750917715),
 ('general-settings', 'a:0:{}', 2065373429),
-('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36', 'i:1;', 1750162938),
-('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36:timer', 'i:1750162938;', 1750162938),
+('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36', 'i:1;', 1750917929),
+('livewire-rate-limiter:056fc329aaaa757d31db450f525da23fde4d1b36:timer', 'i:1750917929;', 1750917929),
 ('livewire-rate-limiter:62dcdddd2131784090e8a5916c260a90678e71b3', 'i:1;', 1750091443),
 ('livewire-rate-limiter:62dcdddd2131784090e8a5916c260a90678e71b3:timer', 'i:1750091443;', 1750091443),
-('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:156:{i:0;a:4:{s:1:\"a\";i:129;s:1:\"b\";s:12:\"view_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:1;a:4:{s:1:\"a\";i:130;s:1:\"b\";s:16:\"view_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:2;a:4:{s:1:\"a\";i:131;s:1:\"b\";s:14:\"create_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:3;a:4:{s:1:\"a\";i:132;s:1:\"b\";s:14:\"update_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:4;a:4:{s:1:\"a\";i:133;s:1:\"b\";s:15:\"restore_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:5;a:4:{s:1:\"a\";i:134;s:1:\"b\";s:19:\"restore_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:6;a:4:{s:1:\"a\";i:135;s:1:\"b\";s:17:\"replicate_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:7;a:4:{s:1:\"a\";i:136;s:1:\"b\";s:15:\"reorder_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:8;a:4:{s:1:\"a\";i:137;s:1:\"b\";s:14:\"delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:9;a:4:{s:1:\"a\";i:138;s:1:\"b\";s:18:\"delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:10;a:4:{s:1:\"a\";i:139;s:1:\"b\";s:20:\"force_delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:11;a:4:{s:1:\"a\";i:140;s:1:\"b\";s:24:\"force_delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:12;a:4:{s:1:\"a\";i:141;s:1:\"b\";s:13:\"view_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:13;a:4:{s:1:\"a\";i:142;s:1:\"b\";s:17:\"view_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:14;a:4:{s:1:\"a\";i:143;s:1:\"b\";s:15:\"create_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:15;a:4:{s:1:\"a\";i:144;s:1:\"b\";s:15:\"update_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:16;a:4:{s:1:\"a\";i:145;s:1:\"b\";s:16:\"restore_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:17;a:4:{s:1:\"a\";i:146;s:1:\"b\";s:20:\"restore_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:18;a:4:{s:1:\"a\";i:147;s:1:\"b\";s:18:\"replicate_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:19;a:4:{s:1:\"a\";i:148;s:1:\"b\";s:16:\"reorder_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:20;a:4:{s:1:\"a\";i:149;s:1:\"b\";s:15:\"delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:21;a:4:{s:1:\"a\";i:150;s:1:\"b\";s:19:\"delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:22;a:4:{s:1:\"a\";i:151;s:1:\"b\";s:21:\"force_delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:23;a:4:{s:1:\"a\";i:152;s:1:\"b\";s:25:\"force_delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:24;a:4:{s:1:\"a\";i:153;s:1:\"b\";s:10:\"view_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:25;a:4:{s:1:\"a\";i:154;s:1:\"b\";s:14:\"view_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:26;a:4:{s:1:\"a\";i:155;s:1:\"b\";s:12:\"create_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:27;a:4:{s:1:\"a\";i:156;s:1:\"b\";s:12:\"update_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:28;a:4:{s:1:\"a\";i:157;s:1:\"b\";s:13:\"restore_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:29;a:4:{s:1:\"a\";i:158;s:1:\"b\";s:17:\"restore_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:30;a:4:{s:1:\"a\";i:159;s:1:\"b\";s:15:\"replicate_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:31;a:4:{s:1:\"a\";i:160;s:1:\"b\";s:13:\"reorder_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:32;a:4:{s:1:\"a\";i:161;s:1:\"b\";s:12:\"delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:33;a:4:{s:1:\"a\";i:162;s:1:\"b\";s:16:\"delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:34;a:4:{s:1:\"a\";i:163;s:1:\"b\";s:18:\"force_delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:35;a:4:{s:1:\"a\";i:164;s:1:\"b\";s:22:\"force_delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:36;a:4:{s:1:\"a\";i:165;s:1:\"b\";s:10:\"view_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:37;a:4:{s:1:\"a\";i:166;s:1:\"b\";s:14:\"view_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:38;a:4:{s:1:\"a\";i:167;s:1:\"b\";s:12:\"create_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:39;a:4:{s:1:\"a\";i:168;s:1:\"b\";s:12:\"update_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:40;a:4:{s:1:\"a\";i:169;s:1:\"b\";s:13:\"restore_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:41;a:4:{s:1:\"a\";i:170;s:1:\"b\";s:17:\"restore_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:42;a:4:{s:1:\"a\";i:171;s:1:\"b\";s:15:\"replicate_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:43;a:4:{s:1:\"a\";i:172;s:1:\"b\";s:13:\"reorder_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:44;a:4:{s:1:\"a\";i:173;s:1:\"b\";s:12:\"delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:45;a:4:{s:1:\"a\";i:174;s:1:\"b\";s:16:\"delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:46;a:4:{s:1:\"a\";i:175;s:1:\"b\";s:18:\"force_delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:47;a:4:{s:1:\"a\";i:176;s:1:\"b\";s:22:\"force_delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:48;a:4:{s:1:\"a\";i:177;s:1:\"b\";s:9:\"view_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:49;a:4:{s:1:\"a\";i:178;s:1:\"b\";s:13:\"view_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:50;a:4:{s:1:\"a\";i:179;s:1:\"b\";s:11:\"create_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:51;a:4:{s:1:\"a\";i:180;s:1:\"b\";s:11:\"update_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:52;a:4:{s:1:\"a\";i:181;s:1:\"b\";s:12:\"restore_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:53;a:4:{s:1:\"a\";i:182;s:1:\"b\";s:16:\"restore_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:54;a:4:{s:1:\"a\";i:183;s:1:\"b\";s:14:\"replicate_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:55;a:4:{s:1:\"a\";i:184;s:1:\"b\";s:12:\"reorder_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:56;a:4:{s:1:\"a\";i:185;s:1:\"b\";s:11:\"delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:57;a:4:{s:1:\"a\";i:186;s:1:\"b\";s:15:\"delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:58;a:4:{s:1:\"a\";i:187;s:1:\"b\";s:17:\"force_delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:59;a:4:{s:1:\"a\";i:188;s:1:\"b\";s:21:\"force_delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:60;a:3:{s:1:\"a\";i:189;s:1:\"b\";s:12:\"view_pattern\";s:1:\"c\";s:3:\"web\";}i:61;a:3:{s:1:\"a\";i:190;s:1:\"b\";s:16:\"view_any_pattern\";s:1:\"c\";s:3:\"web\";}i:62;a:3:{s:1:\"a\";i:191;s:1:\"b\";s:14:\"create_pattern\";s:1:\"c\";s:3:\"web\";}i:63;a:3:{s:1:\"a\";i:192;s:1:\"b\";s:14:\"update_pattern\";s:1:\"c\";s:3:\"web\";}i:64;a:3:{s:1:\"a\";i:193;s:1:\"b\";s:15:\"restore_pattern\";s:1:\"c\";s:3:\"web\";}i:65;a:3:{s:1:\"a\";i:194;s:1:\"b\";s:19:\"restore_any_pattern\";s:1:\"c\";s:3:\"web\";}i:66;a:3:{s:1:\"a\";i:195;s:1:\"b\";s:17:\"replicate_pattern\";s:1:\"c\";s:3:\"web\";}i:67;a:3:{s:1:\"a\";i:196;s:1:\"b\";s:15:\"reorder_pattern\";s:1:\"c\";s:3:\"web\";}i:68;a:3:{s:1:\"a\";i:197;s:1:\"b\";s:14:\"delete_pattern\";s:1:\"c\";s:3:\"web\";}i:69;a:3:{s:1:\"a\";i:198;s:1:\"b\";s:18:\"delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:70;a:3:{s:1:\"a\";i:199;s:1:\"b\";s:20:\"force_delete_pattern\";s:1:\"c\";s:3:\"web\";}i:71;a:3:{s:1:\"a\";i:200;s:1:\"b\";s:24:\"force_delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:72;a:4:{s:1:\"a\";i:201;s:1:\"b\";s:9:\"view_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:73;a:4:{s:1:\"a\";i:202;s:1:\"b\";s:13:\"view_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:74;a:4:{s:1:\"a\";i:203;s:1:\"b\";s:11:\"create_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:75;a:4:{s:1:\"a\";i:204;s:1:\"b\";s:11:\"update_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:76;a:4:{s:1:\"a\";i:205;s:1:\"b\";s:11:\"delete_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:77;a:4:{s:1:\"a\";i:206;s:1:\"b\";s:15:\"delete_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:78;a:4:{s:1:\"a\";i:207;s:1:\"b\";s:12:\"view_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:79;a:4:{s:1:\"a\";i:208;s:1:\"b\";s:16:\"view_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:80;a:4:{s:1:\"a\";i:209;s:1:\"b\";s:14:\"create_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:81;a:4:{s:1:\"a\";i:210;s:1:\"b\";s:14:\"update_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:82;a:4:{s:1:\"a\";i:211;s:1:\"b\";s:15:\"restore_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:83;a:4:{s:1:\"a\";i:212;s:1:\"b\";s:19:\"restore_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:84;a:4:{s:1:\"a\";i:213;s:1:\"b\";s:17:\"replicate_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:85;a:4:{s:1:\"a\";i:214;s:1:\"b\";s:15:\"reorder_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:86;a:4:{s:1:\"a\";i:215;s:1:\"b\";s:14:\"delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:87;a:4:{s:1:\"a\";i:216;s:1:\"b\";s:18:\"delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:88;a:4:{s:1:\"a\";i:217;s:1:\"b\";s:20:\"force_delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:89;a:4:{s:1:\"a\";i:218;s:1:\"b\";s:24:\"force_delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:90;a:4:{s:1:\"a\";i:219;s:1:\"b\";s:22:\"view_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:91;a:4:{s:1:\"a\";i:220;s:1:\"b\";s:26:\"view_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:92;a:4:{s:1:\"a\";i:221;s:1:\"b\";s:24:\"create_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:93;a:4:{s:1:\"a\";i:222;s:1:\"b\";s:24:\"update_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:94;a:4:{s:1:\"a\";i:223;s:1:\"b\";s:25:\"restore_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:95;a:4:{s:1:\"a\";i:224;s:1:\"b\";s:29:\"restore_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:96;a:4:{s:1:\"a\";i:225;s:1:\"b\";s:27:\"replicate_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:97;a:4:{s:1:\"a\";i:226;s:1:\"b\";s:25:\"reorder_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:98;a:4:{s:1:\"a\";i:227;s:1:\"b\";s:24:\"delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:99;a:4:{s:1:\"a\";i:228;s:1:\"b\";s:28:\"delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:100;a:4:{s:1:\"a\";i:229;s:1:\"b\";s:30:\"force_delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:101;a:4:{s:1:\"a\";i:230;s:1:\"b\";s:34:\"force_delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:102;a:4:{s:1:\"a\";i:231;s:1:\"b\";s:8:\"view_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:103;a:4:{s:1:\"a\";i:232;s:1:\"b\";s:12:\"view_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:104;a:4:{s:1:\"a\";i:233;s:1:\"b\";s:10:\"create_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:105;a:4:{s:1:\"a\";i:234;s:1:\"b\";s:10:\"update_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:106;a:4:{s:1:\"a\";i:235;s:1:\"b\";s:11:\"restore_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:107;a:4:{s:1:\"a\";i:236;s:1:\"b\";s:15:\"restore_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:108;a:4:{s:1:\"a\";i:237;s:1:\"b\";s:13:\"replicate_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:109;a:4:{s:1:\"a\";i:238;s:1:\"b\";s:11:\"reorder_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:110;a:4:{s:1:\"a\";i:239;s:1:\"b\";s:10:\"delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:111;a:4:{s:1:\"a\";i:240;s:1:\"b\";s:14:\"delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:112;a:4:{s:1:\"a\";i:241;s:1:\"b\";s:16:\"force_delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:113;a:4:{s:1:\"a\";i:242;s:1:\"b\";s:20:\"force_delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}i:114;a:4:{s:1:\"a\";i:243;s:1:\"b\";s:9:\"view_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:115;a:4:{s:1:\"a\";i:244;s:1:\"b\";s:13:\"view_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:116;a:4:{s:1:\"a\";i:245;s:1:\"b\";s:11:\"create_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:117;a:4:{s:1:\"a\";i:246;s:1:\"b\";s:11:\"update_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:118;a:4:{s:1:\"a\";i:247;s:1:\"b\";s:12:\"restore_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:119;a:4:{s:1:\"a\";i:248;s:1:\"b\";s:16:\"restore_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:120;a:4:{s:1:\"a\";i:249;s:1:\"b\";s:14:\"replicate_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:121;a:4:{s:1:\"a\";i:250;s:1:\"b\";s:12:\"reorder_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:122;a:4:{s:1:\"a\";i:251;s:1:\"b\";s:11:\"delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:123;a:4:{s:1:\"a\";i:252;s:1:\"b\";s:15:\"delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:124;a:4:{s:1:\"a\";i:253;s:1:\"b\";s:17:\"force_delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:125;a:4:{s:1:\"a\";i:254;s:1:\"b\";s:21:\"force_delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:126;a:4:{s:1:\"a\";i:255;s:1:\"b\";s:24:\"page_GeneralSettingsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:127;a:3:{s:1:\"a\";i:256;s:1:\"b\";s:12:\"page_ViewEnv\";s:1:\"c\";s:3:\"web\";}i:128;a:3:{s:1:\"a\";i:257;s:1:\"b\";s:21:\"widget_OptimizeButton\";s:1:\"c\";s:3:\"web\";}i:129;a:4:{s:1:\"a\";i:258;s:1:\"b\";s:18:\"page_EnvEditorPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:130;a:4:{s:1:\"a\";i:259;s:1:\"b\";s:24:\"page_GoogleAnalyticsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:131;a:4:{s:1:\"a\";i:260;s:1:\"b\";s:12:\"view_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:132;a:4:{s:1:\"a\";i:261;s:1:\"b\";s:16:\"view_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:133;a:4:{s:1:\"a\";i:262;s:1:\"b\";s:14:\"create_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:134;a:4:{s:1:\"a\";i:263;s:1:\"b\";s:14:\"update_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:135;a:4:{s:1:\"a\";i:264;s:1:\"b\";s:15:\"restore_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:136;a:4:{s:1:\"a\";i:265;s:1:\"b\";s:19:\"restore_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:137;a:4:{s:1:\"a\";i:266;s:1:\"b\";s:17:\"replicate_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:138;a:4:{s:1:\"a\";i:267;s:1:\"b\";s:15:\"reorder_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:139;a:4:{s:1:\"a\";i:268;s:1:\"b\";s:14:\"delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:140;a:4:{s:1:\"a\";i:269;s:1:\"b\";s:18:\"delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:141;a:4:{s:1:\"a\";i:270;s:1:\"b\";s:20:\"force_delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:142;a:4:{s:1:\"a\";i:271;s:1:\"b\";s:24:\"force_delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:143;a:4:{s:1:\"a\";i:272;s:1:\"b\";s:18:\"view_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:144;a:4:{s:1:\"a\";i:273;s:1:\"b\";s:22:\"view_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:145;a:4:{s:1:\"a\";i:274;s:1:\"b\";s:20:\"create_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:146;a:4:{s:1:\"a\";i:275;s:1:\"b\";s:20:\"update_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:147;a:4:{s:1:\"a\";i:276;s:1:\"b\";s:21:\"restore_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:148;a:4:{s:1:\"a\";i:277;s:1:\"b\";s:25:\"restore_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:149;a:4:{s:1:\"a\";i:278;s:1:\"b\";s:23:\"replicate_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:150;a:4:{s:1:\"a\";i:279;s:1:\"b\";s:21:\"reorder_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:151;a:4:{s:1:\"a\";i:280;s:1:\"b\";s:20:\"delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:152;a:4:{s:1:\"a\";i:281;s:1:\"b\";s:24:\"delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:153;a:4:{s:1:\"a\";i:282;s:1:\"b\";s:26:\"force_delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:154;a:4:{s:1:\"a\";i:283;s:1:\"b\";s:30:\"force_delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:7;}}i:155;a:4:{s:1:\"a\";i:284;s:1:\"b\";s:18:\"page_DashboardPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:7;}}}s:5:\"roles\";a:3:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:9:\"Developer\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:5:\"Admin\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:7;s:1:\"b\";s:10:\"Superadmin\";s:1:\"c\";s:3:\"web\";}}}', 1750186334);
+('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:156:{i:0;a:4:{s:1:\"a\";i:129;s:1:\"b\";s:12:\"view_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:1;a:4:{s:1:\"a\";i:130;s:1:\"b\";s:16:\"view_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:2;a:4:{s:1:\"a\";i:131;s:1:\"b\";s:14:\"create_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:3;a:4:{s:1:\"a\";i:132;s:1:\"b\";s:14:\"update_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:4;a:4:{s:1:\"a\";i:133;s:1:\"b\";s:15:\"restore_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:5;a:4:{s:1:\"a\";i:134;s:1:\"b\";s:19:\"restore_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:6;a:4:{s:1:\"a\";i:135;s:1:\"b\";s:17:\"replicate_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:7;a:4:{s:1:\"a\";i:136;s:1:\"b\";s:15:\"reorder_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:8;a:4:{s:1:\"a\";i:137;s:1:\"b\";s:14:\"delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:9;a:4:{s:1:\"a\";i:138;s:1:\"b\";s:18:\"delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:10;a:4:{s:1:\"a\";i:139;s:1:\"b\";s:20:\"force_delete_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:11;a:4:{s:1:\"a\";i:140;s:1:\"b\";s:24:\"force_delete_any_article\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:12;a:4:{s:1:\"a\";i:141;s:1:\"b\";s:13:\"view_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:13;a:4:{s:1:\"a\";i:142;s:1:\"b\";s:17:\"view_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:14;a:4:{s:1:\"a\";i:143;s:1:\"b\";s:15:\"create_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:15;a:4:{s:1:\"a\";i:144;s:1:\"b\";s:15:\"update_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:16;a:4:{s:1:\"a\";i:145;s:1:\"b\";s:16:\"restore_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:17;a:4:{s:1:\"a\";i:146;s:1:\"b\";s:20:\"restore_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:18;a:4:{s:1:\"a\";i:147;s:1:\"b\";s:18:\"replicate_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:19;a:4:{s:1:\"a\";i:148;s:1:\"b\";s:16:\"reorder_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:20;a:4:{s:1:\"a\";i:149;s:1:\"b\";s:15:\"delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:21;a:4:{s:1:\"a\";i:150;s:1:\"b\";s:19:\"delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:22;a:4:{s:1:\"a\";i:151;s:1:\"b\";s:21:\"force_delete_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:23;a:4:{s:1:\"a\";i:152;s:1:\"b\";s:25:\"force_delete_any_category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:24;a:4:{s:1:\"a\";i:153;s:1:\"b\";s:10:\"view_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:25;a:4:{s:1:\"a\";i:154;s:1:\"b\";s:14:\"view_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:26;a:4:{s:1:\"a\";i:155;s:1:\"b\";s:12:\"create_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:27;a:4:{s:1:\"a\";i:156;s:1:\"b\";s:12:\"update_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:28;a:4:{s:1:\"a\";i:157;s:1:\"b\";s:13:\"restore_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:29;a:4:{s:1:\"a\";i:158;s:1:\"b\";s:17:\"restore_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:30;a:4:{s:1:\"a\";i:159;s:1:\"b\";s:15:\"replicate_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:31;a:4:{s:1:\"a\";i:160;s:1:\"b\";s:13:\"reorder_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:32;a:4:{s:1:\"a\";i:161;s:1:\"b\";s:12:\"delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:33;a:4:{s:1:\"a\";i:162;s:1:\"b\";s:16:\"delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:34;a:4:{s:1:\"a\";i:163;s:1:\"b\";s:18:\"force_delete_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:35;a:4:{s:1:\"a\";i:164;s:1:\"b\";s:22:\"force_delete_any_cover\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:2;}}i:36;a:4:{s:1:\"a\";i:165;s:1:\"b\";s:10:\"view_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:37;a:4:{s:1:\"a\";i:166;s:1:\"b\";s:14:\"view_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:38;a:4:{s:1:\"a\";i:167;s:1:\"b\";s:12:\"create_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:39;a:4:{s:1:\"a\";i:168;s:1:\"b\";s:12:\"update_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:40;a:4:{s:1:\"a\";i:169;s:1:\"b\";s:13:\"restore_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:41;a:4:{s:1:\"a\";i:170;s:1:\"b\";s:17:\"restore_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:42;a:4:{s:1:\"a\";i:171;s:1:\"b\";s:15:\"replicate_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:43;a:4:{s:1:\"a\";i:172;s:1:\"b\";s:13:\"reorder_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:44;a:4:{s:1:\"a\";i:173;s:1:\"b\";s:12:\"delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:45;a:4:{s:1:\"a\";i:174;s:1:\"b\";s:16:\"delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:46;a:4:{s:1:\"a\";i:175;s:1:\"b\";s:18:\"force_delete_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:47;a:4:{s:1:\"a\";i:176;s:1:\"b\";s:22:\"force_delete_any_media\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:48;a:4:{s:1:\"a\";i:177;s:1:\"b\";s:9:\"view_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:49;a:4:{s:1:\"a\";i:178;s:1:\"b\";s:13:\"view_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:50;a:4:{s:1:\"a\";i:179;s:1:\"b\";s:11:\"create_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:51;a:4:{s:1:\"a\";i:180;s:1:\"b\";s:11:\"update_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:52;a:4:{s:1:\"a\";i:181;s:1:\"b\";s:12:\"restore_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:53;a:4:{s:1:\"a\";i:182;s:1:\"b\";s:16:\"restore_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:54;a:4:{s:1:\"a\";i:183;s:1:\"b\";s:14:\"replicate_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:55;a:4:{s:1:\"a\";i:184;s:1:\"b\";s:12:\"reorder_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:56;a:4:{s:1:\"a\";i:185;s:1:\"b\";s:11:\"delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:57;a:4:{s:1:\"a\";i:186;s:1:\"b\";s:15:\"delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:58;a:4:{s:1:\"a\";i:187;s:1:\"b\";s:17:\"force_delete_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:59;a:4:{s:1:\"a\";i:188;s:1:\"b\";s:21:\"force_delete_any_page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:60;a:3:{s:1:\"a\";i:189;s:1:\"b\";s:12:\"view_pattern\";s:1:\"c\";s:3:\"web\";}i:61;a:3:{s:1:\"a\";i:190;s:1:\"b\";s:16:\"view_any_pattern\";s:1:\"c\";s:3:\"web\";}i:62;a:3:{s:1:\"a\";i:191;s:1:\"b\";s:14:\"create_pattern\";s:1:\"c\";s:3:\"web\";}i:63;a:3:{s:1:\"a\";i:192;s:1:\"b\";s:14:\"update_pattern\";s:1:\"c\";s:3:\"web\";}i:64;a:3:{s:1:\"a\";i:193;s:1:\"b\";s:15:\"restore_pattern\";s:1:\"c\";s:3:\"web\";}i:65;a:3:{s:1:\"a\";i:194;s:1:\"b\";s:19:\"restore_any_pattern\";s:1:\"c\";s:3:\"web\";}i:66;a:3:{s:1:\"a\";i:195;s:1:\"b\";s:17:\"replicate_pattern\";s:1:\"c\";s:3:\"web\";}i:67;a:3:{s:1:\"a\";i:196;s:1:\"b\";s:15:\"reorder_pattern\";s:1:\"c\";s:3:\"web\";}i:68;a:3:{s:1:\"a\";i:197;s:1:\"b\";s:14:\"delete_pattern\";s:1:\"c\";s:3:\"web\";}i:69;a:3:{s:1:\"a\";i:198;s:1:\"b\";s:18:\"delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:70;a:3:{s:1:\"a\";i:199;s:1:\"b\";s:20:\"force_delete_pattern\";s:1:\"c\";s:3:\"web\";}i:71;a:3:{s:1:\"a\";i:200;s:1:\"b\";s:24:\"force_delete_any_pattern\";s:1:\"c\";s:3:\"web\";}i:72;a:4:{s:1:\"a\";i:201;s:1:\"b\";s:9:\"view_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:73;a:4:{s:1:\"a\";i:202;s:1:\"b\";s:13:\"view_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:74;a:4:{s:1:\"a\";i:203;s:1:\"b\";s:11:\"create_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:75;a:4:{s:1:\"a\";i:204;s:1:\"b\";s:11:\"update_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:76;a:4:{s:1:\"a\";i:205;s:1:\"b\";s:11:\"delete_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:77;a:4:{s:1:\"a\";i:206;s:1:\"b\";s:15:\"delete_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:78;a:4:{s:1:\"a\";i:207;s:1:\"b\";s:12:\"view_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:79;a:4:{s:1:\"a\";i:208;s:1:\"b\";s:16:\"view_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:80;a:4:{s:1:\"a\";i:209;s:1:\"b\";s:14:\"create_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:81;a:4:{s:1:\"a\";i:210;s:1:\"b\";s:14:\"update_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:82;a:4:{s:1:\"a\";i:211;s:1:\"b\";s:15:\"restore_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:83;a:4:{s:1:\"a\";i:212;s:1:\"b\";s:19:\"restore_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:84;a:4:{s:1:\"a\";i:213;s:1:\"b\";s:17:\"replicate_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:85;a:4:{s:1:\"a\";i:214;s:1:\"b\";s:15:\"reorder_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:86;a:4:{s:1:\"a\";i:215;s:1:\"b\";s:14:\"delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:87;a:4:{s:1:\"a\";i:216;s:1:\"b\";s:18:\"delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:88;a:4:{s:1:\"a\";i:217;s:1:\"b\";s:20:\"force_delete_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:89;a:4:{s:1:\"a\";i:218;s:1:\"b\";s:24:\"force_delete_any_sponsor\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:90;a:4:{s:1:\"a\";i:219;s:1:\"b\";s:22:\"view_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:91;a:4:{s:1:\"a\";i:220;s:1:\"b\";s:26:\"view_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:92;a:4:{s:1:\"a\";i:221;s:1:\"b\";s:24:\"create_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:93;a:4:{s:1:\"a\";i:222;s:1:\"b\";s:24:\"update_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:94;a:4:{s:1:\"a\";i:223;s:1:\"b\";s:25:\"restore_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:95;a:4:{s:1:\"a\";i:224;s:1:\"b\";s:29:\"restore_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:96;a:4:{s:1:\"a\";i:225;s:1:\"b\";s:27:\"replicate_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:97;a:4:{s:1:\"a\";i:226;s:1:\"b\";s:25:\"reorder_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:98;a:4:{s:1:\"a\";i:227;s:1:\"b\";s:24:\"delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:99;a:4:{s:1:\"a\";i:228;s:1:\"b\";s:28:\"delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:100;a:4:{s:1:\"a\";i:229;s:1:\"b\";s:30:\"force_delete_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:101;a:4:{s:1:\"a\";i:230;s:1:\"b\";s:34:\"force_delete_any_sponsor::category\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:102;a:4:{s:1:\"a\";i:231;s:1:\"b\";s:8:\"view_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:103;a:4:{s:1:\"a\";i:232;s:1:\"b\";s:12:\"view_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:104;a:4:{s:1:\"a\";i:233;s:1:\"b\";s:10:\"create_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:105;a:4:{s:1:\"a\";i:234;s:1:\"b\";s:10:\"update_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:106;a:4:{s:1:\"a\";i:235;s:1:\"b\";s:11:\"restore_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:107;a:4:{s:1:\"a\";i:236;s:1:\"b\";s:15:\"restore_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:108;a:4:{s:1:\"a\";i:237;s:1:\"b\";s:13:\"replicate_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:109;a:4:{s:1:\"a\";i:238;s:1:\"b\";s:11:\"reorder_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:110;a:4:{s:1:\"a\";i:239;s:1:\"b\";s:10:\"delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:111;a:4:{s:1:\"a\";i:240;s:1:\"b\";s:14:\"delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:112;a:4:{s:1:\"a\";i:241;s:1:\"b\";s:16:\"force_delete_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:113;a:4:{s:1:\"a\";i:242;s:1:\"b\";s:20:\"force_delete_any_tag\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:2;i:1;i:7;}}i:114;a:4:{s:1:\"a\";i:243;s:1:\"b\";s:9:\"view_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:115;a:4:{s:1:\"a\";i:244;s:1:\"b\";s:13:\"view_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:116;a:4:{s:1:\"a\";i:245;s:1:\"b\";s:11:\"create_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:117;a:4:{s:1:\"a\";i:246;s:1:\"b\";s:11:\"update_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:118;a:4:{s:1:\"a\";i:247;s:1:\"b\";s:12:\"restore_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:119;a:4:{s:1:\"a\";i:248;s:1:\"b\";s:16:\"restore_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:120;a:4:{s:1:\"a\";i:249;s:1:\"b\";s:14:\"replicate_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:121;a:4:{s:1:\"a\";i:250;s:1:\"b\";s:12:\"reorder_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:122;a:4:{s:1:\"a\";i:251;s:1:\"b\";s:11:\"delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:123;a:4:{s:1:\"a\";i:252;s:1:\"b\";s:15:\"delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:124;a:4:{s:1:\"a\";i:253;s:1:\"b\";s:17:\"force_delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:125;a:4:{s:1:\"a\";i:254;s:1:\"b\";s:21:\"force_delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:126;a:4:{s:1:\"a\";i:255;s:1:\"b\";s:24:\"page_GeneralSettingsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:127;a:3:{s:1:\"a\";i:256;s:1:\"b\";s:12:\"page_ViewEnv\";s:1:\"c\";s:3:\"web\";}i:128;a:3:{s:1:\"a\";i:257;s:1:\"b\";s:21:\"widget_OptimizeButton\";s:1:\"c\";s:3:\"web\";}i:129;a:4:{s:1:\"a\";i:258;s:1:\"b\";s:18:\"page_EnvEditorPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:130;a:4:{s:1:\"a\";i:259;s:1:\"b\";s:24:\"page_GoogleAnalyticsPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:7;}}i:131;a:4:{s:1:\"a\";i:260;s:1:\"b\";s:12:\"view_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:132;a:4:{s:1:\"a\";i:261;s:1:\"b\";s:16:\"view_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:133;a:4:{s:1:\"a\";i:262;s:1:\"b\";s:14:\"create_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:134;a:4:{s:1:\"a\";i:263;s:1:\"b\";s:14:\"update_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:135;a:4:{s:1:\"a\";i:264;s:1:\"b\";s:15:\"restore_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:136;a:4:{s:1:\"a\";i:265;s:1:\"b\";s:19:\"restore_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:137;a:4:{s:1:\"a\";i:266;s:1:\"b\";s:17:\"replicate_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:138;a:4:{s:1:\"a\";i:267;s:1:\"b\";s:15:\"reorder_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:139;a:4:{s:1:\"a\";i:268;s:1:\"b\";s:14:\"delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:140;a:4:{s:1:\"a\";i:269;s:1:\"b\";s:18:\"delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:141;a:4:{s:1:\"a\";i:270;s:1:\"b\";s:20:\"force_delete_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:142;a:4:{s:1:\"a\";i:271;s:1:\"b\";s:24:\"force_delete_any_section\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:143;a:4:{s:1:\"a\";i:272;s:1:\"b\";s:18:\"view_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:144;a:4:{s:1:\"a\";i:273;s:1:\"b\";s:22:\"view_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:145;a:4:{s:1:\"a\";i:274;s:1:\"b\";s:20:\"create_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:146;a:4:{s:1:\"a\";i:275;s:1:\"b\";s:20:\"update_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:147;a:4:{s:1:\"a\";i:276;s:1:\"b\";s:21:\"restore_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:148;a:4:{s:1:\"a\";i:277;s:1:\"b\";s:25:\"restore_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:149;a:4:{s:1:\"a\";i:278;s:1:\"b\";s:23:\"replicate_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:150;a:4:{s:1:\"a\";i:279;s:1:\"b\";s:21:\"reorder_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:151;a:4:{s:1:\"a\";i:280;s:1:\"b\";s:20:\"delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:152;a:4:{s:1:\"a\";i:281;s:1:\"b\";s:24:\"delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:153;a:4:{s:1:\"a\";i:282;s:1:\"b\";s:26:\"force_delete_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:154;a:4:{s:1:\"a\";i:283;s:1:\"b\";s:30:\"force_delete_any_section::type\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:155;a:4:{s:1:\"a\";i:284;s:1:\"b\";s:18:\"page_DashboardPage\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:7;i:3;i:8;}}}s:5:\"roles\";a:4:{i:0;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:5:\"Admin\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:7;s:1:\"b\";s:10:\"Superadmin\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:9:\"Developer\";s:1:\"c\";s:3:\"web\";}i:3;a:3:{s:1:\"a\";i:8;s:1:\"b\";s:4:\"User\";s:1:\"c\";s:3:\"web\";}}}', 1751003374);
 
 -- --------------------------------------------------------
 
@@ -192,7 +216,14 @@ INSERT INTO `chatbot_messages` (`id`, `session_id`, `sender`, `message`, `create
 (46, 16, 'user', 'Penjumlahan yang kedua tadi berapa hasilnya?', '2025-06-13 09:17:59', '2025-06-13 09:17:59'),
 (47, 16, 'bot', 'Hasil penjumlahan yang kedua (2+2) adalah 4.\n', '2025-06-13 09:18:01', '2025-06-13 09:18:01'),
 (48, 16, 'user', '6*6?', '2025-06-16 18:58:04', '2025-06-16 18:58:04'),
-(49, 16, 'bot', '36\n', '2025-06-16 18:58:11', '2025-06-16 18:58:11');
+(49, 16, 'bot', '36\n', '2025-06-16 18:58:11', '2025-06-16 18:58:11'),
+(50, 17, 'bot', 'Oke, saya akan membuat artikel, ringkasan, meta title, dan meta description berdasarkan data yang Anda berikan. Karena Anda tidak memberikan label gambar, teks dalam gambar, topik terkait gambar, dan prompt tambahan, saya akan membuatnya secara umum berdasarkan judul artikel.\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, yang dirayakan seminggu setelah Idul Fitri, menjadi berkah tersendiri bagi warga Punia, Kota Mataram. Momen ini dimanfaatkan oleh banyak warga untuk menjajakan ketupat dan opor, hidangan khas yang selalu hadir dalam perayaan Lebaran Topat.\n\nDi sepanjang jalanan Punia, terlihat deretan lapak-lapak sederhana yang menjajakan ketupat yang baru matang, mengepulkan aroma pandan yang menggugah selera. Opor ayam dan daging sapi pun tak kalah menggoda, dengan kuah santan kental berwarna kuning keemasan.\n\n\"Alhamdulillah, setiap tahun Lebaran Topat selalu ramai. Banyak yang mencari ketupat dan opor untuk merayakan bersama keluarga,\" ujar Ibu Siti, salah seorang pedagang ketupat di Punia. \"Penjualan biasanya meningkat drastis dibanding hari biasa. Ini rezeki Lebaran Topat,\" tambahnya.\n\nLebaran Topat sendiri merupakan tradisi unik yang berasal dari Lombok, Nusa Tenggara Barat. Perayaan ini merupakan wujud syukur atas keberhasilan menjalankan ibadah puasa Ramadan sebulan penuh. Ketupat, yang terbuat dari beras yang dibungkus dengan anyaman janur kuning, menjadi simbol kesempurnaan dan keberkahan.\n\nSelain menjual ketupat dan opor, banyak warga Punia yang juga menjajakan berbagai jenis kue tradisional dan minuman segar. Suasana meriah dan penuh kekeluargaan sangat terasa di sepanjang jalanan Punia.\n\nTradisi Lebaran Topat tidak hanya menjadi momen untuk bersantap hidangan lezat, tetapi juga menjadi ajang silaturahmi dan mempererat tali persaudaraan antar warga. Keberadaan para pedagang ketupat dan opor di Punia menjadi bagian tak terpisahkan dari kemeriahan perayaan Lebaran Topat di Kota Mataram. Mereka berkontribusi dalam melestarikan tradisi dan menghidupkan perekonomian lokal.\n\n[Ringkasan]\n\nLebaran Topat: Warga Punia jualan ketupat & opor.\n\n[Meta Title]\n\nLebaran Topat: Warga Punia Raup Berkah Jualan Ketupat\n\n[Meta Description]\n\nLebaran Topat di Mataram, warga Punia manfaatkan berjualan ketupat dan opor. Tradisi yang membawa berkah ekonomi lokal.\n', '2025-06-17 20:12:41', '2025-06-17 20:12:41'),
+(51, 17, 'bot', 'Oke, ini dia draft artikel, ringkasan, meta title, dan meta description yang saya buat berdasarkan data yang Anda berikan:\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, yang dirayakan seminggu setelah Idul Fitri, menjadi berkah tersendiri bagi warga Kelurahan Punia, Kota Mataram. Momentum ini dimanfaatkan secara optimal oleh masyarakat setempat untuk menjajakan ketupat dan opor ayam, dua hidangan ikonik yang tak terpisahkan dari perayaan Lebaran Topat. Aroma gurih ketupat dan rempah opor ayam menguar di sepanjang jalanan Punia, mengundang selera siapapun yang melintas.\n\nPara pedagang dadakan ini mulai beraktivitas sejak pagi buta, mempersiapkan dagangan mereka dengan penuh semangat. Ketupat yang pulen dan opor ayam yang kaya rasa menjadi andalan utama. Tak jarang, resep opor ayam yang diturunkan dari generasi ke generasi menjadi daya tarik tersendiri bagi para pembeli.\n\n\"Setiap Lebaran Topat, saya selalu berjualan ketupat dan opor. Ini sudah menjadi tradisi keluarga,\" ujar Ibu Aminah, salah seorang pedagang ketupat di Punia. \"Alhamdulillah, setiap tahun selalu ramai pembeli. Rezeki Lebaran Topat memang berkah,\" tambahnya dengan senyum sumringah.\n\nLebaran Topat bukan hanya soal hidangan lezat, tetapi juga menjadi ajang silaturahmi dan mempererat tali persaudaraan. Masyarakat berbondong-bondong mengunjungi sanak saudara dan tetangga, membawa ketupat dan opor sebagai simbol kebersamaan. Suasana hangat dan penuh kekeluargaan terasa begitu kental di setiap sudut Kelurahan Punia.\n\nPemerintah Kota Mataram pun turut mendukung tradisi Lebaran Topat ini dengan mengadakan berbagai kegiatan budaya dan hiburan. Hal ini semakin memeriahkan suasana dan menarik wisatawan dari berbagai daerah untuk datang dan merasakan langsung kemeriahan Lebaran Topat di Kota Mataram. Dengan perpaduan antara tradisi kuliner, silaturahmi, dan dukungan pemerintah, Lebaran Topat di Punia, Kota Mataram, menjadi sebuah perayaan yang tak terlupakan.\n\n[Ringkasan]\n\nLebaran Topat berkah bagi penjual ketupat opor di Mataram.\n\n[Meta Title]\n\nLebaran Topat: Warga Mataram Jualan Ketupat Opor Raup Untung!\n\n[Meta Description]\n\nLebaran Topat di Mataram, warga Punia manfaatkan momen jual ketupat dan opor. Tradisi yang membawa berkah ekonomi dan silaturahmi.\n', '2025-06-17 20:19:24', '2025-06-17 20:19:24'),
+(52, 17, 'bot', 'Oke, saya akan membuat artikel, ringkasan, meta title, dan meta description berdasarkan data yang Anda berikan. Karena Anda tidak memberikan label, teks dalam gambar, topik terkait gambar, dan prompt tambahan, saya akan membuatnya berdasarkan judul artikel saja.\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, yang dirayakan seminggu setelah Idul Fitri, menjadi berkah tersendiri bagi warga Kelurahan Punia, Kota Mataram. Momen ini dimanfaatkan untuk menjajakan ketupat dan opor ayam, hidangan khas yang selalu dicari saat Lebaran Topat. Suasana di sekitar Punia pun mendadak ramai dengan lapak-lapak dadakan yang menjajakan kelezatan kuliner tradisional ini.\n\nDari pagi hingga sore hari, aroma harum ketupat yang direbus dan kuah opor yang menggugah selera menyeruak di udara. Para pembeli berdatangan dari berbagai penjuru kota untuk menikmati hidangan khas ini bersama keluarga dan kerabat. Lebaran Topat memang menjadi ajang silaturahmi dan berbagi kebahagiaan, dan kehadiran ketupat opor menjadi pelengkap yang tak terpisahkan.\n\n\"Alhamdulillah, setiap Lebaran Topat selalu jualan ketupat dan opor. Lumayan buat menambah penghasilan,\" ujar Ibu Aminah, salah seorang penjual ketupat opor di Punia. Ia mengaku, permintaan ketupat opor selalu meningkat menjelang dan saat Lebaran Topat. \"Banyak yang pesan untuk acara keluarga atau sekadar dinikmati bersama tetangga.\"\n\nTidak hanya Ibu Aminah, banyak warga Punia lainnya yang turut memanfaatkan momen ini untuk berjualan. Ada yang menjual ketupat saja, ada yang menjual opor, dan ada pula yang menawarkan paket lengkap ketupat dan opor. Harga yang ditawarkan pun bervariasi, tergantung ukuran dan kualitas bahan yang digunakan.\n\nKehadiran para penjual ketupat dan opor ini tidak hanya memberikan keuntungan ekonomi bagi warga Punia, tetapi juga turut melestarikan tradisi kuliner Lebaran Topat. Dengan menikmati hidangan khas ini, masyarakat tidak hanya merasakan kelezatan rasanya, tetapi juga ikut menghidupkan kembali tradisi yang telah diwariskan secara turun temurun.\n\nLebaran Topat di Punia, Kota Mataram, bukan hanya tentang perayaan keagamaan, tetapi juga tentang semangat gotong royong, kreativitas, dan kecintaan terhadap tradisi lokal. Semoga tradisi ini terus lestari dan menjadi daya tarik tersendiri bagi Kota Mataram.\n\n[Ringkasan]\n\nWarga Punia jual ketupat opor saat Lebaran Topat.\n\n[Meta Title]\n\nLebaran Topat: Warga Mataram Jualan Ketupat Opor\n\n[Meta Description]\n\nWarga Punia, Mataram, manfaatkan Lebaran Topat untuk berjualan ketupat dan opor. Tradisi kuliner yang meningkatkan ekonomi lokal.\n', '2025-06-18 00:04:22', '2025-06-18 00:04:22'),
+(53, 17, 'bot', 'Oke, berdasarkan data yang diberikan, berikut adalah artikel yang saya buat:\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, atau Lebaran Ketupat, yang dirayakan seminggu setelah Hari Raya Idul Fitri, menjadi berkah tersendiri bagi warga Kelurahan Punia, Kota Mataram. Momentum ini dimanfaatkan untuk mendulang rezeki dengan berjualan ketupat dan opor ayam, hidangan khas yang selalu hadir dalam perayaan Lebaran Topat.\n\nSejak pagi hari, aroma khas ketupat yang direbus memenuhi udara di sekitar Punia. Puluhan lapak dadakan berjejer di sepanjang jalan, menawarkan berbagai ukuran ketupat, mulai dari yang kecil hingga jumbo. Opor ayam, dengan kuah santan yang kaya rempah, juga menjadi primadona yang banyak dicari pembeli.\n\n\"Alhamdulillah, setiap tahun saat Lebaran Topat, jualan ketupat dan opor ini selalu ramai. Lumayan untuk menambah penghasilan keluarga,\" ujar Ibu Aminah, salah seorang pedagang ketupat di Punia. Ia mengaku sudah berjualan ketupat saat Lebaran Topat selama lebih dari 10 tahun.\n\nPara pembeli pun datang dari berbagai penjuru Kota Mataram dan sekitarnya. Mereka sengaja datang ke Punia untuk membeli ketupat dan opor yang terkenal enak dan murah. \"Rasanya beda dengan ketupat yang dijual di tempat lain. Di sini lebih otentik dan harganya juga terjangkau,\" kata Bapak Budi, seorang pembeli dari Cakranegara.\n\nLebaran Topat bukan hanya sekadar tradisi makan ketupat dan opor. Lebih dari itu, momen ini menjadi ajang silaturahmi antar keluarga dan kerabat. Setelah melaksanakan salat sunah Topat di masjid atau musala, masyarakat biasanya saling berkunjung untuk menikmati hidangan ketupat dan opor bersama.\n\nPemerintah Kota Mataram juga mendukung penuh tradisi Lebaran Topat ini. Berbagai kegiatan budaya digelar untuk memeriahkan perayaan tersebut, seperti pawai budaya, lomba masak ketupat, dan pertunjukan seni tradisional.\n\nDengan adanya dukungan dari pemerintah dan antusiasme masyarakat, Lebaran Topat di Kota Mataram semakin meriah dari tahun ke tahun. Tradisi ini diharapkan dapat terus dilestarikan sebagai bagian dari kekayaan budaya Indonesia.\n\n[Rinkasan]\n\nLebaran Topat, berkah bagi pedagang Punia\n\n[Meta Title]\n\nLebaran Topat: Warga Mataram Berjualan Ketupat & Opor!\n\n[Meta Description]\n\nLebaran Topat di Mataram: Warga Punia manfaatkan berjualan ketupat & opor. Tradisi, silaturahmi, dan berkah ekonomi!\n', '2025-06-18 00:23:48', '2025-06-18 00:23:48'),
+(54, 17, 'bot', 'Oke, siap! Berdasarkan data yang diberikan, berikut adalah artikel beserta metadata SEO yang diminta:\n\n[Artikel]\n\n**Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor**\n\nTradisi Lebaran Topat, atau Lebaran Ketupat, menjadi berkah tersendiri bagi warga Kelurahan Punia, Kota Mataram. Sehari setelah Hari Raya Idul Fitri, kawasan ini dipenuhi oleh pedagang dadakan yang menjajakan ketupat dan opor ayam, makanan khas yang menjadi simbol perayaan Lebaran Topat.\n\nPantauan di lokasi menunjukkan, puluhan warga Punia memadati sepanjang jalan utama kelurahan, menggelar lapak sederhana dengan berbagai ukuran. Tumpukan ketupat yang baru matang, aroma opor ayam yang menggugah selera, serta berbagai lauk pauk pendamping lainnya, menjadi daya tarik utama bagi para pembeli.\n\n\"Alhamdulillah, setiap tahun saat Lebaran Topat, saya selalu berjualan ketupat dan opor di sini,\" ujar Ibu Aminah, salah seorang pedagang. \"Ini sudah menjadi tradisi turun temurun di keluarga kami. Hasilnya lumayan untuk menambah pendapatan keluarga.\"\n\nLebaran Topat sendiri merupakan tradisi perayaan yang dilakukan oleh masyarakat Muslim di Lombok, Nusa Tenggara Barat, seminggu setelah Hari Raya Idul Fitri. Perayaan ini ditandai dengan membuat dan menyantap ketupat, makanan yang terbuat dari beras yang dimasukkan ke dalam anyaman janur kelapa.\n\nSelain menjadi momen untuk bersilaturahmi dan berbagi kebahagiaan, Lebaran Topat juga menjadi ajang untuk melestarikan tradisi kuliner khas Lombok. Tak heran, setiap tahunnya, perayaan ini selalu meriah dan dipadati oleh warga, baik dari dalam maupun luar Kota Mataram.\n\nPara pedagang pun memanfaatkan momen ini untuk meraup rezeki. Harga ketupat dan opor ayam bervariasi, tergantung ukuran dan bahan yang digunakan. Namun, secara umum, harga masih terjangkau oleh masyarakat.\n\n\"Kami berharap, tradisi Lebaran Topat ini akan terus dilestarikan dan menjadi daya tarik wisata bagi Kota Mataram,\" harap Bapak Hasan, salah seorang tokoh masyarakat setempat. \"Dengan begitu, selain melestarikan budaya, juga dapat meningkatkan perekonomian masyarakat.\"\n\n[Ringkasan]\nWarga Punia Mataram jual ketupat saat Lebaran Topat.\n\n[Meta Title]\nLebaran Topat: Warga Punia Mataram Raup Rezeki Jualan Ketupat\n\n[Meta Description]\nLebaran Topat di Mataram dimanfaatkan warga Punia untuk berjualan ketupat dan opor ayam. Momen raih rezeki dan lestarikan tradisi.\n', '2025-06-18 00:24:32', '2025-06-18 00:24:32'),
+(55, 18, 'user', 'Berikan saya saran judul dari perjalanan wisata di lombok', '2025-06-18 00:33:40', '2025-06-18 00:33:40'),
+(56, 18, 'bot', 'Tentu, ini beberapa saran judul perjalanan wisata di Lombok, dikategorikan berdasarkan tema dan gaya:\n\nJudul Umum & Menarik:\n\n*   Lombok: Pesona yang Tersembunyi\n*   Lombok Calling: Petualangan di Pulau Seribu Masjid\n*   Eksplorasi Lombok: Surga Tersembunyi Indonesia\n*   Lombok: Lebih dari Sekadar Gili\n*   Lombok Diaries: Catatan Perjalanan Tak Terlupakan\n\nJudul yang Menekankan Keindahan Alam:\n\n*   Lombok: Emerald Island Getaway\n*   Menyapa Mentari di Pantai Lombok\n*   Lombok: Keajaiban Alam yang Memukau\n*   Dari Rinjani ke Laut: Keindahan Lombok yang Abadi\n*   Lombok: Simfoni Alam yang Mempesona\n\nJudul yang Lebih Spesifik (Jika Anda punya fokus tertentu):\n\n*   Lombok: Surga Para Peselancar (Jika fokus pada surfing)\n*   Rinjani Calling: Pendakian yang Menguji Adrenalin (Jika fokus pada pendakian Rinjani)\n*   Lombok\'s Culinary Journey: Menggugah Selera di Pulau Lombok (Jika fokus pada kuliner)\n*   Lombok\'s Underwater Wonders: Diving and Snorkeling Paradise (Jika fokus pada diving/snorkeling)\n*   Mengenal Budaya Sasak: Perjalanan Spiritual di Lombok (Jika fokus pada budaya)\n\nJudul yang Kreatif & Unik:\n\n*   Lombok: Bukan Sekadar Mimpi\n*   Lombok: Tempat di Mana Jantung Berdegup Lebih Kencang\n*   Lombok: Untold Story\n*   Lombok: Get Lost and Found\n*   Lombok: A Piece of Paradise\n\nTips Tambahan:\n\n*   Pertimbangkan target audiens Anda: Apakah ini untuk blog pribadi, media sosial, atau tujuan komersial?\n*   Gunakan kata kunci yang relevan: Jika Anda ingin orang menemukan perjalanan Anda secara online, gunakan kata kunci seperti \"Lombok\", \"wisata Lombok\", \"liburan Lombok\", dll.\n*   Jadikan judulnya singkat dan mudah diingat.\n*   Sesuaikan dengan isi perjalanan Anda: Pastikan judulnya mencerminkan apa yang akan Anda bagikan.\n\nSemoga ini membantu!', '2025-06-18 00:33:45', '2025-06-18 00:33:45');
 
 -- --------------------------------------------------------
 
@@ -213,7 +244,9 @@ CREATE TABLE `chatbot_sessions` (
 --
 
 INSERT INTO `chatbot_sessions` (`id`, `title`, `user_id`, `created_at`, `updated_at`) VALUES
-(16, 'Penjumlahan Sederhana: 1+1', 1, '2025-06-13 09:16:45', '2025-06-13 09:16:45');
+(16, 'Penjumlahan Sederhana: 1+1', 1, '2025-06-13 09:16:45', '2025-06-13 09:16:45'),
+(17, 'Lebaran Topat Dimanfaatkan Warga Punia Kota Mataram Berjualan Ketupat dan Opor', 1, '2025-06-17 20:12:41', '2025-06-17 20:12:41'),
+(18, 'Wisata Lombok: Judul Singkat', 2, '2025-06-18 00:33:40', '2025-06-18 00:33:40');
 
 -- --------------------------------------------------------
 
@@ -252,6 +285,7 @@ CREATE TABLE `general_settings` (
   `social_network` json DEFAULT NULL,
   `navigation` json DEFAULT NULL,
   `features` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
+  `ai` json DEFAULT NULL,
   `google_analytics` json DEFAULT NULL,
   `user_features` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -262,8 +296,8 @@ CREATE TABLE `general_settings` (
 -- Dumping data for table `general_settings`
 --
 
-INSERT INTO `general_settings` (`id`, `site_name`, `site_description`, `site_logo`, `site_favicon`, `site_url`, `site_dashboard_url`, `location`, `contacts`, `theme`, `email_settings`, `social_network`, `navigation`, `features`, `google_analytics`, `user_features`, `created_at`, `updated_at`) VALUES
-(1, 'Lombok', NULL, NULL, NULL, NULL, 'dashboard', '{\"url\": \"http://127.0.0.1:8000/dashboard/general-settings\", \"address\": \"Kantor desa\", \"coordinate\": {\"lat\": -8.596655771786356, \"lng\": 116.09974429898593}}', '{\"email\": \"lombok@gmail.com\", \"phone\": \"03701234\", \"whatsapp\": null}', '{\"primary\": {\"50\": \"245, 245, 253\", \"100\": \"235, 235, 250\", \"200\": \"204, 204, 243\", \"300\": \"173, 173, 236\", \"400\": \"112, 112, 221\", \"500\": \"50, 50, 207\", \"600\": \"45, 45, 186\", \"700\": \"38, 38, 155\", \"800\": \"30, 30, 124\", \"900\": \"25, 25, 101\", \"950\": \"15, 15, 62\"}, \"tertiary\": null, \"secondary\": null}', '{\"mail_to\": null, \"smtp_host\": \"sandbox.smtp.mailtrap.io\", \"smtp_port\": \"2525\", \"smtp_timeout\": null, \"smtp_password\": \"f9c7ce4781c953\", \"smtp_username\": \"08c61c0b0a50c8\", \"amazon_ses_key\": null, \"mailgun_domain\": null, \"mailgun_secret\": null, \"postmark_token\": null, \"email_from_name\": \"ExRyze\", \"smtp_encryption\": \"tls\", \"mailgun_endpoint\": null, \"amazon_ses_region\": null, \"amazon_ses_secret\": null, \"email_from_address\": \"exryze4@gmail.com\", \"default_email_provider\": \"smtp\"}', '{\"tiktok\": {\"url\": null, \"label\": null}, \"twitter\": {\"url\": null, \"label\": null}, \"youtube\": {\"url\": null, \"label\": null}, \"facebook\": {\"url\": null, \"label\": null}, \"linkedin\": {\"url\": null, \"label\": null}, \"whatsapp\": {\"url\": null, \"label\": null}, \"instagram\": {\"url\": null, \"label\": null}, \"pinterest\": {\"url\": null, \"label\": null}}', '{\"home\": \"1\", \"footer\": \"1\", \"header\": \"2\", \"search\": \"8\", \"nav_items\": [{\"link\": null, \"page\": \"10\", \"type\": \"page\"}, {\"link\": null, \"page\": \"11\", \"type\": \"page\"}, {\"link\": null, \"page\": \"9\", \"type\": \"page\"}]}', '{\"sponsors\":true,\"analytics\":false}', '{\"google_analytics_tag\": null, \"service-account-credentials\": null}', '{\"chatbot\":false}', NULL, '2025-06-17 11:54:55');
+INSERT INTO `general_settings` (`id`, `site_name`, `site_description`, `site_logo`, `site_favicon`, `site_url`, `site_dashboard_url`, `location`, `contacts`, `theme`, `email_settings`, `social_network`, `navigation`, `features`, `ai`, `google_analytics`, `user_features`, `created_at`, `updated_at`) VALUES
+(1, 'Lombok', NULL, NULL, NULL, NULL, 'dashboard', '{\"url\": \"http://127.0.0.1:8000/dashboard/general-settings\", \"address\": \"Kantor desa\", \"coordinate\": {\"lat\": -8.59665817025909, \"lng\": 116.09976053237916}}', '{\"email\": \"lombok@gmail.com\", \"phone\": \"03701234\", \"whatsapp\": null}', '{\"primary\": {\"50\": \"245, 245, 253\", \"100\": \"235, 235, 250\", \"200\": \"204, 204, 243\", \"300\": \"173, 173, 236\", \"400\": \"112, 112, 221\", \"500\": \"50, 50, 207\", \"600\": \"45, 45, 186\", \"700\": \"38, 38, 155\", \"800\": \"30, 30, 124\", \"900\": \"25, 25, 101\", \"950\": \"15, 15, 62\"}, \"tertiary\": null, \"secondary\": {\"50\": \"242, 254, 255\", \"100\": \"230, 254, 255\", \"200\": \"191, 252, 255\", \"300\": \"153, 250, 255\", \"400\": \"77, 246, 255\", \"500\": \"0, 242, 255\", \"600\": \"0, 218, 230\", \"700\": \"0, 182, 191\", \"800\": \"0, 145, 153\", \"900\": \"0, 119, 125\", \"950\": \"0, 73, 77\"}}', '{\"mail_to\": null, \"smtp_host\": \"sandbox.smtp.mailtrap.io\", \"smtp_port\": \"2525\", \"smtp_timeout\": null, \"smtp_password\": \"f9c7ce4781c953\", \"smtp_username\": \"08c61c0b0a50c8\", \"amazon_ses_key\": null, \"mailgun_domain\": null, \"mailgun_secret\": null, \"postmark_token\": null, \"email_from_name\": \"ExRyze\", \"smtp_encryption\": \"tls\", \"mailgun_endpoint\": null, \"amazon_ses_region\": null, \"amazon_ses_secret\": null, \"email_from_address\": \"exryze4@gmail.com\", \"default_email_provider\": \"smtp\"}', '{\"tiktok\": {\"url\": null, \"label\": null}, \"twitter\": {\"url\": null, \"label\": null}, \"youtube\": {\"url\": null, \"label\": null}, \"facebook\": {\"url\": null, \"label\": null}, \"linkedin\": {\"url\": null, \"label\": null}, \"whatsapp\": {\"url\": null, \"label\": null}, \"instagram\": {\"url\": null, \"label\": null}, \"pinterest\": {\"url\": null, \"label\": null}}', '{\"home\": \"1\", \"footer\": \"1\", \"header\": \"2\", \"search\": \"8\", \"nav_items\": [{\"link\": null, \"page\": \"10\", \"type\": \"page\"}, {\"link\": null, \"page\": \"11\", \"type\": \"page\"}, {\"link\": null, \"page\": \"9\", \"type\": \"page\"}]}', '{\"sponsors\":true,\"analytics\":false,\"google_analytics\":false,\"ai\":false}', '[]', '{\"google_analytics_tag\": null, \"service-account-credentials\": null}', '{\"chatbot\":false}', NULL, '2025-06-26 05:04:59');
 
 -- --------------------------------------------------------
 
@@ -363,35 +397,16 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '0001_01_01_000002_create_jobs_table', 1),
 (4, '2025_03_27_000000_create_permission_tables', 1),
 (5, '2025_03_27_000001_create_general-settings_table', 1),
-(6, '2025_03_27_000002_add_logo_favicon_columns_to_general_settings_table', 1),
-(7, '2025_03_27_100001_create_tag_table', 1),
-(9, '2025_03_27_100003_create_articles_table', 1),
-(10, '2025_03_27_100004_create_categories_table', 1),
-(12, '2025_03_27_100006_create_sponsors_table', 1),
-(15, '2025_03_27_100101_create_patterns_table', 1),
-(16, '2025_03_27_100102_create_pages_table', 1),
-(17, '2025_04_22_143452_create_media_table', 2),
-(18, '2025_04_22_143453_add_tenant_aware_column_to_media_table', 2),
-(20, '2025_04_22_163559_switch_categories_and_tags', 3),
-(21, '2025_04_22_185244_update_categories', 4),
-(22, '2025_04_23_132527_rename_column_articles_others_to_fields', 4),
-(23, '2025_04_25_155216_add_location_field_in_general_setting', 5),
-(24, '2025_04_25_165517_add_contact_field_in_general_setting', 6),
-(25, '2025_04_26_030400_update_google_analytics_settings', 7),
-(26, '2025_05_01_214356_delete_email_address_field', 8),
-(27, '2025_05_02_131109_create_theme_field', 9),
-(30, '2025_05_03_103806_rename_pattern_to_section', 11),
-(31, '2025_05_03_142441_general_settings_navigation_field', 12),
-(32, '2025_05_09_004254_add_dashboard_url_field', 13),
-(34, '2025_05_09_090030_add_slug_field_in_categories', 14),
-(35, '2025_05_09_142301_change_name_field_of_section_load_table', 15),
-(36, '2025_05_09_162824_update_fields_of_categories', 16),
-(37, '2025_05_20_170652_creator_editor_in_section_tag_and_sponsor', 17),
-(38, '2025_05_20_173905_add_cover_field', 18),
-(39, '2025_05_20_193859_edit_sponsors', 19),
-(40, '2025_06_12_165835_chatbot_session', 20),
-(41, '2025_06_15_174543_update_article', 21),
-(42, '2025_06_16_164830_deunique_title_in_sponsor', 22);
+(6, '2025_03_27_000002_create_media_table', 1),
+(7, '2025_03_27_000003_add_tenant_aware_column_to_media_table', 1),
+(8, '2025_03_27_100001_create_categories_table', 1),
+(9, '2025_03_27_100002_create_articles_table', 1),
+(10, '2025_03_27_100003_create_tags_table', 1),
+(11, '2025_03_27_100004_create_sections_table', 1),
+(12, '2025_03_27_100005_create_pages_table', 1),
+(13, '2025_03_27_101001_create_sponsors_table', 1),
+(14, '2025_06_12_165835_chatbot_session', 1),
+(43, '2025_06_16_154626_create_breezy_sessions_table', 2);
 
 -- --------------------------------------------------------
 
@@ -422,7 +437,10 @@ CREATE TABLE `model_has_roles` (
 --
 
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
-(1, 'App\\Models\\User', 1);
+(1, 'App\\Models\\User', 1),
+(2, 'App\\Models\\User', 2),
+(7, 'App\\Models\\User', 3),
+(8, 'App\\Models\\User', 4);
 
 -- --------------------------------------------------------
 
@@ -723,54 +741,6 @@ CREATE TABLE `role_has_permissions` (
 --
 
 INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
-(129, 1),
-(130, 1),
-(131, 1),
-(132, 1),
-(133, 1),
-(134, 1),
-(135, 1),
-(136, 1),
-(137, 1),
-(138, 1),
-(139, 1),
-(140, 1),
-(141, 1),
-(142, 1),
-(143, 1),
-(144, 1),
-(145, 1),
-(146, 1),
-(147, 1),
-(148, 1),
-(149, 1),
-(150, 1),
-(151, 1),
-(152, 1),
-(153, 1),
-(154, 1),
-(155, 1),
-(156, 1),
-(157, 1),
-(158, 1),
-(159, 1),
-(160, 1),
-(161, 1),
-(162, 1),
-(163, 1),
-(164, 1),
-(165, 1),
-(166, 1),
-(167, 1),
-(168, 1),
-(169, 1),
-(170, 1),
-(171, 1),
-(172, 1),
-(173, 1),
-(174, 1),
-(175, 1),
-(176, 1),
 (177, 1),
 (178, 1),
 (179, 1),
@@ -783,63 +753,8 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (186, 1),
 (187, 1),
 (188, 1),
-(201, 1),
-(202, 1),
-(203, 1),
-(204, 1),
-(205, 1),
-(206, 1),
-(207, 1),
-(208, 1),
-(209, 1),
-(210, 1),
-(211, 1),
-(212, 1),
-(213, 1),
-(214, 1),
-(215, 1),
-(216, 1),
-(217, 1),
-(218, 1),
-(219, 1),
-(220, 1),
-(221, 1),
-(222, 1),
-(223, 1),
-(224, 1),
-(225, 1),
-(226, 1),
-(227, 1),
-(228, 1),
-(229, 1),
-(230, 1),
-(231, 1),
-(232, 1),
-(233, 1),
-(234, 1),
-(235, 1),
-(236, 1),
-(237, 1),
-(238, 1),
-(239, 1),
-(240, 1),
-(241, 1),
-(242, 1),
-(243, 1),
-(244, 1),
-(245, 1),
-(246, 1),
-(247, 1),
-(248, 1),
-(249, 1),
-(250, 1),
-(251, 1),
-(252, 1),
-(253, 1),
-(254, 1),
 (255, 1),
 (258, 1),
-(259, 1),
 (260, 1),
 (261, 1),
 (262, 1),
@@ -974,18 +889,6 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (150, 7),
 (151, 7),
 (152, 7),
-(153, 7),
-(154, 7),
-(155, 7),
-(156, 7),
-(157, 7),
-(158, 7),
-(159, 7),
-(160, 7),
-(161, 7),
-(162, 7),
-(163, 7),
-(164, 7),
 (165, 7),
 (166, 7),
 (167, 7),
@@ -998,18 +901,6 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (174, 7),
 (175, 7),
 (176, 7),
-(177, 7),
-(178, 7),
-(179, 7),
-(180, 7),
-(181, 7),
-(182, 7),
-(183, 7),
-(184, 7),
-(185, 7),
-(186, 7),
-(187, 7),
-(188, 7),
 (201, 7),
 (202, 7),
 (203, 7),
@@ -1064,34 +955,9 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (252, 7),
 (253, 7),
 (254, 7),
-(255, 7),
-(258, 7),
 (259, 7),
-(260, 7),
-(261, 7),
-(262, 7),
-(263, 7),
-(264, 7),
-(265, 7),
-(266, 7),
-(267, 7),
-(268, 7),
-(269, 7),
-(270, 7),
-(271, 7),
-(272, 7),
-(273, 7),
-(274, 7),
-(275, 7),
-(276, 7),
-(277, 7),
-(278, 7),
-(279, 7),
-(280, 7),
-(281, 7),
-(282, 7),
-(283, 7),
-(284, 7);
+(284, 7),
+(284, 8);
 
 -- --------------------------------------------------------
 
@@ -1206,8 +1072,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('nDT5rigJ9jGfZxvEak5OSgEaH7ovXXXgje0PYn1M', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiZ01qZ2w3MERvZ1B3QnVRT3dFbXIxZjZDVFRRTE9YdVo0czNzM0c0WiI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czo0NzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2Rhc2hib2FyZC9hcnRpY2xlcy9jcmVhdGUiO31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2Rhc2hib2FyZC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1750162861),
-('RBUIHRl5uybeeRBRuQ0Gg3lic8sureZsXzWBv67W', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiYlVmYXJ2T0xucVVhaWZiaGhOckhwSlJ2dGVGdWlrR1Q3VkV5ZXRTWSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQwOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvZGFzaGJvYXJkL2FydGljbGVzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEyJDVsaXl1WEoyQjIzUUlQYTkya2RKTHUxaHY0cDJ1eHhBRXowLlZ2L0xIRUExYmYycG1OQXlXIjtzOjg6ImZpbGFtZW50IjthOjA6e319', 1750170417);
+('J5rA5BEpbPcP7WGnPIJOdDImEaIAWK5l3WbV9sg2', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoicXh3V1JJRldPUGEzZ3dYQkszV3B3NGFpQXZweGVwRzl1b3RLaUtQTSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ob21lIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEyJDVsaXl1WEoyQjIzUUlQYTkya2RKTHUxaHY0cDJ1eHhBRXowLlZ2L0xIRUExYmYycG1OQXlXIjtzOjg6ImZpbGFtZW50IjthOjA6e319', 1750919234);
 
 -- --------------------------------------------------------
 
@@ -1304,7 +1169,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `email`, `profile_image`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Superadmin', '$2y$12$5liyuXJ2B23QIPa92kdJLu1hv4p2uxxAEz0.Vv/LHEA1bf2pmNAyW', 'superadmin@gmail.com', NULL, '2025-03-27 10:39:06', 'GpDoXCewpRs3NYn5mx16Eg7aygzHMUwIwg8P4JmUtwV2cRjqFFDZj4efibEU', '2025-03-27 10:39:06', '2025-03-27 10:39:06', NULL);
+(1, 'Developer', '$2y$12$5liyuXJ2B23QIPa92kdJLu1hv4p2uxxAEz0.Vv/LHEA1bf2pmNAyW', 'developer@gmail.com', NULL, '2025-03-27 10:39:06', 'rMIXGb5ajH8AX0Tf7YG6QAImBlOIW3mrMh9LR4sahWBteLKbvNYoL5Zv56KS', '2025-03-27 10:39:06', '2025-06-19 04:24:12', NULL),
+(2, 'Admin', '$2y$12$u/gq39yaf.RdM3ONDEO9eOi/wuvzhh7MU9FwIjRAG.rb6mpoTP.0y', 'admin@gmail.com', NULL, NULL, NULL, '2025-06-18 00:29:41', '2025-06-18 00:29:41', NULL),
+(3, 'Superadmin', '$2y$12$lN.Hw6WoM1X6EGnNRE2JyuV.dojihfCw8RNCCHmEp6/7g3U8kjBaS', 'superadmin@gmail.com', NULL, '2025-06-19 05:43:00', NULL, '2025-06-19 04:24:44', '2025-06-19 04:24:44', NULL),
+(4, 'User', '$2y$12$y5oEc5hxiu44VeB31IW6AuLhb113BaGPHYE.azjiCEO7PZktQ129.', 'user@gmail.com', NULL, NULL, NULL, '2025-06-19 04:25:03', '2025-06-19 04:25:03', NULL);
 
 --
 -- Indexes for dumped tables
@@ -1335,6 +1203,13 @@ ALTER TABLE `articles_tags`
 ALTER TABLE `article_sponsors`
   ADD KEY `article_sponsors_article_id_foreign` (`article_id`),
   ADD KEY `article_sponsors_sponsor_id_foreign` (`sponsor_id`);
+
+--
+-- Indexes for table `breezy_sessions`
+--
+ALTER TABLE `breezy_sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `breezy_sessions_authenticatable_type_authenticatable_id_index` (`authenticatable_type`,`authenticatable_id`);
 
 --
 -- Indexes for table `cache`
@@ -1544,6 +1419,12 @@ ALTER TABLE `articles`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `breezy_sessions`
+--
+ALTER TABLE `breezy_sessions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
@@ -1553,13 +1434,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `chatbot_messages`
 --
 ALTER TABLE `chatbot_messages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `chatbot_sessions`
 --
 ALTER TABLE `chatbot_sessions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1583,13 +1464,13 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -1655,7 +1536,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
