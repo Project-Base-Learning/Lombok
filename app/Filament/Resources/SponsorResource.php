@@ -18,6 +18,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
 
 class SponsorResource extends Resource
 {
@@ -153,6 +154,6 @@ class SponsorResource extends Resource
 
     public static function canAccess(): bool
     {
-        return config('general-settings.features.sponsors', false);
+        return Auth::user()->can('view_sponsor') ? config('general-settings.features.sponsors', false) : false;
     }
 }

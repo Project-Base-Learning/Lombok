@@ -6,13 +6,13 @@
     <div class="flex flex-col w-9/12 sm:!w-full grow">
         <div class="flex flex-wrap mb-0.5">
             @foreach ($item->tags as $tag)
-                <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" category='{{ $item->category->slug }}' tag='{{ $tag->slug }}' />
+                <x-links.tag search="{{ $data['navigation']['search'] ? true : false }}" category='{{ $item->category->slug }}' tag='{{ $tag->tag_name }}' slug='{{ $tag->slug }}'/>
             @endforeach
         </div>
         <div class="flex flex-col justify-start grow">
             <h5 class="text-sm font-bold sm:!text-lg line-clamp-2">{{ $item->title }}</h5>
-            <p class="text-[0.5rem] md:!text-sm mb-2">{{ \Carbon\Carbon::parse($item->published_at)->diffForHumans() }}</p>
-            <p class="line-clamp-2">{{ $item->preview_content }}</p>
+            <p class="text-[0.5rem] md:!text-sm mb-1 md:mb-2">{{ \Carbon\Carbon::parse($item->published_at)->diffForHumans() }}</p>
+            <p class="text-[0.5rem] md:!text-sm line-clamp-2">{{ $item->preview_content }}</p>
         </div>
     </div>
 </div>

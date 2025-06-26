@@ -79,7 +79,7 @@ class AdminPanelProvider extends PanelProvider
                 ->navigationCountBadge(false)
                 ->registerNavigation(true)
                 ->defaultListView('grid')
-                ->resource(\Awcodes\Curator\Resources\MediaResource::class),
+                ->resource(\App\Filament\Resources\MediaResource::class),
         ];
 
         return $panel

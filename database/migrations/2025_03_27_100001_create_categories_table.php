@@ -13,16 +13,14 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('category_name')->unique();
+            $table->string('category_name');
             $table->string('slug')->unique();
-            $table->foreignId('user_id')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
+            $table->boolean('default')->default(0);
+            $table->boolean('searchable')->default(0);
+            $table->string('card_layout');
+            $table->string('detail_page');
+            $table->json('fields')->nullable();
             $table->timestamps();
-            $table->softDeletes();
-        });
-
-        Schema::create('articles_categories', function (Blueprint $table) {
-            $table->foreignId('article_id')->constrained('articles')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreignId('category_id')->constrained('categories')->cascadeOnUpdate()->cascadeOnDelete();
         });
     }
 
@@ -32,6 +30,5 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('categories');
-        Schema::dropIfExists('articles_categories');
     }
 };

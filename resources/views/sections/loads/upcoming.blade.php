@@ -92,7 +92,7 @@
                             </div>
 
                             <!-- Text Section -->
-                            <div class="flex-shrink ">
+                            <div class="flex-grow">
                                 <h2 class="mb-2 text-2xl font-semibold sm:text-4xl">{{ $item->title }}</h2>
                                 <p class="mb-4 text-lg text-justify text-gray-600 line-clamp-6 indent-4">
                                     {{ $item->preview_content }}

@@ -4,10 +4,8 @@ namespace App\Filament\Forms;
 
 use App\Models\Page;
 use App\Models\Section;
-use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\Section as ComponentsSection;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Get;
@@ -17,12 +15,25 @@ class NavigationFieldsForm
     public static function get(): array
     {
         return [
-            ComponentsSection::make()
+            Group::make()
                 ->schema([
+                    Select::make('home')
+                        ->label('Homepage')
+                        ->required()
+                        ->live()
+                        ->different('search')
+                        ->options(Page::pluck('title', 'id')->toArray()),
+                    Select::make('search')
+                        ->label('Search page')
+                        ->live()
+                        ->different('home')
+                        ->options(Page::pluck('title', 'id')->toArray()),
                     Select::make('header')
+                        ->label('Header section')
                         ->options(Section::whereHas('type', fn ($query) => $query->where('type', 'Header'))->pluck('title', 'id')->toArray())
                         ->live(),
                     Select::make('footer')
+                        ->label('Footer section')
                         ->options(Section::whereHas('type', fn ($query) => $query->where('type', 'Footer'))->pluck('title', 'id')->toArray())
                         ->live(),
                 ])
@@ -30,24 +41,8 @@ class NavigationFieldsForm
                 ->columnSpan(1),
             Group::make()
                 ->schema([
-                    Fieldset::make('Search Page')
-                        ->schema([
-                            Select::make('search')
-                                ->live()
-                                ->different('home')
-                                ->options(Page::pluck('title', 'id')->toArray()),
-                        ])
-                        ->columns(1),
-                    Fieldset::make('Home Page')
-                        ->schema([
-                            Select::make('home')
-                                ->required()
-                                ->live()
-                                ->different('search')
-                                ->options(Page::pluck('title', 'id')->toArray()),
-                        ])
-                        ->columns(1),
                     Repeater::make('nav_items')
+                        ->label('Navigation items')
                         ->schema([
                             Select::make('type')
                                 ->options([

@@ -15,10 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->tinyInteger('sort_order')->default(0);
             $table->foreignId('created_by')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
             $table->foreignId('updated_by')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
-            $table->timestamp('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -27,7 +25,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('page_id')->constrained('pages')->cascadeOnUpdate()->cascadeOnDelete();
             $table->tinyInteger('sort_order')->default(0);
-            $table->foreignId('pattern_id')->constrained('patterns')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('section_id')->constrained('sections')->cascadeOnUpdate()->cascadeOnDelete();
         });
     }
 

@@ -1,5 +1,5 @@
 <footer class="lg:!px-40 lg:!py-12 md:!px-20 md:!py-12 px-8 py-6 border-t-2" data-aos="fade-up">
-    <div class="grid grid-cols-2 gap-y-8 md:grid-cols-3 lg:grid-cols-4">
+    <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
 
         <!-- Logo Section (No Stretching, Center on Mobile, Left on Tablet/Desktop) -->
         <div class="flex col-span-2 mb-6 md:justify-center md:col-span-3 lg:col-span-1">
@@ -21,7 +21,7 @@
                 @endif
                 @foreach ($data['navigation']['nav_items'] as $navItem)
                     @if ($navItem['type'] == 'link')
-                        <x-footer.nav_item slug="{{ $navItem['link']['url'] }}">
+                        <x-footer.nav_item url="{{ $navItem['link']['url'] }}">
                             {{ $navItem['link']['label'] }}
                         </x-footer.nav_item>
                     @else
