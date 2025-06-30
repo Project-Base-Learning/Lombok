@@ -96,6 +96,7 @@
             function addMessage(message, sender, time = null) {
                 const div = document.createElement('div');
                 const timestamp = time ? new Date(time).toLocaleTimeString() : new Date().toLocaleTimeString();
+                console.log(time);
 
                 const textDiv = document.createElement('div');
                 textDiv.textContent = message;

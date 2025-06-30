@@ -28,24 +28,7 @@ class AppServiceProvider extends ServiceProvider
             return [];
         });
 
-        $data = GeneralSetting::select([
-            'site_name',
-            'site_description',
-            'site_logo',
-            'site_favicon',
-            'site_url',
-            'site_dashboard_url',
-            'location',
-            'contacts',
-            'theme',
-            'email_settings',
-            'social_network',
-            'navigation',
-            'features',
-            'ai',
-            'google_analytics',
-            'user_features',
-        ])->first()->toArray();
+        $data = GeneralSetting::first()->toArray();
 
         // app url
         Config::set('app.url', $data['site_url'] ?? env('APP_URL'));
@@ -96,6 +79,7 @@ class AppServiceProvider extends ServiceProvider
             'social_network',
             'navigation',
             'features',
+            'ai',
             'user_features',
         ])));
 
